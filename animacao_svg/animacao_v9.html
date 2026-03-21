@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR" style="
+    overflow: hidden;
+">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Animada - Web-Engenharia</title>
+    <!-- Importando fonte para o texto -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cor-base: #062A1B;      /* Verde escuro intenso */
+            --cor-circuito: #A5C7A9;  /* Verde claro (trilhas elétricas) */
+            --cor-pulso: #E2F2E4;     /* Verde super brilhante */
+            --cor-passaro: #62866D;   /* Verde médio (símbolo) */
+            --cor-fundo: #ffffff;
+            --cor-texto: #000000;
+            /* Cores do Glitch Matrix */
+            --glitch-cyan: #85E8B1;   /* Verde menta luminoso */
+            --glitch-magenta: #00FF41; /* Verde neon vibrante */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--cor-fundo);
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+        }
+
+        .logo-container {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            aspect-ratio: 4 / 3;
+            /* Tremor de montagem e tremor de sobrecarga pré-explosão combinados */
+            animation: containerShakeLoop 14s infinite;
+        }
+
+        /* Clarão da Explosão (Flash Expandido) */
+        .explosion-flash {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+            box-shadow: 0 0 50px 20px var(--glitch-cyan), 0 0 100px 50px var(--glitch-magenta);
+            animation: flashExplode 14s infinite;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        /* ==========================================
+           CICLO MESTRE (14 Segundos)
+           ========================================== */
+
+        /* Movimento físico das peças - Montam, carregam energia e EXPLODEM */
+        @keyframes assemble {
+            0%, 5% { transform: translate(var(--dx), var(--dy)) rotate(var(--rot)) scale(0.1); opacity: 0; filter: blur(10px); }
+            12% { transform: translate(calc(var(--dx) * 0.2), calc(var(--dy) * 0.2)) rotate(calc(var(--rot) * 0.2)) scale(1.1); opacity: 1; filter: blur(2px); }
+            15% { transform: translate(0, 0) rotate(0) scale(0.95); filter: blur(0px); }
+            18%, 76% { transform: translate(0, 0) rotate(0) scale(1); opacity: 1; filter: blur(0px); }
+            
+            /* Acumulação de Energia (Shrink & Shake) */
+            77%, 82% { transform: translate(0, 0) rotate(0) scale(0.93); opacity: 1; filter: blur(0px) drop-shadow(0 0 10px var(--glitch-cyan)); }
+            
+            /* A EXPLOSÃO (Boom!) - Disparam multiplicando a sua distância de origem */
+            83% { transform: translate(calc(var(--dx) * 2.5), calc(var(--dy) * 2.5)) rotate(calc(var(--rot) * 4)) scale(2); opacity: 0; filter: blur(15px); }
+            84%, 100% { transform: translate(calc(var(--dx) * 3), calc(var(--dy) * 3)) rotate(calc(var(--rot) * 5)) scale(2.5); opacity: 0; filter: blur(20px); }
+        }
+
+        /* Clarão massivo que cega o ecrã no momento do impacto */
+        @keyframes flashExplode {
+            0%, 82% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+            82.5% { transform: translate(-50%, -50%) scale(2); opacity: 1; }
+            83% { transform: translate(-50%, -50%) scale(80); opacity: 1; background: var(--glitch-cyan); }
+            85%, 100% { transform: translate(-50%, -50%) scale(100); opacity: 0; }
+        }
+
+        /* Glitch principal da estrutura */
+        @keyframes glitchMain {
+            0%, 14% { opacity: 0; stroke-dashoffset: 1; }
+            15% { opacity: 1; stroke-dashoffset: 0; transform: translateX(-10px) skewX(20deg); filter: drop-shadow(10px 0 0 var(--glitch-cyan)) drop-shadow(-10px 0 0 var(--glitch-magenta)); }
+            17% { transform: translateX(10px) skewX(-10deg); filter: drop-shadow(-10px 0 0 var(--glitch-cyan)) drop-shadow(10px 0 0 var(--glitch-magenta)); }
+            19%, 39% { transform: translateX(0) skewX(0); filter: drop-shadow(0 0 0 transparent); }
+            
+            /* Micro glitches de sistema instável */
+            40% { transform: translate(-2px, 1px) skewX(-5deg); filter: drop-shadow(2px 0 0 var(--glitch-cyan)); }
+            41% { transform: translate(2px, -1px) skewX(5deg); filter: drop-shadow(-2px 0 0 var(--glitch-magenta)); }
+            42%, 69% { transform: translate(0, 0) skewX(0); filter: drop-shadow(0 0 0 transparent); }
+            70% { transform: translate(-2px, 1px) skewX(-5deg); filter: drop-shadow(2px 0 0 var(--glitch-cyan)); }
+            71% { transform: translate(2px, -1px) skewX(5deg); filter: drop-shadow(-2px 0 0 var(--glitch-magenta)); }
+            72%, 82% { transform: translate(0, 0) skewX(0); filter: drop-shadow(0 0 0 transparent); }
+            
+            /* Fade out drástico durante a explosão */
+            83%, 100% { opacity: 0; filter: drop-shadow(0 0 0 transparent); }
+        }
+
+        /* Tremor da Câmera / Container (Agressivo antes de explodir) */
+        @keyframes containerShakeLoop {
+            0%, 14% { transform: translate3d(0, 0, 0); filter: brightness(1); }
+            /* Impacto da montagem */
+            14.5% { transform: translate3d(-4px, 0, 0); }
+            15% { transform: translate3d(4px, 0, 0); }
+            15.5% { transform: translate3d(-2px, 0, 0); }
+            16%, 76% { transform: translate3d(0, 0, 0); filter: brightness(1); }
+            
+            /* Sobrecarga pré-explosão (Tremor rápido) */
+            77% { transform: translate3d(-2px, 2px, 0); filter: brightness(1.2); }
+            78% { transform: translate3d(2px, -2px, 0); filter: brightness(0.8); }
+            79% { transform: translate3d(-4px, -1px, 0); filter: brightness(1.4); }
+            80% { transform: translate3d(4px, 1px, 0); filter: brightness(0.6); }
+            81% { transform: translate3d(-6px, 3px, 0); filter: brightness(1.6); }
+            82% { transform: translate3d(6px, -3px, 0); filter: brightness(2); }
+            
+            /* Explosão e retorno ao normal */
+            83%, 100% { transform: translate3d(0, 0, 0); filter: brightness(1); }
+        }
+
+        @keyframes drawTrace {
+            0%, 10% { opacity: 0; stroke-dashoffset: 1; }
+            12% { opacity: 1; stroke-dashoffset: 0.5; filter: drop-shadow(0 0 10px var(--glitch-cyan)); stroke-width: 8; }
+            15%, 82% { opacity: 1; stroke-dashoffset: 0; filter: drop-shadow(0 0 0 transparent); stroke-width: 4; }
+            83%, 100% { opacity: 0; stroke-dashoffset: 1; }
+        }
+
+        @keyframes powerVisibility {
+            0%, 15% { opacity: 0; filter: brightness(0); }
+            16%, 76% { opacity: 1; filter: brightness(1.2); }
+            /* Brilho ofuscante pré-explosão */
+            77%, 82% { opacity: 1; filter: brightness(3) drop-shadow(0 0 10px var(--glitch-magenta)); }
+            83%, 100% { opacity: 0; filter: brightness(0); }
+        }
+
+        @keyframes dataPulseFlow {
+            0% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: -1.05; }
+        }
+
+        /* Texto também "explode" para fora do ecrã */
+        @keyframes textGlitch {
+            0%, 14% { opacity: 0; letter-spacing: -10px; transform: scale(0.1); filter: blur(5px); }
+            16% { opacity: 1; letter-spacing: 25px; transform: scale(1.2); filter: drop-shadow(5px 5px 0 var(--glitch-cyan)); }
+            18% { transform: scale(1); filter: drop-shadow(-5px -5px 0 var(--glitch-magenta)); letter-spacing: 18px; }
+            20%, 82% { opacity: 1; transform: scale(1); filter: drop-shadow(0 0 0 transparent); letter-spacing: 18px; }
+            /* Explosão do texto - Lança-se para a frente da câmara */
+            83% { opacity: 0; transform: scale(3) translateY(-10px); letter-spacing: 50px; filter: blur(10px); }
+            84%, 100% { opacity: 0; transform: scale(4); letter-spacing: 60px; filter: blur(20px); }
+        }
+
+        /* ==========================================
+           CLASSES DOS ELEMENTOS SVG
+           ========================================== */
+
+        .puzzle-piece {
+            transform-origin: center;
+            transform-box: fill-box;
+            animation: assemble 14s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+            animation-delay: var(--delay, 0s); 
+        }
+
+        .glitch-main {
+            stroke: var(--cor-base);
+            stroke-width: 18;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 1;
+            stroke-dashoffset: 1;
+            animation: glitchMain 14s infinite;
+            animation-delay: var(--delay, 0s); 
+            transform-origin: center;
+            transform-box: fill-box;
+        }
+
+        .bird-part {
+            fill: var(--cor-passaro);
+            animation: glitchMain 14s infinite;
+            animation-delay: var(--delay, 0s);
+            transform-origin: center;
+            transform-box: fill-box;
+            mix-blend-mode: multiply;
+        }
+
+        .pcb-trace {
+            stroke: var(--cor-circuito);
+            stroke-width: 4;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: bevel; 
+            stroke-dasharray: 1;
+            animation: drawTrace 14s infinite;
+            animation-delay: var(--delay, 0s);
+        }
+
+        .power-state {
+            animation: powerVisibility 14s infinite;
+            animation-delay: var(--delay, 0s);
+        }
+
+        .pcb-pulse {
+            stroke: var(--cor-pulso);
+            stroke-width: 4;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: bevel;
+            stroke-dasharray: 0.05 1.05; 
+            animation: dataPulseFlow 2s linear infinite;
+        }
+
+        .pcb-node-solid { fill: var(--cor-circuito); stroke: none; }
+        .pcb-node-hollow { fill: var(--cor-fundo); stroke: var(--cor-circuito); stroke-width: 4; }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px; 
+            font-weight: 300; 
+            fill: var(--cor-texto);
+            animation: textGlitch 14s infinite;
+            animation-delay: var(--delay, 0s);
+            transform-origin: center;
+        }
+
+        .bg-dot {
+            fill: #E5EBE5;
+            animation: drawTrace 14s infinite;
+            animation-delay: var(--delay, 0s);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <!-- O clarão de luz da explosão -->
+        <div class="explosion-flash"></div>
+
+        <svg viewBox="0 0 800 600" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            
+            <!-- CAMADA 0: PONTOS DE FUNDO (VOANDO DO CENTRO) -->
+            <g class="puzzle-piece" style="--dx: 0px; --dy: 0px; --rot: 0deg; --delay: 0s;">
+                <circle cx="610" cy="300" r="5" class="bg-dot"/>
+                <circle cx="500" cy="80" r="7" class="bg-dot"/>
+                <circle cx="410" cy="180" r="4" class="bg-dot"/>
+                <circle cx="310" cy="140" r="6" class="bg-dot"/>
+                <circle cx="210" cy="120" r="4" class="bg-dot"/>
+                <circle cx="260" cy="240" r="3" class="bg-dot"/>
+                <circle cx="580" cy="220" r="3" class="bg-dot"/>
+            </g>
+
+            <!-- ========================================== -->
+            <!-- CAMADA 1: TRILHAS ELÉTRICAS (Módulos PCB)  -->
+            <!-- ========================================== -->
+            
+            <g class="puzzle-piece" style="--dx: -300px; --dy: 200px; --rot: -45deg; --delay: 0.1s;">
+                <path class="pcb-trace" pathLength="1" d="M 183 425 L 290 425 L 300 435 L 330 435 L 340 425" />
+                <g class="power-state">
+                    <path class="pcb-pulse" pathLength="1" d="M 183 425 L 290 425 L 300 435 L 330 435 L 340 425" />
+                    <circle cx="173" cy="425" r="8" class="pcb-node-hollow" />
+                </g>
+            </g>
+
+            <g class="puzzle-piece" style="--dx: 400px; --dy: 200px; --rot: 45deg; --delay: 0.2s;">
+                <path class="pcb-trace" pathLength="1" d="M 340 425 L 485 425 L 615 425" />
+                <path class="pcb-trace" pathLength="1" d="M 485 425 L 485 440" />
+                <g class="power-state">
+                    <path class="pcb-pulse" pathLength="1" d="M 340 425 L 485 425 L 615 425" />
+                    <circle cx="625" cy="425" r="8" class="pcb-node-hollow" />
+                    <circle cx="485" cy="450" r="8" class="pcb-node-hollow" />
+                </g>
+            </g>
+
+            <g class="puzzle-piece" style="--dx: -400px; --dy: -100px; --rot: 90deg; --delay: 0.3s;">
+                <path class="pcb-trace" pathLength="1" d="M 130 350 L 160 350 L 170 340 L 170 290 L 180 280 L 205 280 L 215 290 L 215 425" />
+                <g class="power-state">
+                    <path class="pcb-pulse" pathLength="1" d="M 130 350 L 160 350 L 170 340 L 170 290 L 180 280 L 205 280 L 215 290 L 215 425" />
+                    <circle cx="130" cy="350" r="6" class="pcb-node-solid" />
+                    <circle cx="215" cy="425" r="4" class="pcb-node-solid" />
+                </g>
+            </g>
+
+            <g class="puzzle-piece" style="--dx: -100px; --dy: -300px; --rot: -135deg; --delay: 0.4s;">
+                <path class="pcb-trace" pathLength="1" d="M 235 380 L 235 345 L 245 335 L 255 345 L 255 380" />
+                <path class="pcb-trace" pathLength="1" d="M 285 425 L 285 150" />
+                <path class="pcb-trace" pathLength="1" d="M 285 190 L 275 180 L 260 180" />
+                <g class="power-state">
+                    <path class="pcb-pulse" pathLength="1" d="M 285 425 L 285 150" />
+                    <circle cx="285" cy="150" r="6" class="pcb-node-solid" />
+                    <circle cx="260" cy="180" r="4" class="pcb-node-solid" />
+                </g>
+            </g>
+
+            <g class="puzzle-piece" style="--dx: 0px; --dy: 300px; --rot: 180deg; --delay: 0.5s;">
+                <path class="pcb-trace" pathLength="1" d="M 315 380 L 315 245 L 325 235 L 335 245 L 335 380" />
+                <path class="pcb-trace" pathLength="1" d="M 365 425 L 365 200" />
+                <path class="pcb-trace" pathLength="1" d="M 365 240 L 375 230 L 390 230" />
+                <path class="pcb-trace" pathLength="1" d="M 395 380 L 395 305 L 405 295 L 415 305 L 415 380" />
+                <g class="power-state">
+                    <path class="pcb-pulse" pathLength="1" d="M 365 425 L 365 200" />
+                    <circle cx="365" cy="200" r="5" class="pcb-node-solid" />
+                    <circle cx="390" cy="230" r="4" class="pcb-node-solid" />
+                </g>
+            </g>
+
+            <g class="puzzle-piece" style="--dx: 300px; --dy: -300px; --rot: 270deg; --delay: 0.6s;">
+                <path class="pcb-trace" pathLength="1" d="M 445 425 L 445 280" />
+                <path class="pcb-trace" pathLength="1" d="M 475 380 L 475 245 L 485 235 L 495 245 L 495 380" />
+                <path class="pcb-trace" pathLength="1" d="M 525 425 L 525 320 L 535 310 L 575 310" />
+                <g class="power-state">
+                    <path class="pcb-pulse" pathLength="1" d="M 445 425 L 445 280" />
+                    <circle cx="445" cy="280" r="5" class="pcb-node-solid" />
+                    <circle cx="575" cy="310" r="6" class="pcb-node-solid" />
+                </g>
+            </g>
+
+            <!-- ========================================== -->
+            <!-- CAMADA 2: ESTRUTURA PRINCIPAL DESMONTADA   -->
+            <!-- ========================================== -->
+            
+            <g class="puzzle-piece" style="--dx: -300px; --dy: -200px; --rot: -90deg; --delay: 0.1s;">
+                <path class="glitch-main" pathLength="1" d="M 170 380 L 220 380" />
+            </g>
+            
+            <g class="puzzle-piece" style="--dx: -150px; --dy: 300px; --rot: 45deg; --delay: 0.2s;">
+                <path class="glitch-main" pathLength="1" d="M 220 380 L 220 310 A 25 25 0 0 1 270 310 L 270 380" />
+            </g>
+            
+            <g class="puzzle-piece" style="--dx: 0px; --dy: -400px; --rot: 180deg; --delay: 0.3s;">
+                <path class="glitch-main" pathLength="1" d="M 270 380 L 300 380" />
+            </g>
+            
+            <g class="puzzle-piece" style="--dx: 300px; --dy: 100px; --rot: -135deg; --delay: 0.4s;">
+                <path class="glitch-main" pathLength="1" d="M 300 380 L 300 180 A 25 25 0 0 1 350 180 L 350 380" />
+            </g>
+            
+            <g class="puzzle-piece" style="--dx: 100px; --dy: -200px; --rot: 90deg; --delay: 0.5s;">
+                <path class="glitch-main" pathLength="1" d="M 350 380 L 380 380" />
+            </g>
+            
+            <g class="puzzle-piece" style="--dx: -200px; --dy: 200px; --rot: -45deg; --delay: 0.6s;">
+                <path class="glitch-main" pathLength="1" d="M 380 380 L 380 250 A 25 25 0 0 1 430 250 L 430 380" />
+            </g>
+            
+            <g class="puzzle-piece" style="--dx: 400px; --dy: -300px; --rot: 270deg; --delay: 0.7s;">
+                <path class="glitch-main" pathLength="1" d="M 430 380 L 460 380" />
+            </g>
+            
+            <g class="puzzle-piece" style="--dx: 200px; --dy: 400px; --rot: 135deg; --delay: 0.8s;">
+                <path class="glitch-main" pathLength="1" d="M 460 380 L 460 180 A 25 25 0 0 1 510 180 L 510 380" />
+            </g>
+            
+            <g class="puzzle-piece" style="--dx: 500px; --dy: 0px; --rot: -180deg; --delay: 0.9s;">
+                <path class="glitch-main" pathLength="1" d="M 510 380 L 590 380" />
+            </g>
+
+
+            <!-- ========================================== -->
+            <!-- CAMADA 3: PÁSSARO DESMONTÁVEL & GLITCH     -->
+            <!-- ========================================== -->
+            
+            <!-- Cauda -->
+            <g class="puzzle-piece" style="--dx: 0px; --dy: -300px; --rot: 360deg; --delay: 1.0s;">
+                <path class="bird-part" d="M 425 258 Q 440 290 475 255 Q 440 265 425 258 Z" opacity="0.6"/>
+                <path class="bird-part" d="M 430 260 Q 440 280 460 260 Q 440 265 430 260 Z" />
+            </g>
+
+            <!-- Asa Esquerda -->
+            <g class="puzzle-piece" style="--dx: -400px; --dy: -200px; --rot: 180deg; --delay: 1.1s;">
+                <path class="bird-part" d="M 440 265 C 380 265 330 200 290 120 C 350 140 400 210 440 235 Z" />
+            </g>
+
+            <!-- Asa Direita -->
+            <g class="puzzle-piece" style="--dx: 400px; --dy: -200px; --rot: -180deg; --delay: 1.2s;">
+                <path class="bird-part" d="M 440 235 C 480 210 540 140 600 120 C 550 200 490 265 440 265 Z" />
+            </g>
+
+            <!-- ========================================== -->
+            <!-- CAMADA 4: TEXTO DA MARCA                   -->
+            <!-- ========================================== -->
+            <g class="puzzle-piece" style="--dx: 0px; --dy: 300px; --rot: 0deg; --delay: 1.4s;">
+                <text x="400" y="495" text-anchor="middle" class="logo-text">
+                    WEB-ENGENHARIA
+                </text>
+            </g>
+
+        </svg>
+    </div>
+
+</body>
+</html>

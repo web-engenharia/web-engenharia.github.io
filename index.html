@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web-Engenharia — Consultoria em integrações e API-first</title>
+    <meta
+      name="description"
+      content="Consultoria B2B em integrações multi-tecnologia: contratos claros, governança na operação e risco técnico reduzido — da descoberta ao go-live."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.web-engenharia.com.br/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com.br/" />
+    <link rel="alternate" hreflang="en" href="https://www.web-engenharia.com.br/en/" />
+    <link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com.br/ja/" />
+    <link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com.br/kok/" />
+    <!-- Atualize a URL base acima e em og:image/twitter:image ao publicar em produção -->
+
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Web-Engenharia — Consultoria em integrações e API-first" />
+    <meta
+      property="og:description"
+      content="Agende uma conversa técnica. Integrações multi-tecnologia com desenho API-first, da descoberta à operação."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.web-engenharia.com.br/" />
+    <meta property="og:site_name" content="Web-Engenharia" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en" />
+    <meta property="og:locale:alternate" content="ja" />
+    <meta property="og:locale:alternate" content="kok" />
+    <meta property="og:image" content="https://www.web-engenharia.com.br/images/web-engenharia.png" />
+    <meta property="og:image:alt" content="Web-Engenharia — Consultoria em integrações e API-first" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Web-Engenharia — Consultoria em integrações e API-first" />
+    <meta
+      name="twitter:description"
+      content="Agende uma conversa técnica. Integrações multi-tecnologia com desenho API-first, da descoberta à operação."
+    />
+    <meta name="twitter:image" content="https://www.web-engenharia.com.br/images/web-engenharia.png" />
+    <meta name="twitter:image:alt" content="Web-Engenharia — Consultoria em integrações e API-first" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: '#062A1B',
+                mid: '#62866D',
+                circuit: '#A5C7A9',
+                pulse: '#E2F2E4',
+              },
+            },
+            fontFamily: {
+              sans: ['Montserrat', 'system-ui', 'sans-serif'],
+              display: ['Montserrat', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/landing.css" />
+  </head>
+  <body class="bg-white font-sans text-brand-dark antialiased">
+    <a href="#inicio" class="skip-link">Ir para o conteúdo</a>
+    <!-- Logo oculta: usada apenas para SEO/crawlers de redes sociais (og:image/twitter:image) -->
+    <img
+      src="images/web-engenharia.png"
+      alt="Web-Engenharia — Consultoria em integrações e API-first"
+      class="seo-logo-hidden"
+      width="1200"
+      height="630"
+      fetchpriority="low"
+    />
+
+    <header
+      class="sticky top-0 z-50 border-b border-brand-circuit/30 bg-white/90 backdrop-blur-md"
+      role="banner"
+    >
+      <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+        <a href="#inicio" class="font-display text-lg font-semibold tracking-tight text-brand-dark">
+          Web-Engenharia
+        </a>
+
+        <nav class="header-nav hidden items-center gap-0.5 lg:flex" aria-label="Principal">
+          <a
+            href="#inicio"
+            class="nav-link rounded-lg px-3 py-2.5 text-sm font-medium text-brand-dark/80 transition-colors hover:bg-brand-pulse/40 hover:text-brand-dark"
+            >Início</a
+          >
+          <a
+            href="#o-que-fazemos"
+            class="nav-link rounded-lg px-3 py-2.5 text-sm font-medium text-brand-dark/80 transition-colors hover:bg-brand-pulse/40 hover:text-brand-dark"
+            >O que fazemos</a
+          >
+          <a
+            href="#cultura"
+            class="nav-link rounded-lg px-3 py-2.5 text-sm font-medium text-brand-dark/80 transition-colors hover:bg-brand-pulse/40 hover:text-brand-dark"
+            >Cultura</a
+          >
+          <!-- Mega menu Serviços -->
+          <div class="header-dropdown group relative" data-dropdown="services">
+            <button
+              type="button"
+              id="services-menu-btn"
+              class="nav-link flex items-center gap-1 rounded-lg px-3 py-2.5 text-sm font-medium text-brand-dark/80 transition-colors hover:bg-brand-pulse/40 hover:text-brand-dark"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-controls="services-menu"
+            >
+              Serviços
+              <svg class="h-4 w-4 text-brand-mid transition-transform group-data-[open=true]:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div
+              id="services-menu"
+              class="header-mega absolute left-1/2 top-full z-50 mt-1 hidden w-[min(90vw,28rem)] -translate-x-1/2 rounded-xl border border-brand-circuit/40 bg-white py-4 shadow-xl"
+              role="menu"
+            >
+              <div class="grid grid-cols-1 gap-6 px-4 sm:grid-cols-2">
+                <div>
+                  <a href="#modelos-contratacao" class="block rounded-lg px-3 py-2 text-sm font-medium text-brand-dark hover:bg-brand-pulse/50" role="menuitem">Modelos de contratação</a>
+                  <a href="#servicos" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Visão geral</a>
+                  <div class="my-2 border-t border-brand-circuit/25"></div>
+                  <a href="#servico-descoberta" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Assessment &amp; arquitetura</a>
+                  <a href="#servico-construcao" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Implementação &amp; APIs</a>
+                  <a href="#servico-construcao" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Modernização &amp; nuvem</a>
+                  <a href="#servico-operacao" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Operação &amp; observabilidade</a>
+                  <a href="#servico-governanca" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Governança &amp; segurança</a>
+                  <div class="my-2 border-t border-brand-circuit/25"></div>
+                  <a href="#projetos-ia" class="block rounded-lg px-3 py-2 text-sm font-medium text-brand-dark hover:bg-brand-pulse/50" role="menuitem">Projetos com IA</a>
+                </div>
+                <div>
+                  <span class="block px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-mid">Gerenciamento de Projetos</span>
+                  <a href="#servico-diagnostico" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Diagnóstico e maturidade</a>
+                  <a href="#servico-pmo" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">PMO e portfólio</a>
+                  <a href="#servico-itsm" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">ITSM e catálogo</a>
+                  <a href="#servico-metodologias" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Metodologias e capital</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Dropdown Mais -->
+          <div class="header-dropdown group relative" data-dropdown="more">
+            <button
+              type="button"
+              id="more-menu-btn"
+              class="nav-link flex items-center gap-1 rounded-lg px-3 py-2.5 text-sm font-medium text-brand-dark/80 transition-colors hover:bg-brand-pulse/40 hover:text-brand-dark"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-controls="more-menu"
+            >
+              Mais
+              <svg class="h-4 w-4 text-brand-mid transition-transform group-data-[open=true]:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div
+              id="more-menu"
+              class="absolute right-0 top-full z-50 mt-1 hidden min-w-[11rem] rounded-xl border border-brand-circuit/40 bg-white py-2 shadow-xl"
+              role="menu"
+            >
+              <a href="#cultura" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Cultura</a>
+              <a href="#stacks" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Stacks</a>
+              <a href="#como-trabalhamos" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Como trabalhamos</a>
+              <a href="#casos" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Casos</a>
+              <a href="#portfolio" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Projetos</a>
+            </div>
+          </div>
+          <nav class="flex items-center gap-1 px-2" aria-label="Seleção de idioma">
+            <span class="px-2 py-1 text-sm font-medium text-brand-dark" aria-current="page">PT</span>
+            <span class="text-brand-circuit/50" aria-hidden="true">|</span>
+            <a href="en/" class="rounded px-2 py-1 text-sm font-medium text-brand-dark/80 transition-colors hover:bg-brand-pulse/40 hover:text-brand-dark" hreflang="en">EN</a>
+            <span class="text-brand-circuit/50" aria-hidden="true">|</span>
+            <a href="ja/" class="rounded px-2 py-1 text-sm font-medium text-brand-dark/80 transition-colors hover:bg-brand-pulse/40 hover:text-brand-dark" hreflang="ja">日本語</a>
+            <span class="text-brand-circuit/50" aria-hidden="true">|</span>
+            <a href="kok/" class="rounded px-2 py-1 text-sm font-medium text-brand-dark/80 transition-colors hover:bg-brand-pulse/40 hover:text-brand-dark" hreflang="kok">Konknni</a>
+          </nav>
+          <a
+            href="#contato"
+            class="nav-link ml-1 rounded-lg bg-brand-dark px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-mid"
+            >Contato</a
+          >
+        </nav>
+
+        <button
+          type="button"
+          id="mobile-menu-btn"
+          class="inline-flex items-center justify-center rounded-lg p-2.5 text-brand-dark lg:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Abrir menu"
+        >
+          <svg
+            class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-brand-circuit/30 bg-white px-4 py-4 lg:hidden"
+        role="dialog"
+        aria-label="Menu mobile"
+      >
+        <div class="flex flex-col gap-1 pb-4">
+          <div id="mobile-lang-select" class="mb-3 pb-3 border-b border-brand-circuit/20" role="group" aria-label="Seleção de idioma">
+            <label for="lang-select-mobile" class="mb-2 block text-xs font-semibold uppercase tracking-wide text-brand-mid">Idioma</label>
+            <select id="lang-select-mobile" class="w-full rounded-lg border border-brand-circuit/50 bg-white px-4 py-3 text-sm font-medium text-brand-dark outline-none focus:border-brand-mid focus:ring-2 focus:ring-brand-mid/30"></select>
+          </div>
+          <a href="#inicio" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Início</a>
+          <a href="#o-que-fazemos" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark"
+            >O que fazemos</a
+          >
+          <a href="#cultura" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Cultura</a>
+          <a href="#modelos-contratacao" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark"
+            >Modelos de contratação</a
+          >
+          <span class="px-3 pt-2 text-xs font-semibold uppercase tracking-wide text-brand-mid">Serviços</span>
+          <a href="#servicos" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90">Visão geral</a>
+          <a href="#servico-descoberta" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
+            >Assessment &amp; arquitetura</a
+          >
+          <a href="#servico-construcao" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
+            >Implementação &amp; APIs</a
+          >
+          <a href="#servico-construcao" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
+            >Modernização &amp; nuvem</a
+          >
+          <a href="#servico-operacao" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
+            >Operação &amp; observabilidade</a
+          >
+          <a href="#servico-governanca" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
+            >Governança &amp; segurança</a
+          >
+          <span class="mt-2 px-3 pl-5 text-xs font-semibold uppercase tracking-wide text-brand-mid"
+            >Gerenciamento de Projetos</span
+          >
+          <a href="#servico-diagnostico" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
+            >Diagnóstico e maturidade</a
+          >
+          <a href="#servico-pmo" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
+            >PMO e portfólio</a
+          >
+          <a href="#servico-itsm" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
+            >ITSM e catálogo</a
+          >
+          <a href="#servico-metodologias" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
+            >Metodologias e capital</a
+          >
+          <a href="#projetos-ia" class="rounded-lg px-3 py-2 pl-5 text-sm font-medium text-brand-dark"
+            >Projetos com IA</a
+          >
+          <a href="#stacks" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Stacks</a>
+          <a href="#como-trabalhamos" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark"
+            >Como trabalhamos</a
+          >
+          <a href="#casos" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Casos</a>
+          <a href="#portfolio" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Projetos</a>
+          <a
+            href="#contato"
+            class="mt-2 rounded-lg bg-brand-dark px-3 py-3 text-center text-sm font-semibold text-white"
+            >Contato</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main id="inicio" class="flex-1 pb-24">
+      <section
+        class="relative overflow-hidden border-b border-brand-circuit/25 bg-gradient-to-b from-brand-pulse/30 to-white"
+        aria-labelledby="hero-heading"
+      >
+        <div class="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-12 lg:py-20">
+          <div>
+            <p class="text-sm font-medium uppercase tracking-widest text-brand-mid">Software &amp; integrações</p>
+            <h1 id="hero-heading" class="mt-3 font-display text-3xl font-bold leading-tight text-brand-dark sm:text-4xl lg:text-[2.5rem]">
+              Menos risco técnico nas integrações — com arquitetura API-first de ponta a ponta
+            </h1>
+            <p class="mt-4 max-w-xl text-lg text-brand-dark/75">
+              Da descoberta ao go-live: integrações resilientes, contratos claros e operação com trilha de auditoria —
+              sem depender de atalhos frágeis ponto a ponto.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#contato"
+                class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-dark px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-mid"
+              >
+                <svg
+                  class="h-5 w-5 shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5a2.25 2.25 0 0 0 2.25-2.25m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5"
+                  />
+                </svg>
+                Agendar conversa
+              </a>
+              <a
+                href="#servicos"
+                class="inline-flex items-center justify-center rounded-xl border-2 border-brand-mid px-5 py-3 text-sm font-semibold text-brand-dark transition hover:bg-brand-pulse/50"
+              >
+                <svg
+                  class="mr-2 h-5 w-5 text-brand-mid"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"
+                  />
+                </svg>
+                Ver serviços
+              </a>
+            </div>
+            <p class="mt-8 text-sm text-brand-dark/55">
+              Atualize a página para ver outra animação da marca.
+            </p>
+          </div>
+          <div
+            id="hero-animation"
+            class="relative mx-auto w-full max-w-lg overflow-hidden rounded-2xl border border-brand-circuit/40 bg-white shadow-lg lg:max-w-none"
+            aria-live="polite"
+          ></div>
+        </div>
+      </section>
+
+      <section class="border-b border-brand-circuit/20 bg-white py-10" aria-labelledby="somos-heading">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-start lg:justify-between">
+            <div class="max-w-2xl space-y-3">
+              <h2 id="somos-heading" class="font-display text-lg font-bold text-brand-dark sm:text-xl">
+                Somos a Web-Engenharia
+              </h2>
+              <p class="text-sm text-brand-dark/70">
+                Como desenvolvedores de software nos esforçamos para entregar não somente código bem escrito, mas código
+                que entrega valor real a cada cliente. Não tenha somente uma boa aplicação web em produção mas também
+                melhore seus processos de software e garantia de qualidade.
+              </p>
+              <p class="text-sm text-brand-dark/70">
+                <span class="font-semibold text-brand-dark">Engenharia aplicada a integrações:</span>
+                contratos versionados, padrões de idempotência e observabilidade desde o primeiro sprint — pronto para
+                ambientes regulados e alta carga.
+              </p>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 pt-2 text-sm text-brand-dark/70">
+                <span><span class="font-semibold text-brand-dark">+10 anos</span> de atuação em software</span>
+                <span><span class="font-semibold text-brand-dark">Time enxuto</span> com experiência em integração</span>
+                <span><span class="font-semibold text-brand-dark">Remoto-first</span> — Brasil</span>
+              </div>
+            </div>
+            <div class="flex w-full flex-wrap gap-6 text-center text-sm sm:w-auto sm:justify-end">
+              <div>
+                <p class="font-display text-2xl font-bold text-brand-dark">API-first</p>
+                <p class="text-brand-dark/60">desenho de contratos</p>
+              </div>
+              <div>
+                <p class="font-display text-2xl font-bold text-brand-dark">4 fases</p>
+                <p class="text-brand-dark/60">do diagnóstico ao suporte</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-b border-brand-circuit/20 bg-brand-pulse/20 py-6" aria-label="Confiança operacional">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-center text-sm text-brand-dark/80">
+            <span class="flex items-center gap-2">
+              <svg class="h-5 w-5 text-brand-mid" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+              </svg>
+              Acesso a ambientes com princípio do menor privilégio; secrets e credenciais sob gestão segura
+            </span>
+            <span class="flex items-center gap-2">
+              <svg class="h-5 w-5 text-brand-mid" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+              SLA de resposta definido em contratos de retainer; trilha de auditoria para integrações com dados sensíveis
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="cultura"
+        class="scroll-mt-24 border-b border-brand-circuit/20 bg-white py-16 sm:scroll-mt-28 sm:py-20"
+        aria-labelledby="cultura-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 id="cultura-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">
+            Cultura, missão e princípios
+          </h2>
+          <div class="mt-10 space-y-10">
+            <div>
+              <h3 class="font-display text-lg font-semibold text-brand-dark">Missão</h3>
+              <p class="mt-2 text-brand-dark/80">
+                Unir sistemas e dados com arquitetura clara, tornando integrações acessíveis, úteis e com menos risco para o negócio.
+              </p>
+            </div>
+            <div>
+              <h3 class="font-display text-lg font-semibold text-brand-dark">Visão</h3>
+              <p class="mt-2 text-brand-dark/80">
+                Um mundo em que integrações resilientes e bem governadas ampliem oportunidade, reduzam risco técnico e sustentem operação contínua.
+              </p>
+            </div>
+            <div>
+              <h3 class="font-display text-lg font-semibold text-brand-dark">Valores</h3>
+              <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
+                <li>Foco no cliente</li>
+                <li>Integridade</li>
+                <li>Profissionalismo</li>
+                <li>Perseverança</li>
+                <li>Inovação responsável</li>
+                <li>Trabalho em equipe</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-display text-lg font-semibold text-brand-dark">Princípios</h3>
+              <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
+                <li>Contratos claros e versionados</li>
+                <li>Menor privilégio e governança</li>
+                <li>Observabilidade desde o primeiro sprint</li>
+                <li>Impacto de longo prazo</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-display text-lg font-semibold text-brand-dark">Cultura</h3>
+              <p class="mt-2 text-brand-dark/80">
+                Remoto-first, engenharia com propósito. Nosso maior produto é gente: valorizamos talento, transparência e crescimento.
+              </p>
+            </div>
+          </div>
+          <p class="mt-12 text-sm text-brand-dark/60">
+            Inspirados em práticas e declarações públicas de empresas como Google, Ericsson e Meta.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="o-que-fazemos"
+        class="scroll-mt-24 border-b border-brand-circuit/20 bg-brand-pulse/15 py-16 sm:scroll-mt-28 sm:py-20"
+        aria-labelledby="o-que-fazemos-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 id="o-que-fazemos-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">
+            O que fazemos
+          </h2>
+          <p class="mt-3 max-w-2xl text-brand-dark/70">
+            Identificamos o melhor modelo para o seu contexto: reforço de time, projeto completo ou capacitação.
+          </p>
+          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <article
+              class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pulse/40 text-brand-mid">
+                <svg
+                  class="h-7 w-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Alocação</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Nós identificamos o melhor time para ajudá-lo a alcançar seus objetivos.
+              </p>
+              <p class="mt-3 text-sm text-brand-dark/70">
+                Pode ser que você possua um time que está sobrecarregado de demandas e consequentemente afetando datas
+                de entrega. A melhor coisa a se fazer é dividir para conquistar. Deixe sua equipe trabalhando em
+                objetivos específicos e nos chame para ajudar em novas features, extensões, manutenção e etc.
+              </p>
+              <p class="mt-4 text-sm font-medium italic text-brand-mid">
+                Ideal para empresas com um time de desenvolvimento estabelecido.
+              </p>
+            </article>
+            <article
+              class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-brand-pulse/20 p-6 shadow-sm"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-brand-mid shadow-sm">
+                <svg
+                  class="h-7 w-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V3.75A2.25 2.25 0 0 0 16.5 1.5h-9a2.25 2.25 0 0 0-2.25 2.25V7.5m19.5 0a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 7.5v9a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 16.5v-9Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Tercerização</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Nosso time fica responsável por todo o desenvolvimento do seu projeto.
+              </p>
+              <p class="mt-3 text-sm text-brand-dark/70">
+                Fazemos uma estimativa de custo e previsão de data de entrega e então trabalhamos na implementação
+                utilizando as melhores práticas ágeis. O escopo é variável e nós frequentemente reavaliamos o que
+                deverá ser construído, assim você terá o software que realmente precisa no final do projeto.
+              </p>
+              <p class="mt-4 text-sm font-medium italic text-brand-mid">
+                Ideal para empresas que não possuem um time de desenvolvimento interno disponível.
+              </p>
+            </article>
+            <article
+              class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm sm:col-span-2 lg:col-span-1"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pulse/40 text-brand-mid">
+                <svg
+                  class="h-7 w-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm6 0a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm6 0a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Treinamentos</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Nós ajudamos a entender melhor o que você precisa para alcançar seus objetivos.
+              </p>
+              <p class="mt-3 text-sm text-brand-dark/70">
+                Trazemos a você um time de profissionais capacitados para ajudá-lo a desenvolver seus projetos. Nós
+                também oferecemos cursos de programação para que você possa se desenvolver em outras linguagens.
+              </p>
+              <p class="mt-4 text-sm font-medium italic text-brand-mid">
+                Ideal para empresas/pessoas que desejam se desenvolver em outras linguagens.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="modelos-contratacao"
+        class="scroll-mt-24 border-b border-brand-circuit/20 bg-white py-16 sm:scroll-mt-28 sm:py-20"
+        aria-labelledby="modelos-contratacao-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 id="modelos-contratacao-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">
+            Modelos de contratação
+          </h2>
+          <p class="mt-3 max-w-2xl text-brand-dark/70">
+            Flexibilidade para o seu contexto: hora técnica, preço fechado, retainer, sucesso compartilhado e casos
+            especiais.
+          </p>
+          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <article
+              class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-brand-pulse/20 p-6 shadow-sm"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pulse/40 text-brand-mid">
+                <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Valor hora (HT)</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Cobrança por hora efetivamente trabalhada. Time & Materials, ideal para escopo variável e sprints
+                exploratórios.
+              </p>
+              <p class="mt-4 text-sm font-medium italic text-brand-mid">
+                Ideal para: projetos com demanda imprevisível ou fases de descoberta.
+              </p>
+            </article>
+            <article
+              class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pulse/40 text-brand-mid">
+                <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25Z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Preço fechado</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Fixed fee com escopo e cronograma definidos. Previsibilidade para cliente e consultor.
+              </p>
+              <p class="mt-4 text-sm font-medium italic text-brand-mid">
+                Ideal para: escopo bem delimitado e baixa volatilidade de requisitos.
+              </p>
+            </article>
+            <article
+              class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-brand-pulse/20 p-6 shadow-sm"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-brand-mid shadow-sm">
+                <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Assinatura (Retainer)</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                PMO as a Service ou consultoria contínua. Disponibilidade recorrente e receita previsível.
+              </p>
+              <p class="mt-4 text-sm font-medium italic text-brand-mid">
+                Ideal para: governança contínua, integrações em evolução ou suporte recorrente.
+              </p>
+            </article>
+            <article
+              class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pulse/40 text-brand-mid">
+                <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Success fee</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Remuneração atrelada a metas. Taxa de sucesso quando objetivos pré-definidos são atingidos.
+              </p>
+              <p class="mt-4 text-sm font-medium italic text-brand-mid">
+                Ideal para: projetos com ROI mensurável e alinhamento ganha-ganha.
+              </p>
+            </article>
+            <article
+              class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-brand-pulse/20 p-6 shadow-sm"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-brand-mid shadow-sm">
+                <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Vesting (startups)</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Participação societária progressiva. Equity com cliff e calendário para parcerias de longo prazo.
+              </p>
+              <p class="mt-4 text-sm font-medium italic text-brand-mid">
+                Ideal para: startups em fase inicial, CTOs e advisors estratégicos.
+              </p>
+            </article>
+            <article
+              class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pulse/40 text-brand-mid">
+                <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Pro-bono</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Trabalho voluntário ou subsidiado para impacto social, causas ESG e capacitação de comunidades.
+              </p>
+              <p class="mt-4 text-sm font-medium italic text-brand-mid">
+                Ideal para: ONGs, iniciativas de impacto e portfólio de causas estratégicas.
+              </p>
+            </article>
+            <article
+              class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-brand-pulse/20 p-6 shadow-sm sm:col-span-2 lg:col-span-1"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-brand-mid shadow-sm">
+                <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Híbrido</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Combinação de modelos: retainer + success fee, valor hora + vesting, conforme maturidade e perfil.
+              </p>
+              <p class="mt-4 text-sm font-medium italic text-brand-mid">
+                Ideal para: flexibilidade comercial e alinhamento de risco entre as partes.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicos" class="scroll-mt-24 py-16 sm:scroll-mt-28 sm:py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">Catálogo de serviços</h2>
+          <p class="mt-3 max-w-2xl text-brand-dark/70">
+            Integrações e arquitetura API-first em quatro pilares, mais consultoria em gerenciamento de projetos e
+            governança de TI — cada bloco traduz capacidade técnica em resultado para o negócio.
+          </p>
+          <h3 class="mt-10 font-display text-lg font-semibold text-brand-dark">Integrações e Arquitetura</h3>
+          <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <article
+              id="servico-descoberta"
+              class="scroll-mt-28 flex flex-col rounded-2xl border border-brand-circuit/35 bg-brand-pulse/20 p-6 shadow-sm"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-brand-mid shadow-sm">
+                <svg
+                  class="h-7 w-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Descoberta &amp; desenho</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Mapa de sistemas e contratos; requisitos não funcionais (latência, idempotência, resiliência); padrões
+                (API gateway, mensageria, CDC). Objetivo: menos retrabalho e surpresas em produção.
+              </p>
+            </article>
+            <article
+              id="servico-construcao"
+              class="scroll-mt-28 flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pulse/40 text-brand-mid">
+                <svg
+                  class="h-7 w-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Construção</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Conectores, APIs REST e eventos, orquestração e iPaaS sob demanda, ETL e streaming. Objetivo: entrega
+                que acompanha a escala do negócio.
+              </p>
+            </article>
+            <article
+              id="servico-operacao"
+              class="scroll-mt-28 flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pulse/40 text-brand-mid">
+                <svg
+                  class="h-7 w-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Operação</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                SLIs/SLOs para integrações, monitoramento, runbooks e gestão de incidentes entre fornecedores e times
+                internos. Tratamos integração como produto — não como script isolado.
+              </p>
+            </article>
+            <article
+              id="servico-governanca"
+              class="scroll-mt-28 flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pulse/40 text-brand-mid">
+                <svg
+                  class="h-7 w-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Governança</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                OAuth/OIDC, segredos, mTLS quando aplicável, documentação viva (OpenAPI, catálogo de eventos) e trilha
+                para auditoria. Segurança e conformidade no desenho, não como remendo.
+              </p>
+            </article>
+          </div>
+          <h3 class="mt-16 font-display text-lg font-semibold text-brand-dark">Gerenciamento de Projetos</h3>
+          <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <article
+              id="servico-diagnostico"
+              class="scroll-mt-28 flex flex-col rounded-2xl border border-brand-circuit/35 bg-brand-pulse/20 p-6 shadow-sm"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-brand-mid shadow-sm">
+                <svg
+                  class="h-7 w-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Diagnóstico e maturidade</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Avaliação de maturidade com OPM3 e modelo ITIL. Auditoria de processos e eficácia (não só conformidade).
+                Entregável: Programa de Melhoria com lacunas identificadas e rota para evolução.
+              </p>
+            </article>
+            <article
+              id="servico-pmo"
+              class="scroll-mt-28 flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pulse/40 text-brand-mid">
+                <svg
+                  class="h-7 w-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V3.75A2.25 2.25 0 0 0 16.5 1.5h-9a2.25 2.25 0 0 0-2.25 2.25V7.5m19.5 0a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 7.5v9a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 16.5v-9Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">PMO e gestão de portfólio</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Implementação de Escritório de Projetos (PMO Lite a Full, ou Agile). Priorização estratégica, EVTE e
+                seleção de iniciativas. Métricas de desempenho, dashboards e PMO as a Service.
+              </p>
+            </article>
+            <article
+              id="servico-itsm"
+              class="scroll-mt-28 flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pulse/40 text-brand-mid">
+                <svg
+                  class="h-7 w-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 0 6h13.5a3 3 0 1 0 0-6m-16.5 3a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3m-19.5 0a4.5 4.5 0 0 1 .9-2.7L5.737 5.1a3.375 3.375 0 0 1 2.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 0 1 .9 2.7m0 0a3 3 0 0 1-3 3m0 3h.008v-.008h-.008v.008Zm0-6h.008v-.008h-.008v.008Zm-3 6h.008v-.008h-.008v.008Zm0-6h.008v-.008h-.008v.008Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">ITSM e catálogo de serviços</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Gestão de incidentes, mudanças, problemas e ativos (CMDB). Implementação de plataformas (ServiceNow,
+                Jira SM, GLPi), portais de autoatendimento e fluxos de aprovação automatizados.
+              </p>
+            </article>
+            <article
+              id="servico-metodologias"
+              class="scroll-mt-28 flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm"
+            >
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pulse/40 text-brand-mid">
+                <svg
+                  class="h-7 w-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Metodologias e projetos de capital</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Waterfall, Scrum, Kanban e modelos híbridos conforme o contexto. EVTE, gestão de CAPEX/OPEX,
+                suprimentos e contratos. Projetos de engenharia e infraestrutura com gestão de riscos industriais.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="projetos-ia"
+        class="scroll-mt-24 border-b border-brand-circuit/20 bg-white py-16 sm:scroll-mt-28 sm:py-20"
+        aria-labelledby="projetos-ia-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 id="projetos-ia-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">Projetos com IA</h2>
+          <p class="mt-3 max-w-2xl text-brand-dark/70">
+            Capacidades em inteligência artificial aplicada: da integração de modelos aos seus sistemas até visão computacional, treinamento sob medida e análise de dados para decisão baseada em evidências.
+          </p>
+          <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-brand-pulse/20 p-6 shadow-sm">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-brand-mid shadow-sm">
+                <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Integrações</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                APIs, eventos e orquestração para conectar modelos de IA a sistemas existentes (ERP, CRM, dados); pipelines e governança de dados na ponta.
+              </p>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pulse/40 text-brand-mid">
+                <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Visão computacional</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Soluções de deteção, classificação e análise de imagem e vídeo; modelos adaptados a casos de uso industriais, qualidade e operações.
+              </p>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pulse/40 text-brand-mid">
+                <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h12a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0018 4.5H6A2.25 2.25 0 003.75 6.75zM18 15v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V15M12 9v6m3-3H9" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Treinamento de Modelos</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Desenho de pipelines de ML (dados, feature store, treino e avaliação); fine-tuning e otimização para cenários específicos do negócio.
+              </p>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-pulse/40 text-brand-mid">
+                <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Ciência e Análise de Dados</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Exploração, limpeza e modelagem de dados; dashboards, relatórios e decisão baseada em evidências; preparação para ML/IA.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="casos" class="scroll-mt-24 border-b border-brand-circuit/20 bg-white py-16 sm:scroll-mt-28 sm:py-20" aria-labelledby="casos-heading">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 id="casos-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">Casos e resultados</h2>
+          <p class="mt-3 max-w-2xl text-brand-dark/70">
+            Projetos de integração em que entregamos mapeamento, arquitetura e implementação — com resultados mensuráveis.
+          </p>
+          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-brand-pulse/10 p-6">
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Fintech / Pagamentos</span>
+              <h3 class="mt-2 font-display font-semibold text-brand-dark">Integração ERP com gateway de pagamentos</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Sistema legado sem API moderna bloqueava a adoção de um novo gateway. Entregamos camada REST com
+                contrato estável, migração gradual e idempotência nas transações.
+              </p>
+              <p class="mt-4 text-sm font-medium text-brand-mid">
+                Go-live em 8 semanas; zero incidentes de duplicidade nos primeiros 30 dias.
+              </p>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-brand-pulse/10 p-6">
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Varejo / E-commerce</span>
+              <h3 class="mt-2 font-display font-semibold text-brand-dark">Orquestração pedidos e estoque multi-canal</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Diversos canais (loja, marketplace, PDV) falhando na sincronização de estoque. Mapeamos fluxos, desenhamos
+                eventos assíncronos e implementamos orquestração com fallback e retry configurável.
+              </p>
+              <p class="mt-4 text-sm font-medium text-brand-mid">
+                Redução de 80% em divergências de inventário após 2 meses em produção.
+              </p>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-brand-pulse/10 p-6 sm:col-span-2 lg:col-span-1">
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">SaaS B2B</span>
+              <h3 class="mt-2 font-display font-semibold text-brand-dark">API-first para parceiros e white-label</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Cliente precisava expor APIs estáveis para integradores e white-label. Assessment de superfícies existentes,
+                documentação OpenAPI e governança de versões.
+              </p>
+              <p class="mt-4 text-sm font-medium text-brand-mid">
+                Lançamento de programa de parceiros em 6 semanas com SLAs definidos.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="portfolio"
+        class="scroll-mt-24 border-b border-brand-circuit/20 bg-brand-pulse/25 py-16 sm:scroll-mt-28 sm:py-20"
+        aria-labelledby="portfolio-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 id="portfolio-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">
+            Projetos de portfólio
+          </h2>
+          <p class="mt-3 max-w-3xl text-brand-dark/70">
+            A Web-Engenharia anuncia oficialmente o início de uma nova fase. Estamos desenvolvendo soluções internas
+            robustas que, após validação em produção, serão lançadas como produtos comerciais por até 2 anos. Após esse
+            ciclo, os projetos serão liberados como Open Source, permitindo que outras empresas também os ofereçam como
+            serviço, com apoio da comunidade.
+          </p>
+          <p class="mt-4 max-w-3xl text-sm font-medium text-brand-dark/80">
+            Todos os projetos seguem os princípios da Open Telecom Platform – engenharia e produto caminhando juntos.
+          </p>
+          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Biblioteca / UI</span>
+              <h3 class="mt-2 font-display font-semibold text-brand-dark">WE-UI</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Biblioteca de componentes HEEx para Elixir, inspirada em Radix UI e ShadCN. Visual unificado, moderno e
+                reutilizável para todos os nossos produtos.
+              </p>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Colaboração interna</span>
+              <h3 class="mt-2 font-display font-semibold text-brand-dark">OCP (Open Collaboration Platform)</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Sistema interno para gestão dos nossos engenheiros de software da Web-Engenharia. Módulos reutilizáveis: autenticação, upload
+                de documentos, gestão de ponto, equipes e projetos.
+              </p>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Fintech</span>
+              <h3 class="mt-2 font-display font-semibold text-brand-dark">Open-Banking-Platform</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Plataforma bancária completa, desde emissão de cartões até processamento de pagamentos. Modelada com base
+                na vivência com 8 bancos tradicionais e 8 bancos digitais brasileiros. Construída com quem entende o
+                mercado bancário por dentro.
+              </p>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">IA interna</span>
+              <h3 class="mt-2 font-display font-semibold text-brand-dark">We-IA</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Inteligência artificial desenvolvida exclusivamente para uso interno da Web-Engenharia. Integrada à nossa
+                plataforma de colaboração. Este projeto nunca será comercializado; nosso diferencial começa de dentro para
+                fora.
+              </p>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Viagens</span>
+              <h3 class="mt-2 font-display font-semibold text-brand-dark">Trips4You</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                Plataforma de controle e gestão de viagens em grupos.
+              </p>
+            </article>
+            <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Varejo / ERP</span>
+              <h3 class="mt-2 font-display font-semibold text-brand-dark">Soluções para Supermercado</h3>
+              <p class="mt-2 flex-1 text-sm text-brand-dark/70">
+                ERP, Mobile Digital Super app (compras, entregas, cartões bancários), PDVs e integrações com máquinas de
+                processamento de pagamentos.
+              </p>
+            </article>
+          </div>
+          <div class="mt-12 rounded-2xl border border-brand-circuit/40 bg-white p-6 shadow-sm sm:p-8">
+            <p class="text-sm text-brand-dark/75">
+              Temos outros projetos internos em andamento. Por ora, não serão divulgados e não há intenção de abri-los ao
+              público. São estratégicos, privados e alinhados com nossos planos de longo prazo.
+            </p>
+            <h3 class="mt-8 font-display text-lg font-semibold text-brand-dark">Nosso maior produto? Gente.</h3>
+            <p class="mt-2 text-sm text-brand-dark/75">
+              A Web-Engenharia é feita por desenvolvedores. Nosso portfólio são nossos próprios talentos — com cuidado
+              com propriedade intelectual, direitos de imagem e valorização profissional de cada cooperado.
+            </p>
+            <div class="gente-carousel mt-10" aria-label="Cooperados da Web-Engenharia">
+              <div class="gente-carousel__track" id="gente-track" role="list"></div>
+              <button
+                type="button"
+                class="gente-carousel__btn gente-carousel__btn--prev"
+                id="gente-prev"
+                aria-label="Ver anterior"
+              >
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="gente-carousel__btn gente-carousel__btn--next"
+                id="gente-next"
+                aria-label="Ver próximo"
+              >
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <p class="mt-10 text-center font-display text-base font-semibold text-brand-dark sm:text-lg">
+            Inovação compartilhada. Engenharia com propósito. Web-Engenharia – porque o futuro não se constrói sozinho.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="como-trabalhamos"
+        class="scroll-mt-24 border-y border-brand-circuit/25 bg-brand-pulse/25 py-16 sm:scroll-mt-28 sm:py-20"
+      >
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">Como trabalhamos</h2>
+          <p class="mt-3 max-w-2xl text-brand-dark/70">
+            Da descoberta à operação, com marcos claros e entregas incrementais.
+          </p>
+          <ol class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <li class="relative rounded-2xl border border-brand-circuit/30 bg-white p-6 pt-10 shadow-sm">
+              <span
+                class="absolute left-6 top-0 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-brand-dark font-display text-sm font-bold text-white"
+                >1</span
+              >
+              <h3 class="font-display font-semibold text-brand-dark">Descoberta</h3>
+              <p class="mt-2 text-sm text-brand-dark/70">
+                Alinhamento de contexto, inventário de sistemas e riscos; definição de critérios de sucesso mensuráveis.
+              </p>
+            </li>
+            <li class="relative rounded-2xl border border-brand-circuit/30 bg-white p-6 pt-10 shadow-sm">
+              <span
+                class="absolute left-6 top-0 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-brand-mid font-display text-sm font-bold text-white"
+                >2</span
+              >
+              <h3 class="font-display font-semibold text-brand-dark">Arquitetura &amp; contratos</h3>
+              <p class="mt-2 text-sm text-brand-dark/70">
+                Desenho API-first, fluxos síncronos vs. eventos, desacoplamento e estratégia de dados.
+              </p>
+            </li>
+            <li class="relative rounded-2xl border border-brand-circuit/30 bg-white p-6 pt-10 shadow-sm">
+              <span
+                class="absolute left-6 top-0 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-brand-dark font-display text-sm font-bold text-white"
+                >3</span
+              >
+              <h3 class="font-display font-semibold text-brand-dark">POC &amp; implementação</h3>
+              <p class="mt-2 text-sm text-brand-dark/70">
+                Prova de conceito quando necessário; entrega incremental com testes e observabilidade desde cedo.
+              </p>
+            </li>
+            <li class="relative rounded-2xl border border-brand-circuit/30 bg-white p-6 pt-10 shadow-sm">
+              <span
+                class="absolute left-6 top-0 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-brand-mid font-display text-sm font-bold text-white"
+                >4</span
+              >
+              <h3 class="font-display font-semibold text-brand-dark">Go-live &amp; suporte</h3>
+              <p class="mt-2 text-sm text-brand-dark/70">
+                Cutover planejado, handover documentado e acordos de operação contínua.
+              </p>
+            </li>
+          </ol>
+          <p class="mt-10 text-center text-sm text-brand-dark/70">
+            Quer ver essa jornada no seu contexto?
+            <a
+              href="#contato"
+              class="font-semibold text-brand-mid underline-offset-2 hover:text-brand-dark hover:underline"
+              >Agende uma conversa</a
+            >.
+          </p>
+        </div>
+      </section>
+
+      <section id="stacks" class="scroll-mt-24 py-16 sm:scroll-mt-28 sm:py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">Stacks &amp; ecossistemas</h2>
+          <p class="mt-3 max-w-2xl text-brand-dark/70">
+            Atuamos onde seus dados e processos já vivem: nuvem, ERP, pagamentos e canais digitais. Logotipos de
+            terceiros só com permissão e conforme guideline de cada marca.
+          </p>
+          <p class="mt-4 max-w-2xl text-sm text-brand-dark/70">
+            Integramos via APIs expostas, webhooks, filas e fluxos batch quando o domínio exige — sempre com contratos
+            versionados e visibilidade em produção.
+          </p>
+          <p class="mt-3 max-w-2xl text-sm text-brand-dark/70">
+            Modernização e convivência com legado fazem parte do escopo típico. Referências a Open Finance ou arranjos
+            regulados são tratadas como camada técnica de integração, sem substituir assessoria jurídica do cliente.
+          </p>
+          <ul class="mt-10 flex flex-wrap gap-3">
+            <li
+              class="rounded-full border border-brand-circuit/40 bg-brand-pulse/30 px-4 py-2 text-sm font-medium text-brand-dark"
+            >
+              Cloud (AWS, GCP, Azure)
+            </li>
+            <li
+              class="rounded-full border border-brand-circuit/40 bg-brand-pulse/30 px-4 py-2 text-sm font-medium text-brand-dark"
+            >
+              ERP &amp; backoffice
+            </li>
+            <li
+              class="rounded-full border border-brand-circuit/40 bg-brand-pulse/30 px-4 py-2 text-sm font-medium text-brand-dark"
+            >
+              APIs &amp; mensageria
+            </li>
+            <li
+              class="rounded-full border border-brand-circuit/40 bg-brand-pulse/30 px-4 py-2 text-sm font-medium text-brand-dark"
+            >
+              Pagamentos &amp; Open Finance (técnico)
+            </li>
+            <li
+              class="rounded-full border border-brand-circuit/40 bg-brand-pulse/30 px-4 py-2 text-sm font-medium text-brand-dark"
+            >
+              Observabilidade &amp; segurança
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="border-t border-brand-circuit/25 bg-white py-16 sm:py-20" aria-labelledby="faq-heading">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6">
+          <h2 id="faq-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">Perguntas frequentes</h2>
+          <div class="mt-8 divide-y divide-brand-circuit/30 rounded-2xl border border-brand-circuit/30 bg-brand-pulse/15">
+            <div class="px-4 py-1">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between gap-4 py-4 text-left font-medium text-brand-dark"
+                data-faq-toggle
+                aria-expanded="false"
+                aria-controls="faq-panel-1"
+                id="faq-btn-1"
+              >
+                Vocês atendem integrações com dados pessoais (LGPD)?
+                <svg
+                  class="h-5 w-5 shrink-0 text-brand-mid"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </button>
+              <div id="faq-panel-1" class="hidden pb-4 text-sm text-brand-dark/75" role="region" aria-labelledby="faq-btn-1">
+                Sim. Trabalhamos com minimização de dados, contratos de processamento quando aplicável, trilhas de
+                auditoria e controles de acesso — sempre alinhados ao seu time jurídico e DPO.
+              </div>
+            </div>
+            <div class="px-4 py-1">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between gap-4 py-4 text-left font-medium text-brand-dark"
+                data-faq-toggle
+                aria-expanded="false"
+                aria-controls="faq-panel-2"
+                id="faq-btn-2"
+              >
+                Qual o prazo típico de um projeto de integração?
+                <svg
+                  class="h-5 w-5 shrink-0 text-brand-mid"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </button>
+              <div id="faq-panel-2" class="hidden pb-4 text-sm text-brand-dark/75" role="region" aria-labelledby="faq-btn-2">
+                Depende do escopo, maturidade das APIs legadas e necessidade de POC. Após a descoberta entregamos um
+                plano com marcos — de semanas para MVPs focados a trimestres para programas maiores.
+              </div>
+            </div>
+            <div class="px-4 py-1">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between gap-4 py-4 text-left font-medium text-brand-dark"
+                data-faq-toggle
+                aria-expanded="false"
+                aria-controls="faq-panel-3"
+                id="faq-btn-3"
+              >
+                Vocês só integram ou também desenvolvem produto?
+                <svg
+                  class="h-5 w-5 shrink-0 text-brand-mid"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </button>
+              <div id="faq-panel-3" class="hidden pb-4 text-sm text-brand-dark/75" role="region" aria-labelledby="faq-btn-3">
+                Ambos: camadas de integração, portais BFF, automação e evolução de sistemas existentes — sempre com foco
+                em contratos estáveis e operação sustentável.
+              </div>
+            </div>
+            <div class="px-4 py-1">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between gap-4 py-4 text-left font-medium text-brand-dark"
+                data-faq-toggle
+                aria-expanded="false"
+                aria-controls="faq-panel-4"
+                id="faq-btn-4"
+              >
+                Quem costuma ser o ponto focal do lado do cliente?
+                <svg
+                  class="h-5 w-5 shrink-0 text-brand-mid"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </button>
+              <div id="faq-panel-4" class="hidden pb-4 text-sm text-brand-dark/75" role="region" aria-labelledby="faq-btn-4">
+                Em geral TI ou arquitetura patrocina, com produto próximo às regras de negócio. Quando o go-live depende
+                de fornecedores, alinhamos rituais e responsabilidades para o cutover não ficar refém de um único elo.
+              </div>
+            </div>
+            <div class="px-4 py-1">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between gap-4 py-4 text-left font-medium text-brand-dark"
+                data-faq-toggle
+                aria-expanded="false"
+                aria-controls="faq-panel-5"
+                id="faq-btn-5"
+              >
+                E sistemas legados sem API moderna?
+                <svg
+                  class="h-5 w-5 shrink-0 text-brand-mid"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </button>
+              <div id="faq-panel-5" class="hidden pb-4 text-sm text-brand-dark/75" role="region" aria-labelledby="faq-btn-5">
+                Mapeamos superfícies disponíveis — arquivos, bancos, filas, expedições agendadas ou automação de UI quando
+                inevitável — e desenhamos camadas de integração seguras. Quando fizer sentido, estrangulamento gradual em
+                favor de contratos mais estáveis.
+              </div>
+            </div>
+            <div class="px-4 py-1">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between gap-4 py-4 text-left font-medium text-brand-dark"
+                data-faq-toggle
+                aria-expanded="false"
+                aria-controls="faq-panel-6"
+                id="faq-btn-6"
+              >
+                Vocês atuam remoto ou presencial?
+                <svg
+                  class="h-5 w-5 shrink-0 text-brand-mid"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </button>
+              <div id="faq-panel-6" class="hidden pb-4 text-sm text-brand-dark/75" role="region" aria-labelledby="faq-btn-6">
+                Predominantemente remoto, com cerimônias síncronas em horário combinado. Deslocamentos e workshops
+                presenciais entram sob demanda e alinhamento de escopo.
+              </div>
+            </div>
+            <div class="px-4 py-1">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between gap-4 py-4 text-left font-medium text-brand-dark"
+                data-faq-toggle
+                aria-expanded="false"
+                aria-controls="faq-panel-7"
+                id="faq-btn-7"
+              >
+                Qual o modelo comercial?
+                <svg
+                  class="h-5 w-5 shrink-0 text-brand-mid"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </button>
+              <div id="faq-panel-7" class="hidden pb-4 text-sm text-brand-dark/75" role="region" aria-labelledby="faq-btn-7">
+                Projeto por fases (descoberta, construção, operação), retainer para evolução contínua ou combinação dos
+                dois. A descoberta inicial viabiliza estimativa e plano de marcos antes de compromissos maiores.
+                <a href="#modelos-contratacao" class="mt-2 inline-block font-medium text-brand-mid underline hover:text-brand-dark"
+                  >Conheça nossos modelos de contratação</a
+                >.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contato"
+        class="scroll-mt-24 border-t border-brand-circuit/30 bg-gradient-to-b from-brand-pulse/35 to-white py-16 sm:scroll-mt-28 sm:py-24"
+        aria-labelledby="contato-heading"
+      >
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="grid gap-12 lg:grid-cols-2 lg:gap-16">
+            <div>
+              <h2 id="contato-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">
+                Agendar conversa técnica
+              </h2>
+              <p class="mt-3 text-brand-dark/75">
+                Conte em poucas linhas o contexto (sistemas envolvidos, urgência, restrições). Retornamos com próximos
+                passos e, se fizer sentido, uma chamada de alinhamento.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-lg sm:p-8">
+              <form id="contact-form" class="space-y-4" novalidate>
+                <div id="name-wrap">
+                  <label for="name" class="block text-sm font-medium text-brand-dark">Nome <span class="text-red-600">*</span></label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    minlength="2"
+                    autocomplete="name"
+                    placeholder="Seu nome completo"
+                    class="mt-1 w-full rounded-xl border border-brand-circuit/50 px-4 py-2.5 text-brand-dark outline-none ring-brand-mid focus:border-brand-mid focus:ring-2"
+                  />
+                  <span class="contact-field-error mt-1 block text-sm text-red-600" hidden role="alert"></span>
+                </div>
+                <div id="email-wrap">
+                  <label for="email" class="block text-sm font-medium text-brand-dark">E-mail <span class="text-red-600">*</span></label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    autocomplete="email"
+                    placeholder="seu@email.com"
+                    class="mt-1 w-full rounded-xl border border-brand-circuit/50 px-4 py-2.5 text-brand-dark outline-none ring-brand-mid focus:border-brand-mid focus:ring-2"
+                  />
+                  <span class="contact-field-error mt-1 block text-sm text-red-600" hidden role="alert"></span>
+                </div>
+                <div id="company-wrap">
+                  <label for="company" class="block text-sm font-medium text-brand-dark"
+                    >Empresa <span class="font-normal text-brand-dark/50">(opcional)</span></label
+                  >
+                  <input
+                    id="company"
+                    name="company"
+                    type="text"
+                    autocomplete="organization"
+                    placeholder="Sua empresa"
+                    class="mt-1 w-full rounded-xl border border-brand-circuit/50 px-4 py-2.5 text-brand-dark outline-none ring-brand-mid focus:border-brand-mid focus:ring-2"
+                  />
+                  <span class="contact-field-error mt-1 block text-sm text-red-600" hidden role="alert"></span>
+                </div>
+                <div id="message-wrap">
+                  <label for="message" class="block text-sm font-medium text-brand-dark">Mensagem <span class="text-red-600">*</span></label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required
+                    minlength="10"
+                    placeholder="Descreva seu projeto, sistemas envolvidos, urgência..."
+                    class="mt-1 w-full rounded-xl border border-brand-circuit/50 px-4 py-2.5 text-brand-dark outline-none ring-brand-mid focus:border-brand-mid focus:ring-2"
+                  ></textarea>
+                  <span class="contact-field-error mt-1 block text-sm text-red-600" hidden role="alert"></span>
+                </div>
+                <button
+                  type="submit"
+                  class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-dark py-3 text-sm font-semibold text-white hover:bg-brand-mid sm:w-auto sm:px-8"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                  Enviar por WhatsApp
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-flutuante border-t border-brand-circuit/30 bg-brand-dark/95 text-brand-pulse/90 backdrop-blur-sm" role="contentinfo">
+      <div class="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-6">
+        <p class="font-display text-xs font-semibold tracking-wide text-white">Web-Engenharia</p>
+        <nav class="flex flex-wrap gap-x-4 gap-y-1 text-xs" aria-label="Rodapé">
+          <a href="privacidade.html" class="hover:text-white">Privacidade</a>
+          <a href="termos.html" class="hover:text-white">Termos</a>
+          <a href="#contato" class="hover:text-white">Contato</a>
+          <a href="mailto:matheuscamarques@gmail.com" class="hover:text-white">Email</a>
+        </nav>
+      </div>
+      <p class="mx-auto max-w-6xl border-t border-brand-circuit/20 px-4 py-2 text-[11px] leading-snug text-brand-circuit/80 sm:px-6">
+        © <span id="year"></span> Web-Engenharia. Consulte privacidade e termos nos links acima; revise com assessoria jurídica antes de publicar.
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="js/desenvolvedores.js"></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

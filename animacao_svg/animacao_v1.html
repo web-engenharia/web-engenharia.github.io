@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR" style="
+    overflow: hidden;
+">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Animada - Web-Engenharia</title>
+    <!-- Importando fonte semelhante à da imagem para o texto (agora com pesos finos) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cor-base: #062A1B;      /* Verde escuro intenso */
+            --cor-circuito: #A5C7A9;  /* Verde claro (trilhas elétricas) */
+            --cor-pulso: #E2F2E4;     /* Verde super brilhante para o fluxo de dados */
+            --cor-passaro: #62866D;   /* Verde médio (símbolo) */
+            --cor-fundo: #ffffff;
+            --cor-texto: #000000;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--cor-fundo);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .logo-container {
+            width: 90%;
+            max-width: 800px;
+            aspect-ratio: 4 / 3;
+        }
+
+        /* --- Animações --- */
+
+        /* Desenho da estrutura principal e trilhas (Baseado em pathLength="1") */
+        @keyframes drawPath {
+            0% { stroke-dashoffset: 1; opacity: 1; }
+            100% { stroke-dashoffset: 0; opacity: 1; }
+        }
+
+        /* Fluxo de energia deslizando pelas trilhas */
+        @keyframes dataPulse {
+            0% { stroke-dashoffset: 0; opacity: 0; }
+            10% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { stroke-dashoffset: -1.05; opacity: 0; }
+        }
+
+        /* Efeito 3D do pássaro voando em direção à tela */
+        @keyframes birdSwoop {
+            0% {
+                transform: translate(0px, -500px) scale(0);
+                opacity: 0;
+            }
+            40% {
+                /* Cresce exageradamente dando o efeito de sair da tela para frente */
+                transform: translate(0px, 50px) scale(3.5);
+                opacity: 1;
+                filter: drop-shadow(10px 20px 15px rgba(0,0,0,0.5));
+            }
+            75% {
+                /* Recuo elástico */
+                transform: translate(0px, -15px) scale(0.9);
+                filter: drop-shadow(2px 5px 5px rgba(0,0,0,0.1));
+            }
+            100% {
+                /* Pousa no local fixo */
+                transform: translate(0px, 0px) scale(1);
+                opacity: 1;
+                filter: drop-shadow(0px 0px 0px transparent);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(0px, -8px) scale(1); }
+        }
+
+        /* Pulso de brilho para os nós do circuito */
+        @keyframes pulseNode {
+            0% { transform: scale(0.9); opacity: 0.8; filter: drop-shadow(0 0 0px transparent); }
+            50% { transform: scale(1.1); opacity: 1; filter: drop-shadow(0 0 4px var(--cor-pulso)); fill: var(--cor-pulso); } 
+            100% { transform: scale(0.9); opacity: 0.8; filter: drop-shadow(0 0 0px transparent); }
+        }
+
+        /* --- Classes SVG --- */
+        
+        .main-path {
+            stroke-dasharray: 1;
+            stroke-dashoffset: 1;
+            opacity: 0;
+            animation: drawPath 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        /* O Caminho base de cobre do PCB (agora com cantos biselados) */
+        .pcb-trace {
+            stroke: var(--cor-circuito);
+            stroke-width: 4;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: bevel; /* Ajuda a dar o aspeto técnico de hardware */
+            stroke-dasharray: 1;
+            stroke-dashoffset: 1;
+            opacity: 0; 
+            animation: drawPath 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        /* O feixe de luz elétrico que corre pela trilha */
+        .pcb-pulse {
+            stroke: var(--cor-pulso);
+            stroke-width: 4;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: bevel;
+            stroke-dasharray: 0.05 1.05; 
+            stroke-dashoffset: 0;
+            opacity: 0;
+            filter: drop-shadow(0 0 3px var(--cor-circuito));
+            animation: dataPulse 2.5s linear infinite;
+        }
+
+        /* Nós preenchidos (Pontos de Solda) */
+        .pcb-node-solid {
+            fill: var(--cor-circuito);
+            stroke: none;
+            opacity: 0;
+            transform-origin: center;
+            animation: fadeIn 0.5s ease-out forwards, pulseNode 3s infinite;
+        }
+
+        /* Nós vazados (Vias de placa) */
+        .pcb-node-hollow {
+            fill: var(--cor-fundo);
+            stroke: var(--cor-circuito);
+            stroke-width: 4;
+            opacity: 0;
+            transform-origin: center;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .bird-group {
+            opacity: 0;
+            transform-origin: 445px 200px; /* Eixo central exato do pássaro */
+            animation: 
+                birdSwoop 3.5s cubic-bezier(0.25, 1, 0.5, 1) 1.5s forwards,
+                float 4s ease-in-out 5.0s infinite forwards;
+        }
+
+        .logo-text {
+            opacity: 0;
+            animation: fadeIn 1.2s ease-out 3.5s forwards;
+        }
+
+        /* Pontos cinzas desfocados ao fundo */
+        .bg-dot {
+            fill: #E5EBE5;
+            opacity: 0;
+            animation: fadeIn 2s ease-out 0.5s forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <svg viewBox="0 0 800 600" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            
+            <!-- CAMADA 0: PONTOS DE FUNDO -->
+            <g class="bg-dot">
+                <circle cx="610" cy="300" r="5" />
+                <circle cx="500" cy="80" r="7" />
+                <circle cx="410" cy="180" r="4" />
+                <circle cx="310" cy="140" r="6" />
+                <circle cx="210" cy="120" r="4" />
+                <circle cx="260" cy="240" r="3" />
+                <circle cx="580" cy="220" r="3" />
+            </g>
+
+            <!-- ========================================== -->
+            <!-- CAMADA 1: TRILHAS ELÉTRICAS E PULSOS       -->
+            <!-- ========================================== -->
+            
+            <!-- Trilha 1: Base Inferior (Mestre) -->
+            <g>
+                <path class="pcb-trace" style="animation-delay: 0.2s;" pathLength="1" d="M 183 425 L 290 425 L 300 435 L 330 435 L 340 425 L 485 425 L 615 425" />
+                <path class="pcb-pulse" style="animation-delay: 3.0s;" pathLength="1" d="M 183 425 L 290 425 L 300 435 L 330 435 L 340 425 L 485 425 L 615 425" />
+                <circle cx="173" cy="425" r="8" class="pcb-node-hollow" style="animation-delay: 1.5s;"/>
+                <circle cx="625" cy="425" r="8" class="pcb-node-hollow" style="animation-delay: 1.6s;"/>
+            </g>
+
+            <!-- Derivação Base -->
+            <g>
+                <path class="pcb-trace" style="animation-delay: 0.4s;" pathLength="1" d="M 485 425 L 485 440" />
+                <path class="pcb-pulse" style="animation-delay: 3.2s;" pathLength="1" d="M 485 425 L 485 440" />
+                <circle cx="485" cy="450" r="8" class="pcb-node-hollow" style="animation-delay: 1.6s;"/>
+            </g>
+
+            <!-- Trilha 2: Zig-Zag Lado Esquerdo (Agora desce até y=425 para conectar) -->
+            <g>
+                <path class="pcb-trace" style="animation-delay: 0.5s;" pathLength="1" d="M 130 350 L 160 350 L 170 340 L 170 290 L 180 280 L 205 280 L 215 290 L 215 425" />
+                <path class="pcb-pulse" style="animation-delay: 3.3s;" pathLength="1" d="M 130 350 L 160 350 L 170 340 L 170 290 L 180 280 L 205 280 L 215 290 L 215 425" />
+                <circle cx="130" cy="350" r="6" class="pcb-node-solid" style="animation-delay: 1.7s;"/>
+                <circle cx="215" cy="425" r="4" class="pcb-node-solid" style="animation-delay: 1.8s;"/> <!-- Ponto de conexão na base -->
+            </g>
+
+            <!-- Trilha 3: Loop 1 -->
+            <g>
+                <path class="pcb-trace" style="animation-delay: 0.6s;" pathLength="1" d="M 235 380 L 235 345 L 245 335 L 255 345 L 255 380" />
+                <path class="pcb-pulse" style="animation-delay: 3.5s;" pathLength="1" d="M 235 380 L 235 345 L 245 335 L 255 345 L 255 380" />
+            </g>
+
+            <!-- Trilha 4: Antena Esquerda Alta (Agora desce até y=425 para conectar) -->
+            <g>
+                <!-- Haste principal estendida -->
+                <path class="pcb-trace" style="animation-delay: 0.7s;" pathLength="1" d="M 285 425 L 285 150" />
+                <path class="pcb-pulse" style="animation-delay: 3.7s;" pathLength="1" d="M 285 425 L 285 150" />
+                <circle cx="285" cy="150" r="6" class="pcb-node-solid" style="animation-delay: 1.8s;"/>
+                <circle cx="285" cy="425" r="4" class="pcb-node-solid" style="animation-delay: 1.9s;"/> <!-- Ponto de conexão na base -->
+                
+                <!-- Ramificação (Fork) -->
+                <path class="pcb-trace" style="animation-delay: 0.9s;" pathLength="1" d="M 285 190 L 275 180 L 260 180" />
+                <path class="pcb-pulse" style="animation-delay: 3.9s;" pathLength="1" d="M 285 190 L 275 180 L 260 180" />
+                <circle cx="260" cy="180" r="4" class="pcb-node-solid" style="animation-delay: 1.9s;"/>
+            </g>
+
+            <!-- Trilha 5: Loop 2 -->
+            <g>
+                <path class="pcb-trace" style="animation-delay: 0.8s;" pathLength="1" d="M 315 380 L 315 245 L 325 235 L 335 245 L 335 380" />
+                <path class="pcb-pulse" style="animation-delay: 3.9s;" pathLength="1" d="M 315 380 L 315 245 L 325 235 L 335 245 L 335 380" />
+            </g>
+
+            <!-- Trilha 6: Antena Central (Agora desce até y=425 para conectar) -->
+            <g>
+                <path class="pcb-trace" style="animation-delay: 0.9s;" pathLength="1" d="M 365 425 L 365 200" />
+                <path class="pcb-pulse" style="animation-delay: 4.1s;" pathLength="1" d="M 365 425 L 365 200" />
+                <circle cx="365" cy="200" r="5" class="pcb-node-solid" style="animation-delay: 1.9s;"/>
+                <circle cx="365" cy="425" r="4" class="pcb-node-solid" style="animation-delay: 2.0s;"/> <!-- Ponto de conexão na base -->
+
+                <!-- Ramificação direita -->
+                <path class="pcb-trace" style="animation-delay: 1.0s;" pathLength="1" d="M 365 240 L 375 230 L 390 230" />
+                <path class="pcb-pulse" style="animation-delay: 4.2s;" pathLength="1" d="M 365 240 L 375 230 L 390 230" />
+                <circle cx="390" cy="230" r="4" class="pcb-node-solid" style="animation-delay: 2.0s;"/>
+            </g>
+
+            <!-- Trilha 7: Loop 3 -->
+            <g>
+                <path class="pcb-trace" style="animation-delay: 1.0s;" pathLength="1" d="M 395 380 L 395 305 L 405 295 L 415 305 L 415 380" />
+                <path class="pcb-pulse" style="animation-delay: 4.3s;" pathLength="1" d="M 395 380 L 395 305 L 405 295 L 415 305 L 415 380" />
+            </g>
+
+            <!-- Trilha 8: Antena Média (Agora desce até y=425 para conectar) -->
+            <g>
+                <path class="pcb-trace" style="animation-delay: 1.1s;" pathLength="1" d="M 445 425 L 445 280" />
+                <path class="pcb-pulse" style="animation-delay: 4.5s;" pathLength="1" d="M 445 425 L 445 280" />
+                <circle cx="445" cy="280" r="5" class="pcb-node-solid" style="animation-delay: 2.0s;"/>
+                <circle cx="445" cy="425" r="4" class="pcb-node-solid" style="animation-delay: 2.1s;"/> <!-- Ponto de conexão na base -->
+            </g>
+
+            <!-- Trilha 9: Loop 4 -->
+            <g>
+                <path class="pcb-trace" style="animation-delay: 1.2s;" pathLength="1" d="M 475 380 L 475 245 L 485 235 L 495 245 L 495 380" />
+                <path class="pcb-pulse" style="animation-delay: 4.7s;" pathLength="1" d="M 475 380 L 475 245 L 485 235 L 495 245 L 495 380" />
+            </g>
+
+            <!-- Trilha 10: Curva Lado Direito (Agora desce até y=425 para conectar) -->
+            <g>
+                <path class="pcb-trace" style="animation-delay: 1.3s;" pathLength="1" d="M 525 425 L 525 320 L 535 310 L 575 310" />
+                <path class="pcb-pulse" style="animation-delay: 4.9s;" pathLength="1" d="M 525 425 L 525 320 L 535 310 L 575 310" />
+                <circle cx="575" cy="310" r="6" class="pcb-node-solid" style="animation-delay: 2.1s;"/>
+                <circle cx="525" cy="425" r="4" class="pcb-node-solid" style="animation-delay: 2.2s;"/> <!-- Ponto de conexão na base -->
+            </g>
+
+
+            <!-- ========================================== -->
+            <!-- CAMADA 2: ESTRUTURA PRINCIPAL (Verde Escuro) -->
+            <!-- ========================================== -->
+            <path class="main-path"
+                  pathLength="1"
+                  d="M 170 380 
+                     L 220 380 L 220 310 A 25 25 0 0 1 270 310 L 270 380 
+                     L 300 380 L 300 180 A 25 25 0 0 1 350 180 L 350 380 
+                     L 380 380 L 380 250 A 25 25 0 0 1 430 250 L 430 380 
+                     L 460 380 L 460 180 A 25 25 0 0 1 510 180 L 510 380 
+                     L 590 380"
+                  fill="none" 
+                  stroke="var(--cor-base)" 
+                  stroke-width="18"
+                  stroke-linecap="round" 
+                  stroke-linejoin="round" />
+
+
+            <!-- ========================================== -->
+            <!-- CAMADA 3: SÍMBOLO SUPERIOR (Pássaro/Folha) -->
+            <!-- ========================================== -->
+            <g class="bird-group">
+                <path d="M 440 265 
+                         C 380 265 330 200 290 120 
+                         C 350 140 400 210 440 235 
+                         C 480 210 540 140 600 120 
+                         C 550 200 490 265 440 265 Z"
+                      fill="var(--cor-passaro)" />
+                      
+                <path d="M 420 258 Q 440 285 485 255 Q 440 265 420 258 Z"
+                      fill="var(--cor-passaro)" />
+            </g>
+
+
+            <!-- ========================================== -->
+            <!-- CAMADA 4: TEXTO DA MARCA                   -->
+            <!-- ========================================== -->
+            <!-- Fonte mais fina (weight 300), centralizada no eixo X 400 e bem espaçada -->
+            <text x="400" y="495" text-anchor="middle" class="logo-text"
+                  font-family="'Montserrat', sans-serif"
+                  font-size="28" 
+                  font-weight="300" 
+                  letter-spacing="18" 
+                  fill="var(--cor-texto)">
+                WEB-ENGENHARIA
+            </text>
+
+        </svg>
+    </div>
+
+</body>
+</html>

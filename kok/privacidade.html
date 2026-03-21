@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="kok">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy policy — Web-Engenharia</title>
+    <meta
+      name="description"
+      content="Minimal privacy policy of Web-Engenharia for the static site and contact form."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: '#062A1B',
+                mid: '#62866D',
+                circuit: '#A5C7A9',
+                pulse: '#E2F2E4',
+              },
+            },
+            fontFamily: {
+              sans: ['Montserrat', 'system-ui', 'sans-serif'],
+              display: ['Montserrat', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../css/landing.css" />
+  </head>
+  <body class="bg-white font-sans text-brand-dark antialiased">
+    <header class="border-b border-brand-circuit/30 bg-white/90 py-4" role="banner">
+      <div class="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-2 px-4 sm:px-6">
+        <a href="index.html" class="font-display text-lg font-semibold text-brand-dark">Web-Engenharia</a>
+        <div class="flex items-center gap-2">
+          <nav class="flex items-center gap-1 text-sm" aria-label="Bhaxea nivadd">
+            <a href="../privacidade.html" class="rounded px-2 py-1 text-brand-dark/80 hover:bg-brand-pulse/40 hover:text-brand-dark" hreflang="pt-BR">PT</a>
+            <span class="text-brand-circuit/50">|</span>
+            <a href="../en/privacidade.html" class="rounded px-2 py-1 text-brand-dark/80 hover:bg-brand-pulse/40 hover:text-brand-dark" hreflang="en">EN</a>
+            <span class="text-brand-circuit/50">|</span>
+            <a href="../ja/privacidade.html" class="rounded px-2 py-1 text-brand-dark/80 hover:bg-brand-pulse/40 hover:text-brand-dark" hreflang="ja">日本語</a>
+            <span class="text-brand-circuit/50">|</span>
+            <span class="px-2 py-1 font-medium text-brand-dark" aria-current="page">Konknni</span>
+          </nav>
+          <a href="index.html" class="text-sm font-medium text-brand-mid hover:text-brand-dark">Gharant porto</a>
+        </div>
+      </div>
+    </header>
+    <main class="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+      <h1 class="font-display text-3xl font-bold text-brand-dark">Privacy policy</h1>
+      <p class="mt-2 text-sm text-brand-dark/60">Minimal version for static site. Review with legal counsel before production.</p>
+      <div class="prose-custom mt-8 space-y-4 text-sm leading-relaxed text-brand-dark/80">
+        <p>
+          This page describes, in general terms, the processing of personal data associated with the use of the
+          Web-Engenharia website and the sending of messages through the contact form (visitor forwarding via WhatsApp).
+        </p>
+        <h2 class="font-display text-lg font-semibold text-brand-dark">Data collected</h2>
+        <p>
+          The contact form requests name, email, optionally company and message. This data is sent only when the
+          visitor confirms sending, opening WhatsApp with the filled message; Web-Engenharia does not store this
+          information on its own server in this static version of the site.
+        </p>
+        <h2 class="font-display text-lg font-semibold text-brand-dark">Purpose</h2>
+        <p>
+          To respond to contact requests, qualify business demands, and maintain communication related to the subject
+          of the message.
+        </p>
+        <h2 class="font-display text-lg font-semibold text-brand-dark">Legal basis</h2>
+        <p>
+          Execution of pre-contractual measures at the data subject's request and legitimate interest in responding
+          to requests, as applicable — confirm with your organization's DPO or legal advisor.
+        </p>
+        <h2 class="font-display text-lg font-semibold text-brand-dark">Data subject rights</h2>
+        <p>
+          Under GDPR/LGPD, you may request confirmation of processing, access, correction, anonymization, deletion,
+          or information about sharing. Send requests to
+          <a href="mailto:matheuscamarques@gmail.com" class="text-brand-mid underline hover:text-brand-dark">matheuscamarques@gmail.com</a>.
+        </p>
+        <h2 class="font-display text-lg font-semibold text-brand-dark">Cookies and third parties</h2>
+        <p>
+          This landing may load fonts and scripts from CDNs (e.g., Google Fonts, Tailwind). Consult these vendors'
+          policies. We do not use our own analytics cookies in this minimal version, except for future inclusion
+          documented here.
+        </p>
+        <h2 class="font-display text-lg font-semibold text-brand-dark">Updates</h2>
+        <p>
+          This policy may be changed. The date of the last revision should be indicated below when publishing to
+          production.
+        </p>
+        <p class="text-xs text-brand-dark/55">Last revision: March 2026 (draft).</p>
+      </div>
+    </main>
+    <footer class="border-t border-brand-circuit/30 bg-brand-dark py-8 text-brand-pulse/90" role="contentinfo">
+      <div class="mx-auto max-w-3xl px-4 text-sm sm:px-6">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <span class="mx-2 text-brand-circuit/60">·</span>
+        <a href="termos.html" class="hover:text-white">Terms</a>
+      </div>
+    </footer>
+  </body>
+</html>

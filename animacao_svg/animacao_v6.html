@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR" style="
+    overflow: hidden;
+">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Animada - Web-Engenharia</title>
+    <!-- Importando fonte para o texto -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cor-base: #062A1B;      /* Verde escuro intenso */
+            --cor-circuito: #A5C7A9;  /* Verde claro (trilhas elétricas) */
+            --cor-pulso: #E2F2E4;     /* Verde super brilhante */
+            --cor-passaro: #62866D;   /* Verde médio (símbolo) */
+            --cor-fundo: #ffffff;
+            --cor-texto: #000000;
+            /* Novas cores para o efeito Disruptivo focado no verde (Estilo Matrix) */
+            --glitch-cyan: #85E8B1;   /* Verde menta luminoso */
+            --glitch-magenta: #00FF41; /* Verde neon vibrante */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--cor-fundo);
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+        }
+
+        .logo-container {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            aspect-ratio: 4 / 3;
+            /* Container agita-se violentamente no início */
+            animation: containerShake 0.5s cubic-bezier(.36,.07,.19,.97) 1.5s both;
+        }
+
+        /* ==========================================
+           ANIMAÇÕES CORE: SYSTEM OVERRIDE / GLITCH
+           ========================================== */
+
+        @keyframes containerShake {
+            10%, 90% { transform: translate3d(-2px, 0, 0); }
+            20%, 80% { transform: translate3d(4px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-8px, 0, 0); }
+            40%, 60% { transform: translate3d(8px, 0, 0); }
+        }
+
+        /* O desenho das trilhas sofre curtos-circuitos, indo e voltando */
+        @keyframes drawErratic {
+            0% { stroke-dashoffset: 1; opacity: 0; filter: drop-shadow(0 0 10px var(--glitch-cyan)); }
+            10% { opacity: 1; stroke-dashoffset: 0.8; }
+            20% { stroke-dashoffset: 0.9; opacity: 0; }
+            30% { stroke-dashoffset: 0.5; opacity: 1; filter: drop-shadow(0 0 20px var(--glitch-magenta)); stroke-width: 8;}
+            40% { stroke-width: 4; }
+            60% { stroke-dashoffset: 0.2; }
+            70% { stroke-dashoffset: 0.3; }
+            100% { stroke-dashoffset: 0; opacity: 1; filter: drop-shadow(0 0 0 transparent); }
+        }
+
+        /* A estrutura principal sofre "Aberração Cromática" e desmembramento vertical */
+        @keyframes heavyGlitch {
+            0% { stroke-dashoffset: 1; opacity: 0; }
+            20% { opacity: 1; stroke-dashoffset: 0.5; transform: translateX(-10px); filter: drop-shadow(10px 0 0 var(--glitch-cyan)) drop-shadow(-10px 0 0 var(--glitch-magenta)); }
+            25% { transform: translateX(10px); filter: drop-shadow(-15px 0 0 var(--glitch-cyan)) drop-shadow(15px 0 0 var(--glitch-magenta)); }
+            30% { transform: translateX(0); filter: drop-shadow(0 0 0 transparent); }
+            50% { stroke-dashoffset: 0.2; transform: skewX(20deg); }
+            55% { transform: skewX(0); }
+            100% { stroke-dashoffset: 0; opacity: 1; }
+        }
+
+        /* Pássaro compila-se aos pedaços */
+        @keyframes compileBird {
+            0% { opacity: 0; transform: scale(1.5) translateY(-50px); filter: drop-shadow(0 0 30px var(--glitch-cyan)); clip-path: inset(0 100% 0 0); }
+            40% { opacity: 1; clip-path: inset(0 0 0 0); transform: scale(1.2) translateY(20px); filter: drop-shadow(0 0 10px var(--glitch-magenta)); }
+            45% { transform: scale(0.9) translateY(-10px); }
+            50% { transform: scale(1) translateY(0); filter: drop-shadow(0 0 0 transparent); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        /* Texto pisca em formato hexadecimal/corrompido antes de se alinhar */
+        @keyframes corruptText {
+            0% { opacity: 0; letter-spacing: -10px; transform: scaleY(0.1); filter: blur(5px); }
+            30% { opacity: 1; letter-spacing: 30px; transform: scaleY(2); filter: drop-shadow(5px 5px 0 var(--glitch-cyan)); }
+            35% { transform: scaleY(1); filter: drop-shadow(-5px -5px 0 var(--glitch-magenta)); }
+            40% { letter-spacing: 18px; filter: drop-shadow(0 0 0 transparent); }
+            100% { opacity: 1; letter-spacing: 18px; }
+        }
+
+        /* O loop de micro-glitch que mantém a logo "viva" e instável */
+        @keyframes microGlitchLoop {
+            0%, 96% { transform: translate(0, 0) skewX(0); filter: drop-shadow(0 0 0 transparent); }
+            97% { transform: translate(-2px, 1px) skewX(-5deg); filter: drop-shadow(2px 0 0 var(--glitch-cyan)); }
+            98% { transform: translate(2px, -1px) skewX(5deg); filter: drop-shadow(-2px 0 0 var(--glitch-magenta)); }
+            99% { transform: translate(0, 0) skewX(0); filter: drop-shadow(0 0 0 transparent); }
+            100% { transform: translate(0, 0) skewX(0); }
+        }
+
+        /* Relâmpago de dados de altíssima velocidade */
+        @keyframes overdrivePulse {
+            0% { stroke-dashoffset: 0; opacity: 0; }
+            10% { opacity: 1; stroke-width: 8; stroke: var(--glitch-cyan); }
+            80% { opacity: 1; stroke-width: 4; stroke: var(--cor-pulso); }
+            100% { stroke-dashoffset: -1.05; opacity: 0; }
+        }
+
+        /* ==========================================
+           CLASSES DOS ELEMENTOS SVG
+           ========================================== */
+
+        .pcb-trace {
+            stroke: var(--cor-circuito);
+            stroke-width: 4;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: bevel; 
+            stroke-dasharray: 1;
+            stroke-dashoffset: 1;
+            opacity: 0; 
+            animation: drawErratic 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+        }
+
+        .pcb-pulse {
+            stroke: var(--cor-pulso);
+            stroke-width: 4;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: bevel;
+            stroke-dasharray: 0.05 1.05; 
+            stroke-dashoffset: 0;
+            opacity: 0;
+            animation: overdrivePulse 1.5s linear infinite 2s;
+        }
+
+        .pcb-node-solid, .pcb-node-hollow {
+            transform-origin: center;
+            transform-box: fill-box;
+            opacity: 0;
+            /* Aparecem repentinamente piscando */
+            animation: 
+                compileBird 0.5s steps(3, end) forwards,
+                microGlitchLoop 5s infinite;
+        }
+        
+        .pcb-node-solid {
+            fill: var(--cor-circuito);
+            stroke: none;
+        }
+
+        .pcb-node-hollow {
+            fill: var(--cor-fundo);
+            stroke: var(--cor-circuito);
+            stroke-width: 4;
+        }
+
+        /* ESTRUTURA PRINCIPAL */
+        .main-path {
+            stroke: var(--cor-base);
+            stroke-width: 18;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 1;
+            stroke-dashoffset: 1;
+            opacity: 0;
+            transform-origin: center;
+            /* Aberração cromática extrema na inicialização, e micro glitches contínuos depois */
+            animation: 
+                heavyGlitch 2.5s ease-in-out 0.5s forwards,
+                microGlitchLoop 4.2s infinite 3s; /* Delay para não sobrepor o início */
+        }
+
+        /* PÁSSARO */
+        .bird-group {
+            opacity: 0;
+            transform-origin: center;
+            transform-box: fill-box;
+            animation: 
+                compileBird 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.5s forwards,
+                microGlitchLoop 7s infinite 4s;
+        }
+
+        /* TEXTO DA LOGO */
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px; 
+            font-weight: 300; 
+            fill: var(--cor-texto);
+            opacity: 0;
+            transform-origin: center;
+            animation: 
+                corruptText 2s cubic-bezier(0.1, 0.9, 0.2, 1) 1.8s forwards,
+                microGlitchLoop 6s infinite 5s;
+        }
+
+        .bg-dot {
+            fill: var(--cor-circuito);
+            opacity: 0;
+            animation: compileBird 0.2s steps(2, end) forwards;
+        }
+
+        /* Sombras digitais adicionais (Holograma offset) na estrutura e pássaro durante o micro-glitch */
+        .glitch-layer {
+            mix-blend-mode: multiply;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <!-- SVG Desenhado em Camadas Funcionais -->
+        <svg viewBox="0 0 800 600" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            
+            <!-- CAMADA 0: PONTOS DE FUNDO -->
+            <g>
+                <circle cx="610" cy="300" r="5" class="bg-dot" style="animation-delay: 0.1s;" />
+                <circle cx="500" cy="80"  r="7" class="bg-dot" style="animation-delay: 0.3s;" />
+                <circle cx="410" cy="180" r="4" class="bg-dot" style="animation-delay: 0.5s;" />
+                <circle cx="310" cy="140" r="6" class="bg-dot" style="animation-delay: 0.2s;" />
+                <circle cx="210" cy="120" r="4" class="bg-dot" style="animation-delay: 0.4s;" />
+                <circle cx="260" cy="240" r="3" class="bg-dot" style="animation-delay: 0.6s;" />
+                <circle cx="580" cy="220" r="3" class="bg-dot" style="animation-delay: 0.1s;" />
+            </g>
+
+            <!-- ========================================== -->
+            <!-- CAMADA 1: REDE DE ENERGIA (Trilhas e Nós)  -->
+            <!-- ========================================== -->
+            
+            <g>
+                <path class="pcb-trace" style="animation-delay: 0.0s;" pathLength="1" d="M 183 425 L 290 425 L 300 435 L 330 435 L 340 425 L 485 425 L 615 425" />
+                <path class="pcb-pulse" pathLength="1" d="M 183 425 L 290 425 L 300 435 L 330 435 L 340 425 L 485 425 L 615 425" />
+                <circle cx="173" cy="425" r="8" class="pcb-node-hollow" style="animation-delay: 1.2s;"/>
+                <circle cx="625" cy="425" r="8" class="pcb-node-hollow" style="animation-delay: 1.4s;"/>
+            </g>
+
+            <g>
+                <path class="pcb-trace" style="animation-delay: 0.2s;" pathLength="1" d="M 485 425 L 485 440" />
+                <path class="pcb-pulse" pathLength="1" d="M 485 425 L 485 440" />
+                <circle cx="485" cy="450" r="8" class="pcb-node-hollow" style="animation-delay: 1.5s;"/>
+            </g>
+
+            <g>
+                <path class="pcb-trace" style="animation-delay: 0.1s;" pathLength="1" d="M 130 350 L 160 350 L 170 340 L 170 290 L 180 280 L 205 280 L 215 290 L 215 425" />
+                <path class="pcb-pulse" pathLength="1" d="M 130 350 L 160 350 L 170 340 L 170 290 L 180 280 L 205 280 L 215 290 L 215 425" />
+                <circle cx="130" cy="350" r="6" class="pcb-node-solid" style="animation-delay: 1.3s;"/>
+                <circle cx="215" cy="425" r="4" class="pcb-node-solid" style="animation-delay: 1.4s;"/>
+            </g>
+
+            <g>
+                <path class="pcb-trace" style="animation-delay: 0.3s;" pathLength="1" d="M 235 380 L 235 345 L 245 335 L 255 345 L 255 380" />
+                <path class="pcb-pulse" pathLength="1" d="M 235 380 L 235 345 L 245 335 L 255 345 L 255 380" />
+            </g>
+
+            <g>
+                <path class="pcb-trace" style="animation-delay: 0.4s;" pathLength="1" d="M 285 425 L 285 150" />
+                <path class="pcb-pulse" pathLength="1" d="M 285 425 L 285 150" />
+                <circle cx="285" cy="150" r="6" class="pcb-node-solid" style="animation-delay: 1.5s;"/>
+                <circle cx="285" cy="425" r="4" class="pcb-node-solid" style="animation-delay: 1.6s;"/>
+                
+                <path class="pcb-trace" style="animation-delay: 0.5s;" pathLength="1" d="M 285 190 L 275 180 L 260 180" />
+                <path class="pcb-pulse" pathLength="1" d="M 285 190 L 275 180 L 260 180" />
+                <circle cx="260" cy="180" r="4" class="pcb-node-solid" style="animation-delay: 1.7s;"/>
+            </g>
+
+            <g>
+                <path class="pcb-trace" style="animation-delay: 0.2s;" pathLength="1" d="M 315 380 L 315 245 L 325 235 L 335 245 L 335 380" />
+                <path class="pcb-pulse" pathLength="1" d="M 315 380 L 315 245 L 325 235 L 335 245 L 335 380" />
+            </g>
+
+            <g>
+                <path class="pcb-trace" style="animation-delay: 0.6s;" pathLength="1" d="M 365 425 L 365 200" />
+                <path class="pcb-pulse" pathLength="1" d="M 365 425 L 365 200" />
+                <circle cx="365" cy="200" r="5" class="pcb-node-solid" style="animation-delay: 1.7s;"/>
+                <circle cx="365" cy="425" r="4" class="pcb-node-solid" style="animation-delay: 1.8s;"/>
+
+                <path class="pcb-trace" style="animation-delay: 0.7s;" pathLength="1" d="M 365 240 L 375 230 L 390 230" />
+                <path class="pcb-pulse" pathLength="1" d="M 365 240 L 375 230 L 390 230" />
+                <circle cx="390" cy="230" r="4" class="pcb-node-solid" style="animation-delay: 1.9s;"/>
+            </g>
+
+            <g>
+                <path class="pcb-trace" style="animation-delay: 0.3s;" pathLength="1" d="M 395 380 L 395 305 L 405 295 L 415 305 L 415 380" />
+                <path class="pcb-pulse" pathLength="1" d="M 395 380 L 395 305 L 405 295 L 415 305 L 415 380" />
+            </g>
+
+            <g>
+                <path class="pcb-trace" style="animation-delay: 0.8s;" pathLength="1" d="M 445 425 L 445 280" />
+                <path class="pcb-pulse" pathLength="1" d="M 445 425 L 445 280" />
+                <circle cx="445" cy="280" r="5" class="pcb-node-solid" style="animation-delay: 1.9s;"/>
+                <circle cx="445" cy="425" r="4" class="pcb-node-solid" style="animation-delay: 2.0s;"/>
+            </g>
+
+            <g>
+                <path class="pcb-trace" style="animation-delay: 0.5s;" pathLength="1" d="M 475 380 L 475 245 L 485 235 L 495 245 L 495 380" />
+                <path class="pcb-pulse" pathLength="1" d="M 475 380 L 475 245 L 485 235 L 495 245 L 495 380" />
+            </g>
+
+            <g>
+                <path class="pcb-trace" style="animation-delay: 0.9s;" pathLength="1" d="M 525 425 L 525 320 L 535 310 L 575 310" />
+                <path class="pcb-pulse" pathLength="1" d="M 525 425 L 525 320 L 535 310 L 575 310" />
+                <circle cx="575" cy="310" r="6" class="pcb-node-solid" style="animation-delay: 2.1s;"/>
+                <circle cx="525" cy="425" r="4" class="pcb-node-solid" style="animation-delay: 2.2s;"/>
+            </g>
+
+            <!-- ========================================== -->
+            <!-- CAMADA 2: ESTRUTURA PRINCIPAL (GLITCH)     -->
+            <!-- ========================================== -->
+            <path class="main-path"
+                  pathLength="1"
+                  d="M 170 380 
+                     L 220 380 L 220 310 A 25 25 0 0 1 270 310 L 270 380 
+                     L 300 380 L 300 180 A 25 25 0 0 1 350 180 L 350 380 
+                     L 380 380 L 380 250 A 25 25 0 0 1 430 250 L 430 380 
+                     L 460 380 L 460 180 A 25 25 0 0 1 510 180 L 510 380 
+                     L 590 380" />
+
+
+            <!-- ========================================== -->
+            <!-- CAMADA 3: PÁSSARO                          -->
+            <!-- ========================================== -->
+            <g class="bird-group glitch-layer">
+                <path d="M 425 258 Q 440 290 475 255 Q 440 265 425 258 Z" fill="var(--cor-passaro)" opacity="0.6"/>
+                <path d="M 430 260 Q 440 280 460 260 Q 440 265 430 260 Z" fill="var(--cor-passaro)" />
+
+                <!-- Asa Esquerda -->
+                <path d="M 440 265 C 380 265 330 200 290 120 C 350 140 400 210 440 235 Z" fill="var(--cor-passaro)" />
+                <!-- Asa Direita -->
+                <path d="M 440 235 C 480 210 540 140 600 120 C 550 200 490 265 440 265 Z" fill="var(--cor-passaro)" />
+            </g>
+
+            <!-- ========================================== -->
+            <!-- CAMADA 4: TEXTO DA MARCA                   -->
+            <!-- ========================================== -->
+            <text x="400" y="495" text-anchor="middle" class="logo-text">
+                WEB-ENGENHARIA
+            </text>
+
+        </svg>
+    </div>
+
+</body>
+</html>

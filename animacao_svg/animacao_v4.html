@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR" style="
+    overflow: hidden;
+">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Animada - Web-Engenharia</title>
+    <!-- Importando fonte para o texto -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cor-base: #062A1B;      /* Verde escuro intenso */
+            --cor-circuito: #A5C7A9;  /* Verde claro (trilhas elétricas) */
+            --cor-pulso: #E2F2E4;     /* Verde super brilhante */
+            --cor-passaro: #62866D;   /* Verde médio (símbolo) */
+            --cor-fundo: #ffffff;
+            --cor-texto: #000000;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--cor-fundo);
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+            /* Fundo escurecido rápido durante o "power on" */
+            animation: bgFlash 12s infinite; 
+        }
+
+        .logo-container {
+            width: 90%;
+            max-width: 800px;
+            aspect-ratio: 4 / 3;
+        }
+
+        /* ==========================================
+           ANIMAÇÕES CORE: TRANSFORMER / QUEBRA-CABEÇA
+           ========================================== */
+
+        /* A coreografia principal de montagem e desmontagem */
+        @keyframes transformerAssembly {
+            0% {
+                transform: translate(var(--dx), var(--dy)) rotate(var(--rot)) scale(0.1);
+                opacity: 0;
+                filter: blur(10px);
+            }
+            10% {
+                /* Voando rápido para o centro */
+                transform: translate(calc(var(--dx) * 0.2), calc(var(--dy) * 0.2)) rotate(calc(var(--rot) * 0.2)) scale(1.1);
+                opacity: 1;
+                filter: blur(2px);
+            }
+            15% {
+                /* Impacto do encaixe metálico (Thud) */
+                transform: translate(0, 0) rotate(0) scale(0.95);
+                filter: blur(0px);
+            }
+            18%, 80% {
+                /* Peça fixa, montada e operante */
+                transform: translate(0, 0) rotate(0) scale(1);
+                opacity: 1;
+                filter: blur(0px);
+            }
+            85% {
+                /* Tensão de energia antes de explodir/desmontar */
+                transform: translate(0, 0) rotate(0) scale(1.08);
+                opacity: 1;
+            }
+            100% {
+                /* Desmontagem violenta em reverso */
+                transform: translate(var(--dx), var(--dy)) rotate(calc(var(--rot) * -1.5)) scale(0.1);
+                opacity: 0;
+                filter: blur(10px);
+            }
+        }
+
+        /* O sistema de energia só liga quando as peças estão encaixadas (20% a 80%) */
+        @keyframes powerCycle {
+            0%, 18% { opacity: 0; filter: brightness(0); }
+            20%, 78% { opacity: 1; filter: brightness(1.2); }
+            80%, 100% { opacity: 0; filter: brightness(0); }
+        }
+
+        /* O pulso de dados correndo nas trilhas */
+        @keyframes dataPulse {
+            0% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: -1.05; }
+        }
+
+        /* Batida de asa sincronizada: Bate ao ligar (20%) e depois CONGELA */
+        @keyframes flapWingSync {
+            0%, 19.9% { transform: rotate(0deg) scaleY(1); }
+            /* Início do flap ao ligar (20%) */
+            20% { transform: rotate(0deg) scaleY(1); }
+            21% { transform: rotate(var(--flap-angle)) scaleY(0.6); }
+            22% { transform: rotate(0deg) scaleY(1); }
+            23% { transform: rotate(var(--flap-angle)) scaleY(0.6); }
+            24% { transform: rotate(0deg) scaleY(1); }
+            25% { transform: rotate(var(--flap-angle)) scaleY(0.6); }
+            26%, 100% { transform: rotate(0deg) scaleY(1); } /* Congela majestoso pelo resto do tempo */
+        }
+
+        /* Pulso dos nós de conexão (vias de placa) */
+        @keyframes pulseNode {
+            0%, 100% { filter: drop-shadow(0 0 0px transparent); fill: var(--cor-circuito); }
+            50% { filter: drop-shadow(0 0 4px var(--cor-pulso)); fill: var(--cor-pulso); } 
+        }
+
+        /* ==========================================
+           CLASSES DOS ELEMENTOS SVG
+           ========================================== */
+
+        /* Classe que controla TODAS as peças do quebra-cabeça */
+        .puzzle-piece {
+            /* Garante que cada peça gire em torno de si mesma e não do centro da tela */
+            transform-origin: center;
+            transform-box: fill-box; 
+            /* Loop de 12 segundos para a rotina de montagem/desmontagem com atrasos individuais */
+            animation: transformerAssembly 12s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+            animation-delay: var(--delay);
+            /* Opcional: mantendo preenchimento para trás para iniciar invisível */
+            animation-fill-mode: both; 
+        }
+
+        .power-state {
+            animation: powerCycle 12s infinite;
+            animation-fill-mode: both;
+        }
+
+        .main-piece {
+            stroke: var(--cor-base);
+            stroke-width: 18;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .pcb-trace {
+            stroke: var(--cor-circuito);
+            stroke-width: 4;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: bevel; 
+        }
+
+        .pcb-pulse {
+            stroke: var(--cor-pulso);
+            stroke-width: 4;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: bevel;
+            stroke-dasharray: 0.05 1.05; 
+            animation: dataPulse 2.5s linear infinite;
+        }
+
+        .pcb-node-solid {
+            fill: var(--cor-circuito);
+            stroke: none;
+            animation: pulseNode 2s infinite;
+        }
+
+        .pcb-node-hollow {
+            fill: var(--cor-fundo);
+            stroke: var(--cor-circuito);
+            stroke-width: 4;
+        }
+
+        .bird-wing {
+            transform-origin: bottom;
+            transform-box: fill-box;
+            /* Usa a nova animação de 12s para sincronizar perfeitamente e congelar */
+            animation: flapWingSync 12s ease-in-out infinite;
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px; 
+            font-weight: 300; 
+            letter-spacing: 18px; 
+            fill: var(--cor-texto);
+        }
+
+        .burst-particle {
+            fill: var(--cor-pulso);
+            opacity: 0.8;
+            /* Partículas ligadas ao powerCycle */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <!-- SVG desenhado para montagem modular -->
+        <svg viewBox="0 0 800 600" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            
+            <!-- CAMADA 0: PONTOS DE FUNDO (VOANDO DO CENTRO) -->
+            <g class="puzzle-piece" style="--dx: 0px; --dy: 0px; --rot: 0deg; --delay: 0s;">
+                <circle cx="610" cy="300" r="5" fill="#E5EBE5"/>
+                <circle cx="500" cy="80" r="7" fill="#E5EBE5"/>
+                <circle cx="410" cy="180" r="4" fill="#E5EBE5"/>
+                <circle cx="310" cy="140" r="6" fill="#E5EBE5"/>
+                <circle cx="210" cy="120" r="4" fill="#E5EBE5"/>
+                <circle cx="260" cy="240" r="3" fill="#E5EBE5"/>
+                <circle cx="580" cy="220" r="3" fill="#E5EBE5"/>
+            </g>
+
+            <!-- ========================================== -->
+            <!-- CAMADA 1: TRILHAS ELÉTRICAS (Módulos PCB)  -->
+            <!-- ========================================== -->
+            
+            <!-- Módulo Base Esquerdo -->
+            <g class="puzzle-piece" style="--dx: -300px; --dy: 200px; --rot: -45deg; --delay: 0.1s;">
+                <path class="pcb-trace" d="M 183 425 L 290 425 L 300 435 L 330 435 L 340 425" />
+                <g class="power-state">
+                    <path class="pcb-pulse" pathLength="1" d="M 183 425 L 290 425 L 300 435 L 330 435 L 340 425" />
+                    <circle cx="173" cy="425" r="8" class="pcb-node-hollow" />
+                </g>
+            </g>
+
+            <!-- Módulo Base Direito -->
+            <g class="puzzle-piece" style="--dx: 400px; --dy: 200px; --rot: 45deg; --delay: 0.2s;">
+                <path class="pcb-trace" d="M 340 425 L 485 425 L 615 425" />
+                <path class="pcb-trace" d="M 485 425 L 485 440" />
+                <g class="power-state">
+                    <path class="pcb-pulse" pathLength="1" d="M 340 425 L 485 425 L 615 425" />
+                    <circle cx="625" cy="425" r="8" class="pcb-node-hollow" />
+                    <circle cx="485" cy="450" r="8" class="pcb-node-hollow" />
+                </g>
+            </g>
+
+            <!-- Módulo ZigZag Esquerdo -->
+            <g class="puzzle-piece" style="--dx: -400px; --dy: -100px; --rot: 90deg; --delay: 0.3s;">
+                <path class="pcb-trace" d="M 130 350 L 160 350 L 170 340 L 170 290 L 180 280 L 205 280 L 215 290 L 215 425" />
+                <g class="power-state">
+                    <path class="pcb-pulse" pathLength="1" d="M 130 350 L 160 350 L 170 340 L 170 290 L 180 280 L 205 280 L 215 290 L 215 425" />
+                    <circle cx="130" cy="350" r="6" class="pcb-node-solid" />
+                    <circle cx="215" cy="425" r="4" class="pcb-node-solid" />
+                </g>
+            </g>
+
+            <!-- Loop 1 e Antena Alta Esquerda -->
+            <g class="puzzle-piece" style="--dx: -100px; --dy: -300px; --rot: -135deg; --delay: 0.4s;">
+                <path class="pcb-trace" d="M 235 380 L 235 345 L 245 335 L 255 345 L 255 380" />
+                <path class="pcb-trace" d="M 285 425 L 285 150" />
+                <path class="pcb-trace" d="M 285 190 L 275 180 L 260 180" />
+                <g class="power-state">
+                    <path class="pcb-pulse" pathLength="1" d="M 285 425 L 285 150" />
+                    <circle cx="285" cy="150" r="6" class="pcb-node-solid" />
+                    <circle cx="260" cy="180" r="4" class="pcb-node-solid" />
+                </g>
+            </g>
+
+            <!-- Módulo Central -->
+            <g class="puzzle-piece" style="--dx: 0px; --dy: 300px; --rot: 180deg; --delay: 0.5s;">
+                <path class="pcb-trace" d="M 315 380 L 315 245 L 325 235 L 335 245 L 335 380" />
+                <path class="pcb-trace" d="M 365 425 L 365 200" />
+                <path class="pcb-trace" d="M 365 240 L 375 230 L 390 230" />
+                <path class="pcb-trace" d="M 395 380 L 395 305 L 405 295 L 415 305 L 415 380" />
+                <g class="power-state">
+                    <path class="pcb-pulse" pathLength="1" d="M 365 425 L 365 200" />
+                    <circle cx="365" cy="200" r="5" class="pcb-node-solid" />
+                    <circle cx="390" cy="230" r="4" class="pcb-node-solid" />
+                </g>
+            </g>
+
+            <!-- Módulo Direito Antenas -->
+            <g class="puzzle-piece" style="--dx: 300px; --dy: -300px; --rot: 270deg; --delay: 0.6s;">
+                <path class="pcb-trace" d="M 445 425 L 445 280" />
+                <path class="pcb-trace" d="M 475 380 L 475 245 L 485 235 L 495 245 L 495 380" />
+                <path class="pcb-trace" d="M 525 425 L 525 320 L 535 310 L 575 310" />
+                <g class="power-state">
+                    <path class="pcb-pulse" pathLength="1" d="M 445 425 L 445 280" />
+                    <circle cx="445" cy="280" r="5" class="pcb-node-solid" />
+                    <circle cx="575" cy="310" r="6" class="pcb-node-solid" />
+                </g>
+            </g>
+
+            <!-- ========================================== -->
+            <!-- CAMADA 2: ESTRUTURA PRINCIPAL DESMONTADA   -->
+            <!-- ========================================== -->
+            
+            <!-- Fragmento 1: Base esq -->
+            <path class="puzzle-piece main-piece" style="--dx: -300px; --dy: -200px; --rot: -90deg; --delay: 0.1s;" d="M 170 380 L 220 380" />
+            
+            <!-- Fragmento 2: Pilar 1 -->
+            <path class="puzzle-piece main-piece" style="--dx: -150px; --dy: 300px; --rot: 45deg; --delay: 0.2s;" d="M 220 380 L 220 310 A 25 25 0 0 1 270 310 L 270 380" />
+            
+            <!-- Fragmento 3: Conector -->
+            <path class="puzzle-piece main-piece" style="--dx: 0px; --dy: -400px; --rot: 180deg; --delay: 0.3s;" d="M 270 380 L 300 380" />
+            
+            <!-- Fragmento 4: Pilar 2 Alto -->
+            <path class="puzzle-piece main-piece" style="--dx: 300px; --dy: 100px; --rot: -135deg; --delay: 0.4s;" d="M 300 380 L 300 180 A 25 25 0 0 1 350 180 L 350 380" />
+            
+            <!-- Fragmento 5: Centro -->
+            <path class="puzzle-piece main-piece" style="--dx: 100px; --dy: -200px; --rot: 90deg; --delay: 0.5s;" d="M 350 380 L 380 380" />
+            
+            <!-- Fragmento 6: Pilar 3 -->
+            <path class="puzzle-piece main-piece" style="--dx: -200px; --dy: 200px; --rot: -45deg; --delay: 0.6s;" d="M 380 380 L 380 250 A 25 25 0 0 1 430 250 L 430 380" />
+            
+            <!-- Fragmento 7: Conector Dir -->
+            <path class="puzzle-piece main-piece" style="--dx: 400px; --dy: -300px; --rot: 270deg; --delay: 0.7s;" d="M 430 380 L 460 380" />
+            
+            <!-- Fragmento 8: Pilar 4 Alto -->
+            <path class="puzzle-piece main-piece" style="--dx: 200px; --dy: 400px; --rot: 135deg; --delay: 0.8s;" d="M 460 380 L 460 180 A 25 25 0 0 1 510 180 L 510 380" />
+            
+            <!-- Fragmento 9: Base dir -->
+            <path class="puzzle-piece main-piece" style="--dx: 500px; --dy: 0px; --rot: -180deg; --delay: 0.9s;" d="M 510 380 L 590 380" />
+
+
+            <!-- ========================================== -->
+            <!-- CAMADA 3: PÁSSARO DESMONTÁVEL              -->
+            <!-- ========================================== -->
+            
+            <!-- O pássaro se monta de vários ângulos -->
+            <!-- Cauda -->
+            <g class="puzzle-piece" style="--dx: 0px; --dy: -300px; --rot: 360deg; --delay: 1.0s;">
+                <path d="M 425 258 Q 440 290 475 255 Q 440 265 425 258 Z" fill="var(--cor-passaro)" opacity="0.6"/>
+                <path d="M 430 260 Q 440 280 460 260 Q 440 265 430 260 Z" fill="var(--cor-passaro)" />
+            </g>
+
+            <!-- Asa Esquerda - Voa do lado esquerdo e, ligada, bate -->
+            <g class="puzzle-piece" style="--dx: -400px; --dy: -200px; --rot: 180deg; --delay: 1.1s;">
+                <g class="power-state">
+                    <path class="bird-wing" style="--flap-angle: 15deg;" d="M 440 265 C 380 265 330 200 290 120 C 350 140 400 210 440 235 Z" fill="var(--cor-passaro)" />
+                </g>
+            </g>
+
+            <!-- Asa Direita - Voa do lado direito e, ligada, bate -->
+            <g class="puzzle-piece" style="--dx: 400px; --dy: -200px; --rot: -180deg; --delay: 1.2s;">
+                <g class="power-state">
+                    <path class="bird-wing" style="--flap-angle: -15deg;" d="M 440 235 C 480 210 540 140 600 120 C 550 200 490 265 440 265 Z" fill="var(--cor-passaro)" />
+                </g>
+            </g>
+
+            <!-- Partículas de energia que explodem com as asas ligadas -->
+            <g class="power-state">
+                <circle cx="440" cy="240" r="3" class="burst-particle" transform="translate(-40, -20)" />
+                <circle cx="440" cy="240" r="4" class="burst-particle" transform="translate(30, -40)" />
+                <circle cx="440" cy="240" r="2" class="burst-particle" transform="translate(-10, -50)" />
+                <circle cx="440" cy="240" r="5" class="burst-particle" transform="translate(50, 0)" />
+            </g>
+
+            <!-- ========================================== -->
+            <!-- CAMADA 4: TEXTO DA MARCA (Slide Up)        -->
+            <!-- ========================================== -->
+            <g class="puzzle-piece" style="--dx: 0px; --dy: 300px; --rot: 0deg; --delay: 1.4s;">
+                <text x="400" y="495" text-anchor="middle" class="logo-text">
+                    WEB-ENGENHARIA
+                </text>
+            </g>
+
+        </svg>
+    </div>
+
+</body>
+</html>
