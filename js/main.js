@@ -333,9 +333,11 @@
       imgWrap.className =
         'gente-card__img-wrap relative w-full overflow-hidden bg-brand-pulse/40';
 
+      var base = window.WE_ASSETS_BASE || '';
+      var altText =
+        (window.WE_UI && window.WE_UI.fotoDe ? window.WE_UI.fotoDe : 'Photo of ') + p.nome;
       var img = document.createElement('img');
-      img.src = encodeURI((window.WE_ASSETS_BASE || '') + p.foto);
-      img.alt = (window.WE_UI && window.WE_UI.fotoDe ? window.WE_UI.fotoDe : 'Photo of ') + p.nome;
+      img.alt = altText;
       img.className = 'h-full w-full object-cover';
       img.width = 400;
       img.height = 400;
@@ -346,7 +348,25 @@
         img.src = initialsAvatarDataUrl(p.nome);
       });
 
-      imgWrap.appendChild(img);
+      if (p.fotoFallback) {
+        var picture = document.createElement('picture');
+        if (p.fotoAvif) {
+          var srcAvif = document.createElement('source');
+          srcAvif.type = 'image/avif';
+          srcAvif.srcset = encodeURI(base + p.fotoAvif);
+          picture.appendChild(srcAvif);
+        }
+        var source = document.createElement('source');
+        source.type = 'image/webp';
+        source.srcset = encodeURI(base + p.foto);
+        img.src = encodeURI(base + p.fotoFallback);
+        picture.appendChild(source);
+        picture.appendChild(img);
+        imgWrap.appendChild(picture);
+      } else {
+        img.src = encodeURI(base + p.foto);
+        imgWrap.appendChild(img);
+      }
 
       var overlay = document.createElement('div');
       overlay.className =
