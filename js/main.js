@@ -2,7 +2,7 @@
   'use strict';
 
   /** Número WhatsApp para envio do formulário (E.164, sem +). */
-  var WHATSAPP_E164 = '5541987399548';
+  var WHATSAPP_E164 = '5541987973270';
 
   var pathname = window.location.pathname || '';
   var inLocaleSubfolder = /\/(en|ja|kok)(\/|$)/.test(pathname);
