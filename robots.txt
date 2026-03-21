@@ -1,4 +1,4 @@
-# robots.txt para Web-Engenharia — https://www.web-engenharia.com.br/
+# robots.txt para Web-Engenharia — https://www.web-engenharia.com/
 
 User-agent: *
 Allow: /
@@ -14,4 +14,4 @@ Disallow: /docs/
 Disallow: /web/
 
 # Sitemap
-Sitemap: https://www.web-engenharia.com.br/sitemap.xml
+Sitemap: https://www.web-engenharia.com/sitemap.xml

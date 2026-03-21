@@ -7,6 +7,14 @@
 | `web-engenharia-og.png` | **1200×630 px** | Facebook, LinkedIn, Twitter, WhatsApp — miniaturas de link |
 | `web-engenharia.png` | 1000×1000 px | Logo original (quadrada) |
 
+## Favicon (`favicon.ico`)
+
+O ficheiro **`../favicon.ico`** (raiz da pasta `landing/`) é o ícone da aba do browser. É gerado a partir do logo quadrado. Para regenerar (remove margem em excesso, recentraliza o logo e mantém tamanhos padrão):
+
+```bash
+cd landing && DIM=$(convert images/web-engenharia.png -trim -format "%[fx:max(w,h)]" info:) && convert images/web-engenharia.png -trim -gravity center -background none -extent ${DIM}x${DIM} -define icon:auto-resize=16,32,48,64 favicon.ico
+```
+
 O tamanho **1200×630** (proporção 1.91:1) é o recomendado pelas principais plataformas. Imagens quadradas ou com proporção diferente são recortadas e podem cortar o logo.
 
 ## Fotos dos nossos engenheiros de software (`desenvolvedores/`)
