@@ -20,7 +20,7 @@ O tamanho **1200×630** (proporção 1.91:1) é o recomendado pelas principais p
 
 ## Fotos dos nossos engenheiros de software (`desenvolvedores/`)
 
-Os caminhos das fotos são definidos em `landing/js/desenvolvedores.js` (campo `foto`). O arquivo contém versões dos dados dos cooperados para cada idioma (pt, en, ja, kok). Para trocar uma foto, mantenha o mesmo nome ou atualize o caminho em cada bloco de idioma.
+Os caminhos das fotos estão nos ficheiros `landing/js/desenvolvedores.<locale>.js` (`pt`, `en`, `ja`, `kok`) no campo `foto`. Cada página carrega só o ficheiro do idioma correspondente. Para trocar uma foto, mantenha o mesmo nome ou atualize o caminho em **todos** os ficheiros de locale em que esse cooperado aparece.
 
 | Arquivo em uso | Pessoa |
 |----------------|--------|
