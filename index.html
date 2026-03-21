@@ -52,6 +52,11 @@
     />
     <meta name="twitter:image" content="https://www.web-engenharia.com/images/web-engenharia-og.png" />
     <meta name="twitter:image:alt" content="Web-Engenharia — Consultoria em integrações e API-first" />
+    <!-- PWA Manifesto e Ícones -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2196f3">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/icons/icon-512x512.png">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preload" href="css/tailwind.min.css" as="style" />
     <link rel="preload" href="css/landing.css" as="style" />
@@ -61,6 +66,13 @@
     <link rel="stylesheet" href="css/landing.css" />
   </head>
   <body class="bg-white font-sans text-brand-dark antialiased">
+        <script>
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+              navigator.serviceWorker.register('/service-worker.js');
+            });
+          }
+        </script>
     <a href="#inicio" class="skip-link">Ir para o conteúdo</a>
     <!-- Logo oculta: usada apenas para SEO/crawlers de redes sociais (og:image/twitter:image) -->
     <picture>
