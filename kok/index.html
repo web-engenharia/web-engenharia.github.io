@@ -43,45 +43,31 @@
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="../css/tailwind.min.css" as="style" />
+    <link rel="preload" href="../css/landing.css" as="style" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" as="style" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                dark: '#062A1B',
-                mid: '#62866D',
-                circuit: '#A5C7A9',
-                pulse: '#E2F2E4',
-              },
-            },
-            fontFamily: {
-              sans: ['Montserrat', 'system-ui', 'sans-serif'],
-              display: ['Montserrat', 'system-ui', 'sans-serif'],
-            },
-          },
-        },
-      };
-    </script>
     <script>window.WE_ASSETS_BASE = '../';</script>
+    <link rel="stylesheet" href="../css/tailwind.min.css" />
     <link rel="stylesheet" href="../css/landing.css" />
   </head>
   <body class="bg-white font-sans text-brand-dark antialiased">
-    <a href="#inicio" class="skip-link">Content-ak vetat</a>
+    <a href="#inicio" class="skip-link">Mazvor-ak vetat</a>
     <!-- Logo lipta: Somurti ani social crawlers khatir (og:image/twitter:image) -->
-    <img
-      src="../images/web-engenharia-og.png"
-      alt="Web-Engenharia — Integrasaun ani API-first Consultadoria"
-      class="seo-logo-hidden"
-      width="1200"
-      height="630"
-      fetchpriority="low"
-    />
+    <picture>
+      <source srcset="../images/web-engenharia-og.webp" type="image/webp" />
+      <img
+        src="../images/web-engenharia-og.png"
+        alt="Web-Engenharia — Integrasaun ani API-first Consultadoria"
+        class="seo-logo-hidden"
+        width="1200"
+        height="630"
+        fetchpriority="low"
+      />
+    </picture>
 
     <header
       class="sticky top-0 z-50 border-b border-brand-circuit/30 bg-white/90 backdrop-blur-md"
@@ -130,23 +116,23 @@
             >
               <div class="grid grid-cols-1 gap-6 px-4 sm:grid-cols-2">
                 <div>
-                  <a href="#modelos-contratacao" class="block rounded-lg px-3 py-2 text-sm font-medium text-brand-dark hover:bg-brand-pulse/50" role="menuitem">Contract model</a>
-                  <a href="#servicos" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Drishtikon</a>
+                  <a href="#modelos-contratacao" class="block rounded-lg px-3 py-2 text-sm font-medium text-brand-dark hover:bg-brand-pulse/50" role="menuitem">Karar model</a>
+                  <a href="#servicos" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Somuday drishtikon</a>
                   <div class="my-2 border-t border-brand-circuit/25"></div>
-                  <a href="#servico-descoberta" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Assessment &amp; architecture</a>
-                  <a href="#servico-construcao" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Implementation &amp; APIs</a>
-                  <a href="#servico-construcao" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Modernization &amp; cloud</a>
-                  <a href="#servico-operacao" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Operation &amp; observability</a>
-                  <a href="#servico-governanca" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Governance &amp; security</a>
+                  <a href="#servico-descoberta" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Mulyankan ani vasturchna</a>
+                  <a href="#servico-construcao" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Amal ani APIs</a>
+                  <a href="#servico-construcao" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Adhunikrop ani dhagol</a>
+                  <a href="#servico-operacao" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Chalovnni ani drushtigot</a>
+                  <a href="#servico-governanca" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Adhikar ani suraksha</a>
                   <div class="my-2 border-t border-brand-circuit/25"></div>
-                  <a href="#projetos-ia" class="block rounded-lg px-3 py-2 text-sm font-medium text-brand-dark hover:bg-brand-pulse/50" role="menuitem">AI Projects</a>
+                  <a href="#projetos-ia" class="block rounded-lg px-3 py-2 text-sm font-medium text-brand-dark hover:bg-brand-pulse/50" role="menuitem">AI proiekt</a>
                 </div>
                 <div>
-                  <span class="block px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-mid">Project Management</span>
-                  <a href="#servico-diagnostico" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Diagnostics &amp; maturity</a>
-                  <a href="#servico-pmo" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">PMO &amp; portfolio</a>
-                  <a href="#servico-itsm" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">ITSM &amp; catalog</a>
-                  <a href="#servico-metodologias" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Methodologies &amp; capital</a>
+                  <span class="block px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-mid">Projet vaangddop</span>
+                  <a href="#servico-diagnostico" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Nidan ani paripakvota</a>
+                  <a href="#servico-pmo" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">PMO ani portfolio</a>
+                  <a href="#servico-itsm" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">ITSM ani seva sutra</a>
+                  <a href="#servico-metodologias" class="block rounded-lg px-3 py-2 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Paddhati ani punji proiekt</a>
                 </div>
               </div>
             </div>
@@ -161,7 +147,7 @@
               aria-haspopup="true"
               aria-controls="more-menu"
             >
-              More
+              Anik
               <svg class="h-4 w-4 text-brand-mid transition-transform group-data-[open=true]:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
@@ -174,8 +160,8 @@
               <a href="#cultura" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Sanskriti</a>
               <a href="#stacks" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Stacks</a>
               <a href="#como-trabalhamos" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Ami kite kaam kortat</a>
-              <a href="#casos" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Cases</a>
-              <a href="#portfolio" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Projetos</a>
+              <a href="#casos" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Pramann</a>
+              <a href="#portfolio" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Projekt</a>
             </div>
           </div>
           <nav class="flex items-center gap-1 px-2" aria-label="Bhaxea nivadd">
@@ -224,62 +210,62 @@
         id="mobile-menu"
         class="hidden max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-brand-circuit/30 bg-white px-4 py-4 lg:hidden"
         role="dialog"
-        aria-label="Menu mobile"
+        aria-label="Dorian menu"
       >
         <div class="flex flex-col gap-1 pb-4">
           <div id="mobile-lang-select" class="mb-3 pb-3 border-b border-brand-circuit/20" role="group" aria-label="Bhaxea nivadd">
             <label for="lang-select-mobile" class="mb-2 block text-xs font-semibold uppercase tracking-wide text-brand-mid">Bhaxea</label>
             <select id="lang-select-mobile" class="w-full rounded-lg border border-brand-circuit/50 bg-white px-4 py-3 text-sm font-medium text-brand-dark outline-none focus:border-brand-mid focus:ring-2 focus:ring-brand-mid/30"></select>
           </div>
-          <a href="#inicio" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Home</a>
+          <a href="#inicio" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Ghar</a>
           <a href="#o-que-fazemos" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark"
-            >What we do</a
+            >Ami kite kartat</a
           >
-          <a href="#cultura" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Culture</a>
+          <a href="#cultura" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Sanskriti</a>
           <a href="#modelos-contratacao" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark"
-            >Engagement models</a
+            >Karar model</a
           >
           <span class="px-3 pt-2 text-xs font-semibold uppercase tracking-wide text-brand-mid">Seva</span>
-          <a href="#servicos" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90">Overview</a>
+          <a href="#servicos" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90">Somuday drishtikon</a>
           <a href="#servico-descoberta" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
-            >Assessment &amp; architecture</a
+            >Mulyankan ani vasturchna</a
           >
           <a href="#servico-construcao" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
-            >Implementation &amp; APIs</a
+            >Amal ani APIs</a
           >
           <a href="#servico-construcao" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
-            >Modernization &amp; cloud</a
+            >Adhunikrop ani dhagol</a
           >
           <a href="#servico-operacao" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
-            >Operation &amp; observability</a
+            >Chalovnni ani drushtigot</a
           >
           <a href="#servico-governanca" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
-            >Governance &amp; security</a
+            >Adhikar ani suraksha</a
           >
           <span class="mt-2 px-3 pl-5 text-xs font-semibold uppercase tracking-wide text-brand-mid"
-            >Project Management</span
+            >Projet vaangddop</span
           >
           <a href="#servico-diagnostico" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
-            >Diagnostics &amp; maturity</a
+            >Nidan ani paripakvota</a
           >
           <a href="#servico-pmo" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
-            >PMO &amp; portfolio</a
+            >PMO ani portfolio</a
           >
           <a href="#servico-itsm" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
-            >ITSM &amp; catalog</a
+            >ITSM ani seva sutra</a
           >
           <a href="#servico-metodologias" class="rounded-lg px-3 py-2 pl-5 text-sm text-brand-dark/90"
-            >Methodologies &amp; capital</a
+            >Paddhati ani punji proiekt</a
           >
           <a href="#projetos-ia" class="rounded-lg px-3 py-2 pl-5 text-sm font-medium text-brand-dark"
-            >AI Projects</a
+            >AI projekt</a
           >
           <a href="#stacks" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Stacks</a>
           <a href="#como-trabalhamos" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark"
-            >How we work</a
+            >Ami kite kaam kortat</a
           >
-          <a href="#casos" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Cases</a>
-          <a href="#portfolio" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Projects</a>
+          <a href="#casos" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Pramann</a>
+          <a href="#portfolio" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Projekt</a>
           <a
             href="#contato"
             class="mt-2 rounded-lg bg-brand-dark px-3 py-3 text-center text-sm font-semibold text-white"
@@ -323,7 +309,7 @@
                     d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5a2.25 2.25 0 0 0 2.25-2.25m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5"
                   />
                 </svg>
-                Call schedule korta
+                Uloi ghe
               </a>
               <a
                 href="#servicos"
@@ -344,7 +330,7 @@
                     d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"
                   />
                 </svg>
-                Seva pava
+                Seva polloo
               </a>
             </div>
             <p class="mt-8 text-sm text-brand-dark/55">
@@ -353,7 +339,8 @@
           </div>
           <div
             id="hero-animation"
-            class="relative mx-auto w-full max-w-lg overflow-hidden rounded-2xl border border-brand-circuit/40 bg-white shadow-lg lg:max-w-none"
+            class="relative mx-auto flex w-full max-w-lg overflow-hidden rounded-2xl border border-brand-circuit/40 bg-white shadow-lg lg:max-w-none"
+            style="aspect-ratio: 4/3; min-height: 240px;"
             aria-live="polite"
           ></div>
         </div>
@@ -367,29 +354,27 @@
                 Ami Web-Engenharia
               </h2>
               <p class="text-sm text-brand-dark/70">
-                As software developers we strive to deliver not only well-written code, but code that delivers real
-                value to every client. Have not just a good web application in production, but also improve your
-                software processes and quality assurance.
+                Software developers mhonn ami faiddeachea mullachem ani borem borem kod denn kosloi proyotn kortat.
+                Choddch odik ek bori web application production-an nant, punn tuji software paddhati ani gunvontai sudhar.
               </p>
               <p class="text-sm text-brand-dark/70">
-                <span class="font-semibold text-brand-dark">Engineering applied to integrations:</span>
-                versioned contracts, idempotency patterns, and observability from the first sprint — ready for
-                regulated environments and high load.
+                <span class="font-semibold text-brand-dark">Integrasaunt engineer lagop:</span>
+                versioned karar, idempotency paddhati, ani peleach sprint-aklean drushtigot — regulated vatavaran ani unch load khatir tayar.
               </p>
               <div class="flex flex-wrap gap-x-6 gap-y-1 pt-2 text-sm text-brand-dark/70">
-                <span><span class="font-semibold text-brand-dark">+10 years</span> in software</span>
-                <span><span class="font-semibold text-brand-dark">Lean team</span> with integration expertise</span>
-                <span><span class="font-semibold text-brand-dark">Remote-first</span> — Brazil</span>
+                <span><span class="font-semibold text-brand-dark">+10 vorsam</span> software-an</span>
+                <span><span class="font-semibold text-brand-dark">Enxea tollea</span> integrasaun anubhav</span>
+                <span><span class="font-semibold text-brand-dark">Duri-first</span> — Brasil</span>
               </div>
             </div>
             <div class="flex w-full flex-wrap gap-6 text-center text-sm sm:w-auto sm:justify-end">
               <div>
                 <p class="font-display text-2xl font-bold text-brand-dark">API-first</p>
-                <p class="text-brand-dark/60">contract design</p>
+                <p class="text-brand-dark/60">karar rochna</p>
               </div>
               <div>
-                <p class="font-display text-2xl font-bold text-brand-dark">4 phases</p>
-                <p class="text-brand-dark/60">from diagnosis to support</p>
+                <p class="font-display text-2xl font-bold text-brand-dark">4 tara</p>
+                <p class="text-brand-dark/60">nidanlean sahaya meren</p>
               </div>
             </div>
           </div>
@@ -403,13 +388,13 @@
               <svg class="h-5 w-5 text-brand-mid" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
               </svg>
-              Access to environments with least-privilege principle; secrets and credentials under secure management
+              Vatavaranak lagxi adhikar siddhant-an prugtt; gupt ani maanyota surakshit vaangddop-an
             </span>
             <span class="flex items-center gap-2">
               <svg class="h-5 w-5 text-brand-mid" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
               </svg>
-              Response SLA defined in retainer contracts; audit trail for integrations with sensitive data
+              Retainer kararant SLA spoxt; sensitive data asta teo integrasaunk audit trail
             </span>
           </div>
         </div>
@@ -422,50 +407,52 @@
       >
         <div class="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 id="cultura-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">
-            Culture, mission and principles
+            Sanskriti, dharm ani siddhant
           </h2>
           <div class="mt-10 space-y-10">
             <div>
-              <h3 class="font-display text-lg font-semibold text-brand-dark">Mission</h3>
+              <h3 class="font-display text-lg font-semibold text-brand-dark">Dharm</h3>
               <p class="mt-2 text-brand-dark/80">
-                Unite systems and data with clear architecture, making integrations accessible, useful and lower-risk for the business.
+                Spoxt vasturchnen ani data-ek zoddun, integrasaun sodam-sopam, upyogi ani vepar khatir nemsam riskean.
               </p>
             </div>
             <div>
-              <h3 class="font-display text-lg font-semibold text-brand-dark">Vision</h3>
+              <h3 class="font-display text-lg font-semibold text-brand-dark">Drishtikon</h3>
               <p class="mt-2 text-brand-dark/80">
-                A world where resilient, well-governed integrations expand opportunity, reduce technical risk and sustain continuous operation.
+                Dis jeth resilient, borem vaangddop asat tyo integrasaun avak vaddovtat, tekniko riske ghattat ani sootadhar chalovnni challovtat.
               </p>
             </div>
-            <div>
-              <h3 class="font-display text-lg font-semibold text-brand-dark">Values</h3>
-              <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
-                <li>Client focus</li>
-                <li>Integrity</li>
-                <li>Professionalism</li>
-                <li>Perseverance</li>
-                <li>Responsible innovation</li>
-                <li>Teamwork</li>
-              </ul>
+            <div class="grid gap-10 sm:grid-cols-2">
+              <div>
+                <h3 class="font-display text-lg font-semibold text-brand-dark">Mulla</h3>
+                <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
+                  <li>Grahak lokx</li>
+                  <li>Niyatai</li>
+                  <li>Vaisheshikponn</li>
+                  <li>Dhairi</li>
+                  <li>Javabdar novsadhonn</li>
+                  <li>Tolleant kaam</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-display text-lg font-semibold text-brand-dark">Siddhant</h3>
+                <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
+                  <li>Spoxt, versioned karar</li>
+                  <li>Nemsam adhikar ani vaangddop</li>
+                  <li>Pelea disaklean drushtigot</li>
+                  <li>Lambkam porinam</li>
+                </ul>
+              </div>
             </div>
             <div>
-              <h3 class="font-display text-lg font-semibold text-brand-dark">Principles</h3>
-              <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
-                <li>Clear, versioned contracts</li>
-                <li>Least privilege and governance</li>
-                <li>Observability from day one</li>
-                <li>Long-term impact</li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="font-display text-lg font-semibold text-brand-dark">Culture</h3>
+              <h3 class="font-display text-lg font-semibold text-brand-dark">Sanskriti</h3>
               <p class="mt-2 text-brand-dark/80">
-                Remote-first, engineering with purpose. Our greatest product is people: we value talent, transparency and growth.
+                Duri-first, uddesh borabor engineer. Amchea sogllea vhoddlea upkarnachem mull mhonnche lok — ami pratibha, spoxtai ani vaddop mhotv dilam.
               </p>
             </div>
           </div>
           <p class="mt-12 text-sm text-brand-dark/60">
-            Inspired by practices and public statements from companies such as Google, Ericsson and Meta.
+            Google, Ericsson ani Meta hancher adharit paddhati ani somazik ukti.
           </p>
         </div>
       </section>
@@ -477,10 +464,10 @@
       >
         <div class="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 id="o-que-fazemos-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">
-            What we do
+            Ami kite kartat
           </h2>
           <p class="mt-3 max-w-2xl text-brand-dark/70">
-            We identify the best model for your context: team reinforcement, full project, or capacity building.
+            Tujhea vatavaran khatir ami ott model sodun kaddtam: tolleant vaddop, purn proiekt, vo tokdeari nirmonn.
           </p>
           <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <article
@@ -503,17 +490,16 @@
                   />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Staff augmentation</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Tolleant vaddop</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                We identify the best team to help you achieve your goals.
+                Tuje uddesh sodunk ami vhoddlea tolleachem sochodun kaddtam.
               </p>
               <p class="mt-3 text-sm text-brand-dark/70">
-                Your team may be overloaded with demands, affecting delivery dates. The best approach is to divide and
-                conquer. Let your team focus on specific objectives and call us to help with new features, extensions,
-                maintenance, and more.
+                Tuje tolleant chodd magnean bhar zata, ani denna afet zata. Vhoddi paddhati mhonnche vatt korun jikop.
+                Tuje tolleak vishesh uddeshak lokx div, ani navim features, vistar, suvidha khatir amkam sang.
               </p>
               <p class="mt-4 text-sm font-medium italic text-brand-mid">
-                Ideal for companies with an established development team.
+                Sthapit development tollea kornni khatir ideal.
               </p>
             </article>
             <article
@@ -536,17 +522,15 @@
                   />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Outsourcing</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Bahir korop</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Our team is responsible for the full development of your project.
+                Tuje proiektachem purn nirmonn amche tolleant jhavn asa.
               </p>
               <p class="mt-3 text-sm text-brand-dark/70">
-                We provide cost estimates and delivery forecasts, then work on implementation using agile best
-                practices. Scope is variable and we frequently reassess what should be built, so you get the software
-                you really need at the end of the project.
+                Ami kharch ani denna spoxt kortam, magir agile vhoddea paddhati vaprun amal kortam. Sop vadhullam ani ami punra mulyankan kortam kite nirmonn zata, teakhatir proiektantam tumi gorjechem software mhelam.
               </p>
               <p class="mt-4 text-sm font-medium italic text-brand-mid">
-                Ideal for companies without an in-house development team available.
+                Bhitorlea development tollea vontim kornni khatir ideal.
               </p>
             </article>
             <article
@@ -569,16 +553,15 @@
                   />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Training</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Shikxonn</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                We help you better understand what you need to achieve your goals.
+                Tuje uddesh sodunk tumka kite gorjechem tache somzonn gheunk ami madat kortam.
               </p>
               <p class="mt-3 text-sm text-brand-dark/70">
-                We bring you a team of skilled professionals to help develop your projects. We also offer programming
-                courses so you can grow in other languages and technologies.
+                Tuje proiekt nirmonnpak ami kausholnni lokanchem tolle yetam. Ami programming kursui ditam, teakhatir ani bhasanchi ani teknolojinchi vadd zata.
               </p>
               <p class="mt-4 text-sm font-medium italic text-brand-mid">
-                Ideal for companies or individuals who want to develop skills in other languages.
+                Ani bhasanchi tokdi vaddounk gorjechea kornni vo vyaktim khatir ideal.
               </p>
             </article>
           </div>
@@ -592,10 +575,10 @@
       >
         <div class="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 id="modelos-contratacao-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">
-            Engagement models
+            Karar model
           </h2>
           <p class="mt-3 max-w-2xl text-brand-dark/70">
-            Flexibility for your context: hourly rate, fixed price, retainer, shared success, and special cases.
+            Tuje vatavaran khatir lagpod: tantlean ginn, thollavnn ginn, retainer, vattam jait, ani vishesh pramann.
           </p>
           <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <article
@@ -606,12 +589,12 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Hourly rate (HT)</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Tantlean ginn (HT)</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Billing per hour worked. Time &amp; Materials, ideal for variable scope and exploratory sprints.
+                Kaam zalem tantlean billing. Time &amp; Materials, vadhullam sop ani sodvonit sprint khatir ideal.
               </p>
               <p class="mt-4 text-sm font-medium italic text-brand-mid">
-                Ideal for: projects with unpredictable demand or discovery phases.
+                Ideal: apollovnn magneachem va sodvonit taranchim proiekt khatir.
               </p>
             </article>
             <article
@@ -622,12 +605,12 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25Z" />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Fixed price</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Thollavnn ginn</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Fixed fee with defined scope and schedule. Predictability for client and consultant.
+                Spoxt sop ani kollavnn asat thollavnn toch. Grahak ani consultant khatir pollovnn.
               </p>
               <p class="mt-4 text-sm font-medium italic text-brand-mid">
-                Ideal for: well-defined scope and low requirement volatility.
+                Ideal: borem spoxt sop ani nemsam gorjevoll adharn.
               </p>
             </article>
             <article
@@ -638,12 +621,12 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Subscription (Retainer)</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Nimann (Retainer)</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                PMO as a Service or ongoing consulting. Recurring availability and predictable revenue.
+                PMO Service mhonn va sootadhar consultadoria. Nimann upalobdhta ani pollovnn ichir.
               </p>
               <p class="mt-4 text-sm font-medium italic text-brand-mid">
-                Ideal for: continuous governance, evolving integrations, or recurring support.
+                Ideal: sootadhar vaangddop, vaddtaleo integrasaun, va nimann sahaya.
               </p>
             </article>
             <article
@@ -654,12 +637,12 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Success fee</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Jait tochir</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Compensation tied to goals. Success fee when pre-defined objectives are achieved.
+                Uddesh borear toch. Pelelean spoxt uddesh sodle zalear jait tochir.
               </p>
               <p class="mt-4 text-sm font-medium italic text-brand-mid">
-                Ideal for: projects with measurable ROI and win-win alignment.
+                Ideal: ROI mapan zata tyo proiekt ani donui bhaganchi mell kor.
               </p>
             </article>
             <article
@@ -672,10 +655,10 @@
               </div>
               <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Vesting (startups)</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Progressive equity participation. Equity with cliff and calendar for long-term partnerships.
+                Kramik bhagdar. Lambkam bhagidar khatir cliff ani kalender asat equity.
               </p>
               <p class="mt-4 text-sm font-medium italic text-brand-mid">
-                Ideal for: early-stage startups, CTOs, and strategic advisors.
+                Ideal: pelelea taranchim startups, CTOs, ani stratejik sallagar khatir.
               </p>
             </article>
             <article
@@ -686,12 +669,12 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Pro-bono</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Nishulb</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Voluntary or subsidized work for social impact, ESG causes, and community capacity building.
+                Somajik porinam, ESG karan ani somudai tokdeari khatir ichchhen kaam va subsidy.
               </p>
               <p class="mt-4 text-sm font-medium italic text-brand-mid">
-                Ideal for: NGOs, impact initiatives, and strategic cause portfolios.
+                Ideal: NGOs, porinam chaluim, ani stratejik karan portfolio khatir.
               </p>
             </article>
             <article
@@ -702,12 +685,12 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Hybrid</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Mishrit</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Combination of models: retainer + success fee, hourly + vesting, according to maturity and profile.
+                Modelanchi mell: retainer + jait tochir, tantlean + vesting, paripakvota ani profile pormonnem.
               </p>
               <p class="mt-4 text-sm font-medium italic text-brand-mid">
-                Ideal for: commercial flexibility and risk alignment between parties.
+                Ideal: vepar lagpod ani donui bhaganchea modim riskechi mell.
               </p>
             </article>
           </div>
@@ -716,12 +699,11 @@
 
       <section id="servicos" class="scroll-mt-24 py-16 sm:scroll-mt-28 sm:py-20">
         <div class="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">Seva catalog</h2>
+          <h2 class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">Seva sutra</h2>
           <p class="mt-3 max-w-2xl text-brand-dark/70">
-            Integrations and API-first architecture in four pillars, plus project management and IT governance
-            consulting — each block translates technical capability into business results.
+            Chari stambanchim integrasaun ani API-first vasturchna, ani projet vaangddop ani IT adhikar consultadoria — har block technical tokdi vepar phollant badalta.
           </p>
-          <h3 class="mt-10 font-display text-lg font-semibold text-brand-dark">Integrations &amp; Architecture</h3>
+          <h3 class="mt-10 font-display text-lg font-semibold text-brand-dark">Integrasaun ani vasturchna</h3>
           <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <article
               id="servico-descoberta"
@@ -744,10 +726,9 @@
                   />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Discovery &amp; design</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Sodvonit ani rochna</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                System and contract mapping; non-functional requirements (latency, idempotency, resilience); patterns
-                (API gateway, messaging, CDC). Goal: less rework and surprises in production.
+                System ani karar map; non-functional gorje (latency, idempotency, resilience); paddhati (API gateway, messaging, CDC). Uddesh: production-an nemsam punr-kaam ani surpriz.
               </p>
             </article>
             <article
@@ -771,10 +752,9 @@
                   />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Implementation</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Amal</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Connectors, REST APIs and events, orchestration and on-demand iPaaS, ETL and streaming. Goal: delivery
-                that scales with the business.
+                Connectors, REST APIs ani events, orchestration ani on-demand iPaaS, ETL ani streaming. Uddesh: vepar borabor mellok denna.
               </p>
             </article>
             <article
@@ -798,10 +778,9 @@
                   />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Operation</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Chalovnni</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                SLIs/SLOs for integrations, monitoring, runbooks, and incident management across vendors and internal
-                teams. We treat integration as product — not as an isolated script.
+                Integrasaunk SLIs/SLOs, monitoring, runbooks, ani vendor ani bhitorlea tolleanchim incident vaangddop. Ami integrasaun upkarn mhonn mandtam — isolated script mhonn nant.
               </p>
             </article>
             <article
@@ -825,14 +804,13 @@
                   />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Governance</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Adhikar</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                OAuth/OIDC, secrets, mTLS when applicable, living documentation (OpenAPI, event catalog), and audit
-                trail. Security and compliance by design, not as an afterthought.
+                OAuth/OIDC, gupt, mTLS zaka lagta, jivit dokumentason (OpenAPI, event sutra), ani audit trail. Rochnent suraksha ani compliance, uprant mhonn nant.
               </p>
             </article>
           </div>
-          <h3 class="mt-16 font-display text-lg font-semibold text-brand-dark">Project Management</h3>
+          <h3 class="mt-16 font-display text-lg font-semibold text-brand-dark">Projet vaangddop</h3>
           <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <article
               id="servico-diagnostico"
@@ -855,10 +833,10 @@
                   />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Diagnostics &amp; maturity</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Nidan ani paripakvota</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Maturity assessment with OPM3 and ITIL. Process and effectiveness audit (not just compliance).
-                Deliverable: Improvement Program with identified gaps and evolution roadmap.
+                OPM3 ani ITIL-an paripakvota mulyankan. Paddhati ani prabhav audit (compliance ekloch nant).
+                Meldunk: mellop ani vaddop rochana asat sudharonn karyakram.
               </p>
             </article>
             <article
@@ -882,10 +860,9 @@
                   />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">PMO &amp; portfolio management</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">PMO ani portfolio vaangddop</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Project Office implementation (PMO Lite to Full, or Agile). Strategic prioritization, EVM, and
-                initiative selection. Performance metrics, dashboards, and PMO as a Service.
+                Projet Office amal (PMO Lite te Full, va Agile). Stratejik prioritization, EVM, ani chaluim nivadd. Prabhav mapan, dashboards, ani PMO Service mhonn.
               </p>
             </article>
             <article
@@ -909,10 +886,9 @@
                   />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">ITSM &amp; service catalog</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">ITSM ani seva sutra</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Incident, change, problem, and asset management (CMDB). Platform implementation (ServiceNow,
-                Jira SM, GLPi), self-service portals, and automated approval workflows.
+                Incident, badall, samasya ani asset vaangddop (CMDB). Platform amal (ServiceNow, Jira SM, GLPi), swayam-seva portale, ani automated mannvon workflow.
               </p>
             </article>
             <article
@@ -936,10 +912,9 @@
                   />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Methodologies &amp; capital projects</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Paddhati ani punji proiekt</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Waterfall, Scrum, Kanban, and hybrid models per context. EVM, CAPEX/OPEX management,
-                procurement and contracts. Engineering and infrastructure projects with industrial risk management.
+                Waterfall, Scrum, Kanban ani vatavaran pormonnem mishrit model. EVM, CAPEX/OPEX vaangddop, khareddi ani karar. Engineer ani infrastructure proiekt industrial risk vaangddop borabor.
               </p>
             </article>
           </div>
@@ -952,9 +927,9 @@
         aria-labelledby="projetos-ia-heading"
       >
         <div class="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 id="projetos-ia-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">AI Projects</h2>
+          <h2 id="projetos-ia-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">AI projekt</h2>
           <p class="mt-3 max-w-2xl text-brand-dark/70">
-            Applied artificial intelligence capabilities: from integrating models into your systems to computer vision, tailored training, and data analysis for evidence-based decision-making.
+            Lagu kritichem artificial intelligence tokdear: tuje systems-ant model integrasaun pasun computer vision, tailer shikxonn, ani pramann-adharit nirnay khatir data mulyankan.
           </p>
           <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-brand-pulse/20 p-6 shadow-sm">
@@ -963,9 +938,9 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Integrations</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Integrasaun</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                APIs, events, and orchestration to connect AI models to existing systems (ERP, CRM, data); pipelines and data governance at the edge.
+                AI model existing systems-ank zoddunk APIs, events ani orchestration (ERP, CRM, data); pipelines ani data adhikar krantir.
               </p>
             </article>
             <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
@@ -974,9 +949,9 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Computer vision</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Computer drushtikon</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Detection, classification, and image/video analysis solutions; models tailored to industrial use cases, quality, and operations.
+                Sodop, vargikaronn ani image/video mulyankan udhar; industrial use case, gunvontai ani chalovnni khatir tailer model.
               </p>
             </article>
             <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
@@ -985,9 +960,9 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h12a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0018 4.5H6A2.25 2.25 0 003.75 6.75zM18 15v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V15M12 9v6m3-3H9" />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Model training</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Model shikxonn</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                ML pipeline design (data, feature store, training and evaluation); fine-tuning and optimization for business-specific scenarios.
+                ML pipeline rochna (data, feature store, shikxonn ani mulyankan); vepar-vishesh vatavaran khatir fine-tuning ani sudharonn.
               </p>
             </article>
             <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
@@ -996,9 +971,9 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
                 </svg>
               </div>
-              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Data science &amp; analytics</h3>
+              <h3 class="mt-4 font-display text-lg font-semibold text-brand-dark">Data vijnan ani mulyankan</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Data exploration, cleaning, and modeling; dashboards, reporting, and evidence-based decision-making; preparation for ML/AI.
+                Data sodop, swachha ani model; dashboards, report, ani pramann-adharit nirnay; ML/AI khatir tayar.
               </p>
             </article>
           </div>
@@ -1007,42 +982,39 @@
 
       <section id="casos" class="scroll-mt-24 border-b border-brand-circuit/20 bg-white py-16 sm:scroll-mt-28 sm:py-20" aria-labelledby="casos-heading">
         <div class="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 id="casos-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">Cases ani pholl</h2>
+          <h2 id="casos-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">Pramann ani pholl</h2>
           <p class="mt-3 max-w-2xl text-brand-dark/70">
-            Integration projects where we delivered mapping, architecture, and implementation — with measurable results.
+            Integrasaun proiekt jethe map, vasturchna ani amal amkam dila — mapan zata pholl borabor.
           </p>
           <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-brand-pulse/10 p-6">
-              <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Fintech / Payments</span>
-              <h3 class="mt-2 font-display font-semibold text-brand-dark">ERP integration with payment gateway</h3>
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Fintech / Ute</span>
+              <h3 class="mt-2 font-display font-semibold text-brand-dark">Payment gateway borabor ERP integrasaun</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Legacy system without modern API blocked adoption of a new gateway. We delivered a REST layer with
-                stable contract, gradual migration, and transaction idempotency.
+                Modern API vontim legacy system navem gateway adopt kortolem rokta. Ami REST layer dila spoxt karar, kramik migration ani transaction idempotency borabor.
               </p>
               <p class="mt-4 text-sm font-medium text-brand-mid">
-                Go-live in 8 weeks; zero duplicate incidents in the first 30 days.
+                8 satolleant go-live; pelelea 30 disant ziro duplicate incident.
               </p>
             </article>
             <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-brand-pulse/10 p-6">
               <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Retail / E-commerce</span>
-              <h3 class="mt-2 font-display font-semibold text-brand-dark">Multi-channel order and inventory orchestration</h3>
+              <h3 class="mt-2 font-display font-semibold text-brand-dark">Multi-channel order ani inventory orchestration</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Multiple channels (store, marketplace, POS) failing on inventory sync. We mapped flows, designed
-                async events, and implemented orchestration with fallback and configurable retry.
+                Anik channel (store, marketplace, POS) inventory sync-an fail zatat. Ami flows map kelim, async events rochlim ani fallback ani configurable retry borabor orchestration amal kelim.
               </p>
               <p class="mt-4 text-sm font-medium text-brand-mid">
-                80% reduction in inventory discrepancies after 2 months in production.
+                Production-an 2 masan uprant inventory divergencim 80% ghat.
               </p>
             </article>
             <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-brand-pulse/10 p-6 sm:col-span-2 lg:col-span-1">
               <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">SaaS B2B</span>
-              <h3 class="mt-2 font-display font-semibold text-brand-dark">API-first for partners and white-label</h3>
+              <h3 class="mt-2 font-display font-semibold text-brand-dark">Partner ani white-label khatir API-first</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Client needed to expose stable APIs for integrators and white-label. Assessment of existing surfaces,
-                OpenAPI documentation, and version governance.
+                Integrator ani white-label khatir Grahak spoxt APIs ughoddunk gorjelem. Existing surfaces mulyankan, OpenAPI dokumentason ani version adhikar.
               </p>
               <p class="mt-4 text-sm font-medium text-brand-mid">
-                Partner program launch in 6 weeks with defined SLAs.
+                Spoxt SLAs borabor 6 satolleant partner karyakram ughoddop.
               </p>
             </article>
           </div>
@@ -1056,84 +1028,75 @@
       >
         <div class="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 id="portfolio-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">
-            Portfolio projetos
+            Portfolio projekt
           </h2>
           <p class="mt-3 max-w-3xl text-brand-dark/70">
-            Web-Engenharia officially announces the start of a new phase. We are developing robust internal solutions
-            that, after production validation, will be launched as commercial products for up to 2 years. After this
-            cycle, projects will be released as Open Source, allowing other companies to offer them as a service, with
-            community support.
+            Web-Engenharia navim taranache survat oficially ghoshna korta. Ami robust bhitorlea udhar nirmonn kortat,
+            production validason uprant 2 vorsam vepar upkarn mhonn ughoddtat. He chakr uprant projekt Open Source mhonn suttat,
+            ani somudai sahaya borabor ani kornni toslea seva diunk zata.
           </p>
           <p class="mt-4 max-w-3xl text-sm font-medium text-brand-dark/80">
-            All projects follow the Open Telecom Platform principles — engineering and product walking together.
+            Sogllea proiekt Open Telecom Platform siddhant palltat — engineer ani upkarn ekuch vatant.
           </p>
           <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
               <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Library / UI</span>
               <h3 class="mt-2 font-display font-semibold text-brand-dark">WE-UI</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                HEEx component library for Elixir, inspired by Radix UI and ShadCN. Unified, modern, and reusable
-                look for all our products.
+                Elixir khatir HEEx component library, Radix UI ani ShadCN pasun preronna. Sogllea amchea upkarn khatir ekttay, adhunik ani vaprun ieta te rochop.
               </p>
             </article>
             <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
-              <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Internal collaboration</span>
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Bhitorlea sanyog</span>
               <h3 class="mt-2 font-display font-semibold text-brand-dark">OCP (Open Collaboration Platform)</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Internal system for managing our Web-Engenharia software engineers. Reusable modules: authentication,
-                document upload, time tracking, teams, and projects.
+                Amchea Web-Engenharia software engineers vaangddop khatir bhitorlea system. Vaprun ieta module: authentication,
+                dokument upload, tant vaangddop, tolle ani projekt.
               </p>
             </article>
             <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
               <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Fintech</span>
               <h3 class="mt-2 font-display font-semibold text-brand-dark">Open-Banking-Platform</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Complete banking platform, from card issuance to payment processing. Modeled on experience with 8
-                traditional banks and 8 Brazilian digital banks. Built by those who understand the banking market
-                from the inside.
+                Purn banking platform, card issuance pasun payment processing meren. 8 poramporeo bank ani 8 Brasilian digital bank anubhavan model kelam. Bhitorlean banking bazar somzun ghetlea lokan nirmonn kelam.
               </p>
             </article>
             <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
-              <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Internal AI</span>
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Bhitorlea AI</span>
               <h3 class="mt-2 font-display font-semibold text-brand-dark">We-IA</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                AI developed exclusively for internal Web-Engenharia use. Integrated with our collaboration platform.
-                This project will never be commercialized; our differentiator starts from within.
+                Bhitorlea Web-Engenharia vapr khatir ekloch AI nirmonn kelam. Amchea sanyog platform borabor integrasaun.
+                He proiekt kadhnch vepar zat na; amcho farak bhitorlean suru zata.
               </p>
             </article>
             <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
-              <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Travel</span>
+              <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Fattle</span>
               <h3 class="mt-2 font-display font-semibold text-brand-dark">Trips4You</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                Platform for group travel control and management.
+                Gutt fattle niyontron ani vaangddop khatir platform.
               </p>
             </article>
             <article class="flex flex-col rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
               <span class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Retail / ERP</span>
-              <h3 class="mt-2 font-display font-semibold text-brand-dark">Soluções para Supermercado</h3>
+              <h3 class="mt-2 font-display font-semibold text-brand-dark">Supermarket khatir udhar</h3>
               <p class="mt-2 flex-1 text-sm text-brand-dark/70">
-                ERP, Mobile Digital Super app (shopping, deliveries, bank cards), POS and payment processing machine
-                integrations.
+                ERP, Mobile Digital Super app (kinnn, mellop, bank card), PDV ani payment processing machine integrasaun.
               </p>
             </article>
           </div>
           <div class="mt-12 rounded-2xl border border-brand-circuit/40 bg-white p-6 shadow-sm sm:p-8">
-            <p class="text-sm text-brand-dark/75">
-              We have other internal projects underway. For now, they will not be disclosed and there is no intention
-              to make them public. They are strategic, private, and aligned with our long-term plans.
-            </p>
-            <h3 class="mt-8 font-display text-lg font-semibold text-brand-dark">Our greatest product? People.</h3>
+            <h3 class="font-display text-lg font-semibold text-brand-dark">Amchea vhoddlea upkarnachem mull? Lok.</h3>
             <p class="mt-2 text-sm text-brand-dark/75">
-              Web-Engenharia is made by developers. Our portfolio is our own talent — with care for intellectual
-              property, image rights, and professional appreciation of each team member.
+              Web-Engenharia developers nirmonn korta. Amcho portfolio amcho pratibha — har tolleachea vyaktik intellectual
+              malki, image hakk, ani vaisheshik mhotv dilam.
             </p>
-            <div class="gente-carousel mt-10" aria-label="Web-Engenharia team members">
+            <div class="gente-carousel mt-10" aria-label="Web-Engenharia tolleant lok">
               <div class="gente-carousel__track" id="gente-track" role="list"></div>
               <button
                 type="button"
                 class="gente-carousel__btn gente-carousel__btn--prev"
                 id="gente-prev"
-                aria-label="View previous"
+                aria-label="Adlim polloo"
               >
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -1143,7 +1106,7 @@
                 type="button"
                 class="gente-carousel__btn gente-carousel__btn--next"
                 id="gente-next"
-                aria-label="View next"
+                aria-label="Fuddem polloo"
               >
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -1152,7 +1115,7 @@
             </div>
           </div>
           <p class="mt-10 text-center font-display text-base font-semibold text-brand-dark sm:text-lg">
-            Shared innovation. Engineering with purpose. Web-Engenharia — because the future isn't built alone.
+            Vattam novsadhonn. Uddesh borabor engineer. Web-Engenharia — kiteki bhavisay ekloch nirmonn zat na.
           </p>
         </div>
       </section>
@@ -1162,9 +1125,9 @@
         class="scroll-mt-24 border-y border-brand-circuit/25 bg-brand-pulse/25 py-16 sm:scroll-mt-28 sm:py-20"
       >
         <div class="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">How we work</h2>
+          <h2 class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">Ami kite kaam kortat</h2>
           <p class="mt-3 max-w-2xl text-brand-dark/70">
-            From discovery to operation, with clear milestones and incremental deliveries.
+            Sodvonitolean chalovnni meren, spoxt avk ani kramik mellop borabor.
           </p>
           <ol class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <li class="relative rounded-2xl border border-brand-circuit/30 bg-white p-6 pt-10 shadow-sm">
@@ -1172,9 +1135,9 @@
                 class="absolute left-6 top-0 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-brand-dark font-display text-sm font-bold text-white"
                 >1</span
               >
-              <h3 class="font-display font-semibold text-brand-dark">Discovery</h3>
+              <h3 class="font-display font-semibold text-brand-dark">Sodvonit</h3>
               <p class="mt-2 text-sm text-brand-dark/70">
-                Context alignment, system and risk inventory; definition of measurable success criteria.
+                Vatavaran mell, system ani risk inventory; mapan zata jait nirdhar.
               </p>
             </li>
             <li class="relative rounded-2xl border border-brand-circuit/30 bg-white p-6 pt-10 shadow-sm">
@@ -1182,9 +1145,9 @@
                 class="absolute left-6 top-0 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-brand-mid font-display text-sm font-bold text-white"
                 >2</span
               >
-              <h3 class="font-display font-semibold text-brand-dark">Architecture &amp; contracts</h3>
+              <h3 class="font-display font-semibold text-brand-dark">Vasturchna ani karar</h3>
               <p class="mt-2 text-sm text-brand-dark/70">
-                API-first design, synchronous vs. event flows, decoupling, and data strategy.
+                API-first rochna, synchronous vs. event flows, decoupling, ani data strateji.
               </p>
             </li>
             <li class="relative rounded-2xl border border-brand-circuit/30 bg-white p-6 pt-10 shadow-sm">
@@ -1192,9 +1155,9 @@
                 class="absolute left-6 top-0 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-brand-dark font-display text-sm font-bold text-white"
                 >3</span
               >
-              <h3 class="font-display font-semibold text-brand-dark">POC &amp; implementation</h3>
+              <h3 class="font-display font-semibold text-brand-dark">POC ani amal</h3>
               <p class="mt-2 text-sm text-brand-dark/70">
-                Proof of concept when needed; incremental delivery with testing and observability from the start.
+                Gorjech zalear proof of concept; peleaklean test ani drushtigot borabor kramik mellop.
               </p>
             </li>
             <li class="relative rounded-2xl border border-brand-circuit/30 bg-white p-6 pt-10 shadow-sm">
@@ -1202,18 +1165,18 @@
                 class="absolute left-6 top-0 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-brand-mid font-display text-sm font-bold text-white"
                 >4</span
               >
-              <h3 class="font-display font-semibold text-brand-dark">Go-live &amp; support</h3>
+              <h3 class="font-display font-semibold text-brand-dark">Go-live ani sahaya</h3>
               <p class="mt-2 text-sm text-brand-dark/70">
-                Planned cutover, documented handover, and continuous operation agreements.
+                Yojnit cutover, dokument kelam handover, ani sootadhar chalovnni karar.
               </p>
             </li>
           </ol>
           <p class="mt-10 text-center text-sm text-brand-dark/70">
-            Want to see this journey in your context?
+            Tuje vatavaranant he protsahan pollounk?
             <a
               href="#contato"
               class="font-semibold text-brand-mid underline-offset-2 hover:text-brand-dark hover:underline"
-              >Schedule a conversation</a
+              >Uloi ghe</a
             >.
           </p>
         </div>
@@ -1221,18 +1184,16 @@
 
       <section id="stacks" class="scroll-mt-24 py-16 sm:scroll-mt-28 sm:py-20">
         <div class="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">Stacks &amp; ecosystems</h2>
+          <h2 class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">Stacks ani paristhiti</h2>
           <p class="mt-3 max-w-2xl text-brand-dark/70">
-            We work where your data and processes already live: cloud, ERP, payments, and digital channels. Third-party
-            logos only with permission and per each brand's guideline.
+            Tuje data ani paddhati jeth asat thim ami thim kaam kortam: dhagol, ERP, ute, ani digital channel. Third-party
+            logos ekloch mannati ani har brand guideline pormonnem.
           </p>
           <p class="mt-4 max-w-2xl text-sm text-brand-dark/70">
-            We integrate via exposed APIs, webhooks, queues, and batch flows when the domain requires — always with
-            versioned contracts and production visibility.
+            Ughodlea APIs, webhooks, queues ani batch flows borabor domain gorjech zalear integrasaun kortam — sodeak versioned karar ani production drushtigot.
           </p>
           <p class="mt-3 max-w-2xl text-sm text-brand-dark/70">
-            Modernization and legacy coexistence are part of typical scope. References to Open Finance or regulated
-            arrangements are treated as integration technical layer, without replacing client legal counsel.
+            Adhunikrop ani legacy sorki somajik scope bhag. Open Finance va regulated arranjo integrasaun technical layer mhonn mandtat, grahak legal counsel badoll nant.
           </p>
           <ul class="mt-10 flex flex-wrap gap-3">
             <li
@@ -1243,22 +1204,22 @@
             <li
               class="rounded-full border border-brand-circuit/40 bg-brand-pulse/30 px-4 py-2 text-sm font-medium text-brand-dark"
             >
-              ERP &amp; back office
+              ERP ani back office
             </li>
             <li
               class="rounded-full border border-brand-circuit/40 bg-brand-pulse/30 px-4 py-2 text-sm font-medium text-brand-dark"
             >
-              APIs &amp; mensajaria
+              APIs ani sandesh
             </li>
             <li
               class="rounded-full border border-brand-circuit/40 bg-brand-pulse/30 px-4 py-2 text-sm font-medium text-brand-dark"
             >
-              Pago &amp; Open Finance (técnico)
+              Ute &amp; Open Finance (tekniko)
             </li>
             <li
               class="rounded-full border border-brand-circuit/40 bg-brand-pulse/30 px-4 py-2 text-sm font-medium text-brand-dark"
             >
-              Observabilidade &amp; siguransa
+              Drushtigot ani suraksha
             </li>
           </ul>
         </div>
@@ -1277,7 +1238,7 @@
                 aria-controls="faq-panel-1"
                 id="faq-btn-1"
               >
-                Do you handle integrations with personal data (GDPR/LGPD)?
+                Tumchea integrasaunt vyaktigat data (GDPR/LGPD) vaangddop korta?
                 <svg
                   class="h-5 w-5 shrink-0 text-brand-mid"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1291,8 +1252,7 @@
                 </svg>
               </button>
               <div id="faq-panel-1" class="hidden pb-4 text-sm text-brand-dark/75" role="region" aria-labelledby="faq-btn-1">
-                Yes. We work with data minimization, processing agreements when applicable, audit trails, and access
-                controls — always aligned with your legal team and DPO.
+                Oi. Ami data minimization, lagta zalear processing karar, audit trail ani prugtt niyontron borabor kaam kortam — tuje legal tolle ani DPO borabor sodeak mell.
               </div>
             </div>
             <div class="px-4 py-1">
@@ -1304,7 +1264,7 @@
                 aria-controls="faq-panel-2"
                 id="faq-btn-2"
               >
-                What is the typical timeline for an integration project?
+                Integrasaun proiektachem porompore kollavnn kite?
                 <svg
                   class="h-5 w-5 shrink-0 text-brand-mid"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1318,8 +1278,7 @@
                 </svg>
               </button>
               <div id="faq-panel-2" class="hidden pb-4 text-sm text-brand-dark/75" role="region" aria-labelledby="faq-btn-2">
-                It depends on scope, legacy API maturity, and POC needs. After discovery we deliver a plan with
-                milestones — from weeks for focused MVPs to quarters for larger programs.
+                Sop, legacy API paripakvota ani POC gorjevar adar. Sodvonit uprant ami avk borabor yojna ditam — focused MVPs khatir satolle pasun vhoddlea karyakram khatir trimestram meren.
               </div>
             </div>
             <div class="px-4 py-1">
@@ -1331,7 +1290,7 @@
                 aria-controls="faq-panel-3"
                 id="faq-btn-3"
               >
-                Do you only integrate or also develop product?
+                Tumchea integrasaun ekloch va upkarn nirmonnui?
                 <svg
                   class="h-5 w-5 shrink-0 text-brand-mid"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1345,8 +1304,7 @@
                 </svg>
               </button>
               <div id="faq-panel-3" class="hidden pb-4 text-sm text-brand-dark/75" role="region" aria-labelledby="faq-btn-3">
-                Both: integration layers, BFF portals, automation, and evolution of existing systems — always with
-                focus on stable contracts and sustainable operation.
+                Donui: integrasaun tara, BFF portale, automation ani existing systems vaddop — spoxt karar ani sootadhar chalovnni lokx sodeak.
               </div>
             </div>
             <div class="px-4 py-1">
@@ -1358,7 +1316,7 @@
                 aria-controls="faq-panel-4"
                 id="faq-btn-4"
               >
-                Who is usually the focal point on the client side?
+                Grahak bhagant zata-zata koddch lokx?
                 <svg
                   class="h-5 w-5 shrink-0 text-brand-mid"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1372,8 +1330,7 @@
                 </svg>
               </button>
               <div id="faq-panel-4" class="hidden pb-4 text-sm text-brand-dark/75" role="region" aria-labelledby="faq-btn-4">
-                Usually IT or architecture sponsors, with product close to business rules. When go-live depends on
-                vendors, we align rituals and responsibilities so cutover isn't held hostage by a single link.
+                Zata-zata IT va vasturchna sponsor, vepar niyaman lagim upkarn. Go-live vendor var adar zalear ami riti ani javabdar melltat, teakhatir cutover eklo linkachea hathan zat na.
               </div>
             </div>
             <div class="px-4 py-1">
@@ -1385,7 +1342,7 @@
                 aria-controls="faq-panel-5"
                 id="faq-btn-5"
               >
-                What about legacy systems without modern APIs?
+                Modern API vontim legacy systems kite?
                 <svg
                   class="h-5 w-5 shrink-0 text-brand-mid"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1399,9 +1356,7 @@
                 </svg>
               </button>
               <div id="faq-panel-5" class="hidden pb-4 text-sm text-brand-dark/75" role="region" aria-labelledby="faq-btn-5">
-                We map available surfaces — files, databases, queues, scheduled exports, or UI automation when
-                unavoidable — and design secure integration layers. When it makes sense, gradual strangling in favor
-                of more stable contracts.
+                Ami upalobd surfaces map kortam — files, database, queues, scheduled exports, va UI automation gorjech zalear — ani surakshit integrasaun tara rochta. Zaka lagta, kramik strangling chodd spoxt karar khatir.
               </div>
             </div>
             <div class="px-4 py-1">
@@ -1413,7 +1368,7 @@
                 aria-controls="faq-panel-6"
                 id="faq-btn-6"
               >
-                Do you work remotely or on-site?
+                Duri va sthanak kaam korta?
                 <svg
                   class="h-5 w-5 shrink-0 text-brand-mid"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1427,8 +1382,7 @@
                 </svg>
               </button>
               <div id="faq-panel-6" class="hidden pb-4 text-sm text-brand-dark/75" role="region" aria-labelledby="faq-btn-6">
-                Predominantly remote, with synchronous ceremonies at agreed times. On-site visits and workshops
-                are available on demand and scope alignment.
+                Zaitir duri, mell kelolea vellar synchronous riti. Sthanak bhet ani workshop gorje ani sop mell pormonnem upalobd.
               </div>
             </div>
             <div class="px-4 py-1">
@@ -1440,7 +1394,7 @@
                 aria-controls="faq-panel-7"
                 id="faq-btn-7"
               >
-                What is the commercial model?
+                Vepar model kite?
                 <svg
                   class="h-5 w-5 shrink-0 text-brand-mid"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1454,10 +1408,9 @@
                 </svg>
               </button>
               <div id="faq-panel-7" class="hidden pb-4 text-sm text-brand-dark/75" role="region" aria-labelledby="faq-btn-7">
-                Project by phases (discovery, implementation, operation), retainer for continuous evolution, or
-                a combination. Initial discovery enables estimate and milestone plan before larger commitments.
+                Projet taran pormonnem (sodvonit, amal, chalovnni), sootadhar vaddop khatir retainer, va mell. Pelelem sodvonit vhoddlea commitment adim spoxt ani avk yojna dena.
                 <a href="#modelos-contratacao" class="mt-2 inline-block font-medium text-brand-mid underline hover:text-brand-dark"
-                  >Learn about our engagement models</a
+                  >Amchea karar model polloo</a
                 >.
               </div>
             </div>
@@ -1474,17 +1427,16 @@
           <div class="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
               <h2 id="contato-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">
-                Technical conversation schedule korta
+                Tekniko ghosht uloi ghe
               </h2>
               <p class="mt-3 text-brand-dark/75">
-                Briefly describe the context (systems involved, urgency, constraints). We will reply with next steps
-                and, if it makes sense, an alignment call.
+                Vatavaran kromik vach (systems, gorjevoll, bandh) mhonn sang. Ami fuddlea kadam ani zaka lagta mell ghosht borabor utor ditam.
               </p>
             </div>
             <div class="rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-lg sm:p-8">
               <form id="contact-form" class="space-y-4" novalidate>
                 <div id="name-wrap">
-                  <label for="name" class="block text-sm font-medium text-brand-dark">Name <span class="text-red-600">*</span></label>
+                  <label for="name" class="block text-sm font-medium text-brand-dark">Nav <span class="text-red-600">*</span></label>
                   <input
                     id="name"
                     name="name"
@@ -1492,7 +1444,7 @@
                     required
                     minlength="2"
                     autocomplete="name"
-                    placeholder="Your full name"
+                    placeholder="Tuje purn nav"
                     class="mt-1 w-full rounded-xl border border-brand-circuit/50 px-4 py-2.5 text-brand-dark outline-none ring-brand-mid focus:border-brand-mid focus:ring-2"
                   />
                   <span class="contact-field-error mt-1 block text-sm text-red-600" hidden role="alert"></span>
@@ -1505,34 +1457,34 @@
                     type="email"
                     required
                     autocomplete="email"
-                    placeholder="seu@email.com"
+                    placeholder="tujo@email.com"
                     class="mt-1 w-full rounded-xl border border-brand-circuit/50 px-4 py-2.5 text-brand-dark outline-none ring-brand-mid focus:border-brand-mid focus:ring-2"
                   />
                   <span class="contact-field-error mt-1 block text-sm text-red-600" hidden role="alert"></span>
                 </div>
                 <div id="company-wrap">
                   <label for="company" class="block text-sm font-medium text-brand-dark"
-                    >Company <span class="font-normal text-brand-dark/50">(optional)</span></label
+                    >Kornni <span class="font-normal text-brand-dark/50">(vaikalpi)</span></label
                   >
                   <input
                     id="company"
                     name="company"
                     type="text"
                     autocomplete="organization"
-                    placeholder="Your company"
+                    placeholder="Tuji kornni"
                     class="mt-1 w-full rounded-xl border border-brand-circuit/50 px-4 py-2.5 text-brand-dark outline-none ring-brand-mid focus:border-brand-mid focus:ring-2"
                   />
                   <span class="contact-field-error mt-1 block text-sm text-red-600" hidden role="alert"></span>
                 </div>
                 <div id="message-wrap">
-                  <label for="message" class="block text-sm font-medium text-brand-dark">Message <span class="text-red-600">*</span></label>
+                  <label for="message" class="block text-sm font-medium text-brand-dark">Sandesh <span class="text-red-600">*</span></label>
                   <textarea
                     id="message"
                     name="message"
                     rows="4"
                     required
                     minlength="10"
-                    placeholder="Describe your project, systems involved, urgency..."
+                    placeholder="Tuje proiekt, systems, gorjevoll vach..."
                     class="mt-1 w-full rounded-xl border border-brand-circuit/50 px-4 py-2.5 text-brand-dark outline-none ring-brand-mid focus:border-brand-mid focus:ring-2"
                   ></textarea>
                   <span class="contact-field-error mt-1 block text-sm text-red-600" hidden role="alert"></span>
@@ -1550,7 +1502,7 @@
                   >
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                   </svg>
-                  Send via WhatsApp
+                  WhatsApp-an patha
                 </button>
               </form>
             </div>
@@ -1565,19 +1517,20 @@
         <nav class="flex flex-wrap gap-x-4 gap-y-1 text-xs" aria-label="Pai">
           <a href="privacidade.html" class="hover:text-white">Guptata</a>
           <a href="termos.html" class="hover:text-white">Mudda</a>
+          <a href="../en/careers.html" class="hover:text-white">Amchea sangata kaam</a>
           <a href="#contato" class="hover:text-white">Samparko</a>
           <a href="mailto:contact@web-engenharia.com" class="hover:text-white">Email</a>
         </nav>
       </div>
       <p class="mx-auto max-w-6xl border-t border-brand-circuit/20 px-4 py-2 text-[11px] leading-snug text-brand-circuit/80 sm:px-6">
-        © <span id="year"></span> Web-Engenharia. Guptata ani mudda hea links-ant pav; publik korta adim legal counsel-kodden review korta.
+        © <span id="year"></span> Web-Engenharia.
       </p>
     </footer>
 
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
-    <script src="../js/desenvolvedores.js"></script>
+    <script src="../js/desenvolvedores.js" defer></script>
     <script src="../js/main.js" defer></script>
   </body>
 </html>

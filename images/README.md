@@ -4,7 +4,8 @@
 
 | Arquivo | Dimensões | Uso |
 |---------|-----------|-----|
-| `web-engenharia-og.png` | **1200×630 px** | Facebook, LinkedIn, Twitter, WhatsApp — miniaturas de link |
+| `web-engenharia-og.png` | **1200×630 px** | Facebook, LinkedIn, Twitter, WhatsApp — miniaturas de link (fallback) |
+| `web-engenharia-og.webp` | **1200×630 px** | Versão WebP da og (menor tamanho, usada no HTML quando suportado) |
 | `web-engenharia.png` | 1000×1000 px | Logo original (quadrada) |
 
 ## Favicon (`favicon.ico`)
@@ -19,7 +20,7 @@ O tamanho **1200×630** (proporção 1.91:1) é o recomendado pelas principais p
 
 ## Fotos dos nossos engenheiros de software (`desenvolvedores/`)
 
-Os caminhos das fotos são definidos em `landing/js/desenvolvedores.js` (campo `foto`). Para trocar uma foto, mantenha o mesmo nome ou atualize o caminho no arquivo.
+Os caminhos das fotos são definidos em `landing/js/desenvolvedores.js` (campo `foto`). O arquivo contém versões dos dados dos cooperados para cada idioma (pt, en, ja, kok). Para trocar uma foto, mantenha o mesmo nome ou atualize o caminho em cada bloco de idioma.
 
 | Arquivo em uso | Pessoa |
 |----------------|--------|

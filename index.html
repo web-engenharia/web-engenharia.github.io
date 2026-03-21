@@ -46,44 +46,30 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="css/tailwind.min.css" as="style" />
+    <link rel="preload" href="css/landing.css" as="style" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" as="style" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                dark: '#062A1B',
-                mid: '#62866D',
-                circuit: '#A5C7A9',
-                pulse: '#E2F2E4',
-              },
-            },
-            fontFamily: {
-              sans: ['Montserrat', 'system-ui', 'sans-serif'],
-              display: ['Montserrat', 'system-ui', 'sans-serif'],
-            },
-          },
-        },
-      };
-    </script>
+    <link rel="stylesheet" href="css/tailwind.min.css" />
     <link rel="stylesheet" href="css/landing.css" />
   </head>
   <body class="bg-white font-sans text-brand-dark antialiased">
     <a href="#inicio" class="skip-link">Ir para o conteúdo</a>
     <!-- Logo oculta: usada apenas para SEO/crawlers de redes sociais (og:image/twitter:image) -->
-    <img
-      src="images/web-engenharia-og.png"
-      alt="Web-Engenharia — Consultoria em integrações e API-first"
-      class="seo-logo-hidden"
-      width="1200"
-      height="630"
-      fetchpriority="low"
-    />
+    <picture>
+      <source srcset="images/web-engenharia-og.webp" type="image/webp" />
+      <img
+        src="images/web-engenharia-og.png"
+        alt="Web-Engenharia — Consultoria em integrações e API-first"
+        class="seo-logo-hidden"
+        width="1200"
+        height="630"
+        fetchpriority="low"
+      />
+    </picture>
 
     <header
       class="sticky top-0 z-50 border-b border-brand-circuit/30 bg-white/90 backdrop-blur-md"
@@ -356,7 +342,8 @@
           </div>
           <div
             id="hero-animation"
-            class="relative mx-auto w-full max-w-lg overflow-hidden rounded-2xl border border-brand-circuit/40 bg-white shadow-lg lg:max-w-none"
+            class="relative mx-auto flex w-full max-w-lg overflow-hidden rounded-2xl border border-brand-circuit/40 bg-white shadow-lg lg:max-w-none"
+            style="aspect-ratio: 4/3; min-height: 240px;"
             aria-live="polite"
           ></div>
         </div>
@@ -440,25 +427,27 @@
                 Um mundo em que integrações resilientes e bem governadas ampliem oportunidade, reduzam risco técnico e sustentem operação contínua.
               </p>
             </div>
-            <div>
-              <h3 class="font-display text-lg font-semibold text-brand-dark">Valores</h3>
-              <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
-                <li>Foco no cliente</li>
-                <li>Integridade</li>
-                <li>Profissionalismo</li>
-                <li>Perseverança</li>
-                <li>Inovação responsável</li>
-                <li>Trabalho em equipe</li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="font-display text-lg font-semibold text-brand-dark">Princípios</h3>
-              <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
-                <li>Contratos claros e versionados</li>
-                <li>Menor privilégio e governança</li>
-                <li>Observabilidade desde o primeiro sprint</li>
-                <li>Impacto de longo prazo</li>
-              </ul>
+            <div class="grid gap-10 sm:grid-cols-2">
+              <div>
+                <h3 class="font-display text-lg font-semibold text-brand-dark">Valores</h3>
+                <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
+                  <li>Foco no cliente</li>
+                  <li>Integridade</li>
+                  <li>Profissionalismo</li>
+                  <li>Perseverança</li>
+                  <li>Inovação responsável</li>
+                  <li>Trabalho em equipe</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-display text-lg font-semibold text-brand-dark">Princípios</h3>
+                <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
+                  <li>Contratos claros e versionados</li>
+                  <li>Menor privilégio e governança</li>
+                  <li>Observabilidade desde o primeiro sprint</li>
+                  <li>Impacto de longo prazo</li>
+                </ul>
+              </div>
             </div>
             <div>
               <h3 class="font-display text-lg font-semibold text-brand-dark">Cultura</h3>
@@ -1124,11 +1113,7 @@
             </article>
           </div>
           <div class="mt-12 rounded-2xl border border-brand-circuit/40 bg-white p-6 shadow-sm sm:p-8">
-            <p class="text-sm text-brand-dark/75">
-              Temos outros projetos internos em andamento. Por ora, não serão divulgados e não há intenção de abri-los ao
-              público. São estratégicos, privados e alinhados com nossos planos de longo prazo.
-            </p>
-            <h3 class="mt-8 font-display text-lg font-semibold text-brand-dark">Nosso maior produto? Gente.</h3>
+            <h3 class="font-display text-lg font-semibold text-brand-dark">Nosso maior produto? Gente.</h3>
             <p class="mt-2 text-sm text-brand-dark/75">
               A Web-Engenharia é feita por desenvolvedores. Nosso portfólio são nossos próprios talentos — com cuidado
               com propriedade intelectual, direitos de imagem e valorização profissional de cada cooperado.
@@ -1571,19 +1556,20 @@
         <nav class="flex flex-wrap gap-x-4 gap-y-1 text-xs" aria-label="Rodapé">
           <a href="privacidade.html" class="hover:text-white">Privacidade</a>
           <a href="termos.html" class="hover:text-white">Termos</a>
+          <a href="carreiras.html" class="hover:text-white">Trabalhe conosco</a>
           <a href="#contato" class="hover:text-white">Contato</a>
           <a href="mailto:contact@web-engenharia.com" class="hover:text-white">Email</a>
         </nav>
       </div>
       <p class="mx-auto max-w-6xl border-t border-brand-circuit/20 px-4 py-2 text-[11px] leading-snug text-brand-circuit/80 sm:px-6">
-        © <span id="year"></span> Web-Engenharia. Consulte privacidade e termos nos links acima; revise com assessoria jurídica antes de publicar.
+        © <span id="year"></span> Web-Engenharia.
       </p>
     </footer>
 
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
-    <script src="js/desenvolvedores.js"></script>
+    <script src="js/desenvolvedores.js" defer></script>
     <script src="js/main.js" defer></script>
   </body>
 </html>

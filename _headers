@@ -1,0 +1,12 @@
+# Netlify / Cloudflare Pages headers for cache
+/css/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/js/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/images/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+/animacao_svg/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800

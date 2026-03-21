@@ -43,45 +43,31 @@
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="../css/tailwind.min.css" as="style" />
+    <link rel="preload" href="../css/landing.css" as="style" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" as="style" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                dark: '#062A1B',
-                mid: '#62866D',
-                circuit: '#A5C7A9',
-                pulse: '#E2F2E4',
-              },
-            },
-            fontFamily: {
-              sans: ['Montserrat', 'system-ui', 'sans-serif'],
-              display: ['Montserrat', 'system-ui', 'sans-serif'],
-            },
-          },
-        },
-      };
-    </script>
     <script>window.WE_ASSETS_BASE = '../';</script>
+    <link rel="stylesheet" href="../css/tailwind.min.css" />
     <link rel="stylesheet" href="../css/landing.css" />
   </head>
   <body class="bg-white font-sans text-brand-dark antialiased">
     <a href="#inicio" class="skip-link">Skip to content</a>
     <!-- Hidden logo: used only for SEO/social crawlers (og:image/twitter:image) -->
-    <img
-      src="../images/web-engenharia-og.png"
-      alt="Web-Engenharia — Integration & API-first Consulting"
-      class="seo-logo-hidden"
-      width="1200"
-      height="630"
-      fetchpriority="low"
-    />
+    <picture>
+      <source srcset="../images/web-engenharia-og.webp" type="image/webp" />
+      <img
+        src="../images/web-engenharia-og.png"
+        alt="Web-Engenharia — Integration & API-first Consulting"
+        class="seo-logo-hidden"
+        width="1200"
+        height="630"
+        fetchpriority="low"
+      />
+    </picture>
 
     <header
       class="sticky top-0 z-50 border-b border-brand-circuit/30 bg-white/90 backdrop-blur-md"
@@ -176,6 +162,7 @@
               <a href="#como-trabalhamos" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">How we work</a>
               <a href="#casos" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Cases</a>
               <a href="#portfolio" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Projects</a>
+              <a href="careers.html" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">Careers</a>
             </div>
           </div>
           <nav class="flex items-center gap-1 px-2" aria-label="Language selection">
@@ -280,6 +267,7 @@
           >
           <a href="#casos" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Cases</a>
           <a href="#portfolio" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Projects</a>
+          <a href="careers.html" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Careers</a>
           <a
             href="#contato"
             class="mt-2 rounded-lg bg-brand-dark px-3 py-3 text-center text-sm font-semibold text-white"
@@ -354,7 +342,8 @@
           </div>
           <div
             id="hero-animation"
-            class="relative mx-auto w-full max-w-lg overflow-hidden rounded-2xl border border-brand-circuit/40 bg-white shadow-lg lg:max-w-none"
+            class="relative mx-auto flex w-full max-w-lg overflow-hidden rounded-2xl border border-brand-circuit/40 bg-white shadow-lg lg:max-w-none"
+            style="aspect-ratio: 4/3; min-height: 240px;"
             aria-live="polite"
           ></div>
         </div>
@@ -438,25 +427,27 @@
                 A world where resilient, well-governed integrations expand opportunity, reduce technical risk and sustain continuous operation.
               </p>
             </div>
-            <div>
-              <h3 class="font-display text-lg font-semibold text-brand-dark">Values</h3>
-              <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
-                <li>Client focus</li>
-                <li>Integrity</li>
-                <li>Professionalism</li>
-                <li>Perseverance</li>
-                <li>Responsible innovation</li>
-                <li>Teamwork</li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="font-display text-lg font-semibold text-brand-dark">Principles</h3>
-              <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
-                <li>Clear, versioned contracts</li>
-                <li>Least privilege and governance</li>
-                <li>Observability from day one</li>
-                <li>Long-term impact</li>
-              </ul>
+            <div class="grid gap-10 sm:grid-cols-2">
+              <div>
+                <h3 class="font-display text-lg font-semibold text-brand-dark">Values</h3>
+                <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
+                  <li>Client focus</li>
+                  <li>Integrity</li>
+                  <li>Professionalism</li>
+                  <li>Perseverance</li>
+                  <li>Responsible innovation</li>
+                  <li>Teamwork</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-display text-lg font-semibold text-brand-dark">Principles</h3>
+                <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
+                  <li>Clear, versioned contracts</li>
+                  <li>Least privilege and governance</li>
+                  <li>Observability from day one</li>
+                  <li>Long-term impact</li>
+                </ul>
+              </div>
             </div>
             <div>
               <h3 class="font-display text-lg font-semibold text-brand-dark">Culture</h3>
@@ -1119,11 +1110,7 @@
             </article>
           </div>
           <div class="mt-12 rounded-2xl border border-brand-circuit/40 bg-white p-6 shadow-sm sm:p-8">
-            <p class="text-sm text-brand-dark/75">
-              We have other internal projects underway. For now, they will not be disclosed and there is no intention
-              to make them public. They are strategic, private, and aligned with our long-term plans.
-            </p>
-            <h3 class="mt-8 font-display text-lg font-semibold text-brand-dark">Our greatest product? People.</h3>
+            <h3 class="font-display text-lg font-semibold text-brand-dark">Our greatest product? People.</h3>
             <p class="mt-2 text-sm text-brand-dark/75">
               Web-Engenharia is made by developers. Our portfolio is our own talent — with care for intellectual
               property, image rights, and professional appreciation of each team member.
@@ -1566,19 +1553,20 @@
         <nav class="flex flex-wrap gap-x-4 gap-y-1 text-xs" aria-label="Footer">
           <a href="privacidade.html" class="hover:text-white">Privacy</a>
           <a href="termos.html" class="hover:text-white">Terms</a>
+          <a href="careers.html" class="hover:text-white">Careers</a>
           <a href="#contato" class="hover:text-white">Contact</a>
           <a href="mailto:contact@web-engenharia.com" class="hover:text-white">Email</a>
         </nav>
       </div>
       <p class="mx-auto max-w-6xl border-t border-brand-circuit/20 px-4 py-2 text-[11px] leading-snug text-brand-circuit/80 sm:px-6">
-        © <span id="year"></span> Web-Engenharia. See privacy and terms in the links above; review with legal counsel before publishing.
+        © <span id="year"></span> Web-Engenharia.
       </p>
     </footer>
 
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
-    <script src="../js/desenvolvedores.js"></script>
+    <script src="../js/desenvolvedores.js" defer></script>
     <script src="../js/main.js" defer></script>
   </body>
 </html>

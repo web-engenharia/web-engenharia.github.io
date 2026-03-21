@@ -43,45 +43,31 @@
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="../css/tailwind.min.css" as="style" />
+    <link rel="preload" href="../css/landing.css" as="style" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" as="style" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                dark: '#062A1B',
-                mid: '#62866D',
-                circuit: '#A5C7A9',
-                pulse: '#E2F2E4',
-              },
-            },
-            fontFamily: {
-              sans: ['Montserrat', 'system-ui', 'sans-serif'],
-              display: ['Montserrat', 'system-ui', 'sans-serif'],
-            },
-          },
-        },
-      };
-    </script>
     <script>window.WE_ASSETS_BASE = '../';</script>
+    <link rel="stylesheet" href="../css/tailwind.min.css" />
     <link rel="stylesheet" href="../css/landing.css" />
   </head>
   <body class="bg-white font-sans text-brand-dark antialiased">
     <a href="#inicio" class="skip-link">コンテンツへスキップ</a>
     <!-- 非表示ロゴ：SEO・SNSクローラー用（og:image/twitter:image） -->
-    <img
-      src="../images/web-engenharia-og.png"
-      alt="Web-Engenharia — 統合・API-firstコンサルティング"
-      class="seo-logo-hidden"
-      width="1200"
-      height="630"
-      fetchpriority="low"
-    />
+    <picture>
+      <source srcset="../images/web-engenharia-og.webp" type="image/webp" />
+      <img
+        src="../images/web-engenharia-og.png"
+        alt="Web-Engenharia — 統合・API-firstコンサルティング"
+        class="seo-logo-hidden"
+        width="1200"
+        height="630"
+        fetchpriority="low"
+      />
+    </picture>
 
     <header
       class="sticky top-0 z-50 border-b border-brand-circuit/30 bg-white/90 backdrop-blur-md"
@@ -354,7 +340,8 @@
           </div>
           <div
             id="hero-animation"
-            class="relative mx-auto w-full max-w-lg overflow-hidden rounded-2xl border border-brand-circuit/40 bg-white shadow-lg lg:max-w-none"
+            class="relative mx-auto flex w-full max-w-lg overflow-hidden rounded-2xl border border-brand-circuit/40 bg-white shadow-lg lg:max-w-none"
+            style="aspect-ratio: 4/3; min-height: 240px;"
             aria-live="polite"
           ></div>
         </div>
@@ -435,25 +422,27 @@
                 回復力があり、適切にガバナンスされた統合が機会を広げ、技術リスクを軽減し、継続的な運用を維持する世界。
               </p>
             </div>
-            <div>
-              <h3 class="font-display text-lg font-semibold text-brand-dark">価値観</h3>
-              <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
-                <li>クライアント重視</li>
-                <li>誠実さ</li>
-                <li>プロフェッショナリズム</li>
-                <li>粘り強さ</li>
-                <li>責任あるイノベーション</li>
-                <li>チームワーク</li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="font-display text-lg font-semibold text-brand-dark">原則</h3>
-              <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
-                <li>明確でバージョン管理された契約</li>
-                <li>最小権限とガバナンス</li>
-                <li>初日からのオブザーバビリティ</li>
-                <li>長期的なインパクト</li>
-              </ul>
+            <div class="grid gap-10 sm:grid-cols-2">
+              <div>
+                <h3 class="font-display text-lg font-semibold text-brand-dark">価値観</h3>
+                <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
+                  <li>クライアント重視</li>
+                  <li>誠実さ</li>
+                  <li>プロフェッショナリズム</li>
+                  <li>粘り強さ</li>
+                  <li>責任あるイノベーション</li>
+                  <li>チームワーク</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="font-display text-lg font-semibold text-brand-dark">原則</h3>
+                <ul class="mt-3 list-inside list-disc space-y-1.5 text-brand-dark/80">
+                  <li>明確でバージョン管理された契約</li>
+                  <li>最小権限とガバナンス</li>
+                  <li>初日からのオブザーバビリティ</li>
+                  <li>長期的なインパクト</li>
+                </ul>
+              </div>
             </div>
             <div>
               <h3 class="font-display text-lg font-semibold text-brand-dark">文化</h3>
@@ -1090,10 +1079,7 @@
             </article>
           </div>
           <div class="mt-12 rounded-2xl border border-brand-circuit/40 bg-white p-6 shadow-sm sm:p-8">
-            <p class="text-sm text-brand-dark/75">
-              他の社内プロジェクトも進行中です。現時点では公開せず、公表する意向もありません。戦略的かつ非公開で、当社の長期計画に沿っています。
-            </p>
-            <h3 class="mt-8 font-display text-lg font-semibold text-brand-dark">最大のプロダクト？それは人です。</h3>
+            <h3 class="font-display text-lg font-semibold text-brand-dark">最大のプロダクト？それは人です。</h3>
             <p class="mt-2 text-sm text-brand-dark/75">
               Web-Engenhariaは開発者によって作られています。私たちのポートフォリオは自らの才能 — 知的財産、肖像権、各チームメンバーのプロフェッショナルな評価への配慮を伴います。
             </p>
@@ -1523,19 +1509,20 @@
         <nav class="flex flex-wrap gap-x-4 gap-y-1 text-xs" aria-label="フッター">
           <a href="privacidade.html" class="hover:text-white">プライバシー</a>
           <a href="termos.html" class="hover:text-white">利用規約</a>
+          <a href="../en/careers.html" class="hover:text-white">採用</a>
           <a href="#contato" class="hover:text-white">お問い合わせ</a>
           <a href="mailto:contact@web-engenharia.com" class="hover:text-white">メール</a>
         </nav>
       </div>
       <p class="mx-auto max-w-6xl border-t border-brand-circuit/20 px-4 py-2 text-[11px] leading-snug text-brand-circuit/80 sm:px-6">
-        © <span id="year"></span> Web-Engenharia. プライバシーと利用規約は上記リンクをご確認ください。公開前に法務担当者にご確認ください。
+        © <span id="year"></span> Web-Engenharia.
       </p>
     </footer>
 
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
-    <script src="../js/desenvolvedores.js"></script>
+    <script src="../js/desenvolvedores.js" defer></script>
     <script src="../js/main.js" defer></script>
   </body>
 </html>

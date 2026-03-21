@@ -27,31 +27,14 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="css/tailwind.min.css" as="style" />
+    <link rel="preload" href="css/landing.css" as="style" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" as="style" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                dark: '#062A1B',
-                mid: '#62866D',
-                circuit: '#A5C7A9',
-                pulse: '#E2F2E4',
-              },
-            },
-            fontFamily: {
-              sans: ['Montserrat', 'system-ui', 'sans-serif'],
-              display: ['Montserrat', 'system-ui', 'sans-serif'],
-            },
-          },
-        },
-      };
-    </script>
+    <link rel="stylesheet" href="css/tailwind.min.css" />
     <link rel="stylesheet" href="css/landing.css" />
   </head>
   <body class="bg-white font-sans text-brand-dark antialiased">
@@ -117,6 +100,8 @@
         <a href="index.html" class="hover:text-white">Início</a>
         <span class="mx-2 text-brand-circuit/60">·</span>
         <a href="privacidade.html" class="hover:text-white">Privacidade</a>
+        <span class="mx-2 text-brand-circuit/60">·</span>
+        <a href="carreiras.html" class="hover:text-white">Trabalhe conosco</a>
       </div>
     </footer>
   </body>

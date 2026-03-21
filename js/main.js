@@ -30,21 +30,29 @@
 
     var reduced =
       window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var inKok = /\/(kok)(\/|$)/.test(pathname);
 
     if (reduced) {
+      var fallbackLabel = inKok
+        ? 'Web-Engenharia marca (system nirdhar paun animaion band)'
+        : 'Marca Web-Engenharia (animação desativada por preferência do sistema)';
+      var fallbackText = inKok
+        ? 'Uddesh borabor integrasaun — statik rochop (chalnn ghat).'
+        : 'Integrações com propósito — visual estático (redução de movimento ativa).';
       container.innerHTML =
-        '<div class="hero-static-fallback flex h-full min-h-[240px] w-full flex-col items-center justify-center rounded-2xl px-6 text-center text-white shadow-inner sm:min-h-[280px]" role="img" aria-label="Marca Web-Engenharia (animação desativada por preferência do sistema)">' +
+        '<div class="hero-static-fallback flex h-full min-h-[240px] w-full flex-col items-center justify-center rounded-2xl px-6 text-center text-white shadow-inner sm:min-h-[280px]" role="img" aria-label="' + fallbackLabel + '">' +
         '<span class="font-display text-2xl font-light tracking-[0.35em] sm:text-3xl">WEB-ENGENHARIA</span>' +
-        '<span class="mt-3 max-w-xs text-sm font-light text-white/90">Integrações com propósito — visual estático (redução de movimento ativa).</span>' +
+        '<span class="mt-3 max-w-xs text-sm font-light text-white/90">' + fallbackText + '</span>' +
         '</div>';
       return;
     }
 
     var src = ANIMATION_BASE + ANIMATION_FILES[pickAnimationIndex()];
     var iframe = document.createElement('iframe');
-    iframe.setAttribute('title', 'Animação da marca Web-Engenharia');
+    iframe.setAttribute('title', inKok ? 'Web-Engenharia lip animaion' : 'Animação da marca Web-Engenharia');
     iframe.setAttribute('loading', 'eager');
-    iframe.className = 'h-full min-h-[240px] w-full overflow-hidden rounded-2xl sm:min-h-[280px]';
+    iframe.setAttribute('fetchpriority', 'high');
+    iframe.className = 'min-h-0 flex-1 overflow-hidden rounded-2xl';
     iframe.setAttribute('src', src);
     iframe.referrerPolicy = 'no-referrer-when-downgrade';
     container.appendChild(iframe);
@@ -79,13 +87,19 @@
     var path = window.location.pathname || '';
     var isPrivacidade = /privacidade\.html$/.test(path);
     var isTermos = /termos\.html$/.test(path);
+    var isCareers = /careers\.html$/.test(path);
     var inEn = /\/(en)(\/|$)/.test(path);
     var inJa = /\/(ja)(\/|$)/.test(path);
     var inKok = /\/(kok)(\/|$)/.test(path);
-    var pageFile = isPrivacidade ? 'privacidade.html' : isTermos ? 'termos.html' : '';
+    var pageFile = isPrivacidade ? 'privacidade.html' : isTermos ? 'termos.html' : isCareers ? 'careers.html' : '';
     var urls = { pt: '', en: '', ja: '', kok: '' };
 
-    if (inEn) {
+    if (isCareers && inEn) {
+      urls.pt = '../';
+      urls.en = 'careers.html';
+      urls.ja = '../ja/';
+      urls.kok = '../kok/';
+    } else if (inEn) {
       urls.pt = pageFile ? '../' + pageFile : '../';
       urls.en = pageFile || 'index.html';
       urls.ja = pageFile ? '../ja/' + pageFile : '../ja/';
@@ -317,11 +331,11 @@
 
       var imgWrap = document.createElement('div');
       imgWrap.className =
-        'gente-card__img-wrap relative aspect-square w-full overflow-hidden bg-brand-pulse/40';
+        'gente-card__img-wrap relative w-full overflow-hidden bg-brand-pulse/40';
 
       var img = document.createElement('img');
       img.src = encodeURI((window.WE_ASSETS_BASE || '') + p.foto);
-      img.alt = 'Foto de ' + p.nome;
+      img.alt = (window.WE_UI && window.WE_UI.fotoDe ? window.WE_UI.fotoDe : 'Photo of ') + p.nome;
       img.className = 'h-full w-full object-cover';
       img.width = 400;
       img.height = 400;
@@ -341,7 +355,7 @@
       imgWrap.appendChild(overlay);
 
       var body = document.createElement('div');
-      body.className = 'flex flex-1 flex-col p-5';
+      body.className = 'gente-card__body flex flex-1 flex-col p-5';
 
       if (cargoPortfolio && cargoPortfolio.tag) {
         var tag = document.createElement('span');
@@ -351,7 +365,7 @@
       }
 
       var title = document.createElement('h4');
-      title.className = 'font-display text-base font-semibold text-brand-dark' + (cargoPortfolio && cargoPortfolio.tag ? ' mt-2' : '');
+      title.className = 'gente-card__title font-display text-base font-semibold text-brand-dark' + (cargoPortfolio && cargoPortfolio.tag ? ' mt-2' : '');
       title.textContent = p.nome;
 
       var meta = document.createElement('p');
@@ -380,7 +394,7 @@
 
       if (p.bio) {
         var bio = document.createElement('p');
-        bio.className = 'mt-3 flex-1 text-sm text-brand-dark/75';
+        bio.className = 'gente-card__bio mt-3 flex-1 text-sm text-brand-dark/75';
         bio.textContent = p.bio;
         body.appendChild(bio);
       }
@@ -449,19 +463,37 @@
     var company = (fd.get('company') || '').trim();
     var msg = (fd.get('message') || '').trim();
     var errors = {};
+    var lang = (document.documentElement.getAttribute('lang') || 'pt-BR').toLowerCase();
+    var isKok = lang.startsWith('kok');
+
+    var t = isKok ? {
+      nameShort: 'Nav otthve 2 akshar gorje.',
+      nameReq: 'Nav gorje.',
+      emailReq: 'Email gorje.',
+      emailInvalid: 'Valid email sang.',
+      msgShort: 'Sandesh otthve 10 akshar gorje.',
+      msgReq: 'Sandesh gorje.'
+    } : {
+      nameShort: 'Nome deve ter pelo menos 2 caracteres.',
+      nameReq: 'Nome é obrigatório.',
+      emailReq: 'E-mail é obrigatório.',
+      emailInvalid: 'Informe um e-mail válido.',
+      msgShort: 'Mensagem deve ter pelo menos 10 caracteres.',
+      msgReq: 'Mensagem é obrigatória.'
+    };
 
     if (name.length < 2) {
-      errors.name = name ? 'Nome deve ter pelo menos 2 caracteres.' : 'Nome é obrigatório.';
+      errors.name = name ? t.nameShort : t.nameReq;
     }
 
     if (!email) {
-      errors.email = 'E-mail é obrigatório.';
+      errors.email = t.emailReq;
     } else if (!EMAIL_REGEX.test(email)) {
-      errors.email = 'Informe um e-mail válido.';
+      errors.email = t.emailInvalid;
     }
 
     if (msg.length < 10) {
-      errors.message = msg ? 'Mensagem deve ter pelo menos 10 caracteres.' : 'Mensagem é obrigatória.';
+      errors.message = msg ? t.msgShort : t.msgReq;
     }
 
     return { name: name, email: email, company: company, message: msg, errors: errors };
@@ -534,11 +566,18 @@
 
       var lang = (document.documentElement.getAttribute('lang') || 'pt-BR').toLowerCase();
       var isEn = lang.startsWith('en');
-      var template = isEn
-        ? '*Web-Engenharia Contact*\n\n*Name:* ' + result.name + '\n*Email:* ' + result.email +
-          (result.company ? '\n*Company:* ' + result.company : '') + '\n\n*Message:*\n' + result.message
-        : '*Contato Web-Engenharia*\n\n*Nome:* ' + result.name + '\n*E-mail:* ' + result.email +
+      var isKok = lang.startsWith('kok');
+      var template;
+      if (isEn) {
+        template = '*Web-Engenharia Contact*\n\n*Name:* ' + result.name + '\n*Email:* ' + result.email +
+          (result.company ? '\n*Company:* ' + result.company : '') + '\n\n*Message:*\n' + result.message;
+      } else if (isKok) {
+        template = '*Web-Engenharia Samparko*\n\n*Nav:* ' + result.name + '\n*Email:* ' + result.email +
+          (result.company ? '\n*Kornni:* ' + result.company : '') + '\n\n*Sandesh:*\n' + result.message;
+      } else {
+        template = '*Contato Web-Engenharia*\n\n*Nome:* ' + result.name + '\n*E-mail:* ' + result.email +
           (result.company ? '\n*Empresa:* ' + result.company : '') + '\n\n*Mensagem:*\n' + result.message;
+      }
       var text = template;
 
       var url = 'https://wa.me/' + WHATSAPP_E164 + '?text=' + encodeURIComponent(text);
