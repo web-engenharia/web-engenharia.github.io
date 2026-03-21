@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- PT-BR (padrão) -->
+  <url>
+    <loc>https://www.web-engenharia.com.br/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com.br/ja/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com.br/kok/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.web-engenharia.com.br/privacidade.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com.br/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com.br/en/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com.br/ja/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com.br/kok/privacidade.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.web-engenharia.com.br/termos.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com.br/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com.br/en/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com.br/ja/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com.br/kok/termos.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <!-- EN -->
+  <url>
+    <loc>https://www.web-engenharia.com.br/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com.br/ja/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com.br/kok/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.web-engenharia.com.br/en/privacidade.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com.br/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com.br/en/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com.br/ja/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com.br/kok/privacidade.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.web-engenharia.com.br/en/termos.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com.br/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com.br/en/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com.br/ja/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com.br/kok/termos.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <!-- JA -->
+  <url>
+    <loc>https://www.web-engenharia.com.br/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com.br/ja/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com.br/kok/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.web-engenharia.com.br/ja/privacidade.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com.br/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com.br/en/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com.br/ja/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com.br/kok/privacidade.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.web-engenharia.com.br/ja/termos.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com.br/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com.br/en/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com.br/ja/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com.br/kok/termos.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <!-- KOK (Konknni) -->
+  <url>
+    <loc>https://www.web-engenharia.com.br/kok/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com.br/ja/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com.br/kok/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.web-engenharia.com.br/kok/privacidade.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com.br/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com.br/en/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com.br/ja/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com.br/kok/privacidade.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.web-engenharia.com.br/kok/termos.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com.br/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com.br/en/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com.br/ja/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com.br/kok/termos.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

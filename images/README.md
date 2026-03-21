@@ -1,5 +1,14 @@
 # Imagens da landing
 
+## Preview para redes sociais (og:image / twitter:image)
+
+| Arquivo | Dimensões | Uso |
+|---------|-----------|-----|
+| `web-engenharia-og.png` | **1200×630 px** | Facebook, LinkedIn, Twitter, WhatsApp — miniaturas de link |
+| `web-engenharia.png` | 1000×1000 px | Logo original (quadrada) |
+
+O tamanho **1200×630** (proporção 1.91:1) é o recomendado pelas principais plataformas. Imagens quadradas ou com proporção diferente são recortadas e podem cortar o logo.
+
 ## Fotos dos nossos engenheiros de software (`desenvolvedores/`)
 
 Os caminhos das fotos são definidos em `landing/js/desenvolvedores.js` (campo `foto`). Para trocar uma foto, mantenha o mesmo nome ou atualize o caminho no arquivo.

@@ -1,0 +1,17 @@
+# robots.txt para Web-Engenharia — https://www.web-engenharia.com.br/
+
+User-agent: *
+Allow: /
+Allow: /en/
+Allow: /ja/
+Allow: /kok/
+
+# Bloquear assets de desenvolvimento (animações SVG internas)
+Disallow: /animacao_svg/
+
+# Bloquear documentação e pastas não públicas (se deploy incluir repo inteiro)
+Disallow: /docs/
+Disallow: /web/
+
+# Sitemap
+Sitemap: https://www.web-engenharia.com.br/sitemap.xml
