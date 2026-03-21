@@ -1,3 +1,25 @@
+// Notificação local para marcar reunião de produto
+window.addEventListener('load', function() {
+  if ('Notification' in window) {
+    if (Notification.permission === 'default') {
+      Notification.requestPermission();
+    }
+    if (Notification.permission === 'granted') {
+      // Aguarda a definição da variável WHATSAPP_E164
+      setTimeout(function() {
+        if (typeof WHATSAPP_E164 !== 'undefined') {
+          const notification = new Notification('Marque uma reunião de produto!', {
+            body: 'Clique aqui para falar com a Web-Engenharia pelo WhatsApp.',
+            icon: '/images/icons/icon-192x192.png',
+          });
+          notification.onclick = function() {
+            window.open('https://wa.me/' + WHATSAPP_E164, '_blank');
+          };
+        }
+      }, 100);
+    }
+  }
+});
 (function () {
   'use strict';
 
