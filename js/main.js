@@ -27,7 +27,7 @@ window.addEventListener('load', function() {
   var WHATSAPP_E164 = '5541987973270';
 
   var pathname = window.location.pathname || '';
-  var inLocaleSubfolder = /\/(en|ja|kok)(\/|$)/.test(pathname);
+  var inLocaleSubfolder = /\/(en|es|ja|kok)(\/|$)/.test(pathname);
   var ANIMATION_BASE = inLocaleSubfolder ? '../animacao_svg/' : 'animacao_svg/';
   var ANIMATION_FILES = [
     'animacao_v1.html',
@@ -53,13 +53,18 @@ window.addEventListener('load', function() {
     var reduced =
       window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var inKok = /\/(kok)(\/|$)/.test(pathname);
+    var inEs = /\/(es)(\/|$)/.test(pathname);
 
     if (reduced) {
       var fallbackLabel = inKok
         ? 'Web-Engenharia marca (system nirdhar paun animaion band)'
+        : inEs
+          ? 'Marca Web-Engenharia (animación desactivada por preferencia del sistema)'
         : 'Marca Web-Engenharia (animação desativada por preferência do sistema)';
       var fallbackText = inKok
         ? 'Uddesh borabor integrasaun — statik rochop (chalnn ghat).'
+        : inEs
+          ? 'Integraciones con propósito — vista estática (reducción de movimiento activa).'
         : 'Integrações com propósito — visual estático (redução de movimento ativa).';
       container.innerHTML =
         '<div class="hero-static-fallback flex h-full min-h-[240px] w-full flex-col items-center justify-center rounded-2xl px-6 text-center text-white shadow-inner sm:min-h-[280px]" role="img" aria-label="' + fallbackLabel + '">' +
@@ -73,7 +78,10 @@ window.addEventListener('load', function() {
       if (!document.getElementById('hero-animation')) return;
       var src = ANIMATION_BASE + ANIMATION_FILES[pickAnimationIndex()];
       var iframe = document.createElement('iframe');
-      iframe.setAttribute('title', inKok ? 'Web-Engenharia lip animaion' : 'Animação da marca Web-Engenharia');
+      iframe.setAttribute(
+        'title',
+        inKok ? 'Web-Engenharia lip animaion' : inEs ? 'Animación de marca Web-Engenharia' : 'Animação da marca Web-Engenharia'
+      );
       iframe.className = 'min-h-0 flex-1 overflow-hidden rounded-2xl';
       iframe.setAttribute('src', src);
       iframe.referrerPolicy = 'no-referrer-when-downgrade';
@@ -120,43 +128,71 @@ window.addEventListener('load', function() {
     var isPrivacidade = /privacidade\.html$/.test(path);
     var isTermos = /termos\.html$/.test(path);
     var isCareers = /careers\.html$/.test(path);
+    var isCookies = /cookies\.html$/.test(path);
     var inEn = /\/(en)(\/|$)/.test(path);
     var inJa = /\/(ja)(\/|$)/.test(path);
     var inKok = /\/(kok)(\/|$)/.test(path);
-    var pageFile = isPrivacidade ? 'privacidade.html' : isTermos ? 'termos.html' : isCareers ? 'careers.html' : '';
-    var urls = { pt: '', en: '', ja: '', kok: '' };
+    var inEs = /\/(es)(\/|$)/.test(path);
+    var pageFile = isPrivacidade
+      ? 'privacidade.html'
+      : isTermos
+        ? 'termos.html'
+        : isCareers
+          ? 'careers.html'
+          : isCookies
+            ? 'cookies.html'
+            : '';
+    var urls = { pt: '', en: '', es: '', ja: '', kok: '' };
 
     if (isCareers && inEn) {
-      urls.pt = '../';
+      urls.pt = '../carreiras.html';
       urls.en = 'careers.html';
+      urls.es = '../es/careers.html';
+      urls.ja = '../ja/';
+      urls.kok = '../kok/';
+    } else if (isCareers && inEs) {
+      urls.pt = '../carreiras.html';
+      urls.en = '../en/careers.html';
+      urls.es = 'careers.html';
       urls.ja = '../ja/';
       urls.kok = '../kok/';
     } else if (inEn) {
       urls.pt = pageFile ? '../' + pageFile : '../';
       urls.en = pageFile || 'index.html';
+      urls.es = pageFile ? '../es/' + pageFile : '../es/';
       urls.ja = pageFile ? '../ja/' + pageFile : '../ja/';
       urls.kok = pageFile ? '../kok/' + pageFile : '../kok/';
     } else if (inJa) {
       urls.pt = pageFile ? '../' + pageFile : '../';
       urls.en = pageFile ? '../en/' + pageFile : '../en/';
+      urls.es = pageFile ? '../es/' + pageFile : '../es/';
       urls.ja = pageFile || 'index.html';
       urls.kok = pageFile ? '../kok/' + pageFile : '../kok/';
     } else if (inKok) {
       urls.pt = pageFile ? '../' + pageFile : '../';
       urls.en = pageFile ? '../en/' + pageFile : '../en/';
+      urls.es = pageFile ? '../es/' + pageFile : '../es/';
       urls.ja = pageFile ? '../ja/' + pageFile : '../ja/';
       urls.kok = pageFile || 'index.html';
+    } else if (inEs) {
+      urls.pt = pageFile ? '../' + pageFile : '../';
+      urls.en = pageFile ? '../en/' + pageFile : '../en/';
+      urls.es = pageFile || 'index.html';
+      urls.ja = pageFile ? '../ja/' + pageFile : '../ja/';
+      urls.kok = pageFile ? '../kok/' + pageFile : '../kok/';
     } else {
       urls.pt = pageFile || 'index.html';
       urls.en = pageFile ? 'en/' + pageFile : 'en/';
+      urls.es = pageFile ? 'es/' + pageFile : 'es/';
       urls.ja = pageFile ? 'ja/' + pageFile : 'ja/';
       urls.kok = pageFile ? 'kok/' + pageFile : 'kok/';
     }
 
-    var currentLang = inEn ? 'en' : inJa ? 'ja' : inKok ? 'kok' : 'pt';
+    var currentLang = inEn ? 'en' : inJa ? 'ja' : inKok ? 'kok' : inEs ? 'es' : 'pt';
     var options = [
       { value: urls.pt, label: '🇧🇷 Português', lang: 'pt' },
       { value: urls.en, label: '🇺🇸 English', lang: 'en' },
+      { value: urls.es, label: '🇪🇸 Español', lang: 'es' },
       { value: urls.ja, label: '🇯🇵 日本語', lang: 'ja' },
       { value: urls.kok, label: '🇮🇳 Konknni', lang: 'kok' },
     ];
@@ -550,22 +586,34 @@ window.addEventListener('load', function() {
     var errors = {};
     var lang = (document.documentElement.getAttribute('lang') || 'pt-BR').toLowerCase();
     var isKok = lang.startsWith('kok');
+    var isEs = lang === 'es' || lang.startsWith('es-');
 
-    var t = isKok ? {
-      nameShort: 'Nav otthve 2 akshar gorje.',
-      nameReq: 'Nav gorje.',
-      emailReq: 'Email gorje.',
-      emailInvalid: 'Valid email sang.',
-      msgShort: 'Sandesh otthve 10 akshar gorje.',
-      msgReq: 'Sandesh gorje.'
-    } : {
-      nameShort: 'Nome deve ter pelo menos 2 caracteres.',
-      nameReq: 'Nome é obrigatório.',
-      emailReq: 'E-mail é obrigatório.',
-      emailInvalid: 'Informe um e-mail válido.',
-      msgShort: 'Mensagem deve ter pelo menos 10 caracteres.',
-      msgReq: 'Mensagem é obrigatória.'
-    };
+    var t = isKok
+      ? {
+          nameShort: 'Nav otthve 2 akshar gorje.',
+          nameReq: 'Nav gorje.',
+          emailReq: 'Email gorje.',
+          emailInvalid: 'Valid email sang.',
+          msgShort: 'Sandesh otthve 10 akshar gorje.',
+          msgReq: 'Sandesh gorje.',
+        }
+      : isEs
+        ? {
+            nameShort: 'El nombre debe tener al menos 2 caracteres.',
+            nameReq: 'El nombre es obligatorio.',
+            emailReq: 'El correo es obligatorio.',
+            emailInvalid: 'Indique un correo válido.',
+            msgShort: 'El mensaje debe tener al menos 10 caracteres.',
+            msgReq: 'El mensaje es obligatorio.',
+          }
+        : {
+            nameShort: 'Nome deve ter pelo menos 2 caracteres.',
+            nameReq: 'Nome é obrigatório.',
+            emailReq: 'E-mail é obrigatório.',
+            emailInvalid: 'Informe um e-mail válido.',
+            msgShort: 'Mensagem deve ter pelo menos 10 caracteres.',
+            msgReq: 'Mensagem é obrigatória.',
+          };
 
     if (name.length < 2) {
       errors.name = name ? t.nameShort : t.nameReq;
