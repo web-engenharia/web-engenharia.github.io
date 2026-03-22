@@ -3,15 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX5SDYB2M6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-YX5SDYB2M6');
-    </script>
     <title>कुकी धोरण — Web-Engenharia</title>
     <meta
       name="description"
@@ -24,6 +15,7 @@
     <link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/cookies.html" />
     <link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/cookies.html" />
     <link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/cookies.html" />
+    <link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/cookies.html" />
     <meta property="og:title" content="कुकी धोरण — Web-Engenharia" />
     <meta property="og:description" content="स्थिर साइट आ संपर्क फॉर्मा खातीर Web-Engenharia चें कुकी धोरण." />
     <meta property="og:type" content="website" />
@@ -43,6 +35,7 @@
     <link rel="stylesheet" href="../css/landing.css" />
   </head>
   <body class="bg-white font-sans text-brand-dark antialiased">
+    <a href="#inicio" class="skip-link">Mazvor-ak vetat</a>
     <header class="border-b border-brand-circuit/30 bg-white/90 py-4" role="banner">
       <div class="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-2 px-4 sm:px-6">
         <a href="index.html" class="font-display text-lg font-semibold text-brand-dark">Web-Engenharia</a>
@@ -62,7 +55,7 @@
         </div>
       </div>
     </header>
-    <main class="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+    <main id="inicio" class="mx-auto max-w-3xl px-4 py-12 sm:px-6">
       <h1 class="font-display text-3xl font-bold text-brand-dark">कुकी धोरण</h1>
       <p class="mt-2 text-sm text-brand-dark/60">हे कुकी धोरण आमी कुकी आनी तत्सम तंत्रज्ञानाचो वापर कसो करतात तें स्पश्ट करता.</p>
       <div class="prose-custom mt-8 space-y-4 text-sm leading-relaxed text-brand-dark/80">
@@ -102,5 +95,25 @@
         <a href="../carreiras.html" class="hover:text-white">आमच्या वांगडा काम करात</a>
       </div>
     </footer>
+      <div
+        id="cookie-consent-banner"
+        class="cookie-consent-banner"
+        role="region"
+        aria-label="Cookie svikar"
+        aria-live="polite"
+      >
+        <div class="cookie-consent-banner__inner">
+          <p class="cookie-consent-banner__text">
+            Amchea site ani service gorje, marketing ani personalized content khatir tumche personal mahiti process kortat. Svekar korum-ia khala privacy rights exercis korunk.
+            <span class="cookie-consent-banner__links">
+              <a href="../privacidade.html" target="_blank" rel="noopener noreferrer">Privacy notice</a>
+              <span aria-hidden="true">·</span>
+              <a href="../cookies.html" target="_blank" rel="noopener noreferrer">Cookies</a>
+            </span>
+          </p>
+          <button type="button" id="cookie-consent-accept">Svikar</button>
+        </div>
+      </div>
+      <script src="../js/cookie-consent.js" defer></script>
   </body>
 </html>

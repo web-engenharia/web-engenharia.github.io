@@ -3,15 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX5SDYB2M6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-YX5SDYB2M6');
-    </script>
     <title>Trabalhe conosco — Engenheiros de Software, Design, Marketing e mais | Web-Engenharia</title>
     <meta
       name="description"
@@ -22,6 +13,7 @@
     <link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/carreiras.html" />
     <link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/careers.html" />
     <link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/careers.html" />
+    <link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/careers.html" />
     <link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/carreiras.html" />
     <meta property="og:title" content="Trabalhe conosco — Engenheiros, Design, Marketing e mais | Web-Engenharia" />
     <meta property="og:description" content="Vagas abertas: Engenheiros de Software, UI/UX Design, Marketing, Produto e Projetos, QA, DevOps, Ciência de Dados." />
@@ -42,6 +34,7 @@
     <link rel="stylesheet" href="css/landing.css" />
   </head>
   <body class="bg-white font-sans text-brand-dark antialiased">
+    <a href="#inicio" class="skip-link">Ir para o conteúdo</a>
     <header class="border-b border-brand-circuit/30 bg-white/90 py-4" role="banner">
       <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 sm:px-6">
         <a href="index.html" class="font-display text-lg font-semibold text-brand-dark">Web-Engenharia</a>
@@ -56,12 +49,14 @@
             <a href="ja/" class="rounded px-2 py-1 text-brand-dark/80 hover:bg-brand-pulse/40 hover:text-brand-dark" hreflang="ja">日本語</a>
             <span class="text-brand-circuit/50">|</span>
             <a href="kok/" class="rounded px-2 py-1 text-brand-dark/80 hover:bg-brand-pulse/40 hover:text-brand-dark" hreflang="kok">Konknni</a>
+            <span class="text-brand-circuit/50">|</span>
+            <a href="sv/careers.html" class="rounded px-2 py-1 text-brand-dark/80 hover:bg-brand-pulse/40 hover:text-brand-dark" hreflang="sv">SV</a>
           </nav>
           <a href="index.html" class="text-sm font-medium text-brand-mid hover:text-brand-dark">Voltar ao início</a>
         </div>
       </div>
     </header>
-    <main class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <main id="inicio" class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
       <h1 class="font-display text-3xl font-bold text-brand-dark">Trabalhe conosco</h1>
       <p class="mt-3 text-lg text-brand-dark/80">
         Somos uma empresa de software e precisamos de todo tipo de talento — engenheiros, designers, marketeiros, gerentes de produto e projeto, QA, DevOps e muito mais. Junte-se a nós para construir integrações, produtos e soluções que importam.
@@ -308,5 +303,25 @@
         <a href="carreiras.html" class="hover:text-white">Trabalhe conosco</a>
       </div>
     </footer>
+      <div
+        id="cookie-consent-banner"
+        class="cookie-consent-banner"
+        role="region"
+        aria-label="Consentimento de cookies"
+        aria-live="polite"
+      >
+        <div class="cookie-consent-banner__inner">
+          <p class="cookie-consent-banner__text">
+            Tratamos as suas informações pessoais para medir e melhorar os nossos sites e serviços, para ajudar as nossas campanhas de marketing e fornecer conteúdo e publicidade personalizados. Pode exercer os seus direitos de privacidade ao aceitar abaixo.
+            <span class="cookie-consent-banner__links">
+              <a href="privacidade.html" target="_blank" rel="noopener noreferrer">Aviso de privacidade</a>
+              <span aria-hidden="true">·</span>
+              <a href="cookies.html" target="_blank" rel="noopener noreferrer">Cookies</a>
+            </span>
+          </p>
+          <button type="button" id="cookie-consent-accept">Aceitar</button>
+        </div>
+      </div>
+      <script src="js/cookie-consent.js" defer></script>
   </body>
 </html>

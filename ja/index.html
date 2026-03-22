@@ -17,6 +17,7 @@
     <link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/" />
     <link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/" />
     <link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/" />
+    <link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/" />
     <!-- Atualize a URL base acima e em og:image/twitter:image ao publicar em produção -->
 
     <!-- Open Graph (Facebook, LinkedIn) -->
@@ -174,16 +175,25 @@
               <a href="#portfolio" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">プロジェクト</a>
             </div>
           </div>
-          <nav class="flex items-center gap-1 px-2" aria-label="言語選択">
-            <a href="../" class="rounded px-2 py-1 text-sm font-medium text-brand-dark/80 transition-colors hover:bg-brand-pulse/40 hover:text-brand-dark" hreflang="pt-BR">PT</a>
-            <span class="text-brand-circuit/50" aria-hidden="true">|</span>
-            <a href="../en/" class="rounded px-2 py-1 text-sm font-medium text-brand-dark/80 transition-colors hover:bg-brand-pulse/40 hover:text-brand-dark" hreflang="en">EN</a>
-            <span class="text-brand-circuit/50" aria-hidden="true">|</span>
-            <a href="../es/" class="rounded px-2 py-1 text-sm font-medium text-brand-dark/80 transition-colors hover:bg-brand-pulse/40 hover:text-brand-dark" hreflang="es">ES</a>
-            <span class="text-brand-circuit/50" aria-hidden="true">|</span>
-            <span class="px-2 py-1 text-sm font-medium text-brand-dark" aria-current="page">日本語</span>
-            <span class="text-brand-circuit/50" aria-hidden="true">|</span>
-            <a href="../kok/" class="rounded px-2 py-1 text-sm font-medium text-brand-dark/80 transition-colors hover:bg-brand-pulse/40 hover:text-brand-dark" hreflang="kok">Konknni</a>
+          <nav class="header-dropdown group relative px-1" data-dropdown="lang" aria-label="言語選択">
+            <button
+              type="button"
+              id="lang-menu-btn"
+              class="nav-link flex items-center gap-1 rounded-lg px-3 py-2.5 text-sm font-medium text-brand-dark/80 transition-colors hover:bg-brand-pulse/40 hover:text-brand-dark"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-controls="lang-menu-desktop"
+            >
+              <span id="lang-menu-btn-label">日本語</span>
+              <svg class="h-4 w-4 text-brand-mid transition-transform group-data-[open=true]:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div
+              id="lang-menu-desktop"
+              class="absolute right-0 top-full z-50 mt-1 hidden min-w-[14rem] rounded-xl border border-brand-circuit/40 bg-white py-2 shadow-xl"
+              role="menu"
+            ></div>
           </nav>
           <a
             href="#contato"
@@ -225,9 +235,9 @@
         aria-label="モバイルメニュー"
       >
         <div class="flex flex-col gap-1 pb-4">
-          <div id="mobile-lang-select" class="mb-3 pb-3 border-b border-brand-circuit/20" role="group" aria-label="言語選択">
-            <label for="lang-select-mobile" class="mb-2 block text-xs font-semibold uppercase tracking-wide text-brand-mid">言語</label>
-            <select id="lang-select-mobile" class="w-full rounded-lg border border-brand-circuit/50 bg-white px-4 py-3 text-sm font-medium text-brand-dark outline-none focus:border-brand-mid focus:ring-2 focus:ring-brand-mid/30"></select>
+          <div id="mobile-lang-select" class="mb-3 pb-3 border-b border-brand-circuit/20" role="group" aria-labelledby="mobile-lang-label">
+            <p id="mobile-lang-label" class="mb-2 block text-xs font-semibold uppercase tracking-wide text-brand-mid">言語</p>
+            <ul id="lang-list-mobile" class="m-0 flex list-none flex-col gap-1 p-0" role="list"></ul>
           </div>
           <a href="#inicio" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">ホーム</a>
           <a href="#o-que-fazemos" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark"
@@ -1451,7 +1461,7 @@
                     placeholder="フルネーム"
                     class="mt-1 w-full rounded-xl border border-brand-circuit/50 px-4 py-2.5 text-brand-dark outline-none ring-brand-mid focus:border-brand-mid focus:ring-2"
                   />
-                  <span class="contact-field-error mt-1 block text-sm text-red-600" hidden role="alert"></span>
+                  <span id="name-error" class="contact-field-error mt-1 block text-sm text-red-600" hidden role="alert"></span>
                 </div>
                 <div id="email-wrap">
                   <label for="email" class="block text-sm font-medium text-brand-dark">メール <span class="text-red-600">*</span></label>
@@ -1464,7 +1474,7 @@
                     placeholder="seu@email.com"
                     class="mt-1 w-full rounded-xl border border-brand-circuit/50 px-4 py-2.5 text-brand-dark outline-none ring-brand-mid focus:border-brand-mid focus:ring-2"
                   />
-                  <span class="contact-field-error mt-1 block text-sm text-red-600" hidden role="alert"></span>
+                  <span id="email-error" class="contact-field-error mt-1 block text-sm text-red-600" hidden role="alert"></span>
                 </div>
                 <div id="company-wrap">
                   <label for="company" class="block text-sm font-medium text-brand-dark"
@@ -1478,7 +1488,7 @@
                     placeholder="会社名"
                     class="mt-1 w-full rounded-xl border border-brand-circuit/50 px-4 py-2.5 text-brand-dark outline-none ring-brand-mid focus:border-brand-mid focus:ring-2"
                   />
-                  <span class="contact-field-error mt-1 block text-sm text-red-600" hidden role="alert"></span>
+                  <span id="company-error" class="contact-field-error mt-1 block text-sm text-red-600" hidden role="alert"></span>
                 </div>
                 <div id="message-wrap">
                   <label for="message" class="block text-sm font-medium text-brand-dark">メッセージ <span class="text-red-600">*</span></label>
@@ -1491,7 +1501,7 @@
                     placeholder="プロジェクト、関係するシステム、緊急度を説明してください..."
                     class="mt-1 w-full rounded-xl border border-brand-circuit/50 px-4 py-2.5 text-brand-dark outline-none ring-brand-mid focus:border-brand-mid focus:ring-2"
                   ></textarea>
-                  <span class="contact-field-error mt-1 block text-sm text-red-600" hidden role="alert"></span>
+                  <span id="message-error" class="contact-field-error mt-1 block text-sm text-red-600" hidden role="alert"></span>
                 </div>
                 <button
                   type="submit"
@@ -1534,66 +1544,27 @@
 
     <script src="../js/desenvolvedores.ja.js" defer></script>
     <script src="../js/main.js" defer></script>
-      <!-- Cookie Consent Banner -->
-      <div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-between bg-brand-dark text-white px-4 py-3 shadow-lg transition-transform translate-y-0" style="display:none;">
-        <span>当ウェブサイトでは、最適な閲覧体験を提供するためにクッキーを使用しています。</span>
-        <button id="cookie-consent-accept" class="ml-4 rounded bg-brand-pulse px-4 py-2 text-sm font-semibold text-brand-dark hover:bg-brand-mid focus:outline-none focus:ring-2 focus:ring-brand-pulse">同意する</button>
-      </div>
-      <!-- Ajuste: posição no canto inferior direito -->
-      <style>
-        #cookie-consent-banner {
-          left: auto !important;
-          right: 2rem !important;
-          bottom: 2rem !important;
-          max-width: 340px !important;
-          border-radius: 0.75rem !important;
-        }
-        @media (max-width: 600px) {
-          #cookie-consent-banner {
-            right: 0.5rem !important;
-            bottom: 0.5rem !important;
-            max-width: 98vw !important;
-          }
-        }
-      </style>
+      <!-- Cookie consent banner -->
+      <div
+        id="cookie-consent-banner"
+        class="cookie-consent-banner"
+        role="region"
+        aria-label="クッキーに関する同意"
+        aria-live="polite"
+      >
+        <div class="cookie-consent-banner__inner">
+          <p class="cookie-consent-banner__text">
+            当サイトでは、サイトおよびサービスの測定・改善、マーケティング活動の支援、パーソナライズされたコンテンツおよび広告の提供のために個人情報を取り扱います。下のボタンで同意することにより、プライバシーに関する権利を行使できます。
+            <span class="cookie-consent-banner__links">
+              <a href="privacidade.html" target="_blank" rel="noopener noreferrer">プライバシー</a>
+              <span aria-hidden="true">·</span>
+              <a href="cookies.html" target="_blank" rel="noopener noreferrer">クッキーポリシー</a>
+            </span>
+          </p>
+          <button type="button" id="cookie-consent-accept">同意する</button>
+        </div>
       </div>
 
-      <script>
-        // クッキー同意とGoogle Analyticsの読み込み
-        (function() {
-          var consentKey = 'cookieConsentGiven';
-          var banner = document.getElementById('cookie-consent-banner');
-          var acceptBtn = document.getElementById('cookie-consent-accept');
-
-          function loadGA() {
-            if (window.gtagLoaded) return;
-            window.gtagLoaded = true;
-            var gaScript = document.createElement('script');
-            gaScript.async = true;
-            gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YX5SDYB2M6';
-            document.head.appendChild(gaScript);
-            window.dataLayer = window.dataLayer || [];
-            window.gtag = function(){dataLayer.push(arguments);};
-            gtag('js', new Date());
-            gtag('consent', 'update', {
-              'ad_storage': 'granted',
-              'analytics_storage': 'granted'
-            });
-            gtag('config', 'G-YX5SDYB2M6');
-          }
-
-          if (!localStorage.getItem(consentKey)) {
-            banner.style.display = 'flex';
-          } else {
-            loadGA();
-          }
-
-          acceptBtn.addEventListener('click', function() {
-            localStorage.setItem(consentKey, 'true');
-            banner.style.display = 'none';
-            loadGA();
-          });
-        })();
-      </script>
+      <script src="../js/cookie-consent.js" defer></script>
   </body>
 </html>

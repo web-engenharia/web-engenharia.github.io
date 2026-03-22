@@ -3,8 +3,10 @@
 User-agent: *
 Allow: /
 Allow: /en/
+Allow: /es/
 Allow: /ja/
 Allow: /kok/
+Allow: /sv/
 
 # Bloquear assets de desenvolvimento (animações SVG internas)
 Disallow: /animacao_svg/

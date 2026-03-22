@@ -1,0 +1,18 @@
+Checklist manual — Web-Engenharia (WCAG 2.2 AA)
+
+Por página / idioma
+- [ ] Skip link: primeiro Tab foca “Ir para o conteúdo” / equivalente e salta para #inicio.
+- [ ] Navegação só com teclado: Tab/Shift+Tab por header, dropdowns (setas no menu desktop), menu mobile (Escape fecha, Tab circula no painel).
+- [ ] Formulário de contato: erros anunciados, aria-invalid, foco no primeiro campo inválido.
+- [ ] FAQ: botões expandem/colapsam e aria-expanded / aria-hidden coerentes.
+- [ ] Carrossel “Cooperados”: setas e foco no contentor; setas esquerda/direita com foco no carrossel.
+- [ ] Zoom do navegador 200% e 400%: conteúdo utilizável sem perda de função.
+- [ ] Leitor de ecrã (NVDA/VoiceOver): títulos, landmarks (main, nav, footer), links de idioma.
+
+Automatizado (ambiente local)
+- Requer Chrome e ChromeDriver na mesma família de versão. Se o comando falhar:
+  npx browser-driver-manager install chrome
+- Depois, na raiz do projeto:
+  npm run a11y
+
+Alternativa: servir a pasta landing com um servidor HTTP local e usar Lighthouse ou extensão axe DevTools no Chrome.

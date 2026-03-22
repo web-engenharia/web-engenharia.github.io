@@ -1,33 +1,24 @@
-// Notificação local para marcar reunião de produto
-window.addEventListener('load', function() {
-  if ('Notification' in window) {
-    if (Notification.permission === 'default') {
-      Notification.requestPermission();
-    }
-    if (Notification.permission === 'granted') {
-      // Aguarda a definição da variável WHATSAPP_E164
-      setTimeout(function() {
-        if (typeof WHATSAPP_E164 !== 'undefined') {
-          const notification = new Notification('Marque uma reunião de produto!', {
-            body: 'Clique aqui para falar com a Web-Engenharia pelo WhatsApp.',
-            icon: '/images/icons/icon-192x192.png',
-          });
-          notification.onclick = function() {
-            window.open('https://wa.me/' + WHATSAPP_E164, '_blank');
-          };
-        }
-      }, 100);
-    }
-  }
-});
 (function () {
   'use strict';
+
+  function getFocusableElements(container) {
+    if (!container) return [];
+    var sel =
+      'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    return Array.prototype.filter.call(container.querySelectorAll(sel), function (el) {
+      return el.offsetWidth > 0 || el.offsetHeight > 0 || el.getClientRects().length > 0;
+    });
+  }
+
+  function getMenuItems(menu) {
+    return Array.prototype.slice.call(menu.querySelectorAll('[role="menuitem"]'));
+  }
 
   /** Número WhatsApp para envio do formulário (E.164, sem +). */
   var WHATSAPP_E164 = '5541987973270';
 
   var pathname = window.location.pathname || '';
-  var inLocaleSubfolder = /\/(en|es|ja|kok)(\/|$)/.test(pathname);
+  var inLocaleSubfolder = /\/(en|es|ja|kok|sv)(\/|$)/.test(pathname);
   var ANIMATION_BASE = inLocaleSubfolder ? '../animacao_svg/' : 'animacao_svg/';
   var ANIMATION_FILES = [
     'animacao_v1.html',
@@ -54,17 +45,22 @@ window.addEventListener('load', function() {
       window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var inKok = /\/(kok)(\/|$)/.test(pathname);
     var inEs = /\/(es)(\/|$)/.test(pathname);
+    var inSv = /\/(sv)(\/|$)/.test(pathname);
 
     if (reduced) {
       var fallbackLabel = inKok
         ? 'Web-Engenharia marca (system nirdhar paun animaion band)'
         : inEs
           ? 'Marca Web-Engenharia (animación desactivada por preferencia del sistema)'
+          : inSv
+            ? 'Web-Engenharia-varumärke (animation avstängd p.g.a. systeminställning)'
         : 'Marca Web-Engenharia (animação desativada por preferência do sistema)';
       var fallbackText = inKok
         ? 'Uddesh borabor integrasaun — statik rochop (chalnn ghat).'
         : inEs
           ? 'Integraciones con propósito — vista estática (reducción de movimiento activa).'
+          : inSv
+            ? 'Integrationer med syfte — statisk vy (nedsatt rörelse aktiv).'
         : 'Integrações com propósito — visual estático (redução de movimento ativa).';
       container.innerHTML =
         '<div class="hero-static-fallback flex h-full min-h-[240px] w-full flex-col items-center justify-center rounded-2xl px-6 text-center text-white shadow-inner sm:min-h-[280px]" role="img" aria-label="' + fallbackLabel + '">' +
@@ -80,7 +76,13 @@ window.addEventListener('load', function() {
       var iframe = document.createElement('iframe');
       iframe.setAttribute(
         'title',
-        inKok ? 'Web-Engenharia lip animaion' : inEs ? 'Animación de marca Web-Engenharia' : 'Animação da marca Web-Engenharia'
+        inKok
+          ? 'Web-Engenharia lip animaion'
+          : inEs
+            ? 'Animación de marca Web-Engenharia'
+            : inSv
+              ? 'Web-Engenharia varumärkesanimation'
+              : 'Animação da marca Web-Engenharia'
       );
       iframe.className = 'min-h-0 flex-1 overflow-hidden rounded-2xl';
       iframe.setAttribute('src', src);
@@ -103,36 +105,83 @@ window.addEventListener('load', function() {
     var panel = document.getElementById('mobile-menu');
     if (!btn || !panel) return;
 
-    function setOpen(open) {
-      panel.classList.toggle('hidden', !open);
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    function openMenu() {
+      panel.classList.remove('hidden');
+      btn.setAttribute('aria-expanded', 'true');
+      requestAnimationFrame(function () {
+        var focusables = getFocusableElements(panel);
+        if (focusables.length) focusables[0].focus();
+      });
+    }
+
+    function closeMenu(focusButton) {
+      panel.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+      if (focusButton) btn.focus();
     }
 
     btn.addEventListener('click', function () {
-      var open = panel.classList.contains('hidden');
-      setOpen(open);
+      if (panel.classList.contains('hidden')) openMenu();
+      else closeMenu(true);
     });
 
     panel.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () {
-        setOpen(false);
+        closeMenu(false);
       });
     });
+
+    document.addEventListener(
+      'keydown',
+      function (e) {
+        if (panel.classList.contains('hidden')) return;
+        if (e.key === 'Escape') {
+          closeMenu(true);
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          return;
+        }
+        if (e.key !== 'Tab') return;
+        var focusables = getFocusableElements(panel);
+        if (focusables.length < 2) return;
+        var first = focusables[0];
+        var last = focusables[focusables.length - 1];
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      },
+      true
+    );
   }
 
-  function initMobileLangSelect() {
-    var select = document.getElementById('lang-select-mobile');
-    if (!select) return;
+  var LANG_SWITCH_META = [
+    { key: 'pt', label: '🇧🇷 Português', ariaLabel: 'Português', short: 'PT', hreflang: 'pt-BR' },
+    { key: 'en', label: '🇺🇸 English', ariaLabel: 'English', short: 'EN', hreflang: 'en' },
+    { key: 'es', label: '🇪🇸 Español', ariaLabel: 'Español', short: 'ES', hreflang: 'es' },
+    { key: 'ja', label: '🇯🇵 日本語', ariaLabel: '日本語', short: '日本語', hreflang: 'ja' },
+    { key: 'kok', label: '🇮🇳 Konknni', ariaLabel: 'Konknni', short: 'Konknni', hreflang: 'kok' },
+    { key: 'sv', label: '🇸🇪 Svenska', ariaLabel: 'Svenska', short: 'SV', hreflang: 'sv' },
+  ];
 
-    var path = window.location.pathname || '';
+  function getLangSwitchState(path) {
     var isPrivacidade = /privacidade\.html$/.test(path);
     var isTermos = /termos\.html$/.test(path);
     var isCareers = /careers\.html$/.test(path);
+    var isCarreirasPt = /carreiras\.html$/.test(path);
     var isCookies = /cookies\.html$/.test(path);
     var inEn = /\/(en)(\/|$)/.test(path);
     var inJa = /\/(ja)(\/|$)/.test(path);
     var inKok = /\/(kok)(\/|$)/.test(path);
     var inEs = /\/(es)(\/|$)/.test(path);
+    var inSv = /\/(sv)(\/|$)/.test(path);
     var pageFile = isPrivacidade
       ? 'privacidade.html'
       : isTermos
@@ -142,7 +191,7 @@ window.addEventListener('load', function() {
           : isCookies
             ? 'cookies.html'
             : '';
-    var urls = { pt: '', en: '', es: '', ja: '', kok: '' };
+    var urls = { pt: '', en: '', es: '', ja: '', kok: '', sv: '' };
 
     if (isCareers && inEn) {
       urls.pt = '../carreiras.html';
@@ -150,66 +199,145 @@ window.addEventListener('load', function() {
       urls.es = '../es/careers.html';
       urls.ja = '../ja/';
       urls.kok = '../kok/';
+      urls.sv = '../sv/careers.html';
     } else if (isCareers && inEs) {
       urls.pt = '../carreiras.html';
       urls.en = '../en/careers.html';
       urls.es = 'careers.html';
       urls.ja = '../ja/';
       urls.kok = '../kok/';
+      urls.sv = '../sv/careers.html';
+    } else if (isCareers && inSv) {
+      urls.pt = '../carreiras.html';
+      urls.en = '../en/careers.html';
+      urls.es = '../es/careers.html';
+      urls.ja = '../ja/';
+      urls.kok = '../kok/';
+      urls.sv = 'careers.html';
+    } else if (isCarreirasPt && !inEn && !inEs && !inJa && !inKok && !inSv) {
+      urls.pt = 'carreiras.html';
+      urls.en = 'en/careers.html';
+      urls.es = 'es/careers.html';
+      urls.ja = 'ja/';
+      urls.kok = 'kok/';
+      urls.sv = 'sv/careers.html';
     } else if (inEn) {
       urls.pt = pageFile ? '../' + pageFile : '../';
       urls.en = pageFile || 'index.html';
       urls.es = pageFile ? '../es/' + pageFile : '../es/';
       urls.ja = pageFile ? '../ja/' + pageFile : '../ja/';
       urls.kok = pageFile ? '../kok/' + pageFile : '../kok/';
+      urls.sv = pageFile ? '../sv/' + pageFile : '../sv/';
     } else if (inJa) {
       urls.pt = pageFile ? '../' + pageFile : '../';
       urls.en = pageFile ? '../en/' + pageFile : '../en/';
       urls.es = pageFile ? '../es/' + pageFile : '../es/';
       urls.ja = pageFile || 'index.html';
       urls.kok = pageFile ? '../kok/' + pageFile : '../kok/';
+      urls.sv = pageFile ? '../sv/' + pageFile : '../sv/';
     } else if (inKok) {
       urls.pt = pageFile ? '../' + pageFile : '../';
       urls.en = pageFile ? '../en/' + pageFile : '../en/';
       urls.es = pageFile ? '../es/' + pageFile : '../es/';
       urls.ja = pageFile ? '../ja/' + pageFile : '../ja/';
       urls.kok = pageFile || 'index.html';
+      urls.sv = pageFile ? '../sv/' + pageFile : '../sv/';
     } else if (inEs) {
       urls.pt = pageFile ? '../' + pageFile : '../';
       urls.en = pageFile ? '../en/' + pageFile : '../en/';
       urls.es = pageFile || 'index.html';
       urls.ja = pageFile ? '../ja/' + pageFile : '../ja/';
       urls.kok = pageFile ? '../kok/' + pageFile : '../kok/';
+      urls.sv = pageFile ? '../sv/' + pageFile : '../sv/';
+    } else if (inSv) {
+      urls.pt = pageFile ? '../' + pageFile : '../';
+      urls.en = pageFile ? '../en/' + pageFile : '../en/';
+      urls.es = pageFile ? '../es/' + pageFile : '../es/';
+      urls.ja = pageFile ? '../ja/' + pageFile : '../ja/';
+      urls.kok = pageFile ? '../kok/' + pageFile : '../kok/';
+      urls.sv = pageFile || 'index.html';
     } else {
       urls.pt = pageFile || 'index.html';
       urls.en = pageFile ? 'en/' + pageFile : 'en/';
       urls.es = pageFile ? 'es/' + pageFile : 'es/';
       urls.ja = pageFile ? 'ja/' + pageFile : 'ja/';
       urls.kok = pageFile ? 'kok/' + pageFile : 'kok/';
+      urls.sv = pageFile ? 'sv/' + pageFile : 'sv/';
     }
 
-    var currentLang = inEn ? 'en' : inJa ? 'ja' : inKok ? 'kok' : inEs ? 'es' : 'pt';
-    var options = [
-      { value: urls.pt, label: '🇧🇷 Português', lang: 'pt' },
-      { value: urls.en, label: '🇺🇸 English', lang: 'en' },
-      { value: urls.es, label: '🇪🇸 Español', lang: 'es' },
-      { value: urls.ja, label: '🇯🇵 日本語', lang: 'ja' },
-      { value: urls.kok, label: '🇮🇳 Konknni', lang: 'kok' },
-    ];
+    var currentLang = inEn ? 'en' : inJa ? 'ja' : inKok ? 'kok' : inEs ? 'es' : inSv ? 'sv' : 'pt';
+    return { urls: urls, currentLang: currentLang };
+  }
 
-    select.innerHTML = '';
-    options.forEach(function (opt) {
-      var option = document.createElement('option');
-      option.value = opt.value;
-      option.textContent = opt.label;
-      if (opt.lang === currentLang) option.selected = true;
-      select.appendChild(option);
-    });
+  function initLangSelectors() {
+    var desktopMenu = document.getElementById('lang-menu-desktop');
+    var btnLabel = document.getElementById('lang-menu-btn-label');
+    var mobileList = document.getElementById('lang-list-mobile');
+    if (!desktopMenu && !mobileList) return;
 
-    select.addEventListener('change', function () {
-      var url = select.value;
-      if (url) window.location.href = url;
-    });
+    var state = getLangSwitchState(window.location.pathname || '');
+
+    var currentMeta = null;
+    for (var mi = 0; mi < LANG_SWITCH_META.length; mi++) {
+      if (LANG_SWITCH_META[mi].key === state.currentLang) {
+        currentMeta = LANG_SWITCH_META[mi];
+        break;
+      }
+    }
+    var shortLabel = currentMeta ? currentMeta.short : 'PT';
+    if (btnLabel) btnLabel.textContent = shortLabel;
+
+    function appendDesktopMenuLink(parent, meta) {
+      var url = state.urls[meta.key];
+      var isCurrent = state.currentLang === meta.key;
+      var rowClass =
+        'block w-full rounded-lg px-4 py-2.5 text-left text-sm text-brand-dark/90 hover:bg-brand-pulse/50 focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand-mid/30';
+      if (isCurrent) rowClass += ' font-medium text-brand-dark bg-brand-pulse/40';
+
+      var el = document.createElement('a');
+      el.href = url;
+      el.setAttribute('role', 'menuitem');
+      el.setAttribute('hreflang', meta.hreflang);
+      el.className = rowClass;
+      el.textContent = meta.label;
+      if (isCurrent) el.setAttribute('aria-current', 'page');
+      parent.appendChild(el);
+    }
+
+    function appendMobileRow(ul, meta) {
+      var url = state.urls[meta.key];
+      var isCurrent = state.currentLang === meta.key;
+      var rowClass =
+        'block w-full rounded-lg px-3 py-2.5 text-left text-sm font-medium text-brand-dark hover:bg-brand-pulse/40 focus-visible:outline focus-visible:ring-2 focus-visible:ring-brand-mid/30';
+      if (isCurrent) rowClass += ' bg-brand-pulse/40 text-brand-dark';
+
+      var li = document.createElement('li');
+      li.setAttribute('role', 'none');
+
+      var el = document.createElement('a');
+      el.href = url;
+      el.setAttribute('hreflang', meta.hreflang);
+      el.setAttribute('aria-label', meta.ariaLabel);
+      el.className = rowClass;
+      el.textContent = meta.label;
+      if (isCurrent) el.setAttribute('aria-current', 'page');
+      li.appendChild(el);
+      ul.appendChild(li);
+    }
+
+    if (desktopMenu) {
+      desktopMenu.innerHTML = '';
+      LANG_SWITCH_META.forEach(function (meta) {
+        appendDesktopMenuLink(desktopMenu, meta);
+      });
+    }
+
+    if (mobileList) {
+      mobileList.innerHTML = '';
+      LANG_SWITCH_META.forEach(function (meta) {
+        appendMobileRow(mobileList, meta);
+      });
+    }
   }
 
   function initHeaderDropdowns() {
@@ -245,6 +373,16 @@ window.addEventListener('load', function() {
       if (menu) menu.classList.remove('hidden');
       if (btn) btn.setAttribute('aria-expanded', 'true');
       dd.setAttribute('data-open', 'true');
+    }
+
+    function focusMenuItem(menu, delta) {
+      var items = getMenuItems(menu);
+      if (!items.length) return;
+      var active = document.activeElement;
+      var idx = items.indexOf(active);
+      if (idx < 0) idx = delta > 0 ? -1 : 0;
+      var next = (idx + delta + items.length) % items.length;
+      items[next].focus();
     }
 
     dropdowns.forEach(function (dd) {
@@ -286,6 +424,44 @@ window.addEventListener('load', function() {
         });
       }
 
+      btn.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          e.stopPropagation();
+          var open = !menu.classList.contains('hidden');
+          if (!open) openOne(dd);
+          var items = getMenuItems(menu);
+          if (!items.length) return;
+          if (e.key === 'ArrowDown') items[0].focus();
+          else items[items.length - 1].focus();
+        }
+      });
+
+      menu.addEventListener('keydown', function (e) {
+        if (menu.classList.contains('hidden')) return;
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          closeOne(dd);
+          btn.focus();
+          return;
+        }
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          focusMenuItem(menu, 1);
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          focusMenuItem(menu, -1);
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          var items = getMenuItems(menu);
+          if (items.length) items[0].focus();
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          var itemsEnd = getMenuItems(menu);
+          if (itemsEnd.length) itemsEnd[itemsEnd.length - 1].focus();
+        }
+      });
+
       menu.querySelectorAll('a').forEach(function (a) {
         a.addEventListener('click', function () {
           closeAll();
@@ -299,20 +475,34 @@ window.addEventListener('load', function() {
       }
     });
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') closeAll();
+      if (e.key !== 'Escape') return;
+      var openDd = document.querySelector('.header-dropdown[data-open="true"]');
+      if (openDd) {
+        var b = openDd.querySelector('button');
+        closeAll();
+        if (b) b.focus();
+        e.preventDefault();
+      }
     });
   }
 
   function initFaq() {
     document.querySelectorAll('[data-faq-toggle]').forEach(function (btn) {
+      var id = btn.getAttribute('aria-controls');
+      var panel = id ? document.getElementById(id) : null;
+      if (panel) {
+        var initiallyHidden = panel.classList.contains('hidden');
+        panel.setAttribute('aria-hidden', initiallyHidden ? 'true' : 'false');
+      }
       btn.addEventListener('click', function () {
-        var id = btn.getAttribute('aria-controls');
-        var panel = id ? document.getElementById(id) : null;
-        if (!panel) return;
+        var pid = btn.getAttribute('aria-controls');
+        var p = pid ? document.getElementById(pid) : null;
+        if (!p) return;
 
         var expanded = btn.getAttribute('aria-expanded') === 'true';
         btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        panel.classList.toggle('hidden', expanded);
+        p.classList.toggle('hidden', expanded);
+        p.setAttribute('aria-hidden', expanded ? 'true' : 'false');
       });
     });
   }
@@ -572,6 +762,20 @@ window.addEventListener('load', function() {
     track.addEventListener('scroll', updateButtons);
     window.addEventListener('resize', updateButtons);
 
+    var carousel = track.closest('.gente-carousel');
+    if (carousel) {
+      if (!carousel.hasAttribute('tabindex')) carousel.setAttribute('tabindex', '0');
+      carousel.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          scrollBy(-1);
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          scrollBy(1);
+        }
+      });
+    }
+
     updateButtons();
   }
 
@@ -587,6 +791,8 @@ window.addEventListener('load', function() {
     var lang = (document.documentElement.getAttribute('lang') || 'pt-BR').toLowerCase();
     var isKok = lang.startsWith('kok');
     var isEs = lang === 'es' || lang.startsWith('es-');
+    var isEn = lang.startsWith('en');
+    var isSv = lang === 'sv' || lang.startsWith('sv-');
 
     var t = isKok
       ? {
@@ -606,14 +812,32 @@ window.addEventListener('load', function() {
             msgShort: 'El mensaje debe tener al menos 10 caracteres.',
             msgReq: 'El mensaje es obligatorio.',
           }
-        : {
-            nameShort: 'Nome deve ter pelo menos 2 caracteres.',
-            nameReq: 'Nome é obrigatório.',
-            emailReq: 'E-mail é obrigatório.',
-            emailInvalid: 'Informe um e-mail válido.',
-            msgShort: 'Mensagem deve ter pelo menos 10 caracteres.',
-            msgReq: 'Mensagem é obrigatória.',
-          };
+        : isEn
+          ? {
+              nameShort: 'Name must be at least 2 characters.',
+              nameReq: 'Name is required.',
+              emailReq: 'Email is required.',
+              emailInvalid: 'Enter a valid email address.',
+              msgShort: 'Message must be at least 10 characters.',
+              msgReq: 'Message is required.',
+            }
+          : isSv
+            ? {
+                nameShort: 'Namnet måste ha minst 2 tecken.',
+                nameReq: 'Namn är obligatoriskt.',
+                emailReq: 'E-post är obligatoriskt.',
+                emailInvalid: 'Ange en giltig e-postadress.',
+                msgShort: 'Meddelandet måste ha minst 10 tecken.',
+                msgReq: 'Meddelande är obligatoriskt.',
+              }
+            : {
+                nameShort: 'Nome deve ter pelo menos 2 caracteres.',
+                nameReq: 'Nome é obrigatório.',
+                emailReq: 'E-mail é obrigatório.',
+                emailInvalid: 'Informe um e-mail válido.',
+                msgShort: 'Mensagem deve ter pelo menos 10 caracteres.',
+                msgReq: 'Mensagem é obrigatória.',
+              };
 
     if (name.length < 2) {
       errors.name = name ? t.nameShort : t.nameReq;
@@ -632,11 +856,21 @@ window.addEventListener('load', function() {
     return { name: name, email: email, company: company, message: msg, errors: errors };
   }
 
+  function wrapToErrorId(wrapId) {
+    return wrapId.replace(/-wrap$/, '') + '-error';
+  }
+
   function showFieldError(fieldId, message) {
     var wrap = document.getElementById(fieldId);
     if (!wrap) return;
     wrap.classList.add('contact-field--error');
-    var errEl = wrap.querySelector('.contact-field-error');
+    var errId = wrapToErrorId(fieldId);
+    var errEl = document.getElementById(errId) || wrap.querySelector('.contact-field-error');
+    var input = wrap.querySelector('input, textarea');
+    if (input) {
+      input.setAttribute('aria-invalid', 'true');
+      if (errEl && errEl.id) input.setAttribute('aria-describedby', errEl.id);
+    }
     if (errEl) {
       errEl.textContent = message;
       errEl.removeAttribute('hidden');
@@ -647,7 +881,13 @@ window.addEventListener('load', function() {
     var wrap = document.getElementById(fieldId);
     if (!wrap) return;
     wrap.classList.remove('contact-field--error');
-    var errEl = wrap.querySelector('.contact-field-error');
+    var errId = wrapToErrorId(fieldId);
+    var errEl = document.getElementById(errId) || wrap.querySelector('.contact-field-error');
+    var input = wrap.querySelector('input, textarea');
+    if (input) {
+      input.removeAttribute('aria-invalid');
+      input.removeAttribute('aria-describedby');
+    }
     if (errEl) {
       errEl.textContent = '';
       errEl.setAttribute('hidden', '');
@@ -700,6 +940,7 @@ window.addEventListener('load', function() {
       var lang = (document.documentElement.getAttribute('lang') || 'pt-BR').toLowerCase();
       var isEn = lang.startsWith('en');
       var isKok = lang.startsWith('kok');
+      var isSv = lang === 'sv' || lang.startsWith('sv-');
       var template;
       if (isEn) {
         template = '*Web-Engenharia Contact*\n\n*Name:* ' + result.name + '\n*Email:* ' + result.email +
@@ -707,6 +948,9 @@ window.addEventListener('load', function() {
       } else if (isKok) {
         template = '*Web-Engenharia Samparko*\n\n*Nav:* ' + result.name + '\n*Email:* ' + result.email +
           (result.company ? '\n*Kornni:* ' + result.company : '') + '\n\n*Sandesh:*\n' + result.message;
+      } else if (isSv) {
+        template = '*Web-Engenharia — kontakt*\n\n*Namn:* ' + result.name + '\n*E-post:* ' + result.email +
+          (result.company ? '\n*Företag:* ' + result.company : '') + '\n\n*Meddelande:*\n' + result.message;
       } else {
         template = '*Contato Web-Engenharia*\n\n*Nome:* ' + result.name + '\n*E-mail:* ' + result.email +
           (result.company ? '\n*Empresa:* ' + result.company : '') + '\n\n*Mensagem:*\n' + result.message;
@@ -752,8 +996,8 @@ window.addEventListener('load', function() {
   document.addEventListener('DOMContentLoaded', function () {
     initYear();
     initHeroAnimation();
+    initLangSelectors();
     initMobileNav();
-    initMobileLangSelect();
     initHeaderDropdowns();
     initFaq();
     initGenteWhenNearViewport();
