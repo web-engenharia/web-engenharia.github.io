@@ -4,15 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX5SDYB2M6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-YX5SDYB2M6');
-    </script>
-    <title>Web-Engenharia — 統合・API-firstコンサルティング</title>
+    <!-- Google Analyticsはクッキー同意後にのみ読み込まれます -->
+    <title>あなたのソフトウェア開発コンサルティング - Web-Engenharia</title>
     <meta
       name="description"
       content="マルチテクノロジー統合におけるB2Bコンサルティング：明確な契約、運用ガバナンス、技術リスクの軽減 — 発見からゴーライブまで。"
@@ -1524,6 +1517,7 @@
         <p class="font-display text-xs font-semibold tracking-wide text-white">Web-Engenharia</p>
         <nav class="flex flex-wrap gap-x-4 gap-y-1 text-xs" aria-label="フッター">
           <a href="privacidade.html" class="hover:text-white">プライバシー</a>
+          <a href="cookies.html" class="hover:text-white">クッキーポリシー</a>
           <a href="termos.html" class="hover:text-white">利用規約</a>
           <a href="../en/careers.html" class="hover:text-white">採用</a>
           <a href="#contato" class="hover:text-white">お問い合わせ</a>
@@ -1537,5 +1531,66 @@
 
     <script src="../js/desenvolvedores.ja.js" defer></script>
     <script src="../js/main.js" defer></script>
+      <!-- Cookie Consent Banner -->
+      <div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-between bg-brand-dark text-white px-4 py-3 shadow-lg transition-transform translate-y-0" style="display:none;">
+        <span>当ウェブサイトでは、最適な閲覧体験を提供するためにクッキーを使用しています。</span>
+        <button id="cookie-consent-accept" class="ml-4 rounded bg-brand-pulse px-4 py-2 text-sm font-semibold text-brand-dark hover:bg-brand-mid focus:outline-none focus:ring-2 focus:ring-brand-pulse">同意する</button>
+      </div>
+      <!-- Ajuste: posição no canto inferior direito -->
+      <style>
+        #cookie-consent-banner {
+          left: auto !important;
+          right: 2rem !important;
+          bottom: 2rem !important;
+          max-width: 340px !important;
+          border-radius: 0.75rem !important;
+        }
+        @media (max-width: 600px) {
+          #cookie-consent-banner {
+            right: 0.5rem !important;
+            bottom: 0.5rem !important;
+            max-width: 98vw !important;
+          }
+        }
+      </style>
+      </div>
+
+      <script>
+        // クッキー同意とGoogle Analyticsの読み込み
+        (function() {
+          var consentKey = 'cookieConsentGiven';
+          var banner = document.getElementById('cookie-consent-banner');
+          var acceptBtn = document.getElementById('cookie-consent-accept');
+
+          function loadGA() {
+            if (window.gtagLoaded) return;
+            window.gtagLoaded = true;
+            var gaScript = document.createElement('script');
+            gaScript.async = true;
+            gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YX5SDYB2M6';
+            document.head.appendChild(gaScript);
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function(){dataLayer.push(arguments);};
+            gtag('js', new Date());
+            gtag('consent', 'update', {
+              'ad_storage': 'granted',
+              'analytics_storage': 'granted'
+            });
+            gtag('config', 'G-YX5SDYB2M6');
+          }
+
+          if (!localStorage.getItem(consentKey)) {
+            banner.style.display = 'flex';
+          } else {
+            loadGA();
+          }
+
+          acceptBtn.addEventListener('click', function() {
+            localStorage.setItem(consentKey, 'true');
+            banner.style.display = 'none';
+            loadGA();
+          });
+        })();
+      </script>
   </body>
 </html>

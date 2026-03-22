@@ -283,3 +283,80 @@
   .reveal-section.is-visible .reveal-stagger-grid > *:nth-child(10) { transition-delay: 0.92s; opacity: 1; transform: translateY(0); }
   .reveal-section.is-visible .reveal-stagger-grid > *:nth-child(n+11) { transition-delay: 1s; opacity: 1; transform: translateY(0); }
 }
+
+/* Ajuste: banner acima do footer, alinhado à direita */
+#cookie-consent-banner {
+  position: fixed;
+  right: 2rem;
+  bottom: 72px;
+  left: auto;
+  max-width: 340px;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.12);
+  background: #062a1b;
+  color: #fff;
+  opacity: 0.98;
+  z-index: 1000;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+@media (max-width: 600px) {
+  #cookie-consent-banner {
+    right: 0.5rem;
+    bottom: 72px;
+    max-width: 98vw;
+    font-size: 0.95rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #cookie-consent-banner button {
+    margin: 0.75rem 0 0 0;
+    width: 100%;
+  }
+}
+
+/* Botão do banner de cookies: visual mais moderno e consistente */
+#cookie-consent-banner button {
+  margin-left: 1rem;
+  background: linear-gradient(90deg, #a5c7a9 0%, #62866d 100%);
+  color: #062a1b;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+  cursor: pointer;
+  outline: none;
+}
+#cookie-consent-banner button:hover, #cookie-consent-banner button:focus {
+  background: linear-gradient(90deg, #62866d 0%, #a5c7a9 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+@media (max-width: 600px) {
+  #cookie-consent-banner button {
+    margin: 0.75rem 0 0 0;
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+/* Ajuste: texto do aviso de cookies menor */
+#cookie-consent-banner span {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  max-width: 220px;
+  display: block;
+  word-break: break-word;
+}
+@media (max-width: 600px) {
+  #cookie-consent-banner span {
+    max-width: 100%;
+    font-size: 0.98rem;
+  }
+}

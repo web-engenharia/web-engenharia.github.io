@@ -4,15 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX5SDYB2M6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-YX5SDYB2M6');
-    </script>
-    <title>Web-Engenharia — Consultoria em integrações e API-first</title>
+    <!-- Google Analytics será carregado apenas após consentimento de cookies -->
+    <title>Sua consultoria de Desenvolvimento de Software - Web-Engenharia</title>
     <meta
       name="description"
       content="Consultoria B2B em integrações multi-tecnologia: contratos claros, governança na operação e risco técnico reduzido — da descoberta ao go-live."
@@ -1571,6 +1564,7 @@
         <p class="font-display text-xs font-semibold tracking-wide text-white">Web-Engenharia</p>
         <nav class="flex flex-wrap gap-x-4 gap-y-1 text-xs" aria-label="Rodapé">
           <a href="privacidade.html" class="hover:text-white">Privacidade</a>
+          <a href="cookies.html" class="hover:text-white">Cookies</a>
           <a href="termos.html" class="hover:text-white">Termos</a>
           <a href="carreiras.html" class="hover:text-white">Trabalhe conosco</a>
           <a href="#contato" class="hover:text-white">Contato</a>
@@ -1584,5 +1578,50 @@
 
     <script src="js/desenvolvedores.pt.js" defer></script>
     <script src="js/main.js" defer></script>
+      <!-- Aviso de Cookies -->
+      <div id="cookie-consent-banner" class="fixed bottom-0 right-8 z-50 flex items-center justify-between bg-brand-dark text-white px-4 py-3 shadow-lg transition-transform translate-y-0" style="display:none; max-width:340px; border-radius:0.75rem;">
+        <span style="font-size:0.97rem;">
+          Tratamos as suas informações pessoais para medir e melhorar os nossos sites e serviços, para ajudar as nossas campanhas de marketing e fornecer conteúdo e publicidade personalizados. Pode exercer os seus direitos de privacidade clicando no botão à direita. Para mais informações, consulte o nosso <a href="privacidade.html" target="_blank" style="color:#a5c7a9;text-decoration:underline;">aviso de privacidade</a>.
+        </span>
+        <button id="cookie-consent-accept" class="ml-4 rounded bg-brand-pulse px-4 py-2 text-sm font-semibold text-brand-dark hover:bg-brand-mid focus:outline-none focus:ring-2 focus:ring-brand-pulse">Aceitar</button>
+      </div>
+
+      <script>
+        // Consentimento de cookies e carregamento do Google Analytics
+        (function() {
+          var consentKey = 'cookieConsentGiven';
+          var banner = document.getElementById('cookie-consent-banner');
+          var acceptBtn = document.getElementById('cookie-consent-accept');
+
+          function loadGA() {
+            if (window.gtagLoaded) return;
+            window.gtagLoaded = true;
+            var gaScript = document.createElement('script');
+            gaScript.async = true;
+            gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YX5SDYB2M6';
+            document.head.appendChild(gaScript);
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function(){dataLayer.push(arguments);};
+            gtag('js', new Date());
+            gtag('consent', 'update', {
+              'ad_storage': 'granted',
+              'analytics_storage': 'granted'
+            });
+            gtag('config', 'G-YX5SDYB2M6');
+          }
+
+          if (!localStorage.getItem(consentKey)) {
+            banner.style.display = 'flex';
+          } else {
+            loadGA();
+          }
+
+          acceptBtn.addEventListener('click', function() {
+            localStorage.setItem(consentKey, 'true');
+            banner.style.display = 'none';
+            loadGA();
+          });
+        })();
+      </script>
   </body>
 </html>

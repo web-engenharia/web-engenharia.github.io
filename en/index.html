@@ -4,15 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX5SDYB2M6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-YX5SDYB2M6');
-    </script>
-    <title>Web-Engenharia — Integration & API-first Consulting</title>
+    <!-- Google Analytics will be loaded only after cookie consent -->
+    <title>Your Software Development Consultancy - Web-Engenharia</title>
     <meta
       name="description"
       content="B2B consulting in multi-technology integrations: clear contracts, operational governance, and reduced technical risk — from discovery to go-live."
@@ -1568,6 +1561,7 @@
         <p class="font-display text-xs font-semibold tracking-wide text-white">Web-Engenharia</p>
         <nav class="flex flex-wrap gap-x-4 gap-y-1 text-xs" aria-label="Footer">
           <a href="privacidade.html" class="hover:text-white">Privacy</a>
+          <a href="cookies.html" class="hover:text-white">Cookies</a>
           <a href="termos.html" class="hover:text-white">Terms</a>
           <a href="careers.html" class="hover:text-white">Careers</a>
           <a href="#contato" class="hover:text-white">Contact</a>
@@ -1581,5 +1575,66 @@
 
     <script src="../js/desenvolvedores.en.js" defer></script>
     <script src="../js/main.js" defer></script>
+      <!-- Cookie Consent Banner -->
+      <div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-between bg-brand-dark text-white px-4 py-3 shadow-lg transition-transform translate-y-0" style="display:none;">
+        <span>We use cookies to ensure you get the best experience on our website.</span>
+        <button id="cookie-consent-accept" class="ml-4 rounded bg-brand-pulse px-4 py-2 text-sm font-semibold text-brand-dark hover:bg-brand-mid focus:outline-none focus:ring-2 focus:ring-brand-pulse">Accept</button>
+      </div>
+      <!-- Ajuste: posição no canto inferior direito -->
+      <style>
+        #cookie-consent-banner {
+          left: auto !important;
+          right: 2rem !important;
+          bottom: 2rem !important;
+          max-width: 340px !important;
+          border-radius: 0.75rem !important;
+        }
+        @media (max-width: 600px) {
+          #cookie-consent-banner {
+            right: 0.5rem !important;
+            bottom: 0.5rem !important;
+            max-width: 98vw !important;
+          }
+        }
+      </style>
+      </div>
+
+      <script>
+        // Cookie consent and Google Analytics loading
+        (function() {
+          var consentKey = 'cookieConsentGiven';
+          var banner = document.getElementById('cookie-consent-banner');
+          var acceptBtn = document.getElementById('cookie-consent-accept');
+
+          function loadGA() {
+            if (window.gtagLoaded) return;
+            window.gtagLoaded = true;
+            var gaScript = document.createElement('script');
+            gaScript.async = true;
+            gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YX5SDYB2M6';
+            document.head.appendChild(gaScript);
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function(){dataLayer.push(arguments);};
+            gtag('js', new Date());
+            gtag('consent', 'update', {
+              'ad_storage': 'granted',
+              'analytics_storage': 'granted'
+            });
+            gtag('config', 'G-YX5SDYB2M6');
+          }
+
+          if (!localStorage.getItem(consentKey)) {
+            banner.style.display = 'flex';
+          } else {
+            loadGA();
+          }
+
+          acceptBtn.addEventListener('click', function() {
+            localStorage.setItem(consentKey, 'true');
+            banner.style.display = 'none';
+            loadGA();
+          });
+        })();
+      </script>
   </body>
 </html>
