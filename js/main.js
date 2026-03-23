@@ -177,6 +177,7 @@
     var isCareers = /careers\.html$/.test(path);
     var isCarreirasPt = /carreiras\.html$/.test(path);
     var isCookies = /cookies\.html$/.test(path);
+    var artigosMatch = path.match(/\/artigos\/([^/]+\.html)$/);
     var inEn = /\/(en)(\/|$)/.test(path);
     var inJa = /\/(ja)(\/|$)/.test(path);
     var inKok = /\/(kok)(\/|$)/.test(path);
@@ -221,6 +222,51 @@
       urls.ja = 'ja/';
       urls.kok = 'kok/';
       urls.sv = 'sv/careers.html';
+    } else if (artigosMatch) {
+      var artigosFile = artigosMatch[1];
+      if (inEn) {
+        urls.pt = '../../artigos/' + artigosFile;
+        urls.en = artigosFile;
+        urls.es = '../../es/artigos/' + artigosFile;
+        urls.ja = '../../ja/artigos/' + artigosFile;
+        urls.kok = '../../kok/artigos/' + artigosFile;
+        urls.sv = '../../sv/artigos/' + artigosFile;
+      } else if (inJa) {
+        urls.pt = '../../artigos/' + artigosFile;
+        urls.en = '../../en/artigos/' + artigosFile;
+        urls.es = '../../es/artigos/' + artigosFile;
+        urls.ja = artigosFile;
+        urls.kok = '../../kok/artigos/' + artigosFile;
+        urls.sv = '../../sv/artigos/' + artigosFile;
+      } else if (inKok) {
+        urls.pt = '../../artigos/' + artigosFile;
+        urls.en = '../../en/artigos/' + artigosFile;
+        urls.es = '../../es/artigos/' + artigosFile;
+        urls.ja = '../../ja/artigos/' + artigosFile;
+        urls.kok = artigosFile;
+        urls.sv = '../../sv/artigos/' + artigosFile;
+      } else if (inEs) {
+        urls.pt = '../../artigos/' + artigosFile;
+        urls.en = '../../en/artigos/' + artigosFile;
+        urls.es = artigosFile;
+        urls.ja = '../../ja/artigos/' + artigosFile;
+        urls.kok = '../../kok/artigos/' + artigosFile;
+        urls.sv = '../../sv/artigos/' + artigosFile;
+      } else if (inSv) {
+        urls.pt = '../../artigos/' + artigosFile;
+        urls.en = '../../en/artigos/' + artigosFile;
+        urls.es = '../../es/artigos/' + artigosFile;
+        urls.ja = '../../ja/artigos/' + artigosFile;
+        urls.kok = '../../kok/artigos/' + artigosFile;
+        urls.sv = artigosFile;
+      } else {
+        urls.pt = artigosFile === 'index.html' ? 'index.html' : artigosFile;
+        urls.en = '../en/artigos/' + artigosFile;
+        urls.es = '../es/artigos/' + artigosFile;
+        urls.ja = '../ja/artigos/' + artigosFile;
+        urls.kok = '../kok/artigos/' + artigosFile;
+        urls.sv = '../sv/artigos/' + artigosFile;
+      }
     } else if (inEn) {
       urls.pt = pageFile ? '../' + pageFile : '../';
       urls.en = pageFile || 'index.html';

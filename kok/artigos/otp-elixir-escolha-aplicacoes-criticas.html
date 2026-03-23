@@ -1,1 +1,118 @@
-<!DOCTYPE html><html lang="kok"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>OTP and Elixir for Mission-Critical Apps | Web-Engenharia</title><meta name="description" content="Translation in progress. See PT-BR original."/><meta name="robots" content="index, follow"/><link rel="canonical" href="https://www.web-engenharia.com/kok/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/><link rel="stylesheet" href="../../css/tailwind.min.css"/></head><body class="bg-white font-sans text-brand-dark"><main class="mx-auto max-w-3xl px-4 py-12"><h1 class="text-3xl font-bold">OTP and Elixir for Mission-Critical Apps</h1><p class="mt-4">Translation in progress.</p><a class="underline" href="../../artigos/otp-elixir-escolha-aplicacoes-criticas.html">Open PT-BR</a></main></body></html>
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="kok" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>अपेसांत पडनातल्यो प्रणाली: एरलांग/ओटीपी आनी एलिक्सिर पर्यावरण प्रणाली ही मिशन-क्रिटिकल अनुप्रयोगां खातीर निवड कित्याक | Web-Engenharia</title>
+    <meta name="description" content="समकालीन सॉफ्टवॅर मुळाव्या साधनसुविधांक गुंतागुंत आनी अकार्यक्षमताय हांचे चिरकालीन संकश्टाक तोंड दिवचें पडटा. वापरप्यांची येरादारी अपूर्व प्रमाणांत पावता आनी…" />
+    <meta name="author" content="Matheus de Camargo Marques" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.web-engenharia.com/kok/artigos/otp-elixir-escolha-aplicacoes-criticas.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/artigos/otp-elixir-escolha-aplicacoes-criticas.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/artigos/otp-elixir-escolha-aplicacoes-criticas.html" />
+    <link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/artigos/otp-elixir-escolha-aplicacoes-criticas.html" />
+    <link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/artigos/otp-elixir-escolha-aplicacoes-criticas.html" />
+    <link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/artigos/otp-elixir-escolha-aplicacoes-criticas.html" />
+    <link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/artigos/otp-elixir-escolha-aplicacoes-criticas.html" />
+    <link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/artigos/otp-elixir-escolha-aplicacoes-criticas.html" />
+    <meta property="og:title" content="अपेसांत पडनातल्यो प्रणाली: एरलांग/ओटीपी आनी एलिक्सिर पर्यावरण प्रणाली ही मिशन-क्रिटिकल अनुप्रयोगां खातीर निवड कित्याक | Web-Engenharia" />
+    <meta property="og:description" content="समकालीन सॉफ्टवॅर मुळाव्या साधनसुविधांक गुंतागुंत आनी अकार्यक्षमताय हांचे चिरकालीन संकश्टाक तोंड दिवचें पडटा. वापरप्यांची येरादारी अपूर्व प्रमाणांत पावता आनी…" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.web-engenharia.com/kok/artigos/otp-elixir-escolha-aplicacoes-criticas.html" />
+    <meta property="og:image" content="https://www.web-engenharia.com/images/web-engenharia-og.png" />
+    <meta property="og:locale" content="kok_IN" />
+
+    <meta property="og:locale:alternate" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:locale:alternate" content="ja_JP" />
+    <meta property="og:locale:alternate" content="kok" />
+    <meta property="og:locale:alternate" content="sv_SE" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="अपेसांत पडनातल्यो प्रणाली: एरलांग/ओटीपी आनी एलिक्सिर पर्यावरण प्रणाली ही मिशन-क्रिटिकल अनुप्रयोगां खातीर निवड कित्याक | Web-Engenharia" />
+    <meta name="twitter:description" content="समकालीन सॉफ्टवॅर मुळाव्या साधनसुविधांक गुंतागुंत आनी अकार्यक्षमताय हांचे चिरकालीन संकश्टाक तोंड दिवचें पडटा. वापरप्यांची येरादारी अपूर्व प्रमाणांत पावता आनी…" />
+    <meta name="twitter:image" content="https://www.web-engenharia.com/images/web-engenharia-og.png" />
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
+    <link rel="preload" href="../../css/tailwind.min.css" as="style" />
+    <link rel="preload" href="../../css/landing.css" as="style" />
+    <link rel="stylesheet" href="../../css/tailwind.min.css" />
+    <link rel="stylesheet" href="../../css/landing.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/elixir.min.js"></script>
+    <script defer src="../../artigos/js/render-markdown.js"></script>
+  </head>
+  <body class="bg-white font-sans text-brand-dark antialiased">
+    <a href="#inicio" class="skip-link">Sumir mhollar</a>
+    <header class="border-b border-brand-circuit/30 bg-white/90 py-4" role="banner">
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 sm:px-6">
+        <a href="../index.html" class="font-display text-lg font-semibold text-brand-dark">Web-Engenharia</a>
+        <div class="flex items-center gap-2">
+          <a href="./index.html" class="text-sm font-medium text-brand-mid hover:text-brand-dark">Soglleo lekh</a>
+          <a href="../index.html" class="text-sm font-medium text-brand-mid hover:text-brand-dark">Mukhar</a>
+        </div>
+      </div>
+    </header>
+    <main id="inicio" class="mx-auto max-w-4xl px-4 py-12 sm:px-6">
+      <nav class="mb-2 text-xs text-brand-dark/60" aria-label="Breadcrumb">
+        <a href="../index.html" class="hover:text-brand-dark">Mukhar</a>
+        <span class="mx-2" aria-hidden="true">·</span>
+        <a href="./index.html" class="hover:text-brand-dark">Lekh</a>
+        <span class="mx-2" aria-hidden="true">·</span>
+        <span aria-current="page" class="text-brand-dark/80">अपेसांत पडनातल्यो प्रणाली…</span>
+      </nav>
+      <nav class="mt-4 flex flex-wrap gap-2 text-xs text-brand-dark/70" aria-label="Her bhas">
+        <span class="font-medium text-brand-dark/80">Her bhas:</span>
+        <a hreflang="pt-BR" class="underline hover:text-brand-mid" href="../../artigos/otp-elixir-escolha-aplicacoes-criticas.html">PT</a>
+        <span aria-hidden="true">·</span>
+        <a hreflang="en" class="underline hover:text-brand-mid" href="../../en/artigos/otp-elixir-escolha-aplicacoes-criticas.html">EN</a>
+        <span aria-hidden="true">·</span>
+        <a hreflang="es" class="underline hover:text-brand-mid" href="../../es/artigos/otp-elixir-escolha-aplicacoes-criticas.html">ES</a>
+        <span aria-hidden="true">·</span>
+        <a hreflang="ja" class="underline hover:text-brand-mid" href="../../ja/artigos/otp-elixir-escolha-aplicacoes-criticas.html">日本語</a>
+        <span aria-hidden="true">·</span>
+        <a hreflang="kok" class="underline hover:text-brand-mid" href="../../kok/artigos/otp-elixir-escolha-aplicacoes-criticas.html">Konknni</a>
+        <span aria-hidden="true">·</span>
+        <a hreflang="sv" class="underline hover:text-brand-mid" href="../../sv/artigos/otp-elixir-escolha-aplicacoes-criticas.html">SV</a>
+      </nav>
+      <article data-md="./markdown/otp-elixir-escolha-aplicacoes-criticas.md">
+        <header class="mt-6 rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
+          <p class="text-xs font-semibold uppercase tracking-wide text-brand-mid">Arkitetura · Vishvas</p>
+          <h1 class="mt-2 font-display text-3xl font-bold text-brand-dark">अपेसांत पडनातल्यो प्रणाली: एरलांग/ओटीपी आनी एलिक्सिर पर्यावरण प्रणाली ही मिशन-क्रिटिकल अनुप्रयोगां खातीर निवड कित्याक</h1>
+          <p class="mt-3 text-base text-brand-dark/75">समकालीन सॉफ्टवॅर मुळाव्या साधनसुविधांक गुंतागुंत आनी अकार्यक्षमताय हांचे चिरकालीन संकश्टाक तोंड दिवचें पडटा. वापरप्यांची येरादारी अपूर्व प्रमाणांत पावता आनी…</p>
+          <div class="mt-4 flex flex-wrap items-center gap-3 text-xs text-brand-dark/65">
+            <span>Lekhak: Matheus de Camargo Marques — Software Engineer DevOps</span>
+            <span aria-hidden="true">·</span>
+            <span>Sudarle: 2026-03-23</span>
+            <span aria-hidden="true">·</span>
+            <span>Vach: 12 min</span>
+          </div>
+        </header>
+        <div class="article-content mt-8 text-base leading-8 text-brand-dark/85">
+          <p class="rounded-lg border border-brand-circuit/35 bg-white p-4 text-sm text-brand-dark/70">Lekh load zata…</p>
+        </div>
+        <section class="mt-10 rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm" aria-labelledby="cta-heading">
+          <h2 id="cta-heading" class="font-display text-xl font-semibold text-brand-dark">Tumchea kontextant hacho kortolem?</h2>
+          <p class="mt-2 text-sm text-brand-dark/80">Tumchea tim sangata amkam uloi, nirdeshank karyanvoy nakachem plan korunk.</p>
+          <a href="../index.html#contato" class="mt-4 inline-flex items-center rounded-lg bg-brand-dark px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-mid">Tajnya sangata uloi</a>
+        </section>
+      </article>
+    </main>
+    <footer class="border-t border-brand-circuit/30 bg-brand-dark py-8 text-brand-pulse/90" role="contentinfo">
+      <div class="mx-auto max-w-6xl px-4 text-sm sm:px-6">
+        <a href="../index.html" class="hover:text-white">Mukhar</a>
+        <span class="mx-2 text-brand-circuit/60">·</span>
+        <a href="../privacidade.html" class="hover:text-white">Gupitponn</a>
+        <span class="mx-2 text-brand-circuit/60">·</span>
+        <a href="../cookies.html" class="hover:text-white">Cookies</a>
+        <span class="mx-2 text-brand-circuit/60">·</span>
+        <a href="../termos.html" class="hover:text-white">Nem</a>
+      </div>
+    </footer>
+  </body>
+</html>
