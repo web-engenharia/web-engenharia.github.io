@@ -46,7 +46,7 @@
     <meta name="twitter:image:alt" content="Web-Engenharia — 統合・API-firstコンサルティング" />
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
       <!-- PWA Manifesto e Ícones -->
-      <link rel="manifest" href="/manifest.json?v=3">
+    <link rel="manifest" href="/manifest.json?v=4">
       <meta name="theme-color" content="#062a1b">
       <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/icon-192x192.png">
       <link rel="icon" type="image/png" sizes="512x512" href="/images/icons/icon-512x512.png">
@@ -61,7 +61,7 @@
       <script>
         if ('serviceWorker' in navigator) {
           window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/service-worker.js?v=3');
+            navigator.serviceWorker.register('/service-worker.js?v=4');
           });
         }
       </script>
@@ -170,6 +170,7 @@
             >
               <a href="#cultura" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">文化</a>
               <a href="#stacks" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">スタック</a>
+              <a href="#tecnologias-hub" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">技術</a>
               <a href="#como-trabalhamos" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">働き方</a>
               <a href="#casos" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">事例</a>
               <a href="#portfolio" class="block rounded-lg px-4 py-2.5 text-sm text-brand-dark/90 hover:bg-brand-pulse/50" role="menuitem">プロジェクト</a>
@@ -283,6 +284,7 @@
             >AIプロジェクト</a
           >
           <a href="#stacks" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">スタック</a>
+          <a href="#tecnologias-hub" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">技術</a>
           <a href="#como-trabalhamos" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark"
             >働き方</a
           >
@@ -1268,7 +1270,93 @@
         </div>
       </section>
 
-      <section class="border-t border-brand-circuit/25 bg-white py-16 sm:py-20" aria-labelledby="faq-heading">
+      
+      <section id="tecnologias-hub" class="scroll-mt-24 border-t border-brand-circuit/25 bg-brand-pulse/10 py-16 sm:scroll-mt-28 sm:py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="max-w-3xl">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-mid">テクノロジーエコシステム</p>
+            <h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl">プロジェクトで活用する技術</h2>
+            <p class="mt-4 text-base text-brand-dark/75 sm:text-lg">統合、モダナイゼーション、ソフトウェアエンジニアリング、AI施策を成果につなげるために活用するプラットフォーム、フレームワーク、実践を紹介します。</p>
+          </div>
+          <div class="mt-10 grid gap-6 lg:grid-cols-3">
+          <article class="rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
+            <h3 class="font-display text-lg font-semibold text-brand-dark">アーキテクチャと統合</h3>
+            <ul class="mt-4 space-y-2 text-sm text-brand-dark/80">
+                <li><a href="tecnologias/3scale.html" class="text-brand-mid underline hover:text-brand-dark">3Scale</a></li>
+                <li><a href="tecnologias/openshift.html" class="text-brand-mid underline hover:text-brand-dark">OpenShift</a></li>
+                <li><a href="tecnologias/monolitos.html" class="text-brand-mid underline hover:text-brand-dark">Monolitos</a></li>
+                <li><a href="tecnologias/microsservicos.html" class="text-brand-mid underline hover:text-brand-dark">Microsserviços</a></li>
+                <li><a href="tecnologias/restful.html" class="text-brand-mid underline hover:text-brand-dark">RESTful</a></li>
+                <li><a href="tecnologias/tibco-bw.html" class="text-brand-mid underline hover:text-brand-dark">BusinessWorks - BW</a></li>
+                <li><a href="tecnologias/cobol.html" class="text-brand-mid underline hover:text-brand-dark">Cobol</a></li>
+                <li><a href="tecnologias/db2.html" class="text-brand-mid underline hover:text-brand-dark">DB2</a></li>
+            </ul>
+          </article>
+          <article class="rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
+            <h3 class="font-display text-lg font-semibold text-brand-dark">プロセス・QA・DevOps</h3>
+            <ul class="mt-4 space-y-2 text-sm text-brand-dark/80">
+                <li><a href="tecnologias/jest.html" class="text-brand-mid underline hover:text-brand-dark">Jest</a></li>
+                <li><a href="tecnologias/junit.html" class="text-brand-mid underline hover:text-brand-dark">JUnit</a></li>
+                <li><a href="tecnologias/maven-gradle.html" class="text-brand-mid underline hover:text-brand-dark">Maven/Gradle</a></li>
+                <li><a href="tecnologias/ci-cd.html" class="text-brand-mid underline hover:text-brand-dark">CI/CD</a></li>
+                <li><a href="tecnologias/gitflow.html" class="text-brand-mid underline hover:text-brand-dark">Gitflow</a></li>
+                <li><a href="tecnologias/scrum.html" class="text-brand-mid underline hover:text-brand-dark">Metodologia Ágil Scrum</a></li>
+                <li><a href="tecnologias/copilotos-ia.html" class="text-brand-mid underline hover:text-brand-dark">Copilotos de IA</a></li>
+                <li><a href="tecnologias/figma.html" class="text-brand-mid underline hover:text-brand-dark">Figma</a></li>
+                <li><a href="tecnologias/jenkins.html" class="text-brand-mid underline hover:text-brand-dark">Jenkins</a></li>
+                <li><a href="tecnologias/gitlab-ci.html" class="text-brand-mid underline hover:text-brand-dark">GitLab CI</a></li>
+            </ul>
+          </article>
+          <article class="rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
+            <h3 class="font-display text-lg font-semibold text-brand-dark">データベースとメッセージング</h3>
+            <ul class="mt-4 space-y-2 text-sm text-brand-dark/80">
+                <li><a href="tecnologias/nosql.html" class="text-brand-mid underline hover:text-brand-dark">NoSQL</a></li>
+                <li><a href="tecnologias/postgresql.html" class="text-brand-mid underline hover:text-brand-dark">PostgreSQL</a></li>
+                <li><a href="tecnologias/mysql.html" class="text-brand-mid underline hover:text-brand-dark">MySQL</a></li>
+                <li><a href="tecnologias/mongodb.html" class="text-brand-mid underline hover:text-brand-dark">MongoDB</a></li>
+                <li><a href="tecnologias/redis.html" class="text-brand-mid underline hover:text-brand-dark">Redis</a></li>
+                <li><a href="tecnologias/rabbitmq.html" class="text-brand-mid underline hover:text-brand-dark">RabbitMQ</a></li>
+                <li><a href="tecnologias/kafka.html" class="text-brand-mid underline hover:text-brand-dark">Kafka</a></li>
+                <li><a href="tecnologias/oracle.html" class="text-brand-mid underline hover:text-brand-dark">Oracle</a></li>
+            </ul>
+          </article>
+          <article class="rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
+            <h3 class="font-display text-lg font-semibold text-brand-dark">バックエンドとクラウドネイティブ</h3>
+            <ul class="mt-4 space-y-2 text-sm text-brand-dark/80">
+                <li><a href="tecnologias/nodejs.html" class="text-brand-mid underline hover:text-brand-dark">NodeJS</a></li>
+                <li><a href="tecnologias/spring-ecosystem.html" class="text-brand-mid underline hover:text-brand-dark">Spring Ecosystem</a></li>
+                <li><a href="tecnologias/java-quarkus.html" class="text-brand-mid underline hover:text-brand-dark">Java / Quarkus</a></li>
+                <li><a href="tecnologias/php.html" class="text-brand-mid underline hover:text-brand-dark">PHP</a></li>
+                <li><a href="tecnologias/cpp.html" class="text-brand-mid underline hover:text-brand-dark">C++</a></li>
+                <li><a href="tecnologias/golang.html" class="text-brand-mid underline hover:text-brand-dark">Golang</a></li>
+                <li><a href="tecnologias/elixir-erlang-otp.html" class="text-brand-mid underline hover:text-brand-dark">Elixir/Erlang OTP</a></li>
+                <li><a href="tecnologias/docker.html" class="text-brand-mid underline hover:text-brand-dark">Docker</a></li>
+                <li><a href="tecnologias/kubernetes.html" class="text-brand-mid underline hover:text-brand-dark">Kubernetes</a></li>
+            </ul>
+          </article>
+          <article class="rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
+            <h3 class="font-display text-lg font-semibold text-brand-dark">モバイル開発</h3>
+            <ul class="mt-4 space-y-2 text-sm text-brand-dark/80">
+                <li><a href="tecnologias/react-native.html" class="text-brand-mid underline hover:text-brand-dark">React Native</a></li>
+                <li><a href="tecnologias/android.html" class="text-brand-mid underline hover:text-brand-dark">Android</a></li>
+                <li><a href="tecnologias/kotlin.html" class="text-brand-mid underline hover:text-brand-dark">Kotlin</a></li>
+                <li><a href="tecnologias/objective-c.html" class="text-brand-mid underline hover:text-brand-dark">Objective-C</a></li>
+                <li><a href="tecnologias/swift.html" class="text-brand-mid underline hover:text-brand-dark">Swift</a></li>
+                <li><a href="tecnologias/flutter.html" class="text-brand-mid underline hover:text-brand-dark">Flutter</a></li>
+            </ul>
+          </article>
+          <article class="rounded-2xl border border-brand-circuit/35 bg-white p-6 shadow-sm">
+            <h3 class="font-display text-lg font-semibold text-brand-dark">クラウドプラットフォーム</h3>
+            <ul class="mt-4 space-y-2 text-sm text-brand-dark/80">
+                <li><a href="tecnologias/aws.html" class="text-brand-mid underline hover:text-brand-dark">AWS</a></li>
+                <li><a href="tecnologias/gcp.html" class="text-brand-mid underline hover:text-brand-dark">GCP</a></li>
+                <li><a href="tecnologias/azure.html" class="text-brand-mid underline hover:text-brand-dark">Azure</a></li>
+            </ul>
+          </article>
+          </div>
+        </div>
+      </section>
+<section class="border-t border-brand-circuit/25 bg-white py-16 sm:py-20" aria-labelledby="faq-heading">
         <div class="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 id="faq-heading" class="font-display text-2xl font-bold text-brand-dark sm:text-3xl">よくある質問</h2>
           <div class="mt-8 divide-y divide-brand-circuit/30 rounded-2xl border border-brand-circuit/30 bg-brand-pulse/15">
