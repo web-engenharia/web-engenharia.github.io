@@ -104,10 +104,13 @@ A confluência mecânica de buscas híbridas cria um desafio matemático fundame
 
 A indústria padronizou a solução para esta fricção através do algoritmo de Fusão de Ranqueamento Recíproco (Reciprocal Rank Fusion \- RRF). Este método elimina o problema da padronização de escalas descartando inteiramente as pontuações numéricas puras. Em vez disso, o algoritmo avalia a posição relativa do documento em ambas as listas ordenadas de forma independente. O sistema então computa um novo escore de utilidade somando os rankings recíprocos de cada documento, suavizados por uma constante matemática.
 
-A formulação matemática do RRF é expressa como:
+A formulação matemática do RRF é expressa como a soma, sobre cada lista de ranqueamento \(r\), do inverso do rank acrescido de uma constante \(k\):
 
-![][image1]  
-Na equação, o parâmetro ![][image2] serve como um amortecedor de penalidades (comumente estabelecido em 60 na prática industrial), prevenindo que os resultados de topo absoluto dominem excessivamente a lista agregada, garantindo espaço para documentos medianos que demonstrem utilidade ampla. A verdadeira proeza desta fusão se revela em sua implantação em conjunto com rotinas de compreensão de intenção (query expansion). Uma técnica comum envolve solicitar ao LLM que expanda a pergunta orgânica do usuário em três a cinco variações hipotéticas antes da busca. Todas essas permutações semânticas são despejadas paralelamente nos motores vetorial e lexical, com seus resultados amalgamados pelo RRF. Documentos factualmente sólidos flutuam para o topo do conjunto por consenso natural ao aparecerem consistentemente em múltiplas frentes de busca, enquanto anomalias estatísticas oriundas de uma variação mal elaborada da query afundam organicamente na lista.
+$$
+\mathrm{RRF}(d) = \sum_{r \in R} \frac{1}{k + \mathrm{rank}_r(d)}
+$$
+
+Na equação, o parâmetro \(k\) serve como um amortecedor de penalidades (comumente estabelecido em 60 na prática industrial), prevenindo que os resultados de topo absoluto dominem excessivamente a lista agregada, garantindo espaço para documentos medianos que demonstrem utilidade ampla. A verdadeira proeza desta fusão se revela em sua implantação em conjunto com rotinas de compreensão de intenção (query expansion). Uma técnica comum envolve solicitar ao LLM que expanda a pergunta orgânica do usuário em três a cinco variações hipotéticas antes da busca. Todas essas permutações semânticas são despejadas paralelamente nos motores vetorial e lexical, com seus resultados amalgamados pelo RRF. Documentos factualmente sólidos flutuam para o topo do conjunto por consenso natural ao aparecerem consistentemente em múltiplas frentes de busca, enquanto anomalias estatísticas oriundas de uma variação mal elaborada da query afundam organicamente na lista.
 
 ### **A Fase Crítica de Reclassificação (Reranking) e Cross-Encoders**
 
