@@ -2,14 +2,14 @@
   {
     "url": "http://127.0.0.1:4173",
     "seo": 100,
-    "performance": 81,
+    "performance": 82,
     "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-root.json",
     "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/en/",
     "seo": 100,
-    "performance": 84,
+    "performance": 80,
     "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-en_.json",
     "ok": true
   },
@@ -23,7 +23,7 @@
   {
     "url": "http://127.0.0.1:4173/en/artigos/",
     "seo": 100,
-    "performance": 99,
+    "performance": 100,
     "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-en_artigos_.json",
     "ok": true
   },
@@ -37,7 +37,7 @@
   {
     "url": "http://127.0.0.1:4173/en/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html",
     "seo": 100,
-    "performance": 35,
+    "performance": 43,
     "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-en_artigos_alem-do-hype-arquiteturas-cognitivas-llms.html.json",
     "ok": true
   },

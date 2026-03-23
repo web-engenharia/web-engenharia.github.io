@@ -388,7 +388,7 @@ function main() {
       console.log(`  ${e.loc} — only ${n} xhtml:link alternate(s)`);
     }
   }
-  if (incomplete === 0) console.log('(all article URLs have 0 or full cluster — see detail above)');
+  if (incomplete === 0) console.log('(no article <url> blocks with a partial hreflang cluster)');
   else console.log(`Total incomplete: ${incomplete}`);
 
   // Hreflang reciprocity in HTML (only for pages that declare alternates)
