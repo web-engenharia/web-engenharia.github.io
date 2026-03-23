@@ -1,0 +1,58 @@
+[
+  {
+    "url": "http://127.0.0.1:4173",
+    "seo": 100,
+    "performance": 81,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-root.json",
+    "ok": true
+  },
+  {
+    "url": "http://127.0.0.1:4173/en/",
+    "seo": 100,
+    "performance": 84,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-en_.json",
+    "ok": true
+  },
+  {
+    "url": "http://127.0.0.1:4173/artigos/",
+    "seo": 100,
+    "performance": 99,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-artigos_.json",
+    "ok": true
+  },
+  {
+    "url": "http://127.0.0.1:4173/en/artigos/",
+    "seo": 100,
+    "performance": 99,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-en_artigos_.json",
+    "ok": true
+  },
+  {
+    "url": "http://127.0.0.1:4173/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html",
+    "seo": 100,
+    "performance": 38,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-artigos_alem-do-hype-arquiteturas-cognitivas-llms.html.json",
+    "ok": true
+  },
+  {
+    "url": "http://127.0.0.1:4173/en/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html",
+    "seo": 100,
+    "performance": 35,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-en_artigos_alem-do-hype-arquiteturas-cognitivas-llms.html.json",
+    "ok": true
+  },
+  {
+    "url": "http://127.0.0.1:4173/tecnologias/docker.html",
+    "seo": 100,
+    "performance": 100,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-tecnologias_docker.html.json",
+    "ok": true
+  },
+  {
+    "url": "http://127.0.0.1:4173/en/tecnologias/docker.html",
+    "seo": 100,
+    "performance": 100,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-en_tecnologias_docker.html.json",
+    "ok": true
+  }
+]

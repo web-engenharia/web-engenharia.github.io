@@ -30,15 +30,9 @@ TARGETS = {
 
 # PT source file -> output basename (ASCII, same in every locale folder)
 ARTICLES: list[tuple[str, str]] = [
-    ("OTP e Elixir são a escolha para aplicações críticas.md", "otp-elixir-escolha-aplicacoes-criticas.md"),
-    (
-        "Construindo Sistemas Resilientes: O Valor de Negócio por trás das Arquiteturas Orientadas a Eventos e CQRS.md",
-        "construindo-sistemas-resilientes-eventos-cqrs.md",
-    ),
-    (
-        "Além do Hype: Como integrar Arquiteturas Cognitivas e LLMs ao seu Produto.md",
-        "alem-do-hype-arquiteturas-cognitivas-llms.md",
-    ),
+    ("otp-elixir-escolha-aplicacoes-criticas.md", "otp-elixir-escolha-aplicacoes-criticas.md"),
+    ("construindo-sistemas-resilientes-eventos-cqrs.md", "construindo-sistemas-resilientes-eventos-cqrs.md"),
+    ("alem-do-hype-arquiteturas-cognitivas-llms.md", "alem-do-hype-arquiteturas-cognitivas-llms.md"),
     ("metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.md", "metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.md"),
 ]
 
