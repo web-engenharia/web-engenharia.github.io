@@ -437,3 +437,253 @@ select:focus-visible {
     font-size: 1rem;
   }
 }
+
+/* Tipografia padrao para corpo de artigos */
+.article-content {
+  max-width: 72ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article-content > * + * {
+  margin-top: 1rem;
+}
+
+.article-content h2,
+.article-content h3,
+.article-content h4 {
+  font-family: Montserrat, system-ui, sans-serif;
+  color: #062a1b;
+  letter-spacing: -0.01em;
+}
+
+.article-content h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.4rem, 1.15rem + 0.9vw, 1.9rem);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.article-content h3 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.2rem, 1.05rem + 0.65vw, 1.55rem);
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.article-content h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  font-weight: 650;
+}
+
+.article-content p,
+.article-content li,
+.article-content td,
+.article-content th {
+  line-height: 1.85;
+}
+
+.article-content strong {
+  color: #062a1b;
+  font-weight: 700;
+}
+
+.article-content a {
+  color: #2d6a4f;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
+  transition: color 0.2s ease;
+}
+
+.article-content a:hover {
+  color: #062a1b;
+}
+
+.article-content a:focus-visible {
+  outline: 2px solid #62866d;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.article-content ul,
+.article-content ol {
+  margin: 0.75rem 0 1rem;
+  padding-left: 1.3rem;
+}
+
+.article-content ul {
+  list-style: disc;
+}
+
+.article-content ol {
+  list-style: decimal;
+}
+
+.article-content li + li {
+  margin-top: 0.45rem;
+}
+
+.article-content blockquote {
+  margin: 1.25rem 0;
+  border-left: 4px solid #a5c7a9;
+  background: #f6fbf6;
+  padding: 0.85rem 1rem;
+  color: #1f3a2c;
+}
+
+.article-content hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid rgba(6, 42, 27, 0.2);
+}
+
+/* Blocos de codigo: fundo marca por padrao; com Highlight.js (.hljs) alinha ao tema github-dark */
+.article-content pre {
+  margin: 1.25rem 0;
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(98, 134, 109, 0.35);
+  padding: 0.95rem 1.1rem;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  box-shadow: 0 6px 18px rgba(6, 42, 27, 0.12);
+  background: #062a1b;
+  color: #e2f2e4;
+}
+
+.article-content pre:has(code.hljs) {
+  background: #0d1117;
+  border-color: rgba(98, 134, 109, 0.45);
+}
+
+.article-content code {
+  border-radius: 0.25rem;
+  background: rgba(98, 134, 109, 0.14);
+  padding: 0.1rem 0.3rem;
+  font-size: 0.9em;
+  color: #062a1b;
+}
+
+.article-content pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.article-content pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  background: transparent !important;
+  padding: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+.article-content table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  display: block;
+  overflow-x: auto;
+  white-space: normal;
+  border: 1px solid rgba(6, 42, 27, 0.18);
+  border-radius: 0.75rem;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(6, 42, 27, 0.06);
+  -webkit-overflow-scrolling: touch;
+}
+
+.article-content th,
+.article-content td {
+  border-right: 1px solid rgba(6, 42, 27, 0.14);
+  border-bottom: 1px solid rgba(6, 42, 27, 0.12);
+  padding: 0.7rem 0.85rem;
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.article-content th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: rgba(165, 199, 169, 0.42);
+  color: #062a1b;
+  font-weight: 700;
+}
+
+.article-content th:last-child,
+.article-content td:last-child {
+  border-right: 0;
+}
+
+.article-content tr:last-child td {
+  border-bottom: 0;
+}
+
+.article-content tbody tr:nth-child(even) {
+  background: rgba(246, 251, 246, 0.9);
+}
+
+.article-content tbody tr:hover {
+  background: rgba(165, 199, 169, 0.18);
+}
+
+.article-content table caption {
+  caption-side: top;
+  margin-bottom: 0.65rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(6, 42, 27, 0.78);
+  text-align: left;
+}
+
+@media (max-width: 640px) {
+  .article-content th,
+  .article-content td {
+    padding: 0.6rem 0.7rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+.article-content figure {
+  margin: 1.5rem 0;
+}
+
+.article-content img,
+.article-content video,
+.article-content iframe {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
+
+.article-content figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgba(6, 42, 27, 0.65);
+}
+
+@media (max-width: 640px) {
+  .article-content {
+    max-width: 100%;
+  }
+
+  .article-content h2 {
+    margin-top: 1.75rem;
+  }
+
+  .article-content h3 {
+    margin-top: 1.4rem;
+  }
+}

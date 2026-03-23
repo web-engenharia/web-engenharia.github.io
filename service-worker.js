@@ -1,4 +1,4 @@
-const CACHE_NAME = 'engenharia-2026-v4';
+const CACHE_NAME = 'engenharia-2026-v6';
 const urlsToCache = [
   '/',
   '/index.html',

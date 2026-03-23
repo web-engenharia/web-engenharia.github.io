@@ -46,7 +46,7 @@
     <meta name="twitter:image:alt" content="Web-Engenharia — Integration & API-first Consulting" />
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
       <!-- PWA Manifesto e Ícones -->
-    <link rel="manifest" href="/manifest.json?v=4">
+    <link rel="manifest" href="/manifest.json?v=6">
       <meta name="theme-color" content="#062a1b">
       <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/icon-192x192.png">
       <link rel="icon" type="image/png" sizes="512x512" href="/images/icons/icon-512x512.png">
@@ -61,7 +61,7 @@
       <script>
         if ('serviceWorker' in navigator) {
           window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/service-worker.js?v=4');
+            navigator.serviceWorker.register('/service-worker.js?v=6');
           });
         }
       </script>
@@ -104,6 +104,11 @@
             href="#cultura"
             class="nav-link rounded-lg px-3 py-2.5 text-sm font-medium text-brand-dark/80 transition-colors hover:bg-brand-pulse/40 hover:text-brand-dark"
             >Culture</a
+          >
+          <a
+            href="artigos/index.html"
+            class="nav-link rounded-lg px-3 py-2.5 text-sm font-medium text-brand-dark/80 transition-colors hover:bg-brand-pulse/40 hover:text-brand-dark"
+            >Articles</a
           >
           <!-- Mega menu Serviços -->
           <div class="header-dropdown group relative" data-dropdown="services">
@@ -246,6 +251,7 @@
             >What we do</a
           >
           <a href="#cultura" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Culture</a>
+          <a href="artigos/index.html" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark">Articles</a>
           <a href="#modelos-contratacao" class="rounded-lg px-3 py-3 text-sm font-medium text-brand-dark"
             >Engagement models</a
           >

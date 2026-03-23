@@ -589,4 +589,52 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.web-engenharia.com/artigos/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/artigos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/artigos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/artigos/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/artigos/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/artigos/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/artigos/"/>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.web-engenharia.com/artigos/otp-elixir-escolha-aplicacoes-criticas.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.web-engenharia.com/artigos/construindo-sistemas-resilientes-eventos-cqrs.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.web-engenharia.com/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
 </urlset>
