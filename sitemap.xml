@@ -628,6 +628,11 @@
   <url>
     <loc>https://www.web-engenharia.com/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

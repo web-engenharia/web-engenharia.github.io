@@ -182,6 +182,11 @@ def first_para_desc(lines: list[str]) -> str:
         i += 1
     while i < len(lines) and not lines[i].strip():
         i += 1
+    # Skip subheadings (## …) so we still find body text when the intro is a section title.
+    while i < len(lines) and lines[i].strip().startswith("#"):
+        i += 1
+        while i < len(lines) and not lines[i].strip():
+            i += 1
     parts: list[str] = []
     while i < len(lines) and lines[i].strip() and not lines[i].startswith("#"):
         parts.append(lines[i].strip())
@@ -270,6 +275,8 @@ def render(locale: str, slug: str) -> str:
     <meta property="og:description" content="{desc_e}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{canonical}" />
+    <meta property="article:published_time" content="2026-03-23T12:00:00+00:00" />
+    <meta property="article:modified_time" content="2026-03-23T12:00:00+00:00" />
     <meta property="og:image" content="{BASE}/images/web-engenharia-og.png" />
     <meta property="og:locale" content="{L["og_locale"]}" />
 {og_alt}
