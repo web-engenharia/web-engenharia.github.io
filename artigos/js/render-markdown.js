@@ -70,7 +70,11 @@ async function renderMermaidDiagrams(container) {
     securityLevel: "strict",
   });
 
-  await mermaid.run({ nodes });
+  try {
+    await mermaid.run({ nodes });
+  } catch (error) {
+    console.warn("Falha ao renderizar um ou mais diagramas Mermaid:", error);
+  }
 }
 
 /**
@@ -120,7 +124,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   try {
-    const response = await fetch(markdownPath, { cache: "no-cache" });
+    const resolvedUrl = new URL(markdownPath, window.location.href).href;
+    const response = await fetch(resolvedUrl, { cache: "no-cache" });
     if (!response.ok) {
       throw new Error(`Falha ao carregar Markdown (${response.status})`);
     }
@@ -137,15 +142,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     await renderMermaidDiagrams(container);
 
     if (typeof renderMathInElement === "function") {
-      renderMathInElement(container, {
-        delimiters: [
-          { left: "$$", right: "$$", display: true },
-          { left: "\\[", right: "\\]", display: true },
-          { left: "$", right: "$", display: false },
-          { left: "\\(", right: "\\)", display: false },
-        ],
-        throwOnError: false,
-      });
+      try {
+        renderMathInElement(container, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "\\[", right: "\\]", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\(", right: "\\)", display: false },
+          ],
+          throwOnError: false,
+        });
+      } catch (error) {
+        console.warn("Falha ao renderizar formulas KaTeX:", error);
+      }
     }
   } catch (error) {
     container.innerHTML =

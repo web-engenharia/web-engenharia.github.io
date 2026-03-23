@@ -74,11 +74,11 @@ Para superar o foco no volume bruto e na microgestão, a indústria adotou de fo
 
 ```mermaid
 flowchart TB
-  subgraph vaidade [Metricas de vaidade]
+  subgraph vaidade["Metricas de vaidade"]
     loc["Linhas de codigo (LOC)"]
     prs["Numero de PRs/commits"]
   end
-  subgraph resultado [Metricas de resultado (DORA)]
+  subgraph resultado["Metricas de resultado - DORA"]
     lead["Change Lead Time"]
     freq["Deployment Frequency"]
     cfr["Change Failure Rate"]
@@ -261,7 +261,7 @@ Por fim, no alvorecer transformacional induzido pelo império crescente do apren
 
 ## **Apêndice Prático (Opcional): Medindo Qualidade + Bem-Estar sem Vigilância**
 
-Para manter este artigo no nível estratégico, o uso de código deve ser mínimo. Ainda assim, um pseudoexemplo simples pode ajudar times a operacionalizar a medição de forma agregada e ética.
+Para manter este artigo no nível estratégico, o uso de código permanece mínimo e exclusivamente operacional. Os exemplos abaixo servem apenas para tornar a execução prática por time e por sprint, sem telemetria individual invasiva.
 
 ```sql
 -- Exemplo conceitual: correlaciona qualidade de entrega
@@ -280,6 +280,26 @@ ORDER BY sprint_id DESC, cfr_medio DESC;
 ```
 
 Esse modelo evita telemetria intrusiva individual e permite enxergar tendências de sistema: quando o estresse agregado sobe e o foco profundo cai, CFR e MTTR tendem a piorar. O objetivo não é punir pessoas, mas identificar gargalos operacionais para melhoria contínua.
+
+Um passo adicional simples e objetivo e transformar esse snapshot em um alerta de risco por equipe:
+
+```python
+def risco_operacional(cfr_medio, mttr_medio_horas, estresse_medio, foco_medio_horas):
+    # pesos iniciais calibraveis com historico interno
+    score = (
+        0.35 * cfr_medio
+        + 0.25 * (mttr_medio_horas / 24)
+        + 0.25 * (estresse_medio / 5)
+        + 0.15 * max(0, (20 - foco_medio_horas) / 20)
+    )
+    if score >= 0.70:
+        return "alto"
+    if score >= 0.45:
+        return "moderado"
+    return "baixo"
+```
+
+Esse score não deve ser usado para avaliação individual. Ele existe para priorizar intervenções de sistema: reduzir trabalho reativo, melhorar ciclos de review e proteger janelas de deep work.
 
 ## **Conclusão Sintética**
 

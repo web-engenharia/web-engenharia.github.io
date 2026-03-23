@@ -1,4 +1,4 @@
-const CACHE_NAME = 'engenharia-2026-v6';
+const CACHE_NAME = 'engenharia-2026-v7';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -28,6 +28,13 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
+  const url = new URL(event.request.url);
+  // Markdown is loaded via fetch() from article pages; never serve from cache
+  // (avoids stale or missing responses after deploy).
+  if (url.pathname.endsWith('.md')) {
+    event.respondWith(fetch(event.request));
+    return;
+  }
   event.respondWith(
     caches.match(event.request).then(response => response || fetch(event.request))
   );
