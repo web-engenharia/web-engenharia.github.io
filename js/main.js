@@ -19,7 +19,9 @@
 
   var pathname = window.location.pathname || '';
   var inLocaleSubfolder = /\/(en|es|ja|kok|sv)(\/|$)/.test(pathname);
-  var ANIMATION_BASE = inLocaleSubfolder ? '../animacao_svg/' : 'animacao_svg/';
+  var inProdutosFolder = /\/produtos(\/|$)/.test(pathname);
+  var ANIMATION_BASE =
+    inLocaleSubfolder || inProdutosFolder ? '../animacao_svg/' : 'animacao_svg/';
   var ANIMATION_FILES = [
     'animacao_v1.html',
     'animacao_v2.html',
@@ -899,7 +901,15 @@
       errors.message = msg ? t.msgShort : t.msgReq;
     }
 
-    return { name: name, email: email, company: company, message: msg, errors: errors };
+    var productContext = (fd.get('product_context') || '').trim();
+    return {
+      name: name,
+      email: email,
+      company: company,
+      message: msg,
+      product_context: productContext,
+      errors: errors,
+    };
   }
 
   function wrapToErrorId(wrapId) {
@@ -942,6 +952,21 @@
 
   function clearAllContactErrors(form) {
     ['name-wrap', 'email-wrap', 'company-wrap', 'message-wrap'].forEach(clearFieldError);
+  }
+
+  /** Foco no primeiro campo do formulário quando a página abre ou navega para #contato (acessibilidade). */
+  function focusContactFormIfHash() {
+    if (window.location.hash !== '#contato') return;
+    var form = document.getElementById('contact-form');
+    var nameInput = document.getElementById('name');
+    if (!form || !nameInput) return;
+    window.setTimeout(function () {
+      try {
+        nameInput.focus({ preventScroll: true });
+      } catch (e) {
+        nameInput.focus();
+      }
+    }, 100);
   }
 
   function initContactForm() {
@@ -987,18 +1012,22 @@
       var isEn = lang.startsWith('en');
       var isKok = lang.startsWith('kok');
       var isSv = lang === 'sv' || lang.startsWith('sv-');
+      var pc = result.product_context;
+      var preEn = pc ? '*Product / page:* ' + pc + '\n\n' : '';
+      var preSv = pc ? '*Produkt / sida:* ' + pc + '\n\n' : '';
+      var prePt = pc ? '*Produto / página:* ' + pc + '\n\n' : '';
       var template;
       if (isEn) {
-        template = '*Web-Engenharia Contact*\n\n*Name:* ' + result.name + '\n*Email:* ' + result.email +
+        template = '*Web-Engenharia Contact*\n\n' + preEn + '*Name:* ' + result.name + '\n*Email:* ' + result.email +
           (result.company ? '\n*Company:* ' + result.company : '') + '\n\n*Message:*\n' + result.message;
       } else if (isKok) {
-        template = '*Web-Engenharia Samparko*\n\n*Nav:* ' + result.name + '\n*Email:* ' + result.email +
+        template = '*Web-Engenharia Samparko*\n\n' + prePt + '*Nav:* ' + result.name + '\n*Email:* ' + result.email +
           (result.company ? '\n*Kornni:* ' + result.company : '') + '\n\n*Sandesh:*\n' + result.message;
       } else if (isSv) {
-        template = '*Web-Engenharia — kontakt*\n\n*Namn:* ' + result.name + '\n*E-post:* ' + result.email +
+        template = '*Web-Engenharia — kontakt*\n\n' + preSv + '*Namn:* ' + result.name + '\n*E-post:* ' + result.email +
           (result.company ? '\n*Företag:* ' + result.company : '') + '\n\n*Meddelande:*\n' + result.message;
       } else {
-        template = '*Contato Web-Engenharia*\n\n*Nome:* ' + result.name + '\n*E-mail:* ' + result.email +
+        template = '*Contato Web-Engenharia*\n\n' + prePt + '*Nome:* ' + result.name + '\n*E-mail:* ' + result.email +
           (result.company ? '\n*Empresa:* ' + result.company : '') + '\n\n*Mensagem:*\n' + result.message;
       }
       var text = template;
@@ -1048,6 +1077,11 @@
     initFaq();
     initGenteWhenNearViewport();
     initContactForm();
+    focusContactFormIfHash();
     initScrollReveal();
+  });
+
+  window.addEventListener('hashchange', function () {
+    focusContactFormIfHash();
   });
 })();

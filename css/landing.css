@@ -87,6 +87,59 @@ select:focus-visible {
   }
 }
 
+/* Páginas internas produtos Elite — hero, cartões de recurso (sem CDN; cores brand) */
+.product-hero-glow {
+  background: radial-gradient(ellipse 85% 55% at 50% -15%, rgba(98, 134, 109, 0.22) 0%, transparent 68%);
+}
+
+.product-elite-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  background-color: #62866d;
+  animation: product-elite-dot-pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes product-elite-dot-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(98, 134, 109, 0.45);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(0.92);
+    box-shadow: 0 0 0 6px rgba(98, 134, 109, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-elite-dot {
+    animation: none;
+    box-shadow: none;
+  }
+}
+
+.product-feature-card {
+  border-radius: 1.5rem;
+  border: 1px solid rgba(165, 199, 169, 0.55);
+  background: rgba(226, 242, 228, 0.55);
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .product-feature-card:hover {
+    border-color: #62866d;
+    transform: translateY(-4px);
+    box-shadow: 0 0.75rem 1.75rem -0.35rem rgba(6, 42, 27, 0.1);
+  }
+}
+
 #hero-animation iframe {
   display: block;
   flex: 1 1 0;
@@ -784,6 +837,28 @@ select:focus-visible {
   }
 }
 
+/* Página produtos — cards de preço (hover suave, escopo local) */
+.page-produtos .pricing-card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .page-produtos .pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 10px 25px -5px rgba(6, 42, 27, 0.12),
+      0 4px 10px -4px rgba(6, 42, 27, 0.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-produtos .pricing-card:hover {
+    transform: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .news-ticker__viewport {
     mask-image: none;
@@ -813,4 +888,78 @@ select:focus-visible {
   .news-ticker:focus-within .news-ticker__track {
     animation-play-state: running;
   }
+}
+
+/* Página boutique — hero, cartões e CTA (alinhado à marca) */
+.page-boutique .boutique-hero-gradient {
+  background: radial-gradient(circle at 100% 0%, rgba(168, 230, 207, 0.5) 0%, #ffffff 55%);
+}
+
+.page-boutique .boutique-glass-card {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(6, 42, 27, 0.08);
+}
+
+.page-boutique .boutique-step-watermark {
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: clamp(3rem, 9vw, 4.25rem);
+  font-weight: 800;
+  color: rgba(6, 42, 27, 0.07);
+  line-height: 1;
+  position: absolute;
+  top: 0.35rem;
+  left: 0.75rem;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .page-boutique .boutique-pillar-card {
+    transition:
+      background-color 0.45s ease,
+      border-color 0.45s ease,
+      transform 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+  .page-boutique .boutique-pillar-card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 12px 28px -8px rgba(6, 42, 27, 0.15),
+      0 4px 12px -4px rgba(6, 42, 27, 0.08);
+  }
+}
+
+.page-boutique .boutique-sovereignty-cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-boutique .boutique-sovereignty-cta::before,
+.page-boutique .boutique-sovereignty-cta::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  opacity: 0.32;
+}
+
+.page-boutique .boutique-sovereignty-cta::before {
+  width: 22rem;
+  height: 22rem;
+  background: rgba(34, 197, 94, 0.28);
+  top: -6rem;
+  right: -5rem;
+}
+
+.page-boutique .boutique-sovereignty-cta::after {
+  width: 18rem;
+  height: 18rem;
+  background: rgba(6, 42, 27, 0.55);
+  bottom: -5rem;
+  left: -5rem;
 }
