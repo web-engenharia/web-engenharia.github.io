@@ -190,6 +190,12 @@
     var isCarreirasPt = /carreiras\.html$/.test(path);
     var isCookies = /cookies\.html$/.test(path);
     var artigosMatch = path.match(/\/artigos\/([^/]+\.html)$/);
+    var produtosMatch = (function () {
+      var normalized = String(path || '').replace(/\/index\.html$/, '/').replace(/\/+$/, '');
+      var m = normalized.match(/\/produtos(?:\/([^/]+))?$/);
+      if (!m) return null;
+      return { slug: m[1] || '' };
+    })();
     var inEn = /\/(en)(\/|$)/.test(path);
     var inJa = /\/(ja)(\/|$)/.test(path);
     var inKok = /\/(kok)(\/|$)/.test(path);
@@ -206,7 +212,15 @@
             : '';
     var urls = { pt: '', en: '', es: '', ja: '', kok: '', sv: '' };
 
-    if (isCareers && inEn) {
+    if (produtosMatch) {
+      var suffix = produtosMatch.slug ? produtosMatch.slug + '/' : '';
+      urls.pt = '/produtos/' + suffix;
+      urls.en = '/en/produtos/' + suffix;
+      urls.es = '/es/produtos/' + suffix;
+      urls.ja = '/ja/produtos/' + suffix;
+      urls.kok = '/kok/produtos/' + suffix;
+      urls.sv = '/sv/produtos/' + suffix;
+    } else if (isCareers && inEn) {
       urls.pt = '../carreiras.html';
       urls.en = 'careers.html';
       urls.es = '../es/careers.html';

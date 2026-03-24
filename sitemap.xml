@@ -18,6 +18,11 @@
   <url>
     <loc>https://www.web-engenharia.com/produtos/</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -39,6 +44,11 @@
   <url>
     <loc>https://www.web-engenharia.com/produtos/w-iot/</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/w-iot/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/w-iot/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/w-iot/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/w-iot/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/w-iot/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/w-iot/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/w-iot/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -47,6 +57,11 @@
   <url>
     <loc>https://www.web-engenharia.com/produtos/w-pulse/</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/w-pulse/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/w-pulse/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/w-pulse/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/w-pulse/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/w-pulse/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/w-pulse/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/w-pulse/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -55,6 +70,11 @@
   <url>
     <loc>https://www.web-engenharia.com/produtos/neuroflow/</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/neuroflow/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/neuroflow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/neuroflow/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/neuroflow/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/neuroflow/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/neuroflow/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/neuroflow/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -63,6 +83,11 @@
   <url>
     <loc>https://www.web-engenharia.com/produtos/w-safe/</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/w-safe/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/w-safe/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/w-safe/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/w-safe/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/w-safe/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/w-safe/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/w-safe/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -71,6 +96,11 @@
   <url>
     <loc>https://www.web-engenharia.com/produtos/w-ledger/</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/w-ledger/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/w-ledger/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/w-ledger/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/w-ledger/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/w-ledger/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/w-ledger/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/w-ledger/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -79,6 +109,11 @@
   <url>
     <loc>https://www.web-engenharia.com/produtos/neuromatch/</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/neuromatch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/neuromatch/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/neuromatch/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/neuromatch/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/neuromatch/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/neuromatch/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/neuromatch/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -87,6 +122,11 @@
   <url>
     <loc>https://www.web-engenharia.com/produtos/w-compliance/</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/w-compliance/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/w-compliance/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/w-compliance/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/w-compliance/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/w-compliance/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/w-compliance/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/w-compliance/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -95,6 +135,11 @@
   <url>
     <loc>https://www.web-engenharia.com/produtos/neurosupport/</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/neurosupport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/neurosupport/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/neurosupport/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/neurosupport/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/neurosupport/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/neurosupport/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/neurosupport/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
