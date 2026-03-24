@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
  * Serves landing/ with Python http.server, runs Lighthouse (SEO + Performance)
- * on a representative URL set, writes JSON reports under landing/tools/reports/.
+ * on a fixed URL set (home, boutique locales, all product pages in sitemap, samples),
+ * writes JSON reports under landing/tools/reports/.
  */
 import { spawn, spawnSync } from 'node:child_process';
 import fs from 'node:fs';
@@ -18,6 +19,21 @@ const HOST = `http://127.0.0.1:${PORT}`;
 const URLS = [
   '/',
   '/en/',
+  '/produtos/',
+  '/boutique-engenharia/',
+  '/en/boutique-engenharia/',
+  '/es/boutique-engenharia/',
+  '/ja/boutique-engenharia/',
+  '/kok/boutique-engenharia/',
+  '/sv/boutique-engenharia/',
+  '/produtos/w-iot/',
+  '/produtos/w-pulse/',
+  '/produtos/neuroflow/',
+  '/produtos/w-safe/',
+  '/produtos/w-ledger/',
+  '/produtos/neuromatch/',
+  '/produtos/w-compliance/',
+  '/produtos/neurosupport/',
   '/artigos/',
   '/en/artigos/',
   '/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html',
