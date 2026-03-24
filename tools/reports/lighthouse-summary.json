@@ -1,22 +1,22 @@
 [
   {
     "url": "http://127.0.0.1:4173",
-    "seo": 98,
-    "performance": 82,
+    "seo": 100,
+    "performance": 59,
     "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-root.json",
     "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/en/",
-    "seo": 98,
-    "performance": 89,
+    "seo": 100,
+    "performance": 61,
     "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-en_.json",
     "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/produtos/",
     "seo": 100,
-    "performance": 79,
+    "performance": 88,
     "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-produtos_.json",
     "ok": true
   },
@@ -30,65 +30,107 @@
   {
     "url": "http://127.0.0.1:4173/en/boutique-engenharia/",
     "seo": 100,
-    "performance": 95,
+    "performance": 94,
     "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-en_boutique-engenharia_.json",
     "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/es/boutique-engenharia/",
-    "ok": false
+    "seo": 100,
+    "performance": 81,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-es_boutique-engenharia_.json",
+    "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/ja/boutique-engenharia/",
-    "ok": false
+    "seo": 100,
+    "performance": 90,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-ja_boutique-engenharia_.json",
+    "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/kok/boutique-engenharia/",
-    "ok": false
+    "seo": 100,
+    "performance": 96,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-kok_boutique-engenharia_.json",
+    "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/sv/boutique-engenharia/",
-    "ok": false
+    "seo": 100,
+    "performance": 87,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-sv_boutique-engenharia_.json",
+    "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/produtos/w-iot/",
-    "ok": false
+    "seo": 100,
+    "performance": 86,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-produtos_w-iot_.json",
+    "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/produtos/w-pulse/",
-    "ok": false
+    "seo": 100,
+    "performance": 85,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-produtos_w-pulse_.json",
+    "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/produtos/neuroflow/",
-    "ok": false
+    "seo": 100,
+    "performance": 96,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-produtos_neuroflow_.json",
+    "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/produtos/w-safe/",
-    "ok": false
+    "seo": 100,
+    "performance": 96,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-produtos_w-safe_.json",
+    "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/produtos/w-ledger/",
-    "ok": false
+    "seo": 100,
+    "performance": 96,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-produtos_w-ledger_.json",
+    "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/produtos/neuromatch/",
-    "ok": false
+    "seo": 100,
+    "performance": 90,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-produtos_neuromatch_.json",
+    "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/produtos/w-compliance/",
-    "ok": false
+    "seo": 100,
+    "performance": 97,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-produtos_w-compliance_.json",
+    "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/produtos/neurosupport/",
-    "ok": false
+    "seo": 100,
+    "performance": 91,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-produtos_neurosupport_.json",
+    "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/artigos/",
-    "ok": false
+    "seo": 100,
+    "performance": 99,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-artigos_.json",
+    "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/en/artigos/",
-    "ok": false
+    "seo": 92,
+    "performance": 99,
+    "report": "/home/sanonichan/projetos/web_engenharia_2026/landing/tools/reports/lighthouse-en_artigos_.json",
+    "ok": true
   },
   {
     "url": "http://127.0.0.1:4173/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html",
