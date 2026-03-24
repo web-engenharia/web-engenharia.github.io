@@ -20,8 +20,18 @@
   var pathname = window.location.pathname || '';
   var inLocaleSubfolder = /\/(en|es|ja|kok|sv)(\/|$)/.test(pathname);
   var inProdutosFolder = /\/produtos(\/|$)/.test(pathname);
-  var ANIMATION_BASE =
-    inLocaleSubfolder || inProdutosFolder ? '../animacao_svg/' : 'animacao_svg/';
+  /** /produtos/<slug>/ (ex.: w-iot) fica um nível abaixo de /produtos/ — iframe precisa ../../animacao_svg/ */
+  var inProdutosNested = (function () {
+    var segs = pathname.replace(/\/$/, '').split('/').filter(Boolean);
+    var pi = segs.indexOf('produtos');
+    if (pi < 0 || segs.length <= pi + 1) return false;
+    return segs[pi + 1] !== 'index.html';
+  })();
+  var ANIMATION_BASE = inProdutosNested
+    ? '../../animacao_svg/'
+    : inLocaleSubfolder || inProdutosFolder
+      ? '../animacao_svg/'
+      : 'animacao_svg/';
   var ANIMATION_FILES = [
     'animacao_v1.html',
     'animacao_v2.html',

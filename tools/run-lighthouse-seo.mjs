@@ -84,7 +84,7 @@ async function main() {
           '--only-categories=seo,performance',
           '--output=json',
           `--output-path=${outPath}`,
-          '--chrome-flags=--headless=new --no-sandbox --disable-gpu',
+          '--chrome-flags=--headless=new --no-sandbox --disable-gpu --disable-dev-shm-usage',
           '--quiet',
         ],
         { cwd: ROOT, stdio: 'inherit', shell: true }
