@@ -1,43 +1,27 @@
 # Quality Backlog (Prioritized)
 
-Generated after running:
-- `npm run crawl:local`
-- `npm run i18n:audit`
-- `npm run seo`
-- `npm run a11y`
-- `npm run perf:budget`
-- `npm run security:audit`
+Last updated: 2026-03-25 (corrections applied in this session).
 
-## Blocker
-- None in HTML navigation coverage (`orphans=0`, `broken=0` for HTML routes).
+## Done (this session)
 
-## High
-- Security headers missing in production response:
-  - `content-security-policy`
-  - `strict-transport-security`
-  - `referrer-policy`
-  - `x-content-type-options`
-- SEO critical metadata missing in category product pages:
-  - `missing_og:title`
-  - `missing_og:description`
-  - `missing_og:type`
-  - `missing_og:url`
-- Performance budget failures:
-  - Home `/` and `/en/` below performance threshold.
-  - Four lighthouse target URLs failed and need investigation.
+- **SEO**: Open Graph (`og:title`, `og:description`, `og:type`, `og:url`, image) on all product category pages (`produtos/categorias/*` in all locales).
+- **hreflang**: PT pages `healthtech` and `supermercados` now include full alternate cluster (reciprocity with EN/ES/JA/KOK/SV + `x-default`).
+- **Cross-locale**: Boutique pages `en`, `es`, `ja`, `kok`, `sv` link to `/{locale}/produtos/` instead of PT `../../produtos/index.html`.
+- **Sitemap**: Four category URL groups added to `landing/sitemap.xml` with `xhtml:link` alternates; **0** local HTML files missing from sitemap for categories.
 
-## Medium
-- i18n warnings:
-  - Missing `x-default` in key routes.
-  - Missing `hreflang` clusters in technology pages.
-  - Potential cross-locale leakage in localized boutique product links.
-- A11y:
-  - `region` and `landmark-unique` issues in home templates.
-  - Multiple `color-contrast` issues in `en/careers.html`.
+## High (remaining)
 
-## Next sprint targets
-1. Add missing OG tags in all `produtos/categorias/*` pages.
-2. Normalize `hreflang` strategy for technology and careers pages.
-3. Fix top a11y issues (`region`, `landmark-unique`, high contrast failures).
-4. Add/adjust security headers in production infra.
-5. Re-run lighthouse and fix failing URLs in test set.
+- **Security headers** (production): `content-security-policy`, `strict-transport-security`, `referrer-policy`, `x-content-type-options` — configure at CDN/hosting.
+- **Performance**: Lighthouse budget failures on some URLs (home, articles, tecnologias) — tune per `landing/tools/reports/perf-budget.json` after re-run.
+- **A11y**: axe findings (`region`, `landmark-unique`, `color-contrast` on careers), Chrome session flake on one file — see `npm run a11y` output.
+
+## Medium (remaining)
+
+- **JSON-LD**: Most pages lack `application/ld+json` (warning only unless you want rich results everywhere).
+- **Meta description length**: Many pages outside 110–170 chars (warnings from `seo-audit.mjs`).
+
+## Commands
+
+- `npm run seo` — should report **Issues: 0** for critical meta.
+- `npm run crawl:local` — HTML navigation coverage.
+- `npm run quality:all` — full pipeline.
