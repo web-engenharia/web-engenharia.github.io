@@ -68,6 +68,19 @@
     <priority>0.72</priority>
   </url>
   <url>
+    <loc>https://www.web-engenharia.com/produtos/categorias/odontologia/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/categorias/odontologia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/categorias/odontologia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/categorias/odontologia/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/categorias/odontologia/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/categorias/odontologia/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/categorias/odontologia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/categorias/odontologia/"/>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
     <loc>https://www.web-engenharia.com/produtos/categorias/restaurantes/</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/categorias/restaurantes/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/categorias/restaurantes/"/>
