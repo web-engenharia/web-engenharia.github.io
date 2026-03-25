@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-03-25T15:51:32.720Z",
+  "budget": {
+    "seoMinScore": 90,
+    "performanceMinScore": 75
+  },
+  "scanned": 23,
+  "failures": [
+    {
+      "type": "performance_below_budget",
+      "url": "http://127.0.0.1:4173",
+      "value": 59,
+      "min": 75
+    },
+    {
+      "type": "performance_below_budget",
+      "url": "http://127.0.0.1:4173/en/",
+      "value": 61,
+      "min": 75
+    },
+    {
+      "type": "lighthouse_failed",
+      "url": "http://127.0.0.1:4173/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"
+    },
+    {
+      "type": "lighthouse_failed",
+      "url": "http://127.0.0.1:4173/en/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"
+    },
+    {
+      "type": "lighthouse_failed",
+      "url": "http://127.0.0.1:4173/tecnologias/docker.html"
+    },
+    {
+      "type": "lighthouse_failed",
+      "url": "http://127.0.0.1:4173/en/tecnologias/docker.html"
+    }
+  ]
+}

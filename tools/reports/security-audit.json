@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-03-25T15:51:32.299Z",
+  "warnings": [
+    {
+      "type": "missing_header",
+      "header": "content-security-policy"
+    },
+    {
+      "type": "missing_header",
+      "header": "strict-transport-security"
+    },
+    {
+      "type": "missing_header",
+      "header": "referrer-policy"
+    },
+    {
+      "type": "missing_header",
+      "header": "x-content-type-options"
+    }
+  ],
+  "warningCount": 4
+}

@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-03-25T15:51:33.005Z",
+  "navigation": {
+    "reachable": 406,
+    "htmlOnDisk": 406,
+    "broken": 0,
+    "orphans": 0
+  },
+  "i18n": {
+    "routesChecked": 406,
+    "issues": 0,
+    "warnings": 1613
+  },
+  "performance": {
+    "scanned": 23,
+    "failures": 6
+  },
+  "security": {
+    "warnings": 4
+  }
+}
