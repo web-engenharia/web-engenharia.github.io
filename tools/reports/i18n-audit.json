@@ -1,10 +1,12 @@
 {
-  "generatedAt": "2026-03-26T22:00:43.272Z",
+  "generatedAt": "2026-03-26T22:28:12.484Z",
   "stats": {
-    "routesChecked": 412,
+    "routesChecked": 414,
     "issues": 0,
-    "warnings": 0
+    "warnings": 0,
+    "routesWithMissingHreflang": 0
   },
   "issues": [],
-  "warnings": []
+  "warnings": [],
+  "missingHreflangByRoute": {}
 }

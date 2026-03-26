@@ -154,15 +154,28 @@ function main() {
     }
   }
 
+  /** @type {Record<string, string[]>} */
+  const missingHreflangByRoute = {};
+  for (const w of warnings) {
+    if (w.type !== 'missing_hreflang_locale' || !w.detail) continue;
+    if (!missingHreflangByRoute[w.route]) missingHreflangByRoute[w.route] = [];
+    missingHreflangByRoute[w.route].push(w.detail);
+  }
+  for (const k of Object.keys(missingHreflangByRoute)) {
+    missingHreflangByRoute[k].sort();
+  }
+
   const out = {
     generatedAt: new Date().toISOString(),
     stats: {
       routesChecked: routes.length,
       issues: issues.length,
       warnings: warnings.length,
+      routesWithMissingHreflang: Object.keys(missingHreflangByRoute).length,
     },
     issues,
     warnings,
+    missingHreflangByRoute,
   };
   fs.mkdirSync(REPORTS, { recursive: true });
   fs.writeFileSync(OUT_JSON, JSON.stringify(out, null, 2) + '\n', 'utf8');
@@ -173,7 +186,20 @@ function main() {
   md.push(`- Routes checked: ${out.stats.routesChecked}`);
   md.push(`- Issues: ${out.stats.issues}`);
   md.push(`- Warnings: ${out.stats.warnings}`);
+  md.push(`- Routes with missing hreflang alternate (no localized page in crawl): ${out.stats.routesWithMissingHreflang}`);
   md.push('');
+  const missingRoutes = Object.keys(missingHreflangByRoute).sort();
+  if (missingRoutes.length) {
+    md.push('## Missing hreflang locales by route');
+    md.push('');
+    md.push('Locales listed here have **no published page** in the crawl map, so the alternate link cannot be emitted.');
+    md.push('');
+    for (const r of missingRoutes) {
+      const locs = missingHreflangByRoute[r].join(', ');
+      md.push(`- \`${r}\`: ${locs}`);
+    }
+    md.push('');
+  }
   if (issues.length) {
     md.push('## Issues');
     for (const i of issues.slice(0, 200)) md.push(`- \`${i.type}\` \`${i.route}\`${i.detail ? ` - ${i.detail}` : ''}`);

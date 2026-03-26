@@ -52,11 +52,11 @@ Además de la capacidad reducida para procesar información de manera abstracta,
 
 ```mermaid
 flowchart LR
-  estresse["Estresse cronico"] --> sobrecarga["Sobrecarga cognitiva"]
-  sobrecarga --> vies["Vies de confirmacao"]
-  vies --> revisao["Revisao superficial de codigo"]
-  revisao --> falhas["Falhas e vulnerabilidades nao detectadas"]
-  falhas --> producao["Incidentes em producao"]
+  estresse["Estrés crónico"] --> sobrecarga["Sobrecarga cognitiva"]
+  sobrecarga --> vies["Sesgo de confirmación"]
+  vies --> revisao["Revisión superficial de código"]
+  revisao --> falhas["Fallos y vulnerabilidades no detectadas"]
+  falhas --> producao["Incidentes en producción"]
 ```
 La cuantificación de estas fallas a menudo se realiza utilizando la métrica de densidad de defectos, comúnmente calculada dividiendo la cantidad de defectos confirmados por el tamaño del módulo de software, a menudo medido en miles de líneas de código (KLOC) o puntos de función. Los proyectos de software experimentan, en promedio, entre 15 y 50 errores por cada 000 líneas de código escritas. Cuando la fuerza laboral se agota, la fatiga anula las prácticas de revisión proactiva, lo que permite que la tasa de densidad de defectos se acerque al límite superior de este promedio. Además, el análisis de los patrones de defectos revela que los errores tienden a agruparse en áreas específicas e hipercomplejas del código. Sin la agudeza mental necesaria para navegar estas áreas críticas, los equipos experimentan interrupciones constantes.
 
@@ -278,19 +278,19 @@ Este modelo evita la telemetría individual intrusiva y le permite ver las tende
 Un paso adicional simple y objetivo es transformar esta instantánea en una alerta de riesgo por equipo:
 
 ```python
-def risco_operacional(cfr_medio, mttr_medio_horas, estresse_medio, foco_medio_horas):
-    # pesos iniciais calibraveis com historico interno
+def riesgo_operacional(cfr_medio, mttr_medio_horas, estres_medio, foco_medio_horas):
+    # pesos iniciales calibrables con historial interno
     score = (
         0.35 * cfr_medio
         + 0.25 * (mttr_medio_horas / 24)
-        + 0.25 * (estresse_medio / 5)
+        + 0.25 * (estres_medio / 5)
         + 0.15 * max(0, (20 - foco_medio_horas) / 20)
     )
     if score >= 0.70:
         return "alto"
     if score >= 0.45:
         return "moderado"
-    return "baixo"
+    return "bajo"
 ```
 Esta puntuación no debe utilizarse para la evaluación individual. Existe para priorizar las intervenciones del sistema: reducir el trabajo reactivo, mejorar los ciclos de revisión y proteger las ventanas de trabajo profundo.
 

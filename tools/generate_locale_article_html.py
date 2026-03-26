@@ -153,10 +153,10 @@ CATEGORIES = {
         "metrica": "エンジニアリング · ソフトウェア品質",
     },
     "kok": {
-        "otp": "Arkitetura · Vishvas",
-        "cqrs": "Arkitetura · Navikaran",
-        "llm": "Ruj · Lago AI",
-        "metrica": "Engenher · Software gunott",
+        "otp": "Architecture · Reliability",
+        "cqrs": "Architecture · Modernization",
+        "llm": "Trends · Applied AI",
+        "metrica": "Engineering · Software quality",
     },
     "sv": {
         "otp": "Arkitektur · Tillförlitlighet",

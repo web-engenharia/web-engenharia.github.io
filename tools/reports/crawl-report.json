@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-26T21:59:01.755Z",
-  "origin": "http://127.0.0.1:41287",
+  "generatedAt": "2026-03-26T22:25:37.810Z",
+  "origin": "http://127.0.0.1:38265",
   "seeds": [
     "/",
     "/en/",
@@ -10,156 +10,156 @@
     "/sv/"
   ],
   "stats": {
-    "reachable": 412,
-    "edges": 3503,
+    "reachable": 414,
+    "edges": 3527,
     "broken": 0,
     "htmlOnDisk": 492,
-    "orphans": 80
+    "orphans": 78
   },
   "pages": {
     "/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 68
+      "elapsedMs": 60
     },
     "/en/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 9
+      "elapsedMs": 13
     },
     "/es/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 8
+      "elapsedMs": 10
     },
     "/ja/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 10
+      "elapsedMs": 13
     },
     "/kok/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 8
+      "elapsedMs": 13
     },
     "/sv/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 6
+      "elapsedMs": 8
     },
     "/artigos/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 4
+      "elapsedMs": 5
     },
     "/produtos/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 5
+      "elapsedMs": 6
     },
     "/boutique-engenharia/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 7
+      "elapsedMs": 10
     },
     "/artigos/otp-elixir-escolha-aplicacoes-criticas.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 6
+      "elapsedMs": 5
     },
     "/artigos/construindo-sistemas-resilientes-eventos-cqrs.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 5
     },
     "/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 5
+      "elapsedMs": 7
     },
     "/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 4
     },
     "/tecnologias/3scale.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 5
     },
     "/tecnologias/openshift.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 4
     },
     "/tecnologias/monolitos.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 4
     },
     "/tecnologias/microsservicos.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 4
     },
     "/tecnologias/restful.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 4
     },
     "/tecnologias/tibco-bw.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 4
+      "elapsedMs": 6
     },
     "/tecnologias/cobol.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/tecnologias/db2.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/tecnologias/jest.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 4
+      "elapsedMs": 9
     },
     "/tecnologias/junit.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 5
     },
     "/tecnologias/maven-gradle.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 5
+      "elapsedMs": 4
     },
     "/tecnologias/ci-cd.html": {
       "status": 200,
@@ -171,13 +171,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/tecnologias/scrum.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 6
     },
     "/tecnologias/copilotos-ia.html": {
       "status": 200,
@@ -189,67 +189,67 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/tecnologias/jenkins.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/tecnologias/gitlab-ci.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/tecnologias/nosql.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/tecnologias/postgresql.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 4
+      "elapsedMs": 6
     },
     "/tecnologias/mysql.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 6
     },
     "/tecnologias/mongodb.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/tecnologias/redis.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/tecnologias/rabbitmq.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 6
     },
     "/tecnologias/kafka.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/tecnologias/oracle.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/tecnologias/nodejs.html": {
       "status": 200,
@@ -267,7 +267,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 5
     },
     "/tecnologias/php.html": {
       "status": 200,
@@ -279,25 +279,25 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/tecnologias/golang.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 3
     },
     "/tecnologias/elixir-erlang-otp.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/tecnologias/docker.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/tecnologias/kubernetes.html": {
       "status": 200,
@@ -315,7 +315,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/tecnologias/kotlin.html": {
       "status": 200,
@@ -327,13 +327,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/tecnologias/swift.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/tecnologias/flutter.html": {
       "status": 200,
@@ -345,49 +345,49 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 5
+      "elapsedMs": 6
     },
     "/tecnologias/gcp.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 9
     },
     "/tecnologias/azure.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 7
+      "elapsedMs": 6
     },
     "/privacidade.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/cookies.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/termos.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/carreiras.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/en/artigos/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/en/produtos/": {
       "status": 200,
@@ -399,31 +399,31 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 6
     },
     "/en/careers.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/en/artigos/otp-elixir-escolha-aplicacoes-criticas.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/en/artigos/construindo-sistemas-resilientes-eventos-cqrs.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/en/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 5
     },
     "/en/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html": {
       "status": 200,
@@ -435,7 +435,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/en/tecnologias/openshift.html": {
       "status": 200,
@@ -447,67 +447,67 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/en/tecnologias/microsservicos.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 5
     },
     "/en/tecnologias/restful.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/en/tecnologias/tibco-bw.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 3
     },
     "/en/tecnologias/cobol.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/en/tecnologias/db2.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/en/tecnologias/jest.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/en/tecnologias/junit.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/en/tecnologias/maven-gradle.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/en/tecnologias/ci-cd.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/en/tecnologias/gitflow.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/en/tecnologias/scrum.html": {
       "status": 200,
@@ -519,7 +519,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/en/tecnologias/figma.html": {
       "status": 200,
@@ -531,55 +531,55 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/en/tecnologias/gitlab-ci.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/en/tecnologias/nosql.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/en/tecnologias/postgresql.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/en/tecnologias/mysql.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/en/tecnologias/mongodb.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 7
     },
     "/en/tecnologias/redis.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/en/tecnologias/rabbitmq.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 4
+      "elapsedMs": 3
     },
     "/en/tecnologias/kafka.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 7
     },
     "/en/tecnologias/oracle.html": {
       "status": 200,
@@ -591,13 +591,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/en/tecnologias/spring-ecosystem.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/en/tecnologias/java-quarkus.html": {
       "status": 200,
@@ -609,13 +609,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 6
     },
     "/en/tecnologias/cpp.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/en/tecnologias/golang.html": {
       "status": 200,
@@ -627,7 +627,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/en/tecnologias/docker.html": {
       "status": 200,
@@ -639,43 +639,43 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 4
+      "elapsedMs": 7
     },
     "/en/tecnologias/react-native.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/en/tecnologias/android.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/en/tecnologias/kotlin.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/en/tecnologias/objective-c.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 3
     },
     "/en/tecnologias/swift.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 4
     },
     "/en/tecnologias/flutter.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/en/tecnologias/aws.html": {
       "status": 200,
@@ -699,25 +699,25 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/en/cookies.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 3
     },
     "/en/termos.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/es/artigos/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/es/produtos/": {
       "status": 200,
@@ -729,7 +729,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/es/careers.html": {
       "status": 200,
@@ -741,7 +741,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/es/artigos/construindo-sistemas-resilientes-eventos-cqrs.html": {
       "status": 200,
@@ -765,13 +765,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 5
     },
     "/es/tecnologias/openshift.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 4
+      "elapsedMs": 5
     },
     "/es/tecnologias/monolitos.html": {
       "status": 200,
@@ -789,43 +789,43 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/es/tecnologias/tibco-bw.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 5
     },
     "/es/tecnologias/cobol.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/es/tecnologias/db2.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 4
+      "elapsedMs": 3
     },
     "/es/tecnologias/jest.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 3
     },
     "/es/tecnologias/junit.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/es/tecnologias/maven-gradle.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/es/tecnologias/ci-cd.html": {
       "status": 200,
@@ -843,25 +843,25 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/es/tecnologias/copilotos-ia.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/es/tecnologias/figma.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/es/tecnologias/jenkins.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 3
     },
     "/es/tecnologias/gitlab-ci.html": {
       "status": 200,
@@ -879,19 +879,19 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/es/tecnologias/mysql.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 5
     },
     "/es/tecnologias/mongodb.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 3
     },
     "/es/tecnologias/redis.html": {
       "status": 200,
@@ -903,49 +903,49 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/es/tecnologias/kafka.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/es/tecnologias/oracle.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 6
     },
     "/es/tecnologias/nodejs.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/es/tecnologias/spring-ecosystem.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 4
     },
     "/es/tecnologias/java-quarkus.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/es/tecnologias/php.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/es/tecnologias/cpp.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 3
     },
     "/es/tecnologias/golang.html": {
       "status": 200,
@@ -963,31 +963,31 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/es/tecnologias/kubernetes.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/es/tecnologias/react-native.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/es/tecnologias/android.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/es/tecnologias/kotlin.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/es/tecnologias/objective-c.html": {
       "status": 200,
@@ -1011,13 +1011,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/es/tecnologias/gcp.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/es/tecnologias/azure.html": {
       "status": 200,
@@ -1029,7 +1029,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/es/cookies.html": {
       "status": 200,
@@ -1041,7 +1041,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/ja/artigos/": {
       "status": 200,
@@ -1053,13 +1053,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/ja/boutique-engenharia/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 5
     },
     "/ja/artigos/otp-elixir-escolha-aplicacoes-criticas.html": {
       "status": 200,
@@ -1071,19 +1071,19 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 5
+      "elapsedMs": 4
     },
     "/ja/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/ja/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/ja/tecnologias/3scale.html": {
       "status": 200,
@@ -1101,31 +1101,31 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/ja/tecnologias/microsservicos.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/ja/tecnologias/restful.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/ja/tecnologias/tibco-bw.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/ja/tecnologias/cobol.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/ja/tecnologias/db2.html": {
       "status": 200,
@@ -1137,7 +1137,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/ja/tecnologias/junit.html": {
       "status": 200,
@@ -1161,19 +1161,19 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/ja/tecnologias/scrum.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 3
     },
     "/ja/tecnologias/copilotos-ia.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/ja/tecnologias/figma.html": {
       "status": 200,
@@ -1209,13 +1209,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/ja/tecnologias/mongodb.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/ja/tecnologias/redis.html": {
       "status": 200,
@@ -1233,19 +1233,19 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/ja/tecnologias/oracle.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/ja/tecnologias/nodejs.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 6
     },
     "/ja/tecnologias/spring-ecosystem.html": {
       "status": 200,
@@ -1257,7 +1257,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/ja/tecnologias/php.html": {
       "status": 200,
@@ -1269,7 +1269,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 5
     },
     "/ja/tecnologias/golang.html": {
       "status": 200,
@@ -1287,25 +1287,25 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/ja/tecnologias/kubernetes.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/ja/tecnologias/react-native.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/ja/tecnologias/android.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/ja/tecnologias/kotlin.html": {
       "status": 200,
@@ -1323,25 +1323,25 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/ja/tecnologias/flutter.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/ja/tecnologias/aws.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/ja/tecnologias/gcp.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/ja/tecnologias/azure.html": {
       "status": 200,
@@ -1383,19 +1383,19 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/kok/artigos/otp-elixir-escolha-aplicacoes-criticas.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 4
+      "elapsedMs": 8
     },
     "/kok/artigos/construindo-sistemas-resilientes-eventos-cqrs.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/kok/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html": {
       "status": 200,
@@ -1407,13 +1407,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/kok/tecnologias/3scale.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/kok/tecnologias/openshift.html": {
       "status": 200,
@@ -1425,19 +1425,19 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 4
     },
     "/kok/tecnologias/microsservicos.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/kok/tecnologias/restful.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/kok/tecnologias/tibco-bw.html": {
       "status": 200,
@@ -1449,13 +1449,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 5
     },
     "/kok/tecnologias/db2.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 5
     },
     "/kok/tecnologias/jest.html": {
       "status": 200,
@@ -1479,13 +1479,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/kok/tecnologias/gitflow.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/kok/tecnologias/scrum.html": {
       "status": 200,
@@ -1497,13 +1497,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/kok/tecnologias/figma.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/kok/tecnologias/jenkins.html": {
       "status": 200,
@@ -1527,13 +1527,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/kok/tecnologias/mysql.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/kok/tecnologias/mongodb.html": {
       "status": 200,
@@ -1545,13 +1545,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/kok/tecnologias/rabbitmq.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/kok/tecnologias/kafka.html": {
       "status": 200,
@@ -1569,19 +1569,19 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/kok/tecnologias/spring-ecosystem.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/kok/tecnologias/java-quarkus.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/kok/tecnologias/php.html": {
       "status": 200,
@@ -1629,7 +1629,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/kok/tecnologias/kotlin.html": {
       "status": 200,
@@ -1641,7 +1641,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/kok/tecnologias/swift.html": {
       "status": 200,
@@ -1665,25 +1665,25 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 3
     },
     "/kok/tecnologias/azure.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/kok/privacidade.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 1
     },
     "/kok/cookies.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/kok/termos.html": {
       "status": 200,
@@ -1701,61 +1701,61 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 4
     },
     "/sv/boutique-engenharia/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/sv/careers.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/sv/artigos/otp-elixir-escolha-aplicacoes-criticas.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/sv/artigos/construindo-sistemas-resilientes-eventos-cqrs.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 1
     },
     "/sv/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/sv/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/sv/tecnologias/3scale.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 5
     },
     "/sv/tecnologias/openshift.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/sv/tecnologias/monolitos.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 1
     },
     "/sv/tecnologias/microsservicos.html": {
       "status": 200,
@@ -1767,13 +1767,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/sv/tecnologias/tibco-bw.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/sv/tecnologias/cobol.html": {
       "status": 200,
@@ -1791,7 +1791,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/sv/tecnologias/junit.html": {
       "status": 200,
@@ -1803,13 +1803,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/sv/tecnologias/ci-cd.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 4
     },
     "/sv/tecnologias/gitflow.html": {
       "status": 200,
@@ -1821,67 +1821,67 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/sv/tecnologias/copilotos-ia.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/sv/tecnologias/figma.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/sv/tecnologias/jenkins.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 5
+      "elapsedMs": 1
     },
     "/sv/tecnologias/gitlab-ci.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/sv/tecnologias/nosql.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/sv/tecnologias/postgresql.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/sv/tecnologias/mysql.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/sv/tecnologias/mongodb.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/sv/tecnologias/redis.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/sv/tecnologias/rabbitmq.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/sv/tecnologias/kafka.html": {
       "status": 200,
@@ -1893,13 +1893,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/sv/tecnologias/nodejs.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/sv/tecnologias/spring-ecosystem.html": {
       "status": 200,
@@ -1911,7 +1911,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/sv/tecnologias/php.html": {
       "status": 200,
@@ -1923,31 +1923,31 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/sv/tecnologias/golang.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/sv/tecnologias/elixir-erlang-otp.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/sv/tecnologias/docker.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/sv/tecnologias/kubernetes.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 1
     },
     "/sv/tecnologias/react-native.html": {
       "status": 200,
@@ -1959,13 +1959,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 1
     },
     "/sv/tecnologias/kotlin.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 1
     },
     "/sv/tecnologias/objective-c.html": {
       "status": 200,
@@ -1977,7 +1977,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/sv/tecnologias/flutter.html": {
       "status": 200,
@@ -1989,25 +1989,25 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/sv/tecnologias/gcp.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 6
+      "elapsedMs": 4
     },
     "/sv/tecnologias/azure.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 6
+      "elapsedMs": 2
     },
     "/sv/privacidade.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/sv/cookies.html": {
       "status": 200,
@@ -2019,7 +2019,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/produtos/w-iot/": {
       "status": 200,
@@ -2031,13 +2031,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/produtos/neuroflow/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/produtos/w-safe/": {
       "status": 200,
@@ -2049,31 +2049,31 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/produtos/neuromatch/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 1
     },
     "/produtos/w-compliance/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 4
+      "elapsedMs": 3
     },
     "/produtos/neurosupport/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 7
+      "elapsedMs": 2
     },
     "/produtos/categorias/restaurantes/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 1
     },
     "/produtos/categorias/supermercados/": {
       "status": 200,
@@ -2085,7 +2085,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/produtos/categorias/odontologia/": {
       "status": 200,
@@ -2099,23 +2099,35 @@
       "contentType": "text/html; charset=utf-8",
       "elapsedMs": 2
     },
-    "/en/produtos/w-iot/": {
+    "/ja/careers.html": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
       "elapsedMs": 3
     },
+    "/kok/careers.html": {
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8",
+      "elapsedMs": 3
+    },
+    "/en/produtos/w-iot/": {
+      "status": 200,
+      "ok": true,
+      "contentType": "text/html; charset=utf-8",
+      "elapsedMs": 1
+    },
     "/en/produtos/w-pulse/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/en/produtos/neuroflow/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/en/produtos/w-safe/": {
       "status": 200,
@@ -2127,43 +2139,43 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/en/produtos/neuromatch/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/en/produtos/w-compliance/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/en/produtos/neurosupport/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/en/produtos/categorias/restaurantes/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/en/produtos/categorias/supermercados/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 2
     },
     "/en/produtos/categorias/healthtech/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/en/produtos/categorias/odontologia/": {
       "status": 200,
@@ -2175,13 +2187,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/es/produtos/w-iot/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 1
     },
     "/es/produtos/w-pulse/": {
       "status": 200,
@@ -2199,13 +2211,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/es/produtos/w-ledger/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/es/produtos/neuromatch/": {
       "status": 200,
@@ -2217,7 +2229,7 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/es/produtos/neurosupport/": {
       "status": 200,
@@ -2235,13 +2247,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 4
+      "elapsedMs": 3
     },
     "/es/produtos/categorias/healthtech/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/es/produtos/categorias/odontologia/": {
       "status": 200,
@@ -2259,13 +2271,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/ja/produtos/w-pulse/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 1
     },
     "/ja/produtos/neuroflow/": {
       "status": 200,
@@ -2313,13 +2325,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1
+      "elapsedMs": 3
     },
     "/ja/produtos/categorias/healthtech/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/ja/produtos/categorias/odontologia/": {
       "status": 200,
@@ -2349,19 +2361,19 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/kok/produtos/w-safe/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 5
     },
     "/kok/produtos/w-ledger/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/kok/produtos/neuromatch/": {
       "status": 200,
@@ -2385,13 +2397,13 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/kok/produtos/categorias/supermercados/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 4
     },
     "/kok/produtos/categorias/healthtech/": {
       "status": 200,
@@ -2409,79 +2421,79 @@
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/sv/produtos/w-iot/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 1
     },
     "/sv/produtos/w-pulse/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/sv/produtos/neuroflow/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 6
     },
     "/sv/produtos/w-safe/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/sv/produtos/w-ledger/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/sv/produtos/neuromatch/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/sv/produtos/w-compliance/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 4
     },
     "/sv/produtos/neurosupport/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2
+      "elapsedMs": 3
     },
     "/sv/produtos/categorias/restaurantes/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/sv/produtos/categorias/supermercados/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 5
+      "elapsedMs": 2
     },
     "/sv/produtos/categorias/healthtech/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/sv/produtos/categorias/odontologia/": {
       "status": 200,
       "ok": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3
+      "elapsedMs": 2
     },
     "/sv/produtos/categorias/estetica/": {
       "status": 200,
@@ -5513,11 +5525,11 @@
     },
     {
       "from": "/carreiras.html",
-      "to": "/ja/"
+      "to": "/ja/careers.html"
     },
     {
       "from": "/carreiras.html",
-      "to": "/kok/"
+      "to": "/kok/careers.html"
     },
     {
       "from": "/carreiras.html",
@@ -5705,11 +5717,11 @@
     },
     {
       "from": "/en/careers.html",
-      "to": "/ja/"
+      "to": "/ja/careers.html"
     },
     {
       "from": "/en/careers.html",
-      "to": "/kok/"
+      "to": "/kok/careers.html"
     },
     {
       "from": "/en/careers.html",
@@ -7453,11 +7465,11 @@
     },
     {
       "from": "/es/careers.html",
-      "to": "/ja/"
+      "to": "/ja/careers.html"
     },
     {
       "from": "/es/careers.html",
-      "to": "/kok/"
+      "to": "/kok/careers.html"
     },
     {
       "from": "/es/careers.html",
@@ -7482,14 +7494,6 @@
     {
       "from": "/es/careers.html",
       "to": "/es/careers.html"
-    },
-    {
-      "from": "/es/careers.html",
-      "to": "/privacidade.html"
-    },
-    {
-      "from": "/es/careers.html",
-      "to": "/cookies.html"
     },
     {
       "from": "/es/artigos/otp-elixir-escolha-aplicacoes-criticas.html",
@@ -12233,11 +12237,11 @@
     },
     {
       "from": "/sv/careers.html",
-      "to": "/ja/"
+      "to": "/ja/careers.html"
     },
     {
       "from": "/sv/careers.html",
-      "to": "/kok/"
+      "to": "/kok/careers.html"
     },
     {
       "from": "/sv/careers.html",
@@ -14262,6 +14266,110 @@
     {
       "from": "/produtos/categorias/estetica/",
       "to": "/termos.html"
+    },
+    {
+      "from": "/ja/careers.html",
+      "to": "/ja/"
+    },
+    {
+      "from": "/ja/careers.html",
+      "to": "/carreiras.html"
+    },
+    {
+      "from": "/ja/careers.html",
+      "to": "/en/careers.html"
+    },
+    {
+      "from": "/ja/careers.html",
+      "to": "/es/careers.html"
+    },
+    {
+      "from": "/ja/careers.html",
+      "to": "/kok/careers.html"
+    },
+    {
+      "from": "/ja/careers.html",
+      "to": "/sv/careers.html"
+    },
+    {
+      "from": "/ja/careers.html",
+      "to": "/ja/"
+    },
+    {
+      "from": "/ja/careers.html",
+      "to": "/ja/privacidade.html"
+    },
+    {
+      "from": "/ja/careers.html",
+      "to": "/ja/cookies.html"
+    },
+    {
+      "from": "/ja/careers.html",
+      "to": "/ja/termos.html"
+    },
+    {
+      "from": "/ja/careers.html",
+      "to": "/ja/careers.html"
+    },
+    {
+      "from": "/ja/careers.html",
+      "to": "/privacidade.html"
+    },
+    {
+      "from": "/ja/careers.html",
+      "to": "/cookies.html"
+    },
+    {
+      "from": "/kok/careers.html",
+      "to": "/kok/"
+    },
+    {
+      "from": "/kok/careers.html",
+      "to": "/carreiras.html"
+    },
+    {
+      "from": "/kok/careers.html",
+      "to": "/en/careers.html"
+    },
+    {
+      "from": "/kok/careers.html",
+      "to": "/es/careers.html"
+    },
+    {
+      "from": "/kok/careers.html",
+      "to": "/ja/careers.html"
+    },
+    {
+      "from": "/kok/careers.html",
+      "to": "/sv/careers.html"
+    },
+    {
+      "from": "/kok/careers.html",
+      "to": "/kok/"
+    },
+    {
+      "from": "/kok/careers.html",
+      "to": "/kok/privacidade.html"
+    },
+    {
+      "from": "/kok/careers.html",
+      "to": "/kok/cookies.html"
+    },
+    {
+      "from": "/kok/careers.html",
+      "to": "/kok/termos.html"
+    },
+    {
+      "from": "/kok/careers.html",
+      "to": "/kok/careers.html"
+    },
+    {
+      "from": "/kok/careers.html",
+      "to": "/privacidade.html"
+    },
+    {
+      "from": "/kok/careers.html",
+      "to": "/cookies.html"
     },
     {
       "from": "/en/produtos/w-iot/",
@@ -16536,7 +16644,6 @@
     "/es/w-ledger/",
     "/es/w-pulse/",
     "/es/w-safe/",
-    "/ja/careers.html",
     "/ja/categorias/estetica/",
     "/ja/categorias/healthtech/",
     "/ja/categorias/odontologia/",
@@ -16550,7 +16657,6 @@
     "/ja/w-ledger/",
     "/ja/w-pulse/",
     "/ja/w-safe/",
-    "/kok/careers.html",
     "/kok/categorias/estetica/",
     "/kok/categorias/healthtech/",
     "/kok/categorias/odontologia/",

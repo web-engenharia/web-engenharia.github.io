@@ -12,12 +12,12 @@ La superioridad técnica del ecosistema Erlang y Elixir no radica principalmente
 
 ```mermaid
 flowchart LR
-  tradicional["JVM/.NET tradicional"] --> threads["Threads do SO"]
-  threads --> memoriaCompartilhada["Memoria compartilhada"]
-  memoriaCompartilhada --> locks["Locks e mutexes"]
-  beam["BEAM (Erlang/Elixir)"] --> processos["Processos ultraleves"]
-  processos --> mensagens["Troca de mensagens assincrona"]
-  mensagens --> isolamento["Isolamento de falhas e latencia previsivel"]
+  tradicional["JVM/.NET tradicional"] --> threads["Hilos del SO"]
+  threads --> memoriaCompartilhada["Memoria compartida"]
+  memoriaCompartilhada --> locks["Locks y mutexes"]
+  beam["BEAM (Erlang/Elixir)"] --> processos["Procesos ultraligeros"]
+  processos --> mensagens["Intercambio de mensajes asíncrono"]
+  mensagens --> isolamento["Aislamiento de fallas y latencia predecible"]
 ```
 En ecosistemas industriales estándar como la máquina virtual Java (JVM) o las implementaciones basadas en C\#, la creación de instancias de un *hilo* operativo tiene un costo computacional extremadamente significativo, ya que a menudo consume megabytes de memoria RAM solo para asignar su pila de ejecución básica, además de imponer una fuerte conmutación de contexto (*cambio de contexto*) en el procesador. En marcado contraste, en BEAM, la unidad primaria y básica de concurrencia es el "proceso" de Erlang, una abstracción que no tiene relación directa con los procesos pesados ​​del sistema operativo. Estos procesos internos son estructuras de datos extraordinariamente livianas y, por lo general, consumen solo unos pocos cientos de bytes en el inicio. Esta extrema eficiencia volumétrica permite que un único nodo de servidor físico ejecute millones de procesos simultáneos simultáneamente sin agotar los recursos de memoria de la máquina ni acelerar la unidad central de procesamiento (CPU) con cambios de contexto.
 
@@ -112,13 +112,13 @@ defmodule MyApp.Router do
 
   @impl true
   def handle_cast({:route_async, event}, state) do
-    # despacho "fire-and-forget"; o chamador nao bloqueia
+    # despacho "fire-and-forget"; el llamador no bloquea
     {:noreply, state}
   end
 
   @impl true
   def handle_call({:fetch_sync, key}, _from, state) do
-    # requisicao/resposta; pode acorrentar espera sob rede lenta
+    # petición/respuesta; puede encadenar espera bajo red lenta
     {:reply, Map.get(state, key), state}
   end
 end
@@ -264,7 +264,7 @@ Firma típica de la devolución de llamada `code_change/3` en un `GenServer` (co
 ```elixir
 @impl true
 def code_change(_old_vsn, state, _extra) do
-  # aqui se projeta o estado antigo para o formato esperado pelo novo modulo
+  # aquí se proyecta el estado antiguo al formato esperado por el nuevo módulo
   {:ok, state}
 end
 ```

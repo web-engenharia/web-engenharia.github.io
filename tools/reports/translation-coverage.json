@@ -1,0 +1,854 @@
+{
+  "generatedAt": "2026-03-26T22:26:56.293Z",
+  "stats": {
+    "ptBrRoutesChecked": 69,
+    "completeCoverage": 68,
+    "incompleteCoverage": 1
+  },
+  "incomplete": [
+    {
+      "representativeRoute": "/carreiras.html",
+      "alternateByLocale": {
+        "pt-BR": "/carreiras.html",
+        "en": "/en/careers.html",
+        "es": "/es/careers.html",
+        "sv": "/sv/careers.html"
+      },
+      "missingLocales": [
+        "ja",
+        "kok"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "representativeRoute": "/",
+      "alternateByLocale": {
+        "pt-BR": "/",
+        "en": "/en/",
+        "es": "/es/",
+        "ja": "/ja/",
+        "kok": "/kok/",
+        "sv": "/sv/"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/artigos/",
+      "alternateByLocale": {
+        "pt-BR": "/artigos/",
+        "en": "/en/artigos/",
+        "es": "/es/artigos/",
+        "ja": "/ja/artigos/",
+        "kok": "/kok/artigos/",
+        "sv": "/sv/artigos/"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html",
+      "alternateByLocale": {
+        "pt-BR": "/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html",
+        "en": "/en/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html",
+        "es": "/es/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html",
+        "ja": "/ja/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html",
+        "kok": "/kok/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html",
+        "sv": "/sv/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/artigos/construindo-sistemas-resilientes-eventos-cqrs.html",
+      "alternateByLocale": {
+        "pt-BR": "/artigos/construindo-sistemas-resilientes-eventos-cqrs.html",
+        "en": "/en/artigos/construindo-sistemas-resilientes-eventos-cqrs.html",
+        "es": "/es/artigos/construindo-sistemas-resilientes-eventos-cqrs.html",
+        "ja": "/ja/artigos/construindo-sistemas-resilientes-eventos-cqrs.html",
+        "kok": "/kok/artigos/construindo-sistemas-resilientes-eventos-cqrs.html",
+        "sv": "/sv/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html",
+      "alternateByLocale": {
+        "pt-BR": "/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html",
+        "en": "/en/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html",
+        "es": "/es/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html",
+        "ja": "/ja/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html",
+        "kok": "/kok/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html",
+        "sv": "/sv/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/artigos/otp-elixir-escolha-aplicacoes-criticas.html",
+      "alternateByLocale": {
+        "pt-BR": "/artigos/otp-elixir-escolha-aplicacoes-criticas.html",
+        "en": "/en/artigos/otp-elixir-escolha-aplicacoes-criticas.html",
+        "es": "/es/artigos/otp-elixir-escolha-aplicacoes-criticas.html",
+        "ja": "/ja/artigos/otp-elixir-escolha-aplicacoes-criticas.html",
+        "kok": "/kok/artigos/otp-elixir-escolha-aplicacoes-criticas.html",
+        "sv": "/sv/artigos/otp-elixir-escolha-aplicacoes-criticas.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/boutique-engenharia/",
+      "alternateByLocale": {
+        "pt-BR": "/boutique-engenharia/",
+        "en": "/en/boutique-engenharia/",
+        "es": "/es/boutique-engenharia/",
+        "ja": "/ja/boutique-engenharia/",
+        "kok": "/kok/boutique-engenharia/",
+        "sv": "/sv/boutique-engenharia/"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/carreiras.html",
+      "alternateByLocale": {
+        "pt-BR": "/carreiras.html",
+        "en": "/en/careers.html",
+        "es": "/es/careers.html",
+        "sv": "/sv/careers.html"
+      },
+      "missingLocales": [
+        "ja",
+        "kok"
+      ]
+    },
+    {
+      "representativeRoute": "/cookies.html",
+      "alternateByLocale": {
+        "pt-BR": "/cookies.html",
+        "en": "/en/cookies.html",
+        "es": "/es/cookies.html",
+        "ja": "/ja/cookies.html",
+        "kok": "/kok/cookies.html",
+        "sv": "/sv/cookies.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/privacidade.html",
+      "alternateByLocale": {
+        "pt-BR": "/privacidade.html",
+        "en": "/en/privacidade.html",
+        "es": "/es/privacidade.html",
+        "ja": "/ja/privacidade.html",
+        "kok": "/kok/privacidade.html",
+        "sv": "/sv/privacidade.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/produtos/",
+      "alternateByLocale": {
+        "pt-BR": "/produtos/",
+        "en": "/en/produtos/",
+        "es": "/es/produtos/",
+        "ja": "/ja/produtos/",
+        "kok": "/kok/produtos/",
+        "sv": "/sv/produtos/"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/produtos/categorias/estetica/",
+      "alternateByLocale": {
+        "pt-BR": "/produtos/categorias/estetica/",
+        "en": "/en/produtos/categorias/estetica/",
+        "es": "/es/produtos/categorias/estetica/",
+        "ja": "/ja/produtos/categorias/estetica/",
+        "kok": "/kok/produtos/categorias/estetica/",
+        "sv": "/sv/produtos/categorias/estetica/"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/produtos/categorias/healthtech/",
+      "alternateByLocale": {
+        "pt-BR": "/produtos/categorias/healthtech/",
+        "en": "/en/produtos/categorias/healthtech/",
+        "es": "/es/produtos/categorias/healthtech/",
+        "ja": "/ja/produtos/categorias/healthtech/",
+        "kok": "/kok/produtos/categorias/healthtech/",
+        "sv": "/sv/produtos/categorias/healthtech/"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/produtos/categorias/odontologia/",
+      "alternateByLocale": {
+        "pt-BR": "/produtos/categorias/odontologia/",
+        "en": "/en/produtos/categorias/odontologia/",
+        "es": "/es/produtos/categorias/odontologia/",
+        "ja": "/ja/produtos/categorias/odontologia/",
+        "kok": "/kok/produtos/categorias/odontologia/",
+        "sv": "/sv/produtos/categorias/odontologia/"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/produtos/categorias/restaurantes/",
+      "alternateByLocale": {
+        "pt-BR": "/produtos/categorias/restaurantes/",
+        "en": "/en/produtos/categorias/restaurantes/",
+        "es": "/es/produtos/categorias/restaurantes/",
+        "ja": "/ja/produtos/categorias/restaurantes/",
+        "kok": "/kok/produtos/categorias/restaurantes/",
+        "sv": "/sv/produtos/categorias/restaurantes/"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/produtos/categorias/supermercados/",
+      "alternateByLocale": {
+        "pt-BR": "/produtos/categorias/supermercados/",
+        "en": "/en/produtos/categorias/supermercados/",
+        "es": "/es/produtos/categorias/supermercados/",
+        "ja": "/ja/produtos/categorias/supermercados/",
+        "kok": "/kok/produtos/categorias/supermercados/",
+        "sv": "/sv/produtos/categorias/supermercados/"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/produtos/neuroflow/",
+      "alternateByLocale": {
+        "pt-BR": "/produtos/neuroflow/",
+        "en": "/en/produtos/neuroflow/",
+        "es": "/es/produtos/neuroflow/",
+        "ja": "/ja/produtos/neuroflow/",
+        "kok": "/kok/produtos/neuroflow/",
+        "sv": "/sv/produtos/neuroflow/"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/produtos/neuromatch/",
+      "alternateByLocale": {
+        "pt-BR": "/produtos/neuromatch/",
+        "en": "/en/produtos/neuromatch/",
+        "es": "/es/produtos/neuromatch/",
+        "ja": "/ja/produtos/neuromatch/",
+        "kok": "/kok/produtos/neuromatch/",
+        "sv": "/sv/produtos/neuromatch/"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/produtos/neurosupport/",
+      "alternateByLocale": {
+        "pt-BR": "/produtos/neurosupport/",
+        "en": "/en/produtos/neurosupport/",
+        "es": "/es/produtos/neurosupport/",
+        "ja": "/ja/produtos/neurosupport/",
+        "kok": "/kok/produtos/neurosupport/",
+        "sv": "/sv/produtos/neurosupport/"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/produtos/w-compliance/",
+      "alternateByLocale": {
+        "pt-BR": "/produtos/w-compliance/",
+        "en": "/en/produtos/w-compliance/",
+        "es": "/es/produtos/w-compliance/",
+        "ja": "/ja/produtos/w-compliance/",
+        "kok": "/kok/produtos/w-compliance/",
+        "sv": "/sv/produtos/w-compliance/"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/produtos/w-iot/",
+      "alternateByLocale": {
+        "pt-BR": "/produtos/w-iot/",
+        "en": "/en/produtos/w-iot/",
+        "es": "/es/produtos/w-iot/",
+        "ja": "/ja/produtos/w-iot/",
+        "kok": "/kok/produtos/w-iot/",
+        "sv": "/sv/produtos/w-iot/"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/produtos/w-ledger/",
+      "alternateByLocale": {
+        "pt-BR": "/produtos/w-ledger/",
+        "en": "/en/produtos/w-ledger/",
+        "es": "/es/produtos/w-ledger/",
+        "ja": "/ja/produtos/w-ledger/",
+        "kok": "/kok/produtos/w-ledger/",
+        "sv": "/sv/produtos/w-ledger/"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/produtos/w-pulse/",
+      "alternateByLocale": {
+        "pt-BR": "/produtos/w-pulse/",
+        "en": "/en/produtos/w-pulse/",
+        "es": "/es/produtos/w-pulse/",
+        "ja": "/ja/produtos/w-pulse/",
+        "kok": "/kok/produtos/w-pulse/",
+        "sv": "/sv/produtos/w-pulse/"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/produtos/w-safe/",
+      "alternateByLocale": {
+        "pt-BR": "/produtos/w-safe/",
+        "en": "/en/produtos/w-safe/",
+        "es": "/es/produtos/w-safe/",
+        "ja": "/ja/produtos/w-safe/",
+        "kok": "/kok/produtos/w-safe/",
+        "sv": "/sv/produtos/w-safe/"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/3scale.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/3scale.html",
+        "en": "/en/tecnologias/3scale.html",
+        "es": "/es/tecnologias/3scale.html",
+        "ja": "/ja/tecnologias/3scale.html",
+        "kok": "/kok/tecnologias/3scale.html",
+        "sv": "/sv/tecnologias/3scale.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/android.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/android.html",
+        "en": "/en/tecnologias/android.html",
+        "es": "/es/tecnologias/android.html",
+        "ja": "/ja/tecnologias/android.html",
+        "kok": "/kok/tecnologias/android.html",
+        "sv": "/sv/tecnologias/android.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/aws.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/aws.html",
+        "en": "/en/tecnologias/aws.html",
+        "es": "/es/tecnologias/aws.html",
+        "ja": "/ja/tecnologias/aws.html",
+        "kok": "/kok/tecnologias/aws.html",
+        "sv": "/sv/tecnologias/aws.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/azure.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/azure.html",
+        "en": "/en/tecnologias/azure.html",
+        "es": "/es/tecnologias/azure.html",
+        "ja": "/ja/tecnologias/azure.html",
+        "kok": "/kok/tecnologias/azure.html",
+        "sv": "/sv/tecnologias/azure.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/ci-cd.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/ci-cd.html",
+        "en": "/en/tecnologias/ci-cd.html",
+        "es": "/es/tecnologias/ci-cd.html",
+        "ja": "/ja/tecnologias/ci-cd.html",
+        "kok": "/kok/tecnologias/ci-cd.html",
+        "sv": "/sv/tecnologias/ci-cd.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/cobol.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/cobol.html",
+        "en": "/en/tecnologias/cobol.html",
+        "es": "/es/tecnologias/cobol.html",
+        "ja": "/ja/tecnologias/cobol.html",
+        "kok": "/kok/tecnologias/cobol.html",
+        "sv": "/sv/tecnologias/cobol.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/copilotos-ia.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/copilotos-ia.html",
+        "en": "/en/tecnologias/copilotos-ia.html",
+        "es": "/es/tecnologias/copilotos-ia.html",
+        "ja": "/ja/tecnologias/copilotos-ia.html",
+        "kok": "/kok/tecnologias/copilotos-ia.html",
+        "sv": "/sv/tecnologias/copilotos-ia.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/cpp.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/cpp.html",
+        "en": "/en/tecnologias/cpp.html",
+        "es": "/es/tecnologias/cpp.html",
+        "ja": "/ja/tecnologias/cpp.html",
+        "kok": "/kok/tecnologias/cpp.html",
+        "sv": "/sv/tecnologias/cpp.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/db2.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/db2.html",
+        "en": "/en/tecnologias/db2.html",
+        "es": "/es/tecnologias/db2.html",
+        "ja": "/ja/tecnologias/db2.html",
+        "kok": "/kok/tecnologias/db2.html",
+        "sv": "/sv/tecnologias/db2.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/docker.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/docker.html",
+        "en": "/en/tecnologias/docker.html",
+        "es": "/es/tecnologias/docker.html",
+        "ja": "/ja/tecnologias/docker.html",
+        "kok": "/kok/tecnologias/docker.html",
+        "sv": "/sv/tecnologias/docker.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/elixir-erlang-otp.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/elixir-erlang-otp.html",
+        "en": "/en/tecnologias/elixir-erlang-otp.html",
+        "es": "/es/tecnologias/elixir-erlang-otp.html",
+        "ja": "/ja/tecnologias/elixir-erlang-otp.html",
+        "kok": "/kok/tecnologias/elixir-erlang-otp.html",
+        "sv": "/sv/tecnologias/elixir-erlang-otp.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/figma.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/figma.html",
+        "en": "/en/tecnologias/figma.html",
+        "es": "/es/tecnologias/figma.html",
+        "ja": "/ja/tecnologias/figma.html",
+        "kok": "/kok/tecnologias/figma.html",
+        "sv": "/sv/tecnologias/figma.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/flutter.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/flutter.html",
+        "en": "/en/tecnologias/flutter.html",
+        "es": "/es/tecnologias/flutter.html",
+        "ja": "/ja/tecnologias/flutter.html",
+        "kok": "/kok/tecnologias/flutter.html",
+        "sv": "/sv/tecnologias/flutter.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/gcp.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/gcp.html",
+        "en": "/en/tecnologias/gcp.html",
+        "es": "/es/tecnologias/gcp.html",
+        "ja": "/ja/tecnologias/gcp.html",
+        "kok": "/kok/tecnologias/gcp.html",
+        "sv": "/sv/tecnologias/gcp.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/gitflow.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/gitflow.html",
+        "en": "/en/tecnologias/gitflow.html",
+        "es": "/es/tecnologias/gitflow.html",
+        "ja": "/ja/tecnologias/gitflow.html",
+        "kok": "/kok/tecnologias/gitflow.html",
+        "sv": "/sv/tecnologias/gitflow.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/gitlab-ci.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/gitlab-ci.html",
+        "en": "/en/tecnologias/gitlab-ci.html",
+        "es": "/es/tecnologias/gitlab-ci.html",
+        "ja": "/ja/tecnologias/gitlab-ci.html",
+        "kok": "/kok/tecnologias/gitlab-ci.html",
+        "sv": "/sv/tecnologias/gitlab-ci.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/golang.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/golang.html",
+        "en": "/en/tecnologias/golang.html",
+        "es": "/es/tecnologias/golang.html",
+        "ja": "/ja/tecnologias/golang.html",
+        "kok": "/kok/tecnologias/golang.html",
+        "sv": "/sv/tecnologias/golang.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/java-quarkus.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/java-quarkus.html",
+        "en": "/en/tecnologias/java-quarkus.html",
+        "es": "/es/tecnologias/java-quarkus.html",
+        "ja": "/ja/tecnologias/java-quarkus.html",
+        "kok": "/kok/tecnologias/java-quarkus.html",
+        "sv": "/sv/tecnologias/java-quarkus.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/jenkins.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/jenkins.html",
+        "en": "/en/tecnologias/jenkins.html",
+        "es": "/es/tecnologias/jenkins.html",
+        "ja": "/ja/tecnologias/jenkins.html",
+        "kok": "/kok/tecnologias/jenkins.html",
+        "sv": "/sv/tecnologias/jenkins.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/jest.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/jest.html",
+        "en": "/en/tecnologias/jest.html",
+        "es": "/es/tecnologias/jest.html",
+        "ja": "/ja/tecnologias/jest.html",
+        "kok": "/kok/tecnologias/jest.html",
+        "sv": "/sv/tecnologias/jest.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/junit.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/junit.html",
+        "en": "/en/tecnologias/junit.html",
+        "es": "/es/tecnologias/junit.html",
+        "ja": "/ja/tecnologias/junit.html",
+        "kok": "/kok/tecnologias/junit.html",
+        "sv": "/sv/tecnologias/junit.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/kafka.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/kafka.html",
+        "en": "/en/tecnologias/kafka.html",
+        "es": "/es/tecnologias/kafka.html",
+        "ja": "/ja/tecnologias/kafka.html",
+        "kok": "/kok/tecnologias/kafka.html",
+        "sv": "/sv/tecnologias/kafka.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/kotlin.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/kotlin.html",
+        "en": "/en/tecnologias/kotlin.html",
+        "es": "/es/tecnologias/kotlin.html",
+        "ja": "/ja/tecnologias/kotlin.html",
+        "kok": "/kok/tecnologias/kotlin.html",
+        "sv": "/sv/tecnologias/kotlin.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/kubernetes.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/kubernetes.html",
+        "en": "/en/tecnologias/kubernetes.html",
+        "es": "/es/tecnologias/kubernetes.html",
+        "ja": "/ja/tecnologias/kubernetes.html",
+        "kok": "/kok/tecnologias/kubernetes.html",
+        "sv": "/sv/tecnologias/kubernetes.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/maven-gradle.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/maven-gradle.html",
+        "en": "/en/tecnologias/maven-gradle.html",
+        "es": "/es/tecnologias/maven-gradle.html",
+        "ja": "/ja/tecnologias/maven-gradle.html",
+        "kok": "/kok/tecnologias/maven-gradle.html",
+        "sv": "/sv/tecnologias/maven-gradle.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/microsservicos.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/microsservicos.html",
+        "en": "/en/tecnologias/microsservicos.html",
+        "es": "/es/tecnologias/microsservicos.html",
+        "ja": "/ja/tecnologias/microsservicos.html",
+        "kok": "/kok/tecnologias/microsservicos.html",
+        "sv": "/sv/tecnologias/microsservicos.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/mongodb.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/mongodb.html",
+        "en": "/en/tecnologias/mongodb.html",
+        "es": "/es/tecnologias/mongodb.html",
+        "ja": "/ja/tecnologias/mongodb.html",
+        "kok": "/kok/tecnologias/mongodb.html",
+        "sv": "/sv/tecnologias/mongodb.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/monolitos.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/monolitos.html",
+        "en": "/en/tecnologias/monolitos.html",
+        "es": "/es/tecnologias/monolitos.html",
+        "ja": "/ja/tecnologias/monolitos.html",
+        "kok": "/kok/tecnologias/monolitos.html",
+        "sv": "/sv/tecnologias/monolitos.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/mysql.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/mysql.html",
+        "en": "/en/tecnologias/mysql.html",
+        "es": "/es/tecnologias/mysql.html",
+        "ja": "/ja/tecnologias/mysql.html",
+        "kok": "/kok/tecnologias/mysql.html",
+        "sv": "/sv/tecnologias/mysql.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/nodejs.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/nodejs.html",
+        "en": "/en/tecnologias/nodejs.html",
+        "es": "/es/tecnologias/nodejs.html",
+        "ja": "/ja/tecnologias/nodejs.html",
+        "kok": "/kok/tecnologias/nodejs.html",
+        "sv": "/sv/tecnologias/nodejs.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/nosql.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/nosql.html",
+        "en": "/en/tecnologias/nosql.html",
+        "es": "/es/tecnologias/nosql.html",
+        "ja": "/ja/tecnologias/nosql.html",
+        "kok": "/kok/tecnologias/nosql.html",
+        "sv": "/sv/tecnologias/nosql.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/objective-c.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/objective-c.html",
+        "en": "/en/tecnologias/objective-c.html",
+        "es": "/es/tecnologias/objective-c.html",
+        "ja": "/ja/tecnologias/objective-c.html",
+        "kok": "/kok/tecnologias/objective-c.html",
+        "sv": "/sv/tecnologias/objective-c.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/openshift.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/openshift.html",
+        "en": "/en/tecnologias/openshift.html",
+        "es": "/es/tecnologias/openshift.html",
+        "ja": "/ja/tecnologias/openshift.html",
+        "kok": "/kok/tecnologias/openshift.html",
+        "sv": "/sv/tecnologias/openshift.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/oracle.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/oracle.html",
+        "en": "/en/tecnologias/oracle.html",
+        "es": "/es/tecnologias/oracle.html",
+        "ja": "/ja/tecnologias/oracle.html",
+        "kok": "/kok/tecnologias/oracle.html",
+        "sv": "/sv/tecnologias/oracle.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/php.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/php.html",
+        "en": "/en/tecnologias/php.html",
+        "es": "/es/tecnologias/php.html",
+        "ja": "/ja/tecnologias/php.html",
+        "kok": "/kok/tecnologias/php.html",
+        "sv": "/sv/tecnologias/php.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/postgresql.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/postgresql.html",
+        "en": "/en/tecnologias/postgresql.html",
+        "es": "/es/tecnologias/postgresql.html",
+        "ja": "/ja/tecnologias/postgresql.html",
+        "kok": "/kok/tecnologias/postgresql.html",
+        "sv": "/sv/tecnologias/postgresql.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/rabbitmq.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/rabbitmq.html",
+        "en": "/en/tecnologias/rabbitmq.html",
+        "es": "/es/tecnologias/rabbitmq.html",
+        "ja": "/ja/tecnologias/rabbitmq.html",
+        "kok": "/kok/tecnologias/rabbitmq.html",
+        "sv": "/sv/tecnologias/rabbitmq.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/react-native.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/react-native.html",
+        "en": "/en/tecnologias/react-native.html",
+        "es": "/es/tecnologias/react-native.html",
+        "ja": "/ja/tecnologias/react-native.html",
+        "kok": "/kok/tecnologias/react-native.html",
+        "sv": "/sv/tecnologias/react-native.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/redis.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/redis.html",
+        "en": "/en/tecnologias/redis.html",
+        "es": "/es/tecnologias/redis.html",
+        "ja": "/ja/tecnologias/redis.html",
+        "kok": "/kok/tecnologias/redis.html",
+        "sv": "/sv/tecnologias/redis.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/restful.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/restful.html",
+        "en": "/en/tecnologias/restful.html",
+        "es": "/es/tecnologias/restful.html",
+        "ja": "/ja/tecnologias/restful.html",
+        "kok": "/kok/tecnologias/restful.html",
+        "sv": "/sv/tecnologias/restful.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/scrum.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/scrum.html",
+        "en": "/en/tecnologias/scrum.html",
+        "es": "/es/tecnologias/scrum.html",
+        "ja": "/ja/tecnologias/scrum.html",
+        "kok": "/kok/tecnologias/scrum.html",
+        "sv": "/sv/tecnologias/scrum.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/spring-ecosystem.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/spring-ecosystem.html",
+        "en": "/en/tecnologias/spring-ecosystem.html",
+        "es": "/es/tecnologias/spring-ecosystem.html",
+        "ja": "/ja/tecnologias/spring-ecosystem.html",
+        "kok": "/kok/tecnologias/spring-ecosystem.html",
+        "sv": "/sv/tecnologias/spring-ecosystem.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/swift.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/swift.html",
+        "en": "/en/tecnologias/swift.html",
+        "es": "/es/tecnologias/swift.html",
+        "ja": "/ja/tecnologias/swift.html",
+        "kok": "/kok/tecnologias/swift.html",
+        "sv": "/sv/tecnologias/swift.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/tecnologias/tibco-bw.html",
+      "alternateByLocale": {
+        "pt-BR": "/tecnologias/tibco-bw.html",
+        "en": "/en/tecnologias/tibco-bw.html",
+        "es": "/es/tecnologias/tibco-bw.html",
+        "ja": "/ja/tecnologias/tibco-bw.html",
+        "kok": "/kok/tecnologias/tibco-bw.html",
+        "sv": "/sv/tecnologias/tibco-bw.html"
+      },
+      "missingLocales": []
+    },
+    {
+      "representativeRoute": "/termos.html",
+      "alternateByLocale": {
+        "pt-BR": "/termos.html",
+        "en": "/en/termos.html",
+        "es": "/es/termos.html",
+        "ja": "/ja/termos.html",
+        "kok": "/kok/termos.html",
+        "sv": "/sv/termos.html"
+      },
+      "missingLocales": []
+    }
+  ]
+}

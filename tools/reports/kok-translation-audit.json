@@ -1,0 +1,422 @@
+{
+  "generatedAt": "2026-03-26T22:26:56.833Z",
+  "stats": {
+    "kokFiles": 82,
+    "pairsWithPt": 82,
+    "pairsMissingPt": 0,
+    "findings": 0
+  },
+  "pairs": [
+    {
+      "kokRel": "kok/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html",
+      "ptRel": "artigos/alem-do-hype-arquiteturas-cognitivas-llms.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/artigos/construindo-sistemas-resilientes-eventos-cqrs.html",
+      "ptRel": "artigos/construindo-sistemas-resilientes-eventos-cqrs.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/artigos/index.html",
+      "ptRel": "artigos/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html",
+      "ptRel": "artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/artigos/otp-elixir-escolha-aplicacoes-criticas.html",
+      "ptRel": "artigos/otp-elixir-escolha-aplicacoes-criticas.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/boutique-engenharia/index.html",
+      "ptRel": "boutique-engenharia/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/careers.html",
+      "ptRel": "carreiras.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/categorias/estetica/index.html",
+      "ptRel": "categorias/estetica/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/categorias/healthtech/index.html",
+      "ptRel": "categorias/healthtech/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/categorias/odontologia/index.html",
+      "ptRel": "categorias/odontologia/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/categorias/restaurantes/index.html",
+      "ptRel": "categorias/restaurantes/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/categorias/supermercados/index.html",
+      "ptRel": "categorias/supermercados/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/cookies.html",
+      "ptRel": "cookies.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/index.html",
+      "ptRel": "index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/neuroflow/index.html",
+      "ptRel": "neuroflow/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/neuromatch/index.html",
+      "ptRel": "neuromatch/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/neurosupport/index.html",
+      "ptRel": "neurosupport/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/privacidade.html",
+      "ptRel": "privacidade.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/produtos/categorias/estetica/index.html",
+      "ptRel": "produtos/categorias/estetica/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/produtos/categorias/healthtech/index.html",
+      "ptRel": "produtos/categorias/healthtech/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/produtos/categorias/odontologia/index.html",
+      "ptRel": "produtos/categorias/odontologia/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/produtos/categorias/restaurantes/index.html",
+      "ptRel": "produtos/categorias/restaurantes/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/produtos/categorias/supermercados/index.html",
+      "ptRel": "produtos/categorias/supermercados/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/produtos/index.html",
+      "ptRel": "produtos/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/produtos/neuroflow/index.html",
+      "ptRel": "produtos/neuroflow/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/produtos/neuromatch/index.html",
+      "ptRel": "produtos/neuromatch/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/produtos/neurosupport/index.html",
+      "ptRel": "produtos/neurosupport/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/produtos/w-compliance/index.html",
+      "ptRel": "produtos/w-compliance/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/produtos/w-iot/index.html",
+      "ptRel": "produtos/w-iot/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/produtos/w-ledger/index.html",
+      "ptRel": "produtos/w-ledger/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/produtos/w-pulse/index.html",
+      "ptRel": "produtos/w-pulse/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/produtos/w-safe/index.html",
+      "ptRel": "produtos/w-safe/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/3scale.html",
+      "ptRel": "tecnologias/3scale.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/android.html",
+      "ptRel": "tecnologias/android.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/aws.html",
+      "ptRel": "tecnologias/aws.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/azure.html",
+      "ptRel": "tecnologias/azure.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/ci-cd.html",
+      "ptRel": "tecnologias/ci-cd.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/cobol.html",
+      "ptRel": "tecnologias/cobol.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/copilotos-ia.html",
+      "ptRel": "tecnologias/copilotos-ia.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/cpp.html",
+      "ptRel": "tecnologias/cpp.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/db2.html",
+      "ptRel": "tecnologias/db2.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/docker.html",
+      "ptRel": "tecnologias/docker.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/elixir-erlang-otp.html",
+      "ptRel": "tecnologias/elixir-erlang-otp.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/figma.html",
+      "ptRel": "tecnologias/figma.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/flutter.html",
+      "ptRel": "tecnologias/flutter.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/gcp.html",
+      "ptRel": "tecnologias/gcp.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/gitflow.html",
+      "ptRel": "tecnologias/gitflow.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/gitlab-ci.html",
+      "ptRel": "tecnologias/gitlab-ci.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/golang.html",
+      "ptRel": "tecnologias/golang.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/java-quarkus.html",
+      "ptRel": "tecnologias/java-quarkus.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/jenkins.html",
+      "ptRel": "tecnologias/jenkins.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/jest.html",
+      "ptRel": "tecnologias/jest.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/junit.html",
+      "ptRel": "tecnologias/junit.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/kafka.html",
+      "ptRel": "tecnologias/kafka.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/kotlin.html",
+      "ptRel": "tecnologias/kotlin.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/kubernetes.html",
+      "ptRel": "tecnologias/kubernetes.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/maven-gradle.html",
+      "ptRel": "tecnologias/maven-gradle.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/microsservicos.html",
+      "ptRel": "tecnologias/microsservicos.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/mongodb.html",
+      "ptRel": "tecnologias/mongodb.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/monolitos.html",
+      "ptRel": "tecnologias/monolitos.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/mysql.html",
+      "ptRel": "tecnologias/mysql.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/nodejs.html",
+      "ptRel": "tecnologias/nodejs.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/nosql.html",
+      "ptRel": "tecnologias/nosql.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/objective-c.html",
+      "ptRel": "tecnologias/objective-c.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/openshift.html",
+      "ptRel": "tecnologias/openshift.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/oracle.html",
+      "ptRel": "tecnologias/oracle.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/php.html",
+      "ptRel": "tecnologias/php.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/postgresql.html",
+      "ptRel": "tecnologias/postgresql.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/rabbitmq.html",
+      "ptRel": "tecnologias/rabbitmq.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/react-native.html",
+      "ptRel": "tecnologias/react-native.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/redis.html",
+      "ptRel": "tecnologias/redis.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/restful.html",
+      "ptRel": "tecnologias/restful.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/scrum.html",
+      "ptRel": "tecnologias/scrum.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/spring-ecosystem.html",
+      "ptRel": "tecnologias/spring-ecosystem.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/swift.html",
+      "ptRel": "tecnologias/swift.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/tecnologias/tibco-bw.html",
+      "ptRel": "tecnologias/tibco-bw.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/termos.html",
+      "ptRel": "termos.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/w-compliance/index.html",
+      "ptRel": "w-compliance/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/w-iot/index.html",
+      "ptRel": "w-iot/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/w-ledger/index.html",
+      "ptRel": "w-ledger/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/w-pulse/index.html",
+      "ptRel": "w-pulse/index.html",
+      "ptExists": true
+    },
+    {
+      "kokRel": "kok/w-safe/index.html",
+      "ptRel": "w-safe/index.html",
+      "ptExists": true
+    }
+  ],
+  "findings": []
+}

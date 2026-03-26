@@ -43,10 +43,10 @@ CATEGORIES = {
         "metrica": "エンジニアリング · ソフトウェア品質",
     },
     "kok": {
-        "otp": "Arkitetura · Vishvas",
-        "cqrs": "Arkitetura · Navikaran",
-        "llm": "Ruj · Lago AI",
-        "metrica": "Engenher · Software gunott",
+        "otp": "Architecture · Reliability",
+        "cqrs": "Architecture · Modernization",
+        "llm": "Trends · Applied AI",
+        "metrica": "Engineering · Software quality",
     },
     "sv": {
         "otp": "Arkitektur · Tillförlitlighet",
@@ -99,7 +99,7 @@ CONFIG = {
     "kok": {
         "lang": "kok",
         "title": "Lekh | Web-Engenharia",
-        "desc": "Arkitetura, navikaran, integrashon ani resultad-axil delivericher vixei teknik lekh.",
+        "desc": "Technical articles on architecture, modernization, integration, and outcome-driven delivery.",
         "h1": "Lekh",
         "intro": "Tech timank predict korcha scale, risk kumovnk ani release veg korunk zai tenna khathir lekh.",
         "h2": "Nove lekh",
