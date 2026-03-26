@@ -220,6 +220,12 @@
     var isCarreirasPt = /carreiras\.html$/.test(path);
     var isCookies = /cookies\.html$/.test(path);
     var artigosMatch = path.match(/\/artigos\/([^/]+\.html)$/);
+    var produtosCategoriasMatch = (function () {
+      var normalized = String(path || '').replace(/\/index\.html$/, '/').replace(/\/+$/, '');
+      var m = normalized.match(/\/produtos\/categorias\/([^/]+)$/);
+      if (!m) return null;
+      return { slug: m[1] };
+    })();
     var produtosMatch = (function () {
       var normalized = String(path || '').replace(/\/index\.html$/, '/').replace(/\/+$/, '');
       var m = normalized.match(/\/produtos(?:\/([^/]+))?$/);
@@ -242,7 +248,15 @@
             : '';
     var urls = { pt: '', en: '', es: '', ja: '', kok: '', sv: '' };
 
-    if (produtosMatch) {
+    if (produtosCategoriasMatch) {
+      var catSuffix = 'categorias/' + produtosCategoriasMatch.slug + '/';
+      urls.pt = '/produtos/' + catSuffix;
+      urls.en = '/en/produtos/' + catSuffix;
+      urls.es = '/es/produtos/' + catSuffix;
+      urls.ja = '/ja/produtos/' + catSuffix;
+      urls.kok = '/kok/produtos/' + catSuffix;
+      urls.sv = '/sv/produtos/' + catSuffix;
+    } else if (produtosMatch) {
       var suffix = produtosMatch.slug ? produtosMatch.slug + '/' : '';
       urls.pt = '/produtos/' + suffix;
       urls.en = '/en/produtos/' + suffix;

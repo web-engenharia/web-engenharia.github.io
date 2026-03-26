@@ -9,15 +9,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { BASE, expectedXDefaultHref, LOCALES, requiredAlternateLinks } from './hreflang-utils.mjs';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const LANDING = path.resolve(__dirname, '..');
 const REPORTS = path.join(__dirname, 'reports');
 const CRAWL_JSON = path.join(REPORTS, 'crawl-report.json');
 const OUT_JSON = path.join(REPORTS, 'i18n-audit.json');
 const OUT_MD = path.join(REPORTS, 'i18n-audit.md');
-const BASE = 'https://www.web-engenharia.com';
-const LOCALES = ['en', 'es', 'ja', 'kok', 'sv'];
-const EXPECTED_HREFLANG = ['pt-BR', 'en', 'es', 'ja', 'kok', 'sv'];
 
 function routeToRel(route) {
   if (route === '/' || route === '') return 'index.html';
@@ -128,14 +127,17 @@ function main() {
     }
 
     const hreflangs = extractHreflangs(head);
-    const hs = new Set(hreflangs.map((h) => h.hreflang));
-    for (const needed of EXPECTED_HREFLANG) {
-      if (!hs.has(needed)) warnings.push({ type: 'missing_hreflang_locale', route, detail: needed });
+    const required = requiredAlternateLinks(route, pages);
+    for (const { hreflang, href } of required) {
+      const found = hreflangs.some((h) => h.hreflang === hreflang && h.href === href);
+      if (!found) warnings.push({ type: 'missing_hreflang_locale', route, detail: hreflang });
     }
 
-    // x-default only expected for product hubs and primary home-like pages.
-    const isKeyRoute = route === '/' || LOCALES.some((l) => route === `/${l}/`) || /\/produtos\/$/.test(route);
-    if (isKeyRoute && !hs.has('x-default')) warnings.push({ type: 'missing_x_default', route });
+    const expX = expectedXDefaultHref(route);
+    if (expX) {
+      const xd = hreflangs.find((h) => h.hreflang === 'x-default');
+      if (!xd || xd.href !== expX) warnings.push({ type: 'missing_x_default', route });
+    }
 
     // Cross-locale leakage: page locale linking to another locale root where same-locale path is expected.
     const pageLocale = localeFromRoute(route);

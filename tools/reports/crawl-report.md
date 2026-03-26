@@ -1,12 +1,12 @@
 # Crawl report (local)
 
-- **Generated**: 2026\-03\-26T21:50:38\.556Z
-- **Origin**: http://127\.0\.0\.1:43447
+- **Generated**: 2026\-03\-26T21:59:01\.755Z
+- **Origin**: http://127\.0\.0\.1:41287
 - **Seeds**: /, /en/, /es/, /ja/, /kok/, /sv/
 - **Reachable**: 412
 - **Broken**: 0
-- **HTML on disk**: 490
-- **Orphans**: 78
+- **HTML on disk**: 492
+- **Orphans**: 80
 
 ## Orphan HTML files (not reachable from seeds)
 
@@ -41,6 +41,7 @@
 - `/es/w-ledger/`
 - `/es/w-pulse/`
 - `/es/w-safe/`
+- `/ja/careers.html`
 - `/ja/categorias/estetica/`
 - `/ja/categorias/healthtech/`
 - `/ja/categorias/odontologia/`
@@ -54,6 +55,7 @@
 - `/ja/w-ledger/`
 - `/ja/w-pulse/`
 - `/ja/w-safe/`
+- `/kok/careers.html`
 - `/kok/categorias/estetica/`
 - `/kok/categorias/healthtech/`
 - `/kok/categorias/odontologia/`

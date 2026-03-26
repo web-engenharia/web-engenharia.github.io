@@ -1,23 +1,24 @@
 #!/usr/bin/env node
 /**
- * Generate "alias" pages without the `/produtos` segment and update sitemap accordingly.
+ * Generate "alias" pages without the `/produtos` segment (short URLs for marketing links).
  *
- * Targets (PT-BR root = no prefix):
- * - Categories (hubs):
- *   - /categorias/{slug}/
- *   - /en/categorias/{slug}/ (etc.)
- * - Product modules (hubs):
- *   - /{module}/
- *   - /en/{module}/ (etc.)
+ * SEO policy: canonical URL for each product/category is under `/produtos/...`. These alias
+ * files duplicate content for short paths (`/{module}/`, `/categorias/{slug}/`) but MUST NOT
+ * compete in search: no hreflang cluster here, robots noindex,follow, canonical points to
+ * the `/produtos/...` URL for the same locale. Prefer HTTP 301 from short URL to `/produtos/...`
+ * on the edge server when possible.
  *
  * Templates are copied from existing `/produtos/...` pages in every locale.
  * We update:
- * - <html lang="..."> comes from the template locale (unchanged).
- * - <link rel="canonical" ...> to the alias URL (short, no `/produtos`).
- * - hreflang <link rel="alternate" ...> cluster to match alias URLs (+ x-default to PT-BR root).
- * - <meta property="og:url" ...> to match canonical.
- * We also convert `a[href^='./' or '../' or ...]` into absolute URLs resolved from the source page canonical,
- * so breadcrumbs/internal navigation keep pointing to the original `/produtos/...` pages.
+ * - <link rel="canonical" ...> → `/produtos/...` URL (not the short alias URL).
+ * - <meta name="robots" content="noindex, follow" />
+ * - Remove all hreflang alternates (single cluster lives on canonical `/produtos/` pages only).
+ * - <meta property="og:url" ...> matches canonical.
+ * Relative `a[href^='.'` links are resolved to absolute URLs from the source page canonical
+ * so breadcrumbs/internal navigation keep pointing to `/produtos/...` targets.
+ *
+ * Sitemap: does NOT add alias <loc> entries; removes existing alias blocks so only
+ * `/produtos/...` URLs represent each product/category cluster.
  */
 
 import fs from 'node:fs';
@@ -31,7 +32,6 @@ const BASE = 'https://www.web-engenharia.com';
 
 const LOCALES = ['en', 'es', 'ja', 'kok', 'sv'];
 const PT_LOCALE = 'pt-BR';
-const ALL_HREFLANGS = [PT_LOCALE, ...LOCALES];
 
 function ensureDir(p) {
   fs.mkdirSync(p, { recursive: true });
@@ -57,46 +57,39 @@ function extractOgUrl(html) {
   return m ? m[1].trim() : '';
 }
 
-function buildAlternates(shortUrlByLocale, canonicalShortUrl) {
-  // canonicalShortUrl is not used directly, but we keep it to emphasize intent.
-  void canonicalShortUrl;
-  const lines = [];
-  for (const hl of ALL_HREFLANGS) {
-    lines.push(
-      `    <link rel="alternate" hreflang="${hl}" href="${shortUrlByLocale[hl]}" />`
-    );
-  }
-  lines.push(`    <link rel="alternate" hreflang="x-default" href="${shortUrlByLocale[PT_LOCALE]}" />`);
-  return lines.join('\n');
+/** Canonical indexed URL under /produtos/ for this locale + kind. */
+function urlProdutosForLocale(locale, kind, slugOrModule) {
+  const prefix = locale === PT_LOCALE ? '' : `/${locale}`;
+  if (kind === 'category') return `${BASE}${prefix}/produtos/categorias/${slugOrModule}/`;
+  return `${BASE}${prefix}/produtos/${slugOrModule}/`;
 }
 
-function replaceCanonicalAndHreflang(html, newCanonicalUrl, shortUrlByLocale) {
+/**
+ * Strip hreflang, point canonical + og:url to produtos URL, noindex.
+ */
+function applyAliasSeo(html, canonicalProdutosUrl) {
   const canonicalRe = /<link\s+[^>]*rel=["']canonical["'][^>]*href=["'][^"']*["'][^>]*\/?>/i;
   const altRe = /<link\s+[^>]*rel=["']alternate["'][^>]*\/?>/gi;
-
-  const alternates = buildAlternates(shortUrlByLocale, newCanonicalUrl);
-
-  // Remove all existing <link rel="alternate" ...> elements first.
   let out = html.replace(altRe, '');
-
-  // Replace canonical, then insert hreflang cluster right after it.
-  out = out.replace(canonicalRe, (m) => {
-    // Keep canonical tag formatting simple and deterministic.
-    return `<link rel="canonical" href="${newCanonicalUrl}" />\n${alternates}`;
-  });
-
-  // Update OG URL
+  out = out.replace(
+    canonicalRe,
+    `<link rel="canonical" href="${canonicalProdutosUrl}" />`
+  );
+  out = out.replace(
+    /<meta\s+[^>]*name=["']robots["'][^>]*content=["'][^"']*["'][^>]*\/?>/i,
+    `<meta name="robots" content="noindex, follow" />`
+  );
   const ogUrlRe = /<meta\s+[^>]*property=["']og:url["'][^>]*content=["'][^"']*["'][^>]*\/?>/i;
-  out = out.replace(ogUrlRe, `<meta property="og:url" content="${newCanonicalUrl}" />`);
-
+  out = out.replace(
+    ogUrlRe,
+    `<meta property="og:url" content="${canonicalProdutosUrl}" />`
+  );
   return out;
 }
 
 function convertRelativeAnchorsToAbsolute(html, sourceCanonicalUrl) {
   if (!sourceCanonicalUrl) return html;
 
-  // Convert only `a href="." or ".."` style links to absolute URLs.
-  // This keeps destination page content pointing to the intended `/produtos/...` targets.
   const re = /(<a\b[^>]*?\bhref\s*=\s*)(['"])(\.[^'"]*)\2/gi;
   return html.replace(re, (_, prefix, quote, href) => {
     let abs = '';
@@ -117,21 +110,11 @@ function writeFileIfChanged(destPath, content) {
   return true;
 }
 
-function urlForLocale(locale, kind, slugOrModule) {
-  // kind: 'category' | 'module'
-  const prefix = locale === PT_LOCALE ? '' : `/${locale}`;
-  if (kind === 'category') return `${BASE}${prefix}/categorias/${slugOrModule}/`;
-  return `${BASE}${prefix}/${slugOrModule}/`;
-}
-
 function destFileForLocale(locale, kind, slugOrModule) {
-  // kind: 'category' => landing/{locale}/categorias/{slug}/index.html (or landing/categorias/{slug}/index.html)
-  // kind: 'module' => landing/{locale}/{module}/index.html (or landing/{module}/index.html)
   if (kind === 'category') {
     if (locale === PT_LOCALE) return path.join(LANDING, 'categorias', slugOrModule, 'index.html');
     return path.join(LANDING, locale, 'categorias', slugOrModule, 'index.html');
   }
-  // module
   if (locale === PT_LOCALE) return path.join(LANDING, slugOrModule, 'index.html');
   return path.join(LANDING, locale, slugOrModule, 'index.html');
 }
@@ -141,155 +124,62 @@ function sourceFileForLocale(locale, kind, slugOrModule) {
     if (locale === PT_LOCALE) return path.join(LANDING, 'produtos', 'categorias', slugOrModule, 'index.html');
     return path.join(LANDING, locale, 'produtos', 'categorias', slugOrModule, 'index.html');
   }
-  // module
   if (locale === PT_LOCALE) return path.join(LANDING, 'produtos', slugOrModule, 'index.html');
   return path.join(LANDING, locale, 'produtos', slugOrModule, 'index.html');
 }
 
-function parseSitemapUrlLocs(xml) {
-  const blocks = xml.match(/<url>[\s\S]*?<\/url>/g) || [];
-  const locs = new Set();
-  for (const b of blocks) {
-    const m = b.match(/<loc>([^<]+)<\/loc>/i);
-    if (m) locs.add(m[1].trim());
-  }
-  return locs;
-}
-
-function extractSitemapMetaForLoc(xml, loc) {
-  const blocks = xml.match(/<url>[\s\S]*?<\/url>/g) || [];
-  for (const b of blocks) {
-    const m = b.match(/<loc>\s*([^<]+?)\s*<\/loc>/i);
-    if (!m) continue;
-    if (m[1].trim() !== loc) continue;
-
-    const lastmod = (b.match(/<lastmod>([^<]+)<\/lastmod>/i) || [])[1]?.trim() || '';
-    const changefreq = (b.match(/<changefreq>([^<]+)<\/changefreq>/i) || [])[1]?.trim() || 'monthly';
-    const priority = (b.match(/<priority>([^<]+)<\/priority>/i) || [])[1]?.trim() || '0.7';
-    return { lastmod, changefreq, priority };
-  }
-  return null;
-}
-
-function makeSitemapUrlBlock({ loc, shortUrlsByLocale, priority, changefreq, lastmod }) {
-  const alternates = [];
-  for (const hl of ALL_HREFLANGS) {
-    alternates.push(
-      `    <xhtml:link rel="alternate" hreflang="${hl}" href="${shortUrlsByLocale[hl]}" />`
-    );
-  }
-  alternates.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${shortUrlsByLocale[PT_LOCALE]}" />`);
-
-  return [
-    '  <url>',
-    `    <loc>${loc}</loc>`,
-    ...alternates,
-    `    <lastmod>${lastmod}</lastmod>`,
-    `    <changefreq>${changefreq}</changefreq>`,
-    `    <priority>${priority}</priority>`,
-    '  </url>',
-  ].join('\n');
-}
-
-function updateSitemapWithAliasUrls() {
+/**
+ * Remove <url> blocks whose <loc> is a short alias (not under /produtos/).
+ */
+function removeAliasUrlBlocksFromSitemap(moduleSlugs, categorySlugs) {
   if (!existsFile(SITEMAP_PATH)) throw new Error(`Missing sitemap: ${SITEMAP_PATH}`);
   let xml = fs.readFileSync(SITEMAP_PATH, 'utf8');
+  const moduleSet = new Set(moduleSlugs);
+  const catSet = new Set(categorySlugs);
 
-  const existingLocs = parseSitemapUrlLocs(xml);
-  const today = new Date().toISOString().slice(0, 10);
-
-  const catsRoot = path.join(LANDING, 'produtos', 'categorias');
-  const modulesRoot = path.join(LANDING, 'produtos');
-
-  const categorySlugs = fs
-    .readdirSync(catsRoot, { withFileTypes: true })
-    .filter((d) => d.isDirectory())
-    .map((d) => d.name)
-    .sort();
-
-  const moduleSlugs = fs
-    .readdirSync(modulesRoot, { withFileTypes: true })
-    .filter((d) => d.isDirectory() && d.name !== 'categorias')
-    .map((d) => d.name)
-    .sort();
-
-  const blocksToAdd = [];
-
-  for (const slug of categorySlugs) {
-    const shortPt = urlForLocale(PT_LOCALE, 'category', slug);
-    if (existingLocs.has(shortPt)) continue;
-
-    const sourcePt = `${BASE}/produtos/categorias/${slug}/`;
-    const meta = extractSitemapMetaForLoc(xml, sourcePt) || {
-      lastmod: today,
-      changefreq: 'monthly',
-      priority: '0.72',
-    };
-    meta.lastmod = today;
-
-    const shortUrlsByLocale = {
-      'pt-BR': shortPt,
-      en: urlForLocale('en', 'category', slug),
-      es: urlForLocale('es', 'category', slug),
-      ja: urlForLocale('ja', 'category', slug),
-      kok: urlForLocale('kok', 'category', slug),
-      sv: urlForLocale('sv', 'category', slug),
-    };
-
-    blocksToAdd.push(
-      makeSitemapUrlBlock({
-        loc: shortPt,
-        shortUrlsByLocale,
-        priority: meta.priority,
-        changefreq: meta.changefreq,
-        lastmod: meta.lastmod,
-      })
-    );
+  function isAliasLoc(loc) {
+    try {
+      const u = new URL(loc);
+      if (u.origin !== BASE) return false;
+      let pathname = u.pathname.replace(/\/+$/, '');
+      const segments = pathname.split('/').filter(Boolean);
+      const localePrefixes = new Set(LOCALES);
+      let rest = segments;
+      if (rest.length && localePrefixes.has(rest[0])) rest = rest.slice(1);
+      if (rest.length === 2 && rest[0] === 'categorias' && catSet.has(rest[1])) return true;
+      if (rest.length === 1 && rest[0] === 'categorias') return false;
+      if (rest.length === 1 && moduleSet.has(rest[0])) return true;
+      return false;
+    } catch {
+      return false;
+    }
   }
 
-  for (const module of moduleSlugs) {
-    const shortPt = urlForLocale(PT_LOCALE, 'module', module);
-    if (existingLocs.has(shortPt)) continue;
-
-    const sourcePt = `${BASE}/produtos/${module}/`;
-    const meta = extractSitemapMetaForLoc(xml, sourcePt) || {
-      lastmod: today,
-      changefreq: 'monthly',
-      priority: '0.7',
-    };
-    meta.lastmod = today;
-
-    const shortUrlsByLocale = {
-      'pt-BR': shortPt,
-      en: urlForLocale('en', 'module', module),
-      es: urlForLocale('es', 'module', module),
-      ja: urlForLocale('ja', 'module', module),
-      kok: urlForLocale('kok', 'module', module),
-      sv: urlForLocale('sv', 'module', module),
-    };
-
-    blocksToAdd.push(
-      makeSitemapUrlBlock({
-        loc: shortPt,
-        shortUrlsByLocale,
-        priority: meta.priority,
-        changefreq: meta.changefreq,
-        lastmod: meta.lastmod,
-      })
-    );
+  const blocks = xml.match(/<url>[\s\S]*?<\/url>/g) || [];
+  const kept = [];
+  let removed = 0;
+  for (const block of blocks) {
+    const m = block.match(/<loc>\s*([^<]+?)\s*<\/loc>/i);
+    const loc = m ? m[1].trim() : '';
+    if (loc && isAliasLoc(loc)) {
+      removed++;
+      continue;
+    }
+    kept.push(block);
   }
 
-  if (blocksToAdd.length === 0) {
-    console.log(`Sitemap already contains ${existingLocs.size} locs; no alias blocks added.`);
-    return;
+  const startIdx = xml.indexOf('<url>');
+  const endIdx = xml.lastIndexOf('</urlset>');
+  if (startIdx === -1 || endIdx === -1) throw new Error('Malformed sitemap.xml');
+  const head = xml.slice(0, startIdx);
+  const tail = xml.slice(endIdx);
+  const newXml = `${head}${kept.join('\n  ')}${kept.length ? '\n  ' : ''}${tail}`;
+  if (removed > 0) {
+    fs.writeFileSync(SITEMAP_PATH, newXml, 'utf8');
+    console.log(`Removed ${removed} alias <url> block(s) from sitemap.`);
+  } else {
+    console.log('Sitemap: no alias <loc> blocks to remove.');
   }
-
-  const closeRe = /<\/urlset>\s*$/m;
-  if (!closeRe.test(xml)) throw new Error('Could not find </urlset> end tag');
-
-  xml = xml.replace(closeRe, `${blocksToAdd.join('\n')}\n</urlset>`);
-  fs.writeFileSync(SITEMAP_PATH, xml, 'utf8');
-  console.log(`Added ${blocksToAdd.length} alias <url> block(s) to sitemap.`);
 }
 
 function main() {
@@ -329,25 +219,14 @@ function main() {
 
         const sourceHtml = fs.readFileSync(sourcePath, 'utf8');
         const sourceCanonicalUrl = extractCanonical(sourceHtml);
-        const shortCanonicalUrl = urlForLocale(locale, kind, slugOrModule);
-
-        // Build complete short-url cluster for hreflang.
-        const shortUrlsByLocale = {
-          'pt-BR': urlForLocale(PT_LOCALE, kind, slugOrModule),
-          en: urlForLocale('en', kind, slugOrModule),
-          es: urlForLocale('es', kind, slugOrModule),
-          ja: urlForLocale('ja', kind, slugOrModule),
-          kok: urlForLocale('kok', kind, slugOrModule),
-          sv: urlForLocale('sv', kind, slugOrModule),
-        };
+        const canonicalProdutosUrl = urlProdutosForLocale(locale, kind, slugOrModule);
 
         const afterAnchors = convertRelativeAnchorsToAbsolute(sourceHtml, sourceCanonicalUrl);
-        const afterSeo = replaceCanonicalAndHreflang(afterAnchors, shortCanonicalUrl, shortUrlsByLocale);
+        const afterSeo = applyAliasSeo(afterAnchors, canonicalProdutosUrl);
 
-        // Minimal sanity: ensure we actually updated og:url too.
         const ogUrl = extractOgUrl(afterSeo);
-        if (ogUrl && ogUrl !== shortCanonicalUrl) {
-          console.warn(`og:url mismatch after generation for ${destPath}: ${ogUrl} != ${shortCanonicalUrl}`);
+        if (ogUrl && ogUrl !== canonicalProdutosUrl) {
+          console.warn(`og:url mismatch after generation for ${destPath}: ${ogUrl} != ${canonicalProdutosUrl}`);
         }
 
         const wrote = writeFileIfChanged(destPath, afterSeo);
@@ -358,8 +237,7 @@ function main() {
   }
 
   console.log(`Generated alias pages. Written: ${pagesWritten.length}, skipped (no changes): ${pagesSkipped.length}`);
-  updateSitemapWithAliasUrls();
+  removeAliasUrlBlocksFromSitemap(moduleSlugs, categorySlugs);
 }
 
 main();
-

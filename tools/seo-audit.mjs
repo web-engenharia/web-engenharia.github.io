@@ -413,6 +413,8 @@ function main() {
       }
       const target = pageData.find((x) => x.rel === targetRel);
       if (!target) continue;
+      // Alias pages (noindex) intentionally omit hreflang; skip reciprocity for them.
+      if (!target.hreflangs.length) continue;
       const back = target.hreflangs.find((h) => h.href === p.canonical);
       if (!back) {
         badRecip.push({
@@ -430,11 +432,73 @@ function main() {
     if (badRecip.length > 25) console.log(`... +${badRecip.length - 25}`);
   }
 
+  // Sitemap xhtml:link cluster must match HTML hreflang (same href per hreflang)
+  console.log('\n--- Sitemap hreflang vs HTML <head> ---');
+  const clusterMismatches = [];
+  for (const e of sitemapEntries) {
+    if (e.alternates.length === 0) continue;
+    const rp = urlToRelPath(e.loc);
+    if (!rp) continue;
+    const fp = relPathToFile(LANDING, rp);
+    if (!fs.existsSync(fp)) continue;
+    const head = readHead(fp);
+    const canonical = extractCanonical(head);
+    const htmlPairs = extractHreflangs(head);
+    const byLang = new Map(htmlPairs.map((h) => [h.hreflang, normUrl(h.href)]));
+    if (normUrl(canonical) !== normUrl(e.loc)) {
+      clusterMismatches.push({
+        rel: rp,
+        issue: 'canonical_ne_loc',
+        canonical,
+        loc: e.loc,
+      });
+    }
+    for (const a of e.alternates) {
+      const got = byLang.get(a.hreflang);
+      if (!got || got !== normUrl(a.href)) {
+        clusterMismatches.push({
+          rel: rp,
+          issue: 'hreflang_mismatch',
+          hreflang: a.hreflang,
+          expected: a.href,
+          got: got || '(missing)',
+        });
+      }
+    }
+  }
+  if (clusterMismatches.length === 0) console.log('All sitemap clusters match local HTML hreflang.');
+  else {
+    for (const c of clusterMismatches.slice(0, 40)) console.log(JSON.stringify(c));
+    if (clusterMismatches.length > 40) console.log(`... +${clusterMismatches.length - 40}`);
+  }
+
+  // No duplicate indexable URL for same product module (short path + /produtos/)
+  console.log('\n--- Duplicate alias + produtos <loc> in sitemap ---');
+  const modulesRoot = path.join(LANDING, 'produtos');
+  const moduleSlugs = fs
+    .readdirSync(modulesRoot, { withFileTypes: true })
+    .filter((d) => d.isDirectory() && d.name !== 'categorias')
+    .map((d) => d.name);
+  const locNorm = new Set(sitemapEntries.map((e) => normUrl(e.loc)));
+  const dupPairs = [];
+  for (const m of moduleSlugs) {
+    const short = normUrl(`${BASE}/${m}/`);
+    const long = normUrl(`${BASE}/produtos/${m}/`);
+    if (locNorm.has(short) && locNorm.has(long)) dupPairs.push({ module: m, short, long });
+  }
+  if (dupPairs.length === 0) console.log('(none)');
+  else for (const d of dupPairs) console.log(JSON.stringify(d));
+
   console.log('\n--- Summary ---');
   console.log(`Issues: ${issues.length}, Warnings: ${warnings.length}`);
   console.log(`Sitemap entries: ${sitemapEntries.length}, Missing local files from sitemap: ${missingFiles.length}`);
+  if (clusterMismatches.length) console.log(`Cluster mismatches: ${clusterMismatches.length}`);
+  if (dupPairs.length) console.log(`Duplicate produtos+alias loc pairs: ${dupPairs.length}`);
 
-  process.exit(issues.length > 0 ? 1 : 0);
+  const fatal =
+    clusterMismatches.length > 0 ||
+    dupPairs.length > 0;
+  process.exit(issues.length > 0 || fatal ? 1 : 0);
 }
 
 main();
