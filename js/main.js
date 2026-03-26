@@ -45,8 +45,34 @@
     'animacao_v10.html',
   ];
 
-  function pickAnimationIndex() {
-    return Math.floor(Math.random() * ANIMATION_FILES.length);
+  /** Sem v1/v2/v5: delays longos (~3.5s) antes de fade-in — pioram LCP no hub /produtos/. */
+  var ANIMATION_FILES_PRODUTOS_SAFE = [
+    'animacao_v3.html',
+    'animacao_v4.html',
+    'animacao_v6.html',
+    'animacao_v7.html',
+    'animacao_v8.html',
+    'animacao_v9.html',
+    'animacao_v10.html',
+  ];
+
+  function hashStringToIndex(str, modulo) {
+    var h = 0;
+    for (var i = 0; i < str.length; i++) {
+      h = ((h << 5) - h) + str.charCodeAt(i);
+      h |= 0;
+    }
+    return Math.abs(h) % modulo;
+  }
+
+  /** Aleatório nas demais páginas; em `/produtos/…` lista segura + índice determinístico por pathname (LCP estável). */
+  function pickAnimationFile() {
+    if (inProdutosFolder) {
+      var list = ANIMATION_FILES_PRODUTOS_SAFE;
+      var idx = hashStringToIndex(pathname, list.length);
+      return list[idx];
+    }
+    return ANIMATION_FILES[Math.floor(Math.random() * ANIMATION_FILES.length)];
   }
 
   function initHeroAnimation() {
@@ -84,7 +110,7 @@
 
     function injectHeroIframe() {
       if (!document.getElementById('hero-animation')) return;
-      var src = ANIMATION_BASE + ANIMATION_FILES[pickAnimationIndex()];
+      var src = ANIMATION_BASE + pickAnimationFile();
       var iframe = document.createElement('iframe');
       iframe.setAttribute(
         'title',
@@ -109,7 +135,8 @@
           cb({ didTimeout: true, timeRemaining: function () { return 0; } });
         }, 200);
     };
-    scheduleIdle(injectHeroIframe, { timeout: 2000 });
+    var idleTimeoutMs = inProdutosFolder ? 600 : 2000;
+    scheduleIdle(injectHeroIframe, { timeout: idleTimeoutMs });
   }
 
   function initMobileNav() {
@@ -1067,10 +1094,8 @@
     if (reduced) return;
 
     var sections = document.querySelectorAll('main > section');
-    sections.forEach(function (section, index) {
-      if (index === 0) return;
-      section.classList.add('reveal-section', 'reveal-cv');
-    });
+    var vh = window.innerHeight || document.documentElement.clientHeight || 0;
+    var belowFoldThreshold = vh * 1.1;
 
     var observer = new IntersectionObserver(
       function (entries) {
@@ -1088,6 +1113,11 @@
 
     sections.forEach(function (section, index) {
       if (index === 0) return;
+      if (inProdutosFolder) {
+        var top = section.getBoundingClientRect().top;
+        if (top <= belowFoldThreshold) return;
+      }
+      section.classList.add('reveal-section', 'reveal-cv');
       observer.observe(section);
     });
   }
