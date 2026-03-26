@@ -1,6 +1,6 @@
 # i18n + crawl audit
 
-- Routes checked: 406
+- Routes checked: 412
 - Issues: 0
 - Warnings: 1598
 

@@ -27,11 +27,14 @@
     if (pi < 0 || segs.length <= pi + 1) return false;
     return segs[pi + 1] !== 'index.html';
   })();
+  /** Hub /xx/produtos/ (não aninhado em slug): iframe fica em landing/xx/produtos/ — precisa ../../animacao_svg/, não ../ (evita /en/animacao_svg/). */
   var ANIMATION_BASE = inProdutosNested
     ? '../../animacao_svg/'
-    : inLocaleSubfolder || inProdutosFolder
-      ? '../animacao_svg/'
-      : 'animacao_svg/';
+    : inLocaleSubfolder && inProdutosFolder && !inProdutosNested
+      ? '../../animacao_svg/'
+      : inLocaleSubfolder || inProdutosFolder
+        ? '../animacao_svg/'
+        : 'animacao_svg/';
   var ANIMATION_FILES = [
     'animacao_v1.html',
     'animacao_v2.html',

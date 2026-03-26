@@ -1,10 +1,91 @@
 # Crawl report (local)
 
-- **Generated**: 2026\-03\-25T15:50:47\.833Z
-- **Origin**: http://127\.0\.0\.1:39841
+- **Generated**: 2026\-03\-26T21:50:38\.556Z
+- **Origin**: http://127\.0\.0\.1:43447
 - **Seeds**: /, /en/, /es/, /ja/, /kok/, /sv/
-- **Reachable**: 406
+- **Reachable**: 412
 - **Broken**: 0
-- **HTML on disk**: 406
-- **Orphans**: 0
+- **HTML on disk**: 490
+- **Orphans**: 78
+
+## Orphan HTML files (not reachable from seeds)
+
+- `/categorias/estetica/`
+- `/categorias/healthtech/`
+- `/categorias/odontologia/`
+- `/categorias/restaurantes/`
+- `/categorias/supermercados/`
+- `/en/categorias/estetica/`
+- `/en/categorias/healthtech/`
+- `/en/categorias/odontologia/`
+- `/en/categorias/restaurantes/`
+- `/en/categorias/supermercados/`
+- `/en/neuroflow/`
+- `/en/neuromatch/`
+- `/en/neurosupport/`
+- `/en/w-compliance/`
+- `/en/w-iot/`
+- `/en/w-ledger/`
+- `/en/w-pulse/`
+- `/en/w-safe/`
+- `/es/categorias/estetica/`
+- `/es/categorias/healthtech/`
+- `/es/categorias/odontologia/`
+- `/es/categorias/restaurantes/`
+- `/es/categorias/supermercados/`
+- `/es/neuroflow/`
+- `/es/neuromatch/`
+- `/es/neurosupport/`
+- `/es/w-compliance/`
+- `/es/w-iot/`
+- `/es/w-ledger/`
+- `/es/w-pulse/`
+- `/es/w-safe/`
+- `/ja/categorias/estetica/`
+- `/ja/categorias/healthtech/`
+- `/ja/categorias/odontologia/`
+- `/ja/categorias/restaurantes/`
+- `/ja/categorias/supermercados/`
+- `/ja/neuroflow/`
+- `/ja/neuromatch/`
+- `/ja/neurosupport/`
+- `/ja/w-compliance/`
+- `/ja/w-iot/`
+- `/ja/w-ledger/`
+- `/ja/w-pulse/`
+- `/ja/w-safe/`
+- `/kok/categorias/estetica/`
+- `/kok/categorias/healthtech/`
+- `/kok/categorias/odontologia/`
+- `/kok/categorias/restaurantes/`
+- `/kok/categorias/supermercados/`
+- `/kok/neuroflow/`
+- `/kok/neuromatch/`
+- `/kok/neurosupport/`
+- `/kok/w-compliance/`
+- `/kok/w-iot/`
+- `/kok/w-ledger/`
+- `/kok/w-pulse/`
+- `/kok/w-safe/`
+- `/neuroflow/`
+- `/neuromatch/`
+- `/neurosupport/`
+- `/sv/categorias/estetica/`
+- `/sv/categorias/healthtech/`
+- `/sv/categorias/odontologia/`
+- `/sv/categorias/restaurantes/`
+- `/sv/categorias/supermercados/`
+- `/sv/neuroflow/`
+- `/sv/neuromatch/`
+- `/sv/neurosupport/`
+- `/sv/w-compliance/`
+- `/sv/w-iot/`
+- `/sv/w-ledger/`
+- `/sv/w-pulse/`
+- `/sv/w-safe/`
+- `/w-compliance/`
+- `/w-iot/`
+- `/w-ledger/`
+- `/w-pulse/`
+- `/w-safe/`
 
