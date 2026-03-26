@@ -2,14 +2,13 @@
 
 - Routes checked: 406
 - Issues: 0
-- Warnings: 1613
+- Warnings: 1598
 
 ## Warnings
 - `missing_x_default` `/`
 - `missing_hreflang_locale` `/carreiras.html` - ja
 - `missing_hreflang_locale` `/carreiras.html` - kok
 - `missing_x_default` `/en/`
-- `possible_cross_locale_leak` `/en/boutique-engenharia/` - ../../produtos/index.html -> /produtos/
 - `missing_hreflang_locale` `/en/careers.html` - ja
 - `missing_hreflang_locale` `/en/careers.html` - kok
 - `missing_hreflang_locale` `/en/tecnologias/3scale.html` - pt-BR
@@ -255,5 +254,6 @@
 - `missing_hreflang_locale` `/en/tecnologias/scrum.html` - pt-BR
 - `missing_hreflang_locale` `/en/tecnologias/scrum.html` - en
 - `missing_hreflang_locale` `/en/tecnologias/scrum.html` - es
-- ... 1363 more
+- `missing_hreflang_locale` `/en/tecnologias/scrum.html` - ja
+- ... 1348 more
 

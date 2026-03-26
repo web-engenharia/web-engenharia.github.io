@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-25T15:50:48.271Z",
+  "generatedAt": "2026-03-26T21:08:50.326Z",
   "stats": {
     "routesChecked": 406,
     "issues": 0,
-    "warnings": 1613
+    "warnings": 1598
   },
   "issues": [],
   "warnings": [
@@ -24,11 +24,6 @@
     {
       "type": "missing_x_default",
       "route": "/en/"
-    },
-    {
-      "type": "possible_cross_locale_leak",
-      "route": "/en/boutique-engenharia/",
-      "detail": "../../produtos/index.html -> /produtos/"
     },
     {
       "type": "missing_hreflang_locale",
@@ -1365,11 +1360,6 @@
       "route": "/es/"
     },
     {
-      "type": "possible_cross_locale_leak",
-      "route": "/es/boutique-engenharia/",
-      "detail": "../../produtos/index.html -> /produtos/"
-    },
-    {
       "type": "missing_hreflang_locale",
       "route": "/es/careers.html",
       "detail": "ja"
@@ -2704,11 +2694,6 @@
       "route": "/ja/"
     },
     {
-      "type": "possible_cross_locale_leak",
-      "route": "/ja/boutique-engenharia/",
-      "detail": "../../produtos/index.html -> /produtos/"
-    },
-    {
       "type": "missing_hreflang_locale",
       "route": "/ja/tecnologias/3scale.html",
       "detail": "pt-BR"
@@ -4033,11 +4018,6 @@
       "route": "/kok/"
     },
     {
-      "type": "possible_cross_locale_leak",
-      "route": "/kok/boutique-engenharia/",
-      "detail": "../../produtos/index.html -> /produtos/"
-    },
-    {
       "type": "missing_hreflang_locale",
       "route": "/kok/tecnologias/3scale.html",
       "detail": "pt-BR"
@@ -5355,66 +5335,11 @@
     {
       "type": "missing_hreflang_locale",
       "route": "/kok/tecnologias/tibco-bw.html",
-      "detail": "sv"
-    },
-    {
-      "type": "missing_hreflang_locale",
-      "route": "/produtos/categorias/healthtech/",
-      "detail": "en"
-    },
-    {
-      "type": "missing_hreflang_locale",
-      "route": "/produtos/categorias/healthtech/",
-      "detail": "es"
-    },
-    {
-      "type": "missing_hreflang_locale",
-      "route": "/produtos/categorias/healthtech/",
-      "detail": "ja"
-    },
-    {
-      "type": "missing_hreflang_locale",
-      "route": "/produtos/categorias/healthtech/",
-      "detail": "kok"
-    },
-    {
-      "type": "missing_hreflang_locale",
-      "route": "/produtos/categorias/healthtech/",
-      "detail": "sv"
-    },
-    {
-      "type": "missing_hreflang_locale",
-      "route": "/produtos/categorias/supermercados/",
-      "detail": "en"
-    },
-    {
-      "type": "missing_hreflang_locale",
-      "route": "/produtos/categorias/supermercados/",
-      "detail": "es"
-    },
-    {
-      "type": "missing_hreflang_locale",
-      "route": "/produtos/categorias/supermercados/",
-      "detail": "ja"
-    },
-    {
-      "type": "missing_hreflang_locale",
-      "route": "/produtos/categorias/supermercados/",
-      "detail": "kok"
-    },
-    {
-      "type": "missing_hreflang_locale",
-      "route": "/produtos/categorias/supermercados/",
       "detail": "sv"
     },
     {
       "type": "missing_x_default",
       "route": "/sv/"
-    },
-    {
-      "type": "possible_cross_locale_leak",
-      "route": "/sv/boutique-engenharia/",
-      "detail": "../../produtos/index.html -> /produtos/"
     },
     {
       "type": "missing_hreflang_locale",
