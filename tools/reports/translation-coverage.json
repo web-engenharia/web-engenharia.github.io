@@ -1,25 +1,11 @@
 {
-  "generatedAt": "2026-03-26T22:26:56.293Z",
+  "generatedAt": "2026-03-26T23:02:56.021Z",
   "stats": {
     "ptBrRoutesChecked": 69,
-    "completeCoverage": 68,
-    "incompleteCoverage": 1
+    "completeCoverage": 69,
+    "incompleteCoverage": 0
   },
-  "incomplete": [
-    {
-      "representativeRoute": "/carreiras.html",
-      "alternateByLocale": {
-        "pt-BR": "/carreiras.html",
-        "en": "/en/careers.html",
-        "es": "/es/careers.html",
-        "sv": "/sv/careers.html"
-      },
-      "missingLocales": [
-        "ja",
-        "kok"
-      ]
-    }
-  ],
+  "incomplete": [],
   "coverage": [
     {
       "representativeRoute": "/",
@@ -111,12 +97,11 @@
         "pt-BR": "/carreiras.html",
         "en": "/en/careers.html",
         "es": "/es/careers.html",
+        "ja": "/ja/careers.html",
+        "kok": "/kok/careers.html",
         "sv": "/sv/careers.html"
       },
-      "missingLocales": [
-        "ja",
-        "kok"
-      ]
+      "missingLocales": []
     },
     {
       "representativeRoute": "/cookies.html",

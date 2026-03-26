@@ -1,7 +1,7 @@
 # Crawl report (local)
 
-- **Generated**: 2026\-03\-26T22:25:37\.810Z
-- **Origin**: http://127\.0\.0\.1:38265
+- **Generated**: 2026\-03\-26T23:02:55\.721Z
+- **Origin**: http://127\.0\.0\.1:40755
 - **Seeds**: /, /en/, /es/, /ja/, /kok/, /sv/
 - **Reachable**: 414
 - **Broken**: 0

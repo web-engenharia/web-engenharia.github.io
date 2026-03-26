@@ -15,6 +15,8 @@ export const ROUTE_CLUSTERS = [
     'pt-BR': '/carreiras.html',
     en: '/en/careers.html',
     es: '/es/careers.html',
+    ja: '/ja/careers.html',
+    kok: '/kok/careers.html',
     sv: '/sv/careers.html',
   },
 ];
