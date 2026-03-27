@@ -30,7 +30,7 @@ function normalizeUrl(url) {
 }
 
 function relToExpectedCanonical(rel) {
-  if (rel === 'index.html') return `${BASE}/index.html`;
+  if (rel === 'index.html') return `${BASE}/`;
   // For locale product hubs WESCA tends to crawl /{locale}/produtos
   const localeHub = rel.match(/^(en|es|ja|kok|sv)\/produtos\/index\.html$/);
   if (localeHub) return `${BASE}/${localeHub[1]}/produtos`;
