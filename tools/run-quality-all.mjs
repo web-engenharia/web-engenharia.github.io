@@ -10,6 +10,7 @@ const STEPS = [
   { name: 'crawl:local', required: true },
   { name: 'i18n:audit', required: true },
   { name: 'seo', required: true },
+  { name: 'seo:snippets', required: true },
   { name: 'a11y', required: false },
   { name: 'seo:lighthouse', required: false },
   { name: 'perf:budget', required: false },
