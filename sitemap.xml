@@ -4,845 +4,845 @@
   <!-- Gerado automaticamente a partir das páginas públicas de landing/ -->
   <!-- lastmod segue política de revisão do sitemap (data de geração) -->
   <url>
-    <loc>https://www.web-engenharia.com/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/"/>
+    <loc>https://web-engenharia.com/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/produtos/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/"/>
+    <loc>https://web-engenharia.com/produtos/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/produtos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/produtos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/produtos/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/produtos/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/produtos/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/produtos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://web-engenharia.com/produtos/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/boutique-engenharia/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/boutique-engenharia/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/boutique-engenharia/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/boutique-engenharia/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/boutique-engenharia/"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/boutique-engenharia/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/boutique-engenharia/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/boutique-engenharia/"/>
+    <loc>https://web-engenharia.com/boutique-engenharia/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/boutique-engenharia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/boutique-engenharia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/boutique-engenharia/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/boutique-engenharia/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/boutique-engenharia/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/boutique-engenharia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://web-engenharia.com/boutique-engenharia/"/>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/produtos/categorias/estetica/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/categorias/estetica/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/categorias/estetica/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/categorias/estetica/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/categorias/estetica/"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/categorias/estetica/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/categorias/estetica/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/categorias/estetica/"/>
+    <loc>https://web-engenharia.com/produtos/categorias/estetica/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/produtos/categorias/estetica/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/produtos/categorias/estetica/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/produtos/categorias/estetica/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/produtos/categorias/estetica/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/produtos/categorias/estetica/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/produtos/categorias/estetica/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://web-engenharia.com/produtos/categorias/estetica/"/>
     <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/produtos/categorias/healthtech/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/categorias/healthtech/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/categorias/healthtech/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/categorias/healthtech/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/categorias/healthtech/"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/categorias/healthtech/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/categorias/healthtech/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/categorias/healthtech/"/>
+    <loc>https://web-engenharia.com/produtos/categorias/healthtech/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/produtos/categorias/healthtech/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/produtos/categorias/healthtech/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/produtos/categorias/healthtech/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/produtos/categorias/healthtech/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/produtos/categorias/healthtech/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/produtos/categorias/healthtech/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://web-engenharia.com/produtos/categorias/healthtech/"/>
     <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/produtos/categorias/odontologia/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/categorias/odontologia/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/categorias/odontologia/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/categorias/odontologia/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/categorias/odontologia/"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/categorias/odontologia/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/categorias/odontologia/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/categorias/odontologia/"/>
+    <loc>https://web-engenharia.com/produtos/categorias/odontologia/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/produtos/categorias/odontologia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/produtos/categorias/odontologia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/produtos/categorias/odontologia/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/produtos/categorias/odontologia/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/produtos/categorias/odontologia/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/produtos/categorias/odontologia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://web-engenharia.com/produtos/categorias/odontologia/"/>
     <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/produtos/categorias/restaurantes/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/categorias/restaurantes/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/categorias/restaurantes/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/categorias/restaurantes/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/categorias/restaurantes/"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/categorias/restaurantes/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/categorias/restaurantes/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/categorias/restaurantes/"/>
+    <loc>https://web-engenharia.com/produtos/categorias/restaurantes/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/produtos/categorias/restaurantes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/produtos/categorias/restaurantes/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/produtos/categorias/restaurantes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/produtos/categorias/restaurantes/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/produtos/categorias/restaurantes/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/produtos/categorias/restaurantes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://web-engenharia.com/produtos/categorias/restaurantes/"/>
     <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/produtos/categorias/supermercados/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/categorias/supermercados/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/categorias/supermercados/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/categorias/supermercados/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/categorias/supermercados/"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/categorias/supermercados/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/categorias/supermercados/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/categorias/supermercados/"/>
+    <loc>https://web-engenharia.com/produtos/categorias/supermercados/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/produtos/categorias/supermercados/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/produtos/categorias/supermercados/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/produtos/categorias/supermercados/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/produtos/categorias/supermercados/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/produtos/categorias/supermercados/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/produtos/categorias/supermercados/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://web-engenharia.com/produtos/categorias/supermercados/"/>
     <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/produtos/w-iot/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/w-iot/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/w-iot/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/w-iot/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/w-iot/"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/w-iot/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/w-iot/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/w-iot/"/>
+    <loc>https://web-engenharia.com/produtos/w-iot/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/produtos/w-iot/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/produtos/w-iot/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/produtos/w-iot/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/produtos/w-iot/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/produtos/w-iot/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/produtos/w-iot/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://web-engenharia.com/produtos/w-iot/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/produtos/w-pulse/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/w-pulse/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/w-pulse/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/w-pulse/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/w-pulse/"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/w-pulse/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/w-pulse/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/w-pulse/"/>
+    <loc>https://web-engenharia.com/produtos/w-pulse/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/produtos/w-pulse/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/produtos/w-pulse/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/produtos/w-pulse/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/produtos/w-pulse/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/produtos/w-pulse/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/produtos/w-pulse/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://web-engenharia.com/produtos/w-pulse/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/produtos/neuroflow/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/neuroflow/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/neuroflow/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/neuroflow/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/neuroflow/"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/neuroflow/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/neuroflow/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/neuroflow/"/>
+    <loc>https://web-engenharia.com/produtos/neuroflow/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/produtos/neuroflow/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/produtos/neuroflow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/produtos/neuroflow/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/produtos/neuroflow/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/produtos/neuroflow/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/produtos/neuroflow/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://web-engenharia.com/produtos/neuroflow/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/produtos/w-safe/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/w-safe/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/w-safe/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/w-safe/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/w-safe/"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/w-safe/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/w-safe/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/w-safe/"/>
+    <loc>https://web-engenharia.com/produtos/w-safe/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/produtos/w-safe/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/produtos/w-safe/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/produtos/w-safe/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/produtos/w-safe/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/produtos/w-safe/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/produtos/w-safe/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://web-engenharia.com/produtos/w-safe/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/produtos/w-ledger/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/w-ledger/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/w-ledger/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/w-ledger/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/w-ledger/"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/w-ledger/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/w-ledger/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/w-ledger/"/>
+    <loc>https://web-engenharia.com/produtos/w-ledger/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/produtos/w-ledger/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/produtos/w-ledger/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/produtos/w-ledger/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/produtos/w-ledger/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/produtos/w-ledger/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/produtos/w-ledger/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://web-engenharia.com/produtos/w-ledger/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/produtos/neuromatch/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/neuromatch/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/neuromatch/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/neuromatch/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/neuromatch/"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/neuromatch/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/neuromatch/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/neuromatch/"/>
+    <loc>https://web-engenharia.com/produtos/neuromatch/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/produtos/neuromatch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/produtos/neuromatch/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/produtos/neuromatch/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/produtos/neuromatch/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/produtos/neuromatch/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/produtos/neuromatch/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://web-engenharia.com/produtos/neuromatch/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/produtos/w-compliance/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/w-compliance/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/w-compliance/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/w-compliance/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/w-compliance/"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/w-compliance/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/w-compliance/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/w-compliance/"/>
+    <loc>https://web-engenharia.com/produtos/w-compliance/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/produtos/w-compliance/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/produtos/w-compliance/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/produtos/w-compliance/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/produtos/w-compliance/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/produtos/w-compliance/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/produtos/w-compliance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://web-engenharia.com/produtos/w-compliance/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/produtos/neurosupport/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/produtos/neurosupport/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/produtos/neurosupport/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/produtos/neurosupport/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/produtos/neurosupport/"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/produtos/neurosupport/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/produtos/neurosupport/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/produtos/neurosupport/"/>
+    <loc>https://web-engenharia.com/produtos/neurosupport/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/produtos/neurosupport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/produtos/neurosupport/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/produtos/neurosupport/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/produtos/neurosupport/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/produtos/neurosupport/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/produtos/neurosupport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://web-engenharia.com/produtos/neurosupport/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/privacidade.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/privacidade.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/privacidade.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/privacidade.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/privacidade.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/privacidade.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/privacidade.html"/>
+    <loc>https://web-engenharia.com/privacidade.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/privacidade.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/termos.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/termos.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/termos.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/termos.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/termos.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/termos.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/termos.html"/>
+    <loc>https://web-engenharia.com/termos.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/termos.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/termos.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/cookies.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/cookies.html"/>
+    <loc>https://web-engenharia.com/cookies.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/cookies.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/carreiras.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/carreiras.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/careers.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/careers.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/careers.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/careers.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/careers.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.web-engenharia.com/carreiras.html"/>
+    <loc>https://web-engenharia.com/carreiras.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/carreiras.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://web-engenharia.com/carreiras.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/3scale.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/3scale.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/3scale.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/3scale.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/3scale.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/3scale.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/3scale.html"/>
+    <loc>https://web-engenharia.com/tecnologias/3scale.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/3scale.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/3scale.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/3scale.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/3scale.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/3scale.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/3scale.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/android.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/android.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/android.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/android.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/android.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/android.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/android.html"/>
+    <loc>https://web-engenharia.com/tecnologias/android.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/android.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/android.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/android.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/android.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/android.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/android.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/aws.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/aws.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/aws.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/aws.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/aws.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/aws.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/aws.html"/>
+    <loc>https://web-engenharia.com/tecnologias/aws.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/aws.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/aws.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/aws.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/aws.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/aws.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/aws.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/azure.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/azure.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/azure.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/azure.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/azure.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/azure.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/azure.html"/>
+    <loc>https://web-engenharia.com/tecnologias/azure.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/azure.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/azure.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/azure.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/azure.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/azure.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/azure.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/ci-cd.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/ci-cd.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/ci-cd.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/ci-cd.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/ci-cd.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/ci-cd.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/ci-cd.html"/>
+    <loc>https://web-engenharia.com/tecnologias/ci-cd.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/ci-cd.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/ci-cd.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/ci-cd.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/ci-cd.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/ci-cd.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/ci-cd.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/cobol.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/cobol.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/cobol.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/cobol.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/cobol.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/cobol.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/cobol.html"/>
+    <loc>https://web-engenharia.com/tecnologias/cobol.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/cobol.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/cobol.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/cobol.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/cobol.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/cobol.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/cobol.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/copilotos-ia.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/copilotos-ia.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/copilotos-ia.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/copilotos-ia.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/copilotos-ia.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/copilotos-ia.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/copilotos-ia.html"/>
+    <loc>https://web-engenharia.com/tecnologias/copilotos-ia.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/copilotos-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/copilotos-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/copilotos-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/copilotos-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/copilotos-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/copilotos-ia.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/cpp.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/cpp.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/cpp.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/cpp.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/cpp.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/cpp.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/cpp.html"/>
+    <loc>https://web-engenharia.com/tecnologias/cpp.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/cpp.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/cpp.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/cpp.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/cpp.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/cpp.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/cpp.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/db2.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/db2.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/db2.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/db2.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/db2.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/db2.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/db2.html"/>
+    <loc>https://web-engenharia.com/tecnologias/db2.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/db2.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/db2.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/db2.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/db2.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/db2.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/db2.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/docker.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/docker.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/docker.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/docker.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/docker.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/docker.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/docker.html"/>
+    <loc>https://web-engenharia.com/tecnologias/docker.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/docker.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/docker.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/docker.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/docker.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/docker.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/docker.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/elixir-erlang-otp.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/elixir-erlang-otp.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/elixir-erlang-otp.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/elixir-erlang-otp.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/elixir-erlang-otp.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/elixir-erlang-otp.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/elixir-erlang-otp.html"/>
+    <loc>https://web-engenharia.com/tecnologias/elixir-erlang-otp.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/elixir-erlang-otp.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/elixir-erlang-otp.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/elixir-erlang-otp.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/elixir-erlang-otp.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/elixir-erlang-otp.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/elixir-erlang-otp.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/figma.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/figma.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/figma.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/figma.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/figma.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/figma.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/figma.html"/>
+    <loc>https://web-engenharia.com/tecnologias/figma.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/figma.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/figma.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/figma.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/figma.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/figma.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/figma.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/flutter.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/flutter.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/flutter.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/flutter.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/flutter.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/flutter.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/flutter.html"/>
+    <loc>https://web-engenharia.com/tecnologias/flutter.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/flutter.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/flutter.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/flutter.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/flutter.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/flutter.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/flutter.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/gcp.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/gcp.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/gcp.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/gcp.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/gcp.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/gcp.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/gcp.html"/>
+    <loc>https://web-engenharia.com/tecnologias/gcp.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/gcp.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/gcp.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/gcp.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/gcp.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/gcp.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/gcp.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/gitflow.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/gitflow.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/gitflow.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/gitflow.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/gitflow.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/gitflow.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/gitflow.html"/>
+    <loc>https://web-engenharia.com/tecnologias/gitflow.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/gitflow.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/gitflow.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/gitflow.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/gitflow.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/gitflow.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/gitflow.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/gitlab-ci.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/gitlab-ci.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/gitlab-ci.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/gitlab-ci.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/gitlab-ci.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/gitlab-ci.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/gitlab-ci.html"/>
+    <loc>https://web-engenharia.com/tecnologias/gitlab-ci.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/gitlab-ci.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/gitlab-ci.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/gitlab-ci.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/gitlab-ci.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/gitlab-ci.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/gitlab-ci.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/golang.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/golang.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/golang.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/golang.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/golang.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/golang.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/golang.html"/>
+    <loc>https://web-engenharia.com/tecnologias/golang.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/golang.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/golang.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/golang.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/golang.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/golang.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/golang.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/java-quarkus.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/java-quarkus.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/java-quarkus.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/java-quarkus.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/java-quarkus.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/java-quarkus.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/java-quarkus.html"/>
+    <loc>https://web-engenharia.com/tecnologias/java-quarkus.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/java-quarkus.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/java-quarkus.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/java-quarkus.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/java-quarkus.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/java-quarkus.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/java-quarkus.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/jenkins.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/jenkins.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/jenkins.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/jenkins.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/jenkins.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/jenkins.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/jenkins.html"/>
+    <loc>https://web-engenharia.com/tecnologias/jenkins.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/jenkins.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/jenkins.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/jenkins.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/jenkins.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/jenkins.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/jenkins.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/jest.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/jest.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/jest.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/jest.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/jest.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/jest.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/jest.html"/>
+    <loc>https://web-engenharia.com/tecnologias/jest.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/jest.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/jest.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/jest.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/jest.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/jest.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/jest.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/junit.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/junit.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/junit.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/junit.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/junit.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/junit.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/junit.html"/>
+    <loc>https://web-engenharia.com/tecnologias/junit.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/junit.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/junit.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/junit.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/junit.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/junit.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/junit.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/kafka.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/kafka.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/kafka.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/kafka.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/kafka.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/kafka.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/kafka.html"/>
+    <loc>https://web-engenharia.com/tecnologias/kafka.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/kafka.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/kafka.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/kafka.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/kafka.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/kafka.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/kafka.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/kotlin.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/kotlin.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/kotlin.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/kotlin.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/kotlin.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/kotlin.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/kotlin.html"/>
+    <loc>https://web-engenharia.com/tecnologias/kotlin.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/kotlin.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/kotlin.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/kotlin.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/kotlin.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/kotlin.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/kotlin.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/kubernetes.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/kubernetes.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/kubernetes.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/kubernetes.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/kubernetes.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/kubernetes.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/kubernetes.html"/>
+    <loc>https://web-engenharia.com/tecnologias/kubernetes.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/kubernetes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/kubernetes.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/kubernetes.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/kubernetes.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/kubernetes.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/kubernetes.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/maven-gradle.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/maven-gradle.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/maven-gradle.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/maven-gradle.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/maven-gradle.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/maven-gradle.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/maven-gradle.html"/>
+    <loc>https://web-engenharia.com/tecnologias/maven-gradle.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/maven-gradle.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/maven-gradle.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/maven-gradle.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/maven-gradle.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/maven-gradle.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/maven-gradle.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/microsservicos.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/microsservicos.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/microsservicos.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/microsservicos.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/microsservicos.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/microsservicos.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/microsservicos.html"/>
+    <loc>https://web-engenharia.com/tecnologias/microsservicos.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/microsservicos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/microsservicos.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/microsservicos.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/microsservicos.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/microsservicos.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/microsservicos.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/mongodb.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/mongodb.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/mongodb.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/mongodb.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/mongodb.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/mongodb.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/mongodb.html"/>
+    <loc>https://web-engenharia.com/tecnologias/mongodb.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/mongodb.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/mongodb.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/mongodb.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/mongodb.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/mongodb.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/mongodb.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/monolitos.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/monolitos.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/monolitos.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/monolitos.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/monolitos.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/monolitos.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/monolitos.html"/>
+    <loc>https://web-engenharia.com/tecnologias/monolitos.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/monolitos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/monolitos.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/monolitos.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/monolitos.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/monolitos.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/monolitos.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/mysql.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/mysql.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/mysql.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/mysql.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/mysql.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/mysql.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/mysql.html"/>
+    <loc>https://web-engenharia.com/tecnologias/mysql.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/mysql.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/mysql.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/mysql.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/mysql.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/mysql.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/mysql.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/nodejs.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/nodejs.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/nodejs.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/nodejs.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/nodejs.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/nodejs.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/nodejs.html"/>
+    <loc>https://web-engenharia.com/tecnologias/nodejs.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/nodejs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/nodejs.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/nodejs.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/nodejs.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/nodejs.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/nodejs.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/nosql.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/nosql.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/nosql.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/nosql.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/nosql.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/nosql.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/nosql.html"/>
+    <loc>https://web-engenharia.com/tecnologias/nosql.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/nosql.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/nosql.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/nosql.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/nosql.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/nosql.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/nosql.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/objective-c.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/objective-c.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/objective-c.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/objective-c.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/objective-c.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/objective-c.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/objective-c.html"/>
+    <loc>https://web-engenharia.com/tecnologias/objective-c.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/objective-c.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/objective-c.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/objective-c.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/objective-c.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/objective-c.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/objective-c.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/openshift.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/openshift.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/openshift.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/openshift.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/openshift.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/openshift.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/openshift.html"/>
+    <loc>https://web-engenharia.com/tecnologias/openshift.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/openshift.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/openshift.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/openshift.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/openshift.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/openshift.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/openshift.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/oracle.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/oracle.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/oracle.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/oracle.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/oracle.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/oracle.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/oracle.html"/>
+    <loc>https://web-engenharia.com/tecnologias/oracle.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/oracle.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/oracle.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/oracle.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/oracle.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/oracle.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/oracle.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/php.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/php.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/php.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/php.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/php.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/php.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/php.html"/>
+    <loc>https://web-engenharia.com/tecnologias/php.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/php.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/php.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/php.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/php.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/php.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/php.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/postgresql.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/postgresql.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/postgresql.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/postgresql.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/postgresql.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/postgresql.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/postgresql.html"/>
+    <loc>https://web-engenharia.com/tecnologias/postgresql.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/postgresql.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/postgresql.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/postgresql.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/postgresql.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/postgresql.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/postgresql.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/rabbitmq.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/rabbitmq.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/rabbitmq.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/rabbitmq.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/rabbitmq.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/rabbitmq.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/rabbitmq.html"/>
+    <loc>https://web-engenharia.com/tecnologias/rabbitmq.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/rabbitmq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/rabbitmq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/rabbitmq.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/rabbitmq.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/rabbitmq.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/rabbitmq.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/react-native.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/react-native.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/react-native.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/react-native.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/react-native.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/react-native.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/react-native.html"/>
+    <loc>https://web-engenharia.com/tecnologias/react-native.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/react-native.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/react-native.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/react-native.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/react-native.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/react-native.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/react-native.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/redis.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/redis.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/redis.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/redis.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/redis.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/redis.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/redis.html"/>
+    <loc>https://web-engenharia.com/tecnologias/redis.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/redis.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/redis.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/redis.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/redis.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/redis.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/redis.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/restful.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/restful.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/restful.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/restful.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/restful.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/restful.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/restful.html"/>
+    <loc>https://web-engenharia.com/tecnologias/restful.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/restful.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/restful.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/restful.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/restful.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/restful.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/restful.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/scrum.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/scrum.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/scrum.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/scrum.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/scrum.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/scrum.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/scrum.html"/>
+    <loc>https://web-engenharia.com/tecnologias/scrum.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/scrum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/scrum.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/scrum.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/scrum.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/scrum.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/scrum.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/spring-ecosystem.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/spring-ecosystem.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/spring-ecosystem.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/spring-ecosystem.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/spring-ecosystem.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/spring-ecosystem.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/spring-ecosystem.html"/>
+    <loc>https://web-engenharia.com/tecnologias/spring-ecosystem.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/spring-ecosystem.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/spring-ecosystem.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/spring-ecosystem.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/spring-ecosystem.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/spring-ecosystem.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/spring-ecosystem.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/swift.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/swift.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/swift.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/swift.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/swift.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/swift.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/swift.html"/>
+    <loc>https://web-engenharia.com/tecnologias/swift.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/swift.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/swift.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/swift.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/swift.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/swift.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/swift.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/tecnologias/tibco-bw.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/tecnologias/tibco-bw.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/tecnologias/tibco-bw.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/tecnologias/tibco-bw.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/tecnologias/tibco-bw.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/tecnologias/tibco-bw.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/tecnologias/tibco-bw.html"/>
+    <loc>https://web-engenharia.com/tecnologias/tibco-bw.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/tecnologias/tibco-bw.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/tecnologias/tibco-bw.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/tecnologias/tibco-bw.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/tecnologias/tibco-bw.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/tecnologias/tibco-bw.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/tecnologias/tibco-bw.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/artigos/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/artigos/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/artigos/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/artigos/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/artigos/"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/artigos/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/artigos/"/>
+    <loc>https://web-engenharia.com/artigos/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/artigos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/artigos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/artigos/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/artigos/"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/artigos/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/artigos/"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/artigos/otp-elixir-escolha-aplicacoes-criticas.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
+    <loc>https://web-engenharia.com/artigos/otp-elixir-escolha-aplicacoes-criticas.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/artigos/otp-elixir-escolha-aplicacoes-criticas.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/artigos/construindo-sistemas-resilientes-eventos-cqrs.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
+    <loc>https://web-engenharia.com/artigos/construindo-sistemas-resilientes-eventos-cqrs.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/artigos/construindo-sistemas-resilientes-eventos-cqrs.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
+    <loc>https://web-engenharia.com/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/artigos/metrica-invisivel-saude-bem-estar-desenvolvedor-qualidade-codigo.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.web-engenharia.com/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.web-engenharia.com/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.web-engenharia.com/en/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.web-engenharia.com/es/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.web-engenharia.com/ja/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
-    <xhtml:link rel="alternate" hreflang="kok" href="https://www.web-engenharia.com/kok/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://www.web-engenharia.com/sv/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
+    <loc>https://web-engenharia.com/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://web-engenharia.com/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://web-engenharia.com/en/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://web-engenharia.com/es/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://web-engenharia.com/ja/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
+    <xhtml:link rel="alternate" hreflang="kok" href="https://web-engenharia.com/kok/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://web-engenharia.com/sv/artigos/alem-do-hype-arquiteturas-cognitivas-llms.html"/>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
