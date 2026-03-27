@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const LANDING = path.resolve(__dirname, '..');
 const BASE = 'https://web-engenharia.com';
-const DESC_MAX = Number.parseInt(process.env.SEO_DESC_MAX ?? '155', 10);
+const DESC_MAX = Number.parseInt(process.env.SEO_DESC_MAX ?? '145', 10);
 
 const args = new Set(process.argv.slice(2));
 const FIX_SAFE = args.has('--fix-safe');
@@ -31,6 +31,9 @@ function normalizeUrl(url) {
 
 function relToExpectedCanonical(rel) {
   if (rel === 'index.html') return `${BASE}/index.html`;
+  // For locale product hubs WESCA tends to crawl /{locale}/produtos
+  const localeHub = rel.match(/^(en|es|ja|kok|sv)\/produtos\/index\.html$/);
+  if (localeHub) return `${BASE}/${localeHub[1]}/produtos`;
   if (rel.endsWith('/index.html')) return `${BASE}/${rel}`;
   return `${BASE}/${rel}`;
 }
@@ -155,6 +158,41 @@ function addAliasClusterIfMissing(rel, html) {
   );
 }
 
+function ensureAlternatesBlock(html, variants, xDefaultHref) {
+  const altSet = new Set(variants.map(([, href]) => normalizeUrl(href)));
+  let xDefault = xDefaultHref;
+  if (altSet.has(normalizeUrl(xDefault))) {
+    xDefault = `${BASE}/en/produtos/index.html`;
+  }
+  const block = variants
+    .map(([l, href]) => `    <link rel="alternate" hreflang="${l}" href="${href}" />`)
+    .concat(`    <link rel="alternate" hreflang="x-default" href="${xDefault}" />`)
+    .join('\n');
+
+  // Remove all previous alternates, then insert clean block after canonical.
+  const cleared = html.replace(/\s*<link\s+[^>]*rel=["']alternate["'][^>]*>\s*/gi, '\n');
+  return cleared.replace(
+    /(<link\s+[^>]*rel=["']canonical["'][^>]*>\s*)/i,
+    `$1${block}\n`
+  );
+}
+
+function maybeBuildCategoriaVariants(rel) {
+  const m = rel.match(/^(en|es|ja|kok|sv)\/categorias\/([a-z0-9-]+)\/index\.html$/i);
+  if (!m) return null;
+  const slug = m[2];
+  const variants = [
+    ['pt-BR', `${BASE}/categorias/${slug}/index.html`],
+    ['en', `${BASE}/en/categorias/${slug}/index.html`],
+    ['es', `${BASE}/es/categorias/${slug}/index.html`],
+    ['ja', `${BASE}/ja/categorias/${slug}/index.html`],
+    ['kok', `${BASE}/kok/categorias/${slug}/index.html`],
+    ['sv', `${BASE}/sv/categorias/${slug}/index.html`],
+  ].filter(([, href]) => fileExistsForUrl(href));
+  if (variants.length < 2) return null;
+  return variants;
+}
+
 const files = walkHtml(LANDING);
 const findings = [];
 let changed = 0;
@@ -210,11 +248,39 @@ for (const file of files) {
     }
   }
 
+  // WESCA-like: missing hreflang locales for localized category pages
+  const categoriaVariants = maybeBuildCategoriaVariants(rel);
+  if (categoriaVariants) {
+    const declared = new Set(hreflangs.map((h) => h.hreflang));
+    const needed = new Set(categoriaVariants.map(([l]) => l));
+    let missing = false;
+    for (const locale of needed) {
+      if (!declared.has(locale)) {
+        findings.push({ type: 'missing_hreflang_locale', rel, locale });
+        missing = true;
+      }
+    }
+    if (missing && FIX_SAFE) {
+      const xDefault = categoriaVariants.find(([l]) => l === 'en')?.[1] ?? categoriaVariants[0][1];
+      html = ensureAlternatesBlock(html, categoriaVariants, xDefault);
+    }
+  }
+
   // WESCA-like: missing hreflang locales (common on alias pages)
   const hasAlternates = hreflangs.length > 0;
   if (!hasAlternates && /^((en|es|ja|kok|sv)\/[a-z0-9-]+\/index\.html)$/i.test(rel)) {
     findings.push({ type: 'missing_hreflang_cluster', rel });
-    if (FIX_SAFE) html = addAliasClusterIfMissing(rel, html);
+    if (FIX_SAFE) {
+      html = addAliasClusterIfMissing(rel, html);
+      // Re-read alternates after insertion; de-dup x-default if equal to en
+      const refreshed = getHreflangs(getHead(html));
+      const enHref = refreshed.find((x) => x.hreflang === 'en')?.href;
+      const xHref = refreshed.find((x) => x.hreflang === 'x-default')?.href;
+      if (enHref && xHref && normalizeUrl(enHref) === normalizeUrl(xHref)) {
+        const canonicalNow = getCanonical(getHead(html)) || relToExpectedCanonical(rel);
+        html = upsertXDefault(html, canonicalNow);
+      }
+    }
   }
 
   // WESCA-like: meta description long estimate
