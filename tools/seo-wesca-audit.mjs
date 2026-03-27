@@ -23,7 +23,9 @@ function walkHtml(dir, out = []) {
 function normalizeUrl(url) {
   try {
     const u = new URL(url);
-    return `${u.origin}${u.pathname}`;
+    let pathname = u.pathname || '/';
+    if (pathname.length > 1 && pathname.endsWith('/')) pathname = pathname.slice(0, -1);
+    return `${u.origin}${pathname}`;
   } catch {
     return url;
   }
@@ -31,10 +33,11 @@ function normalizeUrl(url) {
 
 function relToExpectedCanonical(rel) {
   if (rel === 'index.html') return `${BASE}`;
-  // Locale product hubs in this project are audited as /{locale}/produtos/index.html
-  const localeHub = rel.match(/^(en|es|ja|kok|sv)\/produtos\/index\.html$/);
-  if (localeHub) return `${BASE}/${localeHub[1]}/produtos`;
-  if (rel.endsWith('/index.html')) return `${BASE}/${rel}`;
+  // Clean URL mode: any */index.html canonical is expected as directory URL (no index.html)
+  if (rel.endsWith('/index.html')) {
+    const dir = rel.slice(0, -'/index.html'.length);
+    return `${BASE}/${dir}`;
+  }
   return `${BASE}/${rel}`;
 }
 
@@ -235,6 +238,10 @@ for (const file of files) {
     }
     for (const [href, locales] of byHref.entries()) {
       if (locales.length > 1) {
+        // Allow x-default to intentionally mirror one locale target.
+        const nonDefault = locales.filter((l) => l.toLowerCase() !== 'x-default');
+        const hasOnlyXDefaultPair = locales.length === 2 && nonDefault.length === 1;
+        if (hasOnlyXDefaultPair) continue;
         findings.push({ type: 'hreflang_duplicate_href', rel, href, locales });
         if (FIX_SAFE && locales.includes('x-default')) {
           const expected = canonical || relToExpectedCanonical(rel);
