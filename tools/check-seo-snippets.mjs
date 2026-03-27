@@ -6,8 +6,8 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const LANDING = path.resolve(__dirname, '..');
 
-const TITLE_MAX = Number.parseInt(process.env.SEO_TITLE_MAX ?? '60', 10);
-const DESC_MAX = Number.parseInt(process.env.SEO_DESC_MAX ?? '155', 10);
+const TITLE_MAX = Number.parseInt(process.env.SEO_TITLE_MAX ?? '65', 10);
+const DESC_MAX = Number.parseInt(process.env.SEO_DESC_MAX ?? '160', 10);
 const IGNORE_DIRS = new Set(['animacao_svg']);
 
 function walkHtml(dir, out = []) {
